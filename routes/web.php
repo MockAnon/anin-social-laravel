@@ -15,6 +15,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('contact', 'PagesController@getContact');
+Route::get('/contact', [
+    'uses' => 'ContactMessageController@create'
+]);
 
-Route::post('contact', 'PagesController@postContact');
+Route::post('/contact', [
+    'uses' => 'ContactMessageController@store',
+    'as' => 'contact.store'
+]);

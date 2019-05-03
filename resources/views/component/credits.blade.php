@@ -1,4 +1,4 @@
-<div class="row">
+<!-- <div class="row">
     <div class="col-md-6">
         <h3> Sign Up </h3>
         <form action="#" method="post"> 
@@ -31,4 +31,4 @@
             <button type="submit" class="btn btn-primary"> Submit </button>
         </form>
     </div>
- </div>
+ </div> -->
