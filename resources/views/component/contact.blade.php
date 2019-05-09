@@ -30,7 +30,7 @@
             <button type="submit" class="btn btn-primary"> Submit </button>
         </form>
     </div>
-    <div class="col-md-6">
+    <!-- <div class="col-md-6">
         <h3> Sign In </h3>
         <form action="#" method="post"> 
             <div class="form-group">
@@ -43,7 +43,7 @@
             </div>
             <button type="submit" class="btn btn-primary"> Submit </button>
         </form>
-    </div>
+    </div> -->
  </div>
 
  <?php

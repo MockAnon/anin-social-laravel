@@ -17,10 +17,10 @@ class ContactMessageController extends Controller
     {
         $this->validate($request, [
             'name' => 'required',
-            'email' => 'required',
-            'message' => 'required|email'
+            'email' => 'required|email',
+            'message' => 'required'
         ]);
-        Mail::send('emails.contact-message', [
+        Mail::send('emails.contactMessage', [
             'msg' => $request->message
 
 
@@ -30,5 +30,6 @@ class ContactMessageController extends Controller
         });
 
         return redirect()->back()->with('flash_message', 'Thank you for your message.');
+        // return response()->json(['message' => 'Request completed']);
     }
 }
