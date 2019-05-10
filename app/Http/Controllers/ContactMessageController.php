@@ -21,11 +21,14 @@ class ContactMessageController extends Controller
             'message' => 'required'
         ]);
         Mail::send('emails.contactMessage', [
-            'msg' => $request->message
+            'msg' => $request->message,
+            'email' => $request->email,
+            'name' => $request->name
 
 
         ], function($mail) use($request){
             $mail->from($request->email, $request->name);
+            $mail->subject($request->email);
             $mail->to('jarondevans@gmail.com')->subject('Contact Message');
         });
 

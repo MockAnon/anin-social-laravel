@@ -59,6 +59,7 @@ return [
         'address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),
         'name' => env('MAIL_FROM_NAME', 'Example'),
     ],
+    // 'from' => array('address' => 'application@whatever.com', 'name' => '<Name of Sender >'),
 
     /*
     |--------------------------------------------------------------------------
