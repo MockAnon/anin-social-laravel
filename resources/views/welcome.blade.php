@@ -7,5 +7,7 @@
 @section('content')
     @include('component.contact')
     @include('component.credits')
+
+    @include('component.message')
     
 @endsection
