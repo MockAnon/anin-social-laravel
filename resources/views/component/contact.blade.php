@@ -27,7 +27,7 @@
                     <small class="form-text invalid-feedback">{{ $errors->first('message') }} </small>
                 @endif
             </div>
-            <button type="submit" class="btn btn-primary"> Submit </button>
+            <button type="submit" class="btn btn-primary flex-05"> Submit </button>
         </form>
     </div>
  </div>
