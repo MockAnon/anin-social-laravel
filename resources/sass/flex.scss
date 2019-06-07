@@ -45,13 +45,16 @@ button {
     color: white;
     width: 100%;
     border: none;
-    transition-property: background-color;
-    transition-duration: 1000ms;
-    transition-timing-function: ease-in;
+    // transition-property: all;
+    // transition-duration: 1000ms;
+    // transition-timing-function: ease-in;
+    transition: background-color 3s ease-in-out 1s, color 3s ease-in-out 1s;
 }
 
 button:hover {
     background-color: blue;
+    color: black;
+    width: 600px;
 }
 textarea,
 input {
