@@ -23,3 +23,11 @@ Route::post('/contact', [
     'uses' => 'ContactMessageController@store',
     'as' => 'contact.store'
 ]);
+
+Route::get('/development', function () {
+    return view('pages.development');
+});
+
+// Route::get('/', function () {
+//     return view('welcome');
+// });
