@@ -83,13 +83,9 @@ a:hover {
 }
 
 #menuToggle {
-  display: block;
+  display: fixed;
   position: relative;
   z-index: 1;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-   -ms-user-select: none;
-       user-select: none;
 }
 
 #menuToggle input {
@@ -97,11 +93,9 @@ a:hover {
   width: 40px;
   height: 32px;
   position: absolute;
-  top: -7px;
   cursor: pointer;
   opacity: 0;
   z-index: 2;
-  -webkit-touch-callout: none;
 }
 
 #menuToggle span {
@@ -149,8 +143,10 @@ a:hover {
 }
 
 #menu {
-  position: absolute;
-  width: 300px;
+  position: fixed;
+  height: 100vh;
+  top: 0;
+  left: 0;
   background: #ededed;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;

@@ -17,5 +17,11 @@
     
 
     </div>
+    @include('component.message')
+    @include('component.message')
+    @include('component.message')
+    @include('component.message')
+    @include('component.message')
+    
     
 @endsection
