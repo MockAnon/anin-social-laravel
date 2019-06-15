@@ -33,36 +33,3 @@
 .flex-4 {
     flex: 4;
 }
-
-body {
-    font-size: 1.6rem;
-}
-button {
-    font-size: 1.6rem;
-    padding: 0.5rem 1rem;
-    border-radius: 0.2rem;
-    background-color: $blue;
-    color: white;
-    width: 100%;
-    border: none;
-    // transition-property: all;
-    // transition-duration: 1000ms;
-    // transition-timing-function: ease-in;
-    // transition: background-color 3s ease-in-out 1s, color 3s ease-in-out 1s;
-    transition: transform 2s;
-}
-
-button:hover {
-    background-color: blue;
-    color: black;
-    width: 600px;
-    transform: translateX(500px);
-}
-textarea,
-input {
-    font-size: 1.6rem;
-    width: 100%;
-    border-radius: 0.2rem;
-    min-height: 1.6rem;
-    max-height: 5rem;
-}

@@ -28,6 +28,10 @@ Route::get('/development', function () {
     return view('pages.development');
 });
 
+Route::get('/generalist', function () {
+    return view('pages.generalist');
+});
+
 // Route::get('/', function () {
 //     return view('welcome');
 // });

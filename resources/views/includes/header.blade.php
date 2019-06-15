@@ -10,11 +10,10 @@
     
     
     <ul id="menu">
-      <a href="#"><li>Home</li></a>
-      <a href="#"><li>About</li></a>
-      <a href="#"><li>Info</li></a>
-      <a href="#"><li>Contact</li></a>
-      <a href="https://erikterwan.com/" target="_blank"><li>Show me more</li></a>
+      <a href="/"><li>Home</li></a>
+      <a href="/development"><li>Development</li></a>
+      <a href="/generalist"><li>Designer / Generalist </li></a>
+      <!-- <a id="modalBtn"><li>Contact</li></a> -->
     </ul>
   </div>
 </nav>

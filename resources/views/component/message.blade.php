@@ -1,5 +1,7 @@
 <!-- Trigger/Open The Modal -->
-<button id="modalBtn">Open Modal</button>
+<div id="modalBtn">
+  <img id="modalIcon" src="img/icons/create_mail.svg">
+</div>
 
 
 
