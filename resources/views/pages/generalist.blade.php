@@ -5,8 +5,8 @@
 @endsection
 
 @section('content')
-<div class="row">
-    <div class="col">
+<div class="">
+    <div class="">
         <h3> Designer, Compositor, and CG Generalist </h3>
         <p>
         My names Jaron D. Evans, I'm currently working as Front-End Developer and UI Designer. <br>
@@ -22,5 +22,7 @@
         <iframe width="560" height="315" src="https://www.youtube.com/embed/6OKm4HMqyHY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
 </div>
+
+@include('component.slider')
     
 @endsection

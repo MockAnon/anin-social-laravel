@@ -207,6 +207,76 @@
   height: 7rem;
 }
 
+#slider-container {
+  width: 100%;
+  max-width: 1275px;
+  margin: 0 auto;
+  background-color: #233;
+  position: relative;
+}
+
+#slider-box {
+  width: 100%;
+  background-color: #ccc;
+  overflow: hidden;
+}
+
+#slider-box ul {
+  list-style: none;
+  width: 6000px;
+  margin-left: 35px;
+  padding: 0;
+}
+
+#slider-box li {
+  width: 245px;
+  height: 320px;
+  display: block;
+  text-align: center;
+  line-height: 320px;
+  float: left;
+  font-size: 48px;
+}
+
+.credit-img {
+  height: 100%;
+  width: auto;
+  transition: -webkit-transform 2s;
+  transition: transform 2s;
+  transition: transform 2s, -webkit-transform 2s;
+}
+
+.credit-img:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  z-index: 2;
+  display: block;
+  position: absolute;
+}
+
+#parent {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+#slide-foward-button {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 100px;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+#slide-backward-button {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100px;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
 body {
   font-size: 1.6rem;
   height: 100%;
