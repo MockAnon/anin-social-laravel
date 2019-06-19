@@ -141,7 +141,7 @@ var output = $('#sliderParent');
 for (val in objectCredits) {
   console.log(objectCredits[val]['img'], val);
   
-  output.append('<li><img value=' + val + ' onclick="filmCreditModal()" class="credit-img" src=' + objectCredits[val]['img'] + '></li>')
+  output.append('<li><img value=' + val + ' onclick="filmCreditModal(event)" class="credit-img" src=' + objectCredits[val]['img'] + '></li>')
 }
 
 
@@ -253,8 +253,10 @@ for (val in objectCredits) {
     }
   }
 
-  function filmCreditModal () {
+  function filmCreditModal (event) {
     modalSlider.style.display = "block";
+
+    console.log("EVENT VALUE", event.target.value)
   }
 
 
