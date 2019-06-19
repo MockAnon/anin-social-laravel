@@ -1,24 +1,44 @@
 <div id="slider-container">
   <div id="slider-box">
-    <ul id="parent">
-      <li><img class="credit-img" src="img/filmCredits/credit1.jpg"></li>
-      <li><img class="credit-img" src="img/filmCredits/credit1.jpg"></li>
-      <li><img class="credit-img" src="img/filmCredits/credit1.jpg"></li>
-      <li><img class="credit-img" src="img/filmCredits/credit1.jpg"></li>
-      <li><img class="credit-img" src="img/filmCredits/credit1.jpg"></li>
-      <li><img class="credit-img" src="img/filmCredits/credit1.jpg"></li>
-      <li><img class="credit-img" src="img/filmCredits/credit1.jpg"></li>
-      <li><img class="credit-img" src="img/filmCredits/credit1.jpg"></li>
-      <li><img class="credit-img" src="img/filmCredits/credit1.jpg"></li>
-      <li><img class="credit-img" src="img/filmCredits/credit1.jpg"></li>
-      <li><img class="credit-img" src="img/filmCredits/credit1.jpg"></li>
-      <li><img class="credit-img" src="img/filmCredits/credit1.jpg"></li>
-      <li><img class="credit-img" src="img/filmCredits/credit1.jpg"></li>
+    <ul id="sliderParent">
+      <!-- <li><img onclick="filmCreditModal()" class="credit-img modalSliderBtn" src="img/filmCredits/credit1.jpg"></li>
+      <li><img onclick="filmCreditModal()" class="credit-img" src="img/filmCredits/credit1.jpg"></li>
+      <li><img onclick="filmCreditModal()" class="credit-img" src="img/filmCredits/credit1.jpg"></li>
+      <li><img onclick="filmCreditModal()" class="credit-img" src="img/filmCredits/credit1.jpg"></li>
+      <li><img onclick="filmCreditModal()" class="credit-img" src="img/filmCredits/credit1.jpg"></li>
+      <li><img onclick="filmCreditModal()" class="credit-img" src="img/filmCredits/credit1.jpg"></li>
+      <li><img onclick="filmCreditModal()" class="credit-img" src="img/filmCredits/credit1.jpg"></li>
+      <li><img onclick="filmCreditModal()" class="credit-img" src="img/filmCredits/credit1.jpg"></li>
+      <li><img onclick="filmCreditModal()" class="credit-img" src="img/filmCredits/credit1.jpg"></li>
+      <li><img onclick="filmCreditModal()" class="credit-img" src="img/filmCredits/credit1.jpg"></li>
+      <li><img onclick="filmCreditModal()" class="credit-img" src="img/filmCredits/credit1.jpg"></li>
+      <li><img onclick="filmCreditModal()" class="credit-img" src="img/filmCredits/credit1.jpg"></li>
+      <li><img onclick="filmCreditModal()" class="credit-img" src="img/filmCredits/credit1.jpg"></li> -->
 
     </ul>
   </div>
   <button id="slide-foward-button" onclick="nextSlide()"> > </button>
   <button id="slide-backward-button" onclick="previousSlide()"> < </button>
+
+
+  <!-- Trigger/Open The Modal -->
+  <!-- <div id="modalSliderBtn"> -->
+    <!-- <img id="modalIcon" src="img/icons/create_mail.svg"> -->
+    <!-- <button> PRESS THIS </button>
+  </div> -->
+
+  <!-- The Modal -->
+  <div id="myModalSlider" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="flex-row-reverse">
+        <span class="close">&times;</span>
+      </div>
+      Test
+    </div>
+
+  </div>
 </div>
 
 
@@ -27,21 +47,123 @@
 <script src="{{ asset('js/app.js') }}"></script>
 
 <script>
-  console.log("test");
+  let objectCredits = [{
+    img: "img/filmCredits/credit1.jpg",
+    title: "Colossal",
+    description: "goes here"
+  },
+  { img: "img/filmCredits/credit2.jpg",
+    title: "Colossal",
+    description: "goes here"
+  },
+  { img: "img/filmCredits/credit3.jpg",
+    title: "Colossal",
+    description: "goes here"
+  },
+  { img: "img/filmCredits/credit4.jpg",
+    title: "Colossal",
+    description: "goes here"
+  },
+  { img: "img/filmCredits/credit5.jpg",
+    title: "Colossal",
+    description: "goes here"
+  },
+  { img: "img/filmCredits/credit6.jpg",
+    title: "Colossal",
+    description: "goes here"
+  },
+  { img: "img/filmCredits/credit7.jpg",
+    title: "Colossal",
+    description: "goes here"
+  },
+  { img: "img/filmCredits/credit8.jpg",
+    title: "Colossal",
+    description: "goes here"
+  },
+  { img: "img/filmCredits/credit9.jpg",
+    title: "Colossal",
+    description: "goes here"
+  },
+  { img: "img/filmCredits/credit10.jpg",
+    title: "Colossal",
+    description: "goes here"
+  },
+  { img: "img/filmCredits/credit11.jpg",
+    title: "Colossal",
+    description: "goes here"
+  },
+  { img: "img/filmCredits/credit12.jpg",
+    title: "Colossal",
+    description: "goes here"
+  },
+  { img: "img/filmCredits/credit13.jpg",
+    title: "Colossal",
+    description: "goes here"
+  },
+  { img: "img/filmCredits/credit14.jpg",
+    title: "Colossal",
+    description: "goes here"
+  },
+  { img: "img/filmCredits/credit15.jpg",
+    title: "Colossal",
+    description: "goes here"
+  },
+  { img: "img/filmCredits/credit16.jpg",
+    title: "Colossal",
+    description: "goes here"
+  },
+  { img: "img/filmCredits/credit17.jpg",
+    title: "Colossal",
+    description: "goes here"
+  },
+  { img: "img/filmCredits/credit18.jpg",
+    title: "Colossal",
+    description: "goes here"
+  },
+  { img: "img/filmCredits/credit19.jpg",
+    title: "Colossal",
+    description: "goes here"
+  },
+  { img: "img/filmCredits/credit20.jpg",
+    title: "Colossal",
+    description: "goes here"
+  },
+  { img: "img/filmCredits/credit21.jpg",
+    title: "Colossal",
+    description: "goes here"
+  }
+]
+
+// let out;
+var output = $('#sliderParent');
+
+
+for (val in objectCredits) {
+  console.log(objectCredits[val]['img'], val);
+  
+  output.append('<li><img value=' + val + ' onclick="filmCreditModal()" class="credit-img" src=' + objectCredits[val]['img'] + '></li>')
+}
+
+
+
+
+
+  console.log("test", objectCredits);
   let guardSlide = false;
 
   //configuration
   var xOffset = 300;
-  var animationSpeed = 1500;
-  var slideSpeed = 1500;
+  var animationSpeed = 1000;
+  var slideSpeed = 2500;
   var startSlide = 1;
+  var lastSlide = objectCredits.length;
   //cache the DOM
   var slider = $("#slider-box");
   var slideContainer = slider.find("ul");
   var slides = slideContainer.find("li");
 
   function checkPosition() {
-      if (startSlide >= 7) {
+      if (startSlide >= lastSlide) {
         startSlide = 1;
         // slideContainer.css("margin-left", "50px");
         slideContainer.animate({"margin-left": "35px"},animationSpeed, function(){
@@ -107,7 +229,44 @@
   //         $('#slider-container').hide();
   //     }
   // });
+
+  var modalSlider = document.getElementById("myModalSlider");
+
+  var btn = document.getElementById("modalSliderBtn");
+
+  // var btn = document.getElementsByClassName("modalSliderBtn");  
+
+  var span = document.getElementsByClassName("close")[0];
+
+  btn.onclick = function() {
+    modalSlider.style.display = "block";
+  }
+
+  span.onclick = function() {
+    modalSlider.style.display = "none";
+  }
+
+  // When the user clicks anywhere outside of the modalSlider, close it
+  window.onclick = function(event) {
+    if (event.target == modalSlider) {
+      modalSlider.style.display = "none";
+    }
+  }
+
+  function filmCreditModal () {
+    modalSlider.style.display = "block";
+  }
+
+
 </script>
+
+
+
+
+
+
+
+
 
 <!-- 
 @push('custom-scripts')
