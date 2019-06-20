@@ -33,7 +33,7 @@
     <!-- Modal content -->
     <div class="modal-content">
       <div class="flex-row-reverse">
-        <span class="close">&times;</span>
+        <span class="close close-slider">&times;</span>
       </div>
       Test
     </div>
@@ -236,13 +236,15 @@ for (val in objectCredits) {
 
   // var btn = document.getElementsByClassName("modalSliderBtn");  
 
-  var span = document.getElementsByClassName("close")[0];
+  var spanSlider = document.getElementsByClassName("close-slider");
+
+  console.log("span", spanSlider);
 
   btn.onclick = function() {
     modalSlider.style.display = "block";
   }
 
-  span.onclick = function() {
+  spanSlider.onclick = function() {
     modalSlider.style.display = "none";
   }
 
