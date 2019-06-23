@@ -211,13 +211,13 @@
   width: 100%;
   max-width: 1275px;
   margin: 0 auto;
-  background-color: #233;
+  background-color: #1b1b1b;
   position: relative;
 }
 
 #slider-box {
   width: 100%;
-  background-color: #ccc;
+  background-color: #1b1b1b;
   overflow: hidden;
 }
 
