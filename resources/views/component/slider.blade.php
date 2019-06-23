@@ -34,13 +34,20 @@
     <div class="modal-content">
       <div class="flex-row-reverse">
         <span id="modalSliderClose" class="close close-slider">&times;</span>
+      </div >
+
+      <div class="flex-row" style="max-height: 500px; width: 100%;">
+        <div>
+          <h1 id="filmModalTitle"> </h1>
+          <p id="filmModalDescription"> </p>
+        </div>
+        <div >
+          <img class="img-width-100-height-auto" id="filmModalImage" src=""/>
+        </div>
       </div>
-        <h1 id="filmModalTitle"> </h1>
-        <p id="filmModalDescription"> </p>
-        <p id="filmModalImage"> </p>
-    </div>
 
   </div>
+
 </div>
 
 
@@ -146,10 +153,6 @@ for (val in objectCredits) {
   output.append('<li><img value=' + val + ' onclick="filmCreditModal('+ val +')" class="credit-img" src=' + objectCredits[val]['img'] + '></li>')
 }
 
-
-
-
-
   console.log("test", objectCredits);
   let guardSlide = false;
 
@@ -158,7 +161,7 @@ for (val in objectCredits) {
   var animationSpeed = 1000;
   var slideSpeed = 2500;
   var startSlide = 1;
-  var lastSlide = objectCredits.length;
+  var lastSlide = objectCredits.length / 1.5;
   //cache the DOM
   var slider = $("#slider-box");
   var slideContainer = slider.find("ul");
@@ -269,8 +272,9 @@ for (val in objectCredits) {
         console.log("EVENT VALUE", objectCredits[event].description)
 
         $("#filmModalTitle").text(objectCredits[event].title);
-        $("#filmModalDescription").text(objectCredits[event].img);
-        $("#filmModalImage").text(objectCredits[event].description);
+        // $("#filmModalDescription").text(objectCredits[event].img);
+        $("#filmModalDescription").text(objectCredits[event].description);
+        $("#filmModalImage").attr("src", objectCredits[event].img);
   
   }
 
