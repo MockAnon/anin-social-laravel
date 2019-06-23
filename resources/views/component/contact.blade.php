@@ -5,7 +5,10 @@
             <div class="alert alert-success">{{ Session::get('flash_message') }} </div>
         @endif
         <form action="{{ route('contact.store') }}" method="post"> 
+            
         {{ csrf_field() }}
+
+        @csrf
             <div class="form-group">
                 <label for="email"> Your E-Mail: </label>
                 <input class="form-control" type="text" name="email" id="email"> 

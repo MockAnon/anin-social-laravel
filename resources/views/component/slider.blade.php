@@ -33,9 +33,11 @@
     <!-- Modal content -->
     <div class="modal-content">
       <div class="flex-row-reverse">
-        <span class="close close-slider">&times;</span>
+        <span id="modalSliderClose" class="close close-slider">&times;</span>
       </div>
-      Test
+        <h1 id="filmModalTitle"> </h1>
+        <p id="filmModalDescription"> </p>
+        <p id="filmModalImage"> </p>
     </div>
 
   </div>
@@ -141,7 +143,7 @@ var output = $('#sliderParent');
 for (val in objectCredits) {
   console.log(objectCredits[val]['img'], val);
   
-  output.append('<li><img value=' + val + ' onclick="filmCreditModal(event)" class="credit-img" src=' + objectCredits[val]['img'] + '></li>')
+  output.append('<li><img value=' + val + ' onclick="filmCreditModal('+ val +')" class="credit-img" src=' + objectCredits[val]['img'] + '></li>')
 }
 
 
@@ -232,17 +234,19 @@ for (val in objectCredits) {
 
   var modalSlider = document.getElementById("myModalSlider");
 
-  var btn = document.getElementById("modalSliderBtn");
+  // var btn = document.getElementById("modalSliderBtn");
+
+  var spanSlider = document.getElementById("modalSliderClose");
 
   // var btn = document.getElementsByClassName("modalSliderBtn");  
 
-  var spanSlider = document.getElementsByClassName("close-slider");
+  // var spanSlider = document.getElementsByClassName("close-slider");
 
-  console.log("span", spanSlider);
+  // console.log("span", spanSlider);
 
-  btn.onclick = function() {
-    modalSlider.style.display = "block";
-  }
+  // btn.onclick = function() {
+  //   modalSlider.style.display = "block";
+  // }
 
   spanSlider.onclick = function() {
     modalSlider.style.display = "none";
@@ -257,8 +261,17 @@ for (val in objectCredits) {
 
   function filmCreditModal (event) {
     modalSlider.style.display = "block";
+    
+        console.log("EVENT VALUE", objectCredits[event].title)
+    
+        console.log("EVENT VALUE", objectCredits[event].img)
+    
+        console.log("EVENT VALUE", objectCredits[event].description)
 
-    console.log("EVENT VALUE", event.target.value)
+        $("#filmModalTitle").text(objectCredits[event].title);
+        $("#filmModalDescription").text(objectCredits[event].img);
+        $("#filmModalImage").text(objectCredits[event].description);
+  
   }
 
 
