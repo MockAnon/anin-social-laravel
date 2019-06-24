@@ -23,6 +23,8 @@
     </div>
 </div>
 
+@include('component.imageAccordion')
+
 @include('component.slider')
     
 @endsection
