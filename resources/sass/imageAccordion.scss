@@ -5,14 +5,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 10vmin;
+    margin: 4vmin;
     overflow: hidden;
     transform: skew(5deg);
 
     .card {
         flex: 1;
         transition: all 1s ease-in-out;
-        height: 75vmin;
+        height: 40vmin;
         position: relative;
         overflow: hidden;
         .card__head {
