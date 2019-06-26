@@ -25,14 +25,16 @@
 
 @include('component.imageAccordion')
 
-@include('component.slider')
-    
+ 
+
 
 <h1> Design </h1>
 <p> Design is the best thing ever </p>
 @include('component.imageAccordion')
 
-@include('component.horizontalSlider')
+@include('component.vertSlider')
+@include('component.slider')
+
 
 
 @endsection

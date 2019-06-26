@@ -1,36 +1,11 @@
-<div id="slider-container">
-  <div id="slider-box">
+<div id="slider-vert-container">
+  <div id="slider-vert-box">
     <ul id="sliderParent">
     </ul>
   </div>
   <button id="slide-foward-button" onclick="nextSlide()"> > </button>
   <button id="slide-backward-button" onclick="previousSlide()"> < </button>
-
-  <!-- The Modal -->
-  <div id="myModalSlider" class="modal">
-
-    <!-- Modal content -->
-    <div class="modal-content">
-      <div class="flex-row-reverse">
-        <span id="modalSliderClose" class="close close-slider">&times;</span>
-      </div >
-
-      <div class="flex-row" style="max-height: 500px; width: 100%;">
-        <div>
-          <h1 id="filmModalTitle"> </h1>
-          <p id="filmModalDescription"> </p>
-        </div>
-        <div >
-          <img class="img-width-100-height-auto" id="filmModalImage" src=""/>
-        </div>
-      </div>
-    </div>
-
-  </div>
 </div>
-
-
-
 
 <script src="{{ asset('js/app.js') }}"></script>
 
@@ -123,13 +98,13 @@
 ]
 
 // let out;
-var output = $('#sliderParent');
+var outputVert = $('#sliderParent');
 
 
 for (val in objectCredits) {
   console.log(objectCredits[val]['img'], val);
   
-  output.append('<li><img value=' + val + ' onclick="filmCreditModal('+ val +')" class="credit-img" src=' + objectCredits[val]['img'] + '></li>')
+  outputVert.append('<li><img value=' + val + ' onclick="filmCreditModal('+ val +')" class="credit-img" src=' + objectCredits[val]['img'] + '></li>')
 }
 
   console.log("test", objectCredits);
@@ -141,9 +116,10 @@ for (val in objectCredits) {
   var slideSpeed = 2500;
   var startSlide = 1;
   var lastSlide = objectCredits.length / 1.5;
+
   //cache the DOM
-  var slider = $("#slider-box");
-  var slideContainer = slider.find("ul");
+  var sliderVert = $("#slider-vert-box");
+  var slideContainer = sliderVert.find("ul");
   var slides = slideContainer.find("li");
 
   function checkPosition() {
@@ -172,9 +148,6 @@ for (val in objectCredits) {
   function stopSlider(){
     clearInterval(sliderInterval);
   }
-  //mouse events
-  // slider.on("mouseenter", stopSlider);
-  // slider.on("mouseleave", startSlider);
   startSlider();
   });
 
@@ -196,117 +169,7 @@ for (val in objectCredits) {
   }
 
 
-  $('#slider-container').hover(function(){
-    $(this).addClass('active');
-    guardSlide = true;
-    console.log(guardSlide);
-    }, function(){
-        $(this).removeClass('active');
-        guardSlide = false;
-        console.log(guardSlide);
-    })
-
-  // $('#slider-container').mouseenter(function() {
-  //     $('#slider-container').show();  
-  // }).mouseleave(function() {      
-  //     if(!$('#slider-container').hasClass('active')){
-  //         $('#slider-container').hide();
-  //     }
-  // });
-
-  var modalSlider = document.getElementById("myModalSlider");
-
-  // var btn = document.getElementById("modalSliderBtn");
-
-  var spanSlider = document.getElementById("modalSliderClose");
-
-  // var btn = document.getElementsByClassName("modalSliderBtn");  
-
-  // var spanSlider = document.getElementsByClassName("close-slider");
-
-  // console.log("span", spanSlider);
-
-  // btn.onclick = function() {
-  //   modalSlider.style.display = "block";
-  // }
-
-  spanSlider.onclick = function() {
-    modalSlider.style.display = "none";
-  }
-
-  // When the user clicks anywhere outside of the modalSlider, close it
-  window.onclick = function(event) {
-    if (event.target == modalSlider) {
-      modalSlider.style.display = "none";
-    }
-  }
-
-  function filmCreditModal (event) {
-    modalSlider.style.display = "block";
-    
-        console.log("EVENT VALUE", objectCredits[event].title)
-    
-        console.log("EVENT VALUE", objectCredits[event].img)
-    
-        console.log("EVENT VALUE", objectCredits[event].description)
-
-        $("#filmModalTitle").text(objectCredits[event].title);
-        // $("#filmModalDescription").text(objectCredits[event].img);
-        $("#filmModalDescription").text(objectCredits[event].description);
-        $("#filmModalImage").attr("src", objectCredits[event].img);
-  
-  }
-
-
 </script>
 
 
 
-
-
-
-
-
-
-<!-- 
-@push('custom-scripts')
-  
-  <script type="text/javascript">
-    console.log("test");
-    $(document).ready(function(){
-      //configuration
-      var xOffset = 300;
-      var animationSpeed = 500;
-      var slideSpeed = 3000;
-      var startSlide = 1;
-
-      //cache the DOM
-      var slider = $("#slider-box");
-      var slideContainer = slider.find("ul");
-      var slides = slideContainer.find("li");
-        
-      var sliderInterval;
-      function startSlider(){
-        sliderInterval = setInterval(function(){
-        slideContainer.animate({"margin-left": "-="+xOffset},animationSpeed, function(){
-          startSlide++;
-          if (startSlide >= 7) {
-            startSlide = 1;
-            //slideContainer.animate({"margin-left": 0},500);
-            slideContainer.css("margin-left", "50px");
-          };
-        });
-      },slideSpeed);
-      };
-
-      function stopSlider(){
-        clearInterval(sliderInterval);
-      }
-      //mouse events
-      slider.on("mouseenter", stopSlider);
-      slider.on("mouseleave", startSlider);
-      startSlider();
-      console.log(reStartSlide);
-    });
-  </script>
-@endpush -->
