@@ -1,6 +1,6 @@
 <div id="slider-vert-container">
   <div id="slider-vert-box">
-    <ul id="sliderParent">
+    <ul id="vertParent">
     </ul>
   </div>
   <button id="slide-foward-button" onclick="nextSlide()"> > </button>
@@ -10,7 +10,7 @@
 <script src="{{ asset('js/app.js') }}"></script>
 
 <script>
-  let objectCredits = [{
+  let vertCredits = [{
     img: "img/filmCredits/credit1.jpg",
     title: "Colossal",
     description: "goes here"
@@ -98,24 +98,24 @@
 ]
 
 // let out;
-var outputVert = $('#sliderParent');
+var outputVert = $('#vertParent');
 
 
-for (val in objectCredits) {
-  console.log(objectCredits[val]['img'], val);
+for (val in vertCredits) {
+  console.log("VERT CREDITS", vertCredits[val]['img'], val);
   
-  outputVert.append('<li><img value=' + val + ' onclick="filmCreditModal('+ val +')" class="credit-img" src=' + objectCredits[val]['img'] + '></li>')
+  outputVert.append('<li><img value=' + val + ' onclick="filmCreditModal('+ val +')" class="credit-img" src=' + vertCredits[val]['img'] + '></li>')
 }
 
-  console.log("test", objectCredits);
-  let guardSlide = false;
+  console.log("test", vertCredits);
+  let guardSlide2 = false;
 
   //configuration
-  var xOffset = 300;
-  var animationSpeed = 1000;
-  var slideSpeed = 2500;
-  var startSlide = 1;
-  var lastSlide = objectCredits.length / 1.5;
+  var xOffset2 = 300;
+  var animationSpeed2 = 1000;
+  var slideSpeed2 = 2500;
+  var startSlide2 = 1;
+  var lastSlide2 = vertCredits.length / 1.5;
 
   //cache the DOM
   var sliderVert = $("#slider-vert-box");
@@ -123,11 +123,11 @@ for (val in objectCredits) {
   var slides = slideContainer.find("li");
 
   function checkPosition() {
-      if (startSlide >= lastSlide) {
-        startSlide = 1;
+      if (startSlide2 >= lastSlide2) {
+        startSlide2 = 1;
         // slideContainer.css("margin-left", "50px");
-        slideContainer.animate({"margin-left": "35px"},animationSpeed, function(){
-        startSlide = 0;
+        slideContainer.animate({"margin-left": "35px"},animationSpeed2, function(){
+        startSlide2 = 0;
       });
     }
   }
@@ -136,14 +136,14 @@ for (val in objectCredits) {
     var sliderInterval;
     function startSlider(){
       sliderInterval = setInterval(function(){
-          if (guardSlide == false) {
-          // console.log(slideContainer.animate({"margin-left": "-="+xOffset}));
-        slideContainer.animate({"margin-left": "-="+xOffset},animationSpeed, function(){
-          startSlide++;
+          if (guardSlide2 == false) {
+          // console.log(slideContainer.animate({"margin-left": "-="+xOffset2}));
+        slideContainer.animate({"margin-left": "-="+xOffset2},animationSpeed2, function(){
+          startSlide2++;
           checkPosition();
         });
       }
-      },slideSpeed);
+      },slideSpeed2);
   };
   function stopSlider(){
     clearInterval(sliderInterval);
@@ -152,17 +152,17 @@ for (val in objectCredits) {
   });
 
   function nextSlide() {
-    console.log("next", startSlide);
-    slideContainer.animate({"margin-left": "-="+xOffset},animationSpeed, function(){
-        startSlide++;
+    console.log("next", startSlide2);
+    slideContainer.animate({"margin-left": "-="+xOffset2},animationSpeed2, function(){
+        startSlide2++;
         checkPosition();
       });
   }
   function previousSlide() {
-    if (startSlide > 1) {
-      console.log("previous", startSlide);
-      slideContainer.animate({"margin-left": "+="+xOffset},animationSpeed, function(){
-        startSlide = startSlide - 1;
+    if (startSlide2 > 1) {
+      console.log("previous", startSlide2);
+      slideContainer.animate({"margin-left": "+="+xOffset2},animationSpeed2, function(){
+        startSlide2 = startSlide2 - 1;
         checkPosition();
         });
     }
