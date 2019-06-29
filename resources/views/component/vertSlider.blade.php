@@ -3,8 +3,8 @@
     <ul id="vertParent">
     </ul>
   </div>
-  <button id="slide-foward-button" onclick="nextSlide()"> > </button>
-  <button id="slide-backward-button" onclick="previousSlide()"> < </button>
+  <button id="slide-foward-button" onclick="nextSlideVert()"> > </button>
+  <button id="slide-backward-button" onclick="previousSlideVert()"> < </button>
 </div>
 
 <script src="{{ asset('js/app.js') }}"></script>
@@ -119,49 +119,50 @@ for (val in vertCredits) {
 
   //cache the DOM
   var sliderVert = $("#slider-vert-box");
-  var slideContainer = sliderVert.find("ul");
-  var slides = slideContainer.find("li");
+  var slideContainerVert = sliderVert.find("ul");
+  var slides = slideContainerVert.find("li");
 
   function checkPosition() {
       if (startSlide2 >= lastSlide2) {
         startSlide2 = 1;
-        // slideContainer.css("margin-left", "50px");
-        slideContainer.animate({"margin-left": "35px"},animationSpeed2, function(){
+        // slideContainerVert.css("margin-left", "50px");
+        slideContainerVert.animate({"margin-left": "35px"},animationSpeed2, function(){
         startSlide2 = 0;
       });
     }
   }
 
-  $(document).ready(function(){
-    var sliderInterval;
-    function startSlider(){
-      sliderInterval = setInterval(function(){
-          if (guardSlide2 == false) {
-          // console.log(slideContainer.animate({"margin-left": "-="+xOffset2}));
-        slideContainer.animate({"margin-left": "-="+xOffset2},animationSpeed2, function(){
-          startSlide2++;
-          checkPosition();
-        });
-      }
-      },slideSpeed2);
-  };
-  function stopSlider(){
-    clearInterval(sliderInterval);
-  }
-  startSlider();
-  });
+  // $(document).ready(function(){
+  //   var sliderInterval;
+  //   function startSlider(){
+  //     sliderInterval = setInterval(function(){
+  //         if (guardSlide2 == false) {
+  //         // console.log(slideContainerVert.animate({"margin-left": "-="+xOffset2}));
+  //       slideContainerVert.animate({"margin-left": "-="+xOffset2},animationSpeed2, function(){
+  //         startSlide2++;
+  //         checkPosition();
+  //       });
+  //     }
+  //     },slideSpeed2);
+  // };
+  // function stopSlider(){
+  //   clearInterval(sliderInterval);
+  // }
+  // startSlider();
+  // });
 
-  function nextSlide() {
+  function nextSlideVert() {
     console.log("next", startSlide2);
-    slideContainer.animate({"margin-left": "-="+xOffset2},animationSpeed2, function(){
+    // slideContainerVert.animate({"margin-left": "-="+xOffset2},animationSpeed2, function(){
+    slideContainerVert.animate({"margin-top": "-="+xOffset2},animationSpeed2, function(){
         startSlide2++;
         checkPosition();
       });
   }
-  function previousSlide() {
+  function previousSlideVert() {
     if (startSlide2 > 1) {
       console.log("previous", startSlide2);
-      slideContainer.animate({"margin-left": "+="+xOffset2},animationSpeed2, function(){
+      slideContainerVert.animate({"margin-top": "+="+xOffset2},animationSpeed2, function(){
         startSlide2 = startSlide2 - 1;
         checkPosition();
         });

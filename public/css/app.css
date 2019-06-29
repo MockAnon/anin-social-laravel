@@ -484,14 +484,17 @@
 }
 
 #slider-vert-container {
-  width: 100%;
-  max-width: 1275px;
+  max-width: 245px;
+  max-height: 1200px;
+  height: 45rem;
   margin: 0 auto;
   background-color: #1b1b1b;
   position: relative;
 }
 
 #slider-vert-container #slider-vert-box {
+  height: 100%;
+  display: flex;
   width: 100%;
   background-color: #1b1b1b;
   overflow: hidden;
@@ -500,7 +503,6 @@
 #slider-vert-container #slider-vert-box li {
   width: 245px;
   height: 320px;
-  display: block;
   text-align: center;
   line-height: 320px;
   float: left;
@@ -510,7 +512,7 @@
 #slider-vert-container #slider-vert-box ul {
   list-style: none;
   width: 6000px;
-  margin-left: 35px;
+  height: 6000px;
   padding: 0;
 }
 
