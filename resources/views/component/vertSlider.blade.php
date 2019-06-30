@@ -11,19 +11,19 @@
 
 <script>
   let vertCredits = [{
-    img: "img/filmCredits/credit1.jpg",
+    img: "img/designCredits/credit1.jpg",
     title: "Colossal",
     description: "goes here"
   },
-  { img: "img/filmCredits/credit2.jpg",
+  { img: "img/designCredits/credit2.jpg",
     title: "Colossal",
     description: "goes here"
   },
-  { img: "img/filmCredits/credit3.jpg",
+  { img: "img/designCredits/credit3.jpg",
     title: "Colossal",
     description: "goes here"
   },
-  { img: "img/filmCredits/credit4.jpg",
+  { img: "img/designCredits/credit4.jpg",
     title: "Colossal",
     description: "goes here"
   },
@@ -65,6 +65,13 @@ for (val in vertCredits) {
   function checkPositionVert() {
     console.log("Last Slide", lastSlide2);
       if (startSlide2 >= lastSlide2) {
+        startSlide2 = 1;
+        // slideContainerVert.css("margin-left", "50px");
+        slideContainerVert.animate({"margin-top": "0px"},animationSpeed2, function(){
+        startSlide2 = 1;
+      });
+    }
+    if (startSlide2 <= 1) {
         startSlide2 = 1;
         // slideContainerVert.css("margin-left", "50px");
         slideContainerVert.animate({"margin-top": "0px"},animationSpeed2, function(){
