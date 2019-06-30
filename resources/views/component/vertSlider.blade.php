@@ -35,66 +35,6 @@
     title: "Colossal",
     description: "goes here"
   },
-  { img: "img/filmCredits/credit7.jpg",
-    title: "Colossal",
-    description: "goes here"
-  },
-  { img: "img/filmCredits/credit8.jpg",
-    title: "Colossal",
-    description: "goes here"
-  },
-  { img: "img/filmCredits/credit9.jpg",
-    title: "Colossal",
-    description: "goes here"
-  },
-  { img: "img/filmCredits/credit10.jpg",
-    title: "Colossal",
-    description: "goes here"
-  },
-  { img: "img/filmCredits/credit11.jpg",
-    title: "Colossal",
-    description: "goes here"
-  },
-  { img: "img/filmCredits/credit12.jpg",
-    title: "Colossal",
-    description: "goes here"
-  },
-  { img: "img/filmCredits/credit13.jpg",
-    title: "Colossal",
-    description: "goes here"
-  },
-  { img: "img/filmCredits/credit14.jpg",
-    title: "Colossal",
-    description: "goes here"
-  },
-  { img: "img/filmCredits/credit15.jpg",
-    title: "Colossal",
-    description: "goes here"
-  },
-  { img: "img/filmCredits/credit16.jpg",
-    title: "Colossal",
-    description: "goes here"
-  },
-  { img: "img/filmCredits/credit17.jpg",
-    title: "Colossal",
-    description: "goes here"
-  },
-  { img: "img/filmCredits/credit18.jpg",
-    title: "Colossal",
-    description: "goes here"
-  },
-  { img: "img/filmCredits/credit19.jpg",
-    title: "Colossal",
-    description: "goes here"
-  },
-  { img: "img/filmCredits/credit20.jpg",
-    title: "Colossal",
-    description: "goes here"
-  },
-  { img: "img/filmCredits/credit21.jpg",
-    title: "Colossal",
-    description: "goes here"
-  }
 ]
 
 // let out;
@@ -104,7 +44,7 @@ var outputVert = $('#vertParent');
 for (val in vertCredits) {
   console.log("VERT CREDITS", vertCredits[val]['img'], val);
   
-  outputVert.append('<li><img value=' + val + ' onclick="filmCreditModal('+ val +')" class="credit-img" src=' + vertCredits[val]['img'] + '></li>')
+  outputVert.append('<li><div class="credit-img-div"><img value=' + val + ' onclick="filmCreditModal('+ val +')" class="credit-img" src=' + vertCredits[val]['img'] + '></div></li>')
 }
 
   console.log("test", vertCredits);
@@ -115,19 +55,20 @@ for (val in vertCredits) {
   var animationSpeed2 = 1000;
   var slideSpeed2 = 2500;
   var startSlide2 = 1;
-  var lastSlide2 = vertCredits.length / 1.5;
+  var lastSlide2 = vertCredits.length;
 
   //cache the DOM
   var sliderVert = $("#slider-vert-box");
   var slideContainerVert = sliderVert.find("ul");
   var slides = slideContainerVert.find("li");
 
-  function checkPosition() {
+  function checkPositionVert() {
+    console.log("Last Slide", lastSlide2);
       if (startSlide2 >= lastSlide2) {
         startSlide2 = 1;
         // slideContainerVert.css("margin-left", "50px");
-        slideContainerVert.animate({"margin-left": "35px"},animationSpeed2, function(){
-        startSlide2 = 0;
+        slideContainerVert.animate({"margin-top": "0px"},animationSpeed2, function(){
+        startSlide2 = 1;
       });
     }
   }
@@ -140,7 +81,7 @@ for (val in vertCredits) {
   //         // console.log(slideContainerVert.animate({"margin-left": "-="+xOffset2}));
   //       slideContainerVert.animate({"margin-left": "-="+xOffset2},animationSpeed2, function(){
   //         startSlide2++;
-  //         checkPosition();
+  //         checkPositionVert();
   //       });
   //     }
   //     },slideSpeed2);
@@ -152,19 +93,22 @@ for (val in vertCredits) {
   // });
 
   function nextSlideVert() {
+    console.log("Last Slide", lastSlide2);
     console.log("next", startSlide2);
     // slideContainerVert.animate({"margin-left": "-="+xOffset2},animationSpeed2, function(){
     slideContainerVert.animate({"margin-top": "-="+xOffset2},animationSpeed2, function(){
         startSlide2++;
-        checkPosition();
+        checkPositionVert();
       });
   }
   function previousSlideVert() {
+    console.log("Last Slide", lastSlide2);
+    console.log("next", startSlide2);
     if (startSlide2 > 1) {
       console.log("previous", startSlide2);
       slideContainerVert.animate({"margin-top": "+="+xOffset2},animationSpeed2, function(){
         startSlide2 = startSlide2 - 1;
-        checkPosition();
+        checkPositionVert();
         });
     }
   }

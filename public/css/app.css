@@ -490,18 +490,19 @@
   background-color: #1b1b1b;
   position: relative;
   width: 50%;
+  border-radius: 30px 30px 40px 40px;
+  padding: 1rem;
+  padding-bottom: 0px;
 }
 
 #slider-vert-container #slider-vert-box {
   display: flex;
   width: 100%;
   height: 100%;
-  background-color: #1b1b1b;
   overflow: hidden;
 }
 
 #slider-vert-container #slider-vert-box li {
-  width: 245px;
   height: 320px;
   text-align: center;
   line-height: 320px;
@@ -522,6 +523,17 @@
   margin-right: auto;
   display: flex;
   flex-direction: column;
+}
+
+#slider-vert-container .credit-img-div {
+  height: 100%;
+  width: 100%;
+}
+
+#slider-vert-container .credit-img {
+  margin-bottom: 10%;
+  margin-top: 0px;
+  height: calc(100% - 1rem);
 }
 
 body {
