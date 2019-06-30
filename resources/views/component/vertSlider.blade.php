@@ -111,7 +111,7 @@ for (val in vertCredits) {
   let guardSlide2 = false;
 
   //configuration
-  var xOffset2 = 300;
+  var xOffset2 = 320;
   var animationSpeed2 = 1000;
   var slideSpeed2 = 2500;
   var startSlide2 = 1;
