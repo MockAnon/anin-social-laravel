@@ -5,6 +5,19 @@
     margin: 0 auto;
     background-color: #1b1b1b;
     position: relative;
+    .credit-img {
+        height: 100%;
+        width: auto;
+        transition: transform 2s;
+    }
+
+    .credit-img:hover {
+        transform: scale(1.2);
+        z-index: 1;
+        display: block;
+        position: absolute;
+        // right: 0;
+    }
 }
 
 #slider-box {
@@ -34,19 +47,6 @@
     float: left;
     font-size: 48px;
     // position: relative;
-}
-.credit-img {
-    height: 100%;
-    width: auto;
-    transition: transform 2s;
-}
-
-.credit-img:hover {
-    transform: scale(1.2);
-    z-index: 1;
-    display: block;
-    position: absolute;
-    // right: 0;
 }
 
 #parent {

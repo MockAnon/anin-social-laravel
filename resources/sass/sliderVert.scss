@@ -8,7 +8,7 @@
     // margin: 0 auto;
     background-color: #1b1b1b;
     position: relative;
-    width: 50%;
+    // width: 50%;
     border-radius: 30px 30px 40px 40px;
 
     padding: 1rem;
@@ -70,4 +70,8 @@
         // height: 90%;
         height: calc(100% - 1rem);
     }
+}
+.vert-img {
+    width: 100%;
+    height: auto;
 }

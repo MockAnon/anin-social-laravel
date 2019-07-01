@@ -42,9 +42,9 @@ var outputVert = $('#vertParent');
 
 
 for (val in vertCredits) {
-  console.log("VERT CREDITS", vertCredits[val]['img'], val);
+  console.log("VERT CREDITS", vertCredits[val]['img-v'], val);
   
-  outputVert.append('<li><div class="credit-img-div"><img value=' + val + ' onclick="filmCreditModal('+ val +')" class="credit-img" src=' + vertCredits[val]['img'] + '></div></li>')
+  outputVert.append('<li><div class="credit-img-div"><img value=' + val + ' onclick="vertSliderData('+ val +')" class="credit-img" src=' + vertCredits[val]['img'] + '></div></li>')
 }
 
   console.log("test", vertCredits);
@@ -118,6 +118,31 @@ for (val in vertCredits) {
         checkPositionVert();
         });
     }
+  }
+
+
+  function filmCreditModal (event) {
+    modalSlider.style.display = "block";
+    
+        console.log("EVENT VALUE", objectCredits[event].title)
+    
+        console.log("EVENT VALUE", objectCredits[event].img)
+    
+        console.log("EVENT VALUE", objectCredits[event].description)
+
+        $("#filmModalTitle").text(objectCredits[event].title);
+        // $("#filmModalDescription").text(objectCredits[event].img);
+        $("#filmModalDescription").text(objectCredits[event].description);
+        $("#filmModalImage").attr("src", objectCredits[event].img);
+  
+  }
+
+  function vertSliderData(data) {
+    console.log (vertCredits[data]);
+    $(".vert-title").text(vertCredits[data].title);
+    $(".vert-description").text(vertCredits[data].description);
+    // $(".vert-img").text(vertCredits[data].img);
+    $(".vert-img").attr("src", vertCredits[data].img);
   }
 
 

@@ -19,7 +19,7 @@
 
 <div class="row">
     <div class="col">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/6OKm4HMqyHY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/6OKm4HMqyHY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
 </div>
 
@@ -31,8 +31,18 @@
 <h1> Design </h1>
 <p> Design is the best thing ever </p>
 @include('component.imageAccordion')
+    <div class="flex-row-to-col"> 
+        <div style="width: 50%;">
+            <h1> Title </h1> 
+            <p> this text </p>
+            <hr>
+            <h1 class="vert-title"> Title </h1> 
+            <p class="vert-description"> this text </p>
+            <img src="" class="vert-img">
+        </div>
+        @include('component.vertSlider')
 
-@include('component.vertSlider')
+    </div> 
 @include('component.slider')
 
 
