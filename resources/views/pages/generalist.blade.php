@@ -5,8 +5,12 @@
 @endsection
 
 @section('content')
-<div class="">
+<div class="display-info">
     <div class="">
+        <button onclick="toggleReel()" class="toggle-reel-button"> 
+            <p> Play Reel </p> 
+            <img class="toggle-reel-img" style="" src="img/icons/play_reel.svg"> 
+        </button>
         <h3> Designer, Compositor, and CG Generalist </h3>
         <p>
         My names Jaron D. Evans, I'm currently working as Front-End Developer and UI Designer. <br>
@@ -17,9 +21,14 @@
     </div>
 </div>
 
-<div class="row">
+<div class="row display-reel">
     <div class="col">
-        <iframe width="100%" height="315" src="https://www.youtube.com/embed/6OKm4HMqyHY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <button onclick="toggleReel()" class="toggle-reel-button"> 
+            <p> Play Reel </p> 
+            <img class="toggle-reel-img" src="img/icons/return_icon.svg"> 
+        </button>
+        <!-- <button onclick="toggleReel()" style="height:6rem; width: auto;"> <p> Return </p> <img style="width: auto; height: 4rem;" src="img/icons/return_icon.svg"> </button> -->
+        <iframe class="video" width="100%" height="315" src="https://www.youtube.com/embed/6OKm4HMqyHY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
 </div>
 
@@ -48,3 +57,27 @@
 
 
 @endsection
+
+<script> 
+
+let globalToggleReel = false;
+
+
+
+
+function toggleReel() {
+    if (globalToggleReel == false) {
+        console.log("this sort of works. false");
+        $('.display-info').css('display','none');
+        $('.display-reel').css('display','block');
+        return globalToggleReel = true;
+    }
+    if (globalToggleReel == true) {
+        console.log("this sort of works. true");
+        $('.display-reel').css('display','none');
+        $('.display-info').css('display','block');
+        return globalToggleReel = false;
+    }
+}
+
+</script>

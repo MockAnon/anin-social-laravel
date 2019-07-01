@@ -551,6 +551,32 @@
   height: auto;
 }
 
+.display-reel {
+  display: none;
+}
+
+.toggle-reel-button {
+  height: 6rem;
+  width: auto;
+  height: auto;
+  display: flex;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 3;
+}
+
+.toggle-reel-img {
+  width: auto;
+  height: 4rem;
+  margin: auto;
+  margin-left: 1rem;
+}
+
+.video {
+  z-index: 0;
+}
+
 body {
   font-size: 1.6rem;
   height: 100%;
