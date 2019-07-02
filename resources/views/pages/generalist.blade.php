@@ -7,11 +7,14 @@
 @section('content')
 <div class="display-info">
     <div class="">
-        <button onclick="toggleReel()" class="toggle-reel-button"> 
-            <p> Play Reel </p> 
-            <img class="toggle-reel-img" style="" src="img/icons/play_reel.svg"> 
-        </button>
-        <h3> Designer, Compositor, and CG Generalist </h3>
+        <div class="flex-row">
+
+            <h3> Designer, Compositor, and CG Generalist </h3>
+            <button onclick="toggleReel()" class="toggle-reel-button"> 
+                <p> Play Reel </p> 
+                <img class="toggle-reel-img" style="" src="img/icons/play_reel.svg"> 
+            </button>
+        </div>
         <p>
         My names Jaron D. Evans, I'm currently working as Front-End Developer and UI Designer. <br>
         I'm a graduate of both Seneca's Visual Effects for Film and Television program, as well as Sheridan's famous BAA Animation program. Over my carrier I have worked as a designer, ui designer, animator, cg generalist, and compositor accumillating over 20 film credits, attributing to multple apps, websites, and even winning a Canadian Screen Award. I've worked on projects such as: UFO Declassifed, Texas Rising, and Beast Farmer. I'm proficent with software such as: Nuke, Modo, Fusion, Maya, Mudbox, Z Brush, After Effects, Premier, Photoshop, Boujou, and Pftrack. Please feel free to send me a message regarding any potential employment opportunities. 
@@ -70,12 +73,14 @@ function toggleReel() {
         console.log("this sort of works. false");
         $('.display-info').css('display','none');
         $('.display-reel').css('display','block');
+        $('.video').attr('src', 'https://www.youtube.com/embed/6OKm4HMqyHY');
         return globalToggleReel = true;
     }
     if (globalToggleReel == true) {
         console.log("this sort of works. true");
         $('.display-reel').css('display','none');
         $('.display-info').css('display','block');
+        $('.video').attr('src', '/');
         return globalToggleReel = false;
     }
 }
