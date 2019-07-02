@@ -25,17 +25,21 @@
 </div>
 
 <div class="row display-reel">
-    <div class="col">
-        <button onclick="toggleReel()" class="toggle-reel-button"> 
+    <div style="position: relative;">
+        <button onclick="toggleReel()" class="toggle-reel-button position-reel-button"> 
             <p> Play Reel </p> 
             <img class="toggle-reel-img" src="img/icons/return_icon.svg"> 
         </button>
-        <!-- <button onclick="toggleReel()" style="height:6rem; width: auto;"> <p> Return </p> <img style="width: auto; height: 4rem;" src="img/icons/return_icon.svg"> </button> -->
-        <iframe class="video" width="100%" height="315" src="https://www.youtube.com/embed/6OKm4HMqyHY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe style="position: relative;" class="video" width="100%" height="315" src="https://www.youtube.com/embed/6OKm4HMqyHY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+        </iframe>
     </div>
 </div>
 
 @include('component.imageAccordion')
+
+@include('component.slider')
+
+<!-- design Section -->
 
  
 
@@ -55,7 +59,7 @@
         @include('component.vertSlider')
 
     </div> 
-@include('component.slider')
+
 
 
 
