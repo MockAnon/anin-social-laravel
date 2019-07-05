@@ -16,14 +16,14 @@
 
 <!-- Image Accordion -->
 <div class="accordion-container">
-  <div class="card" onclick="loadDevObject('1')">
+  <div class="card" onclick="loadDevObject('0')">
     <img src="https://upload.wikimedia.org/wikipedia/commons/d/d6/Cat_plotting_something_evil%21.jpg">
     <div class="card__head">
       Plotting Cat
     </div>
     <p class="card__copy">This is the text below</p>
   </div>
-  <div class="card" onclick="loadDevObject('2')">
+  <div class="card" onclick="loadDevObject('1')">
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/False_alarm_-a.jpg/1280px-False_alarm_-a.jpg">
     <div class="card__head">
       Angry Cat
@@ -60,9 +60,13 @@
   </div>
 </div>
 <!-- Image Accordion -->
-<img id="devImg" src="/"/>
-<h1 id="devTitle"> Title </h1>
-<p id="devDescription"> Description </p>
+<div class="flex-col">
+    <div>
+        <img id="devImg" src="/"/>
+    </div>
+    <h1 id="devTitle"> Title </h1>
+    <p id="devDescription"> Description </p>
+</div>
     
 @endsection
 
@@ -84,11 +88,11 @@ function loadDevObject (event) {
 
     console.log("this works");
     
-    console.log("EVENT VALUE", devObject[event].title)
+    console.log("EVENT VALUE", devObject[event].title);
 
-    console.log("EVENT VALUE", devObject[event].img)
+    console.log("EVENT VALUE", devObject[event].img);
 
-    console.log("EVENT VALUE", devObject[event].description)
+    console.log("EVENT VALUE", devObject[event].description);
 
     $("#devTitle").text(devObject[event].title);
     // $("#filmModalDescription").text(objectCredits[event].img);
