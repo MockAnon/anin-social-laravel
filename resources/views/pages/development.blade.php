@@ -21,10 +21,10 @@
 
 <!-- Image Accordion -->
 <div class="accordion-container">
-  <a class="card" onclick="loadDevObject('0')" href="#devTitle">
+<a class="card" onclick="loadDevObject('0')" href="#devTitle">
     <img src="https://upload.wikimedia.org/wikipedia/commons/d/d6/Cat_plotting_something_evil%21.jpg">
     <div class="card__head">
-      BeauteVite
+        <script> devObject[0].title </script>
     </div>
     <p class="card__copy">This is the text below</p>
     </a>
@@ -36,14 +36,6 @@
     </div>
     <p class="card__copy">This is the text below</p>
 </a>
-
-  <!-- <div class="card" onclick="loadDevObject('2')">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Neugierige-Katze.JPG/1280px-Neugierige-Katze.JPG">
-    <div class="card__head">
-      FIIN INC.
-    </div>
-    <p class="card__copy">This is the text below</p>
-  </div> -->
 
   <a class="card" onclick="loadDevObject('3')" href="#devTitle">
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Al_acecho_%289272124788%29.jpg/1280px-Al_acecho_%289272124788%29.jpg">
@@ -133,5 +125,9 @@ function loadDevObject (event) {
     $("#devImg").attr("src", devObject[event].img);
   
   }
+
+  let devAccordian = ``
+
+$(".accordion-container").append(devAccordian);
 
 </script>
