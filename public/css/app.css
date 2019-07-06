@@ -44,6 +44,10 @@
   background-color: red;
 }
 
+.flex-1-van {
+  flex: 1;
+}
+
 .flex-2 {
   flex: 2;
 }
@@ -584,6 +588,11 @@
 
 .video {
   z-index: 0;
+}
+
+#devImg {
+  width: 100%;
+  height: auto;
 }
 
 body {
