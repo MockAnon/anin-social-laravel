@@ -21,15 +21,16 @@
 
 <!-- Image Accordion -->
 <div class="accordion-container">
-<a class="card" onclick="loadDevObject('0')" href="#devTitle">
+
+<a id="devDiv00" class="card" onclick="loadDevObject('0')" href="#devTitle">
     <img src="https://upload.wikimedia.org/wikipedia/commons/d/d6/Cat_plotting_something_evil%21.jpg">
     <div class="card__head">
-        <script> devObject[0].title </script>
+        Title
     </div>
     <p class="card__copy">This is the text below</p>
-    </a>
+</a>
 
-  <a class="card" onclick="loadDevObject('1')" href="#devTitle">
+  <a id="devDiv01" class="card" onclick="loadDevObject('1')" href="#devTitle">
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/False_alarm_-a.jpg/1280px-False_alarm_-a.jpg">
     <div class="card__head">
       MoneyMate
@@ -37,7 +38,7 @@
     <p class="card__copy">This is the text below</p>
 </a>
 
-  <a class="card" onclick="loadDevObject('3')" href="#devTitle">
+  <a id="devDiv02" class="card" onclick="loadDevObject('2')" href="#devTitle">
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Al_acecho_%289272124788%29.jpg/1280px-Al_acecho_%289272124788%29.jpg">
     <div class="card__head">
       Furrever
@@ -45,7 +46,7 @@
     <p class="card__copy">This is the text below</p>
 </a>
 
-  <a class="card" onclick="loadDevObject('4')" href="#devTitle">
+  <a id="devDiv03" class="card" onclick="loadDevObject('3')" href="#devTitle">
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Mimi%26Tigsi.jpg/1280px-Mimi%26Tigsi.jpg">
     <div class="card__head">
       Chatty App
@@ -53,7 +54,7 @@
     <p class="card__copy">This is the text below</p>
 </a>
 
-  <a class="card" onclick="loadDevObject('5')" href="#devTitle">
+  <a id="devDiv04" class="card" onclick="loadDevObject('4')" href="#devTitle">
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Mimi%26Tigsi.jpg/1280px-Mimi%26Tigsi.jpg">
     <div class="card__head">
       Scoodle
@@ -78,6 +79,8 @@
 </div>
     
 @endsection
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 
 <script>
 
@@ -126,8 +129,17 @@ function loadDevObject (event) {
   
   }
 
-  let devAccordian = ``
+//   let devAccordian = ``;
 
-$(".accordion-container").append(devAccordian);
+// function onLoadDev() {
+// }
+
+$(document).ready(function () {
+  //your code here
+  $("#devDiv00 .card__head").text(devObject[0].title);
+});
+
+onLoadDev();
+
 
 </script>
