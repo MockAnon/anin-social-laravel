@@ -224,7 +224,7 @@
 }
 
 #modalBtn:hover {
-  background-color: #75e1e2;
+  background-color: #1c768f;
   color: black;
   padding: 0.5rem 1rem;
   border-radius: 200%;
@@ -618,7 +618,7 @@ button {
   font-size: 1.6rem;
   padding: 0.5rem 1rem;
   border-radius: 0.2rem;
-  background-color: #75e1e2;
+  background-color: #1c768f;
   color: white;
   width: 100%;
   border: none;
@@ -629,6 +629,6 @@ button {
 
 button:hover {
   background-color: white;
-  color: #75e1e2;
+  color: #1c768f;
 }
 
