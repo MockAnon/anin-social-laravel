@@ -43,10 +43,10 @@
 
  
 
-
-<h1> Design </h1>
-<p> Design is the best thing ever </p>
-@include('component.imageAccordion')
+<div style="height: 100vh;">
+    <h1> Design </h1>
+    <p> Design is the best thing ever </p>
+    @include('component.imageAccordion')
     <div class="flex-row-to-col"> 
         <div style="width: 50%;">
             <h1> Title </h1> 
@@ -59,6 +59,7 @@
         @include('component.vertSlider')
 
     </div> 
+</div>
 
 
 
