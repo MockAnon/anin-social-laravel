@@ -44,13 +44,13 @@
  
 
 <div style="height: 100vh;">
-    <h1> Design </h1>
-    <p> Design is the best thing ever </p>
+
     @include('component.imageAccordion')
+    <p> Design, UX Design, Character Design, CGI, Rigging </p>
     <div class="flex-row-to-col"> 
         <div style="width: 50%;">
-            <h1> Title </h1> 
-            <p> this text </p>
+            <h1> Design </h1>
+            <p> Design is the best thing ever </p>
             <hr>
             <h1 class="vert-title"> Title </h1> 
             <p class="vert-description"> this text </p>
