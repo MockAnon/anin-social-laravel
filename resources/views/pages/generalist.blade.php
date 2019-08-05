@@ -50,7 +50,7 @@
     <div class="flex-row-to-col"> 
         <div style="width: 50%;">
             <h1> Design </h1>
-            <p> Design is the best thing ever </p>
+            <p> Design  </p>
             <hr>
             <h1 class="vert-title"> Title </h1> 
             <p class="vert-description"> this text </p>
