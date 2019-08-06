@@ -8,12 +8,21 @@
 <div class="row">
     <div class="col">
         <h3> Development </h3>
-        <p> With over a year of experience as a developer and roughly five years of Compositing experience. Experience with languages such as Javascript, PHP, Python, CSS, Sass and HTML. I also have experience with Frameworks such as Laravel, Angular, Ionic, and React Native. I have experience with lybraries such as jQuery and React.
+        <p> Over a year of experience as a developer and roughly five years of Compositing experience. Experience with languages such as Javascript, PHP, Python, CSS, Sass and HTML. I also have experience with Frameworks such as Laravel, Angular, Ionic, and React Native. I have experience with lybraries such as jQuery and React.
          DATABASES, SYSTEMS, CMS: MongoDB, SQL, Git, Firebase, Google FireStore </p>
 
         <p> Resume: https://resume.creddle.io/resume/4h5yjn4rlty </p>
         <p> LinkedIn: https://www.linkedin.com/in/jarondevans/ </p>
         <p> GitHub: https://github.com/mockanon </p>
+        <div class="row">
+          <div class="col">
+            <img src="{{ asset('/img/icons/linkedin-logo.svg') }}">
+          </div>
+          <div class="col">
+          </div>
+          <div class="col">
+          </div>
+        </div>
         
     </div>
 </div>
