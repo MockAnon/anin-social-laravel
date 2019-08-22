@@ -16,8 +16,10 @@
         <p> GitHub: https://github.com/mockanon </p>
         <div class="row">
           <div class="col">
-            <img src="{{ asset('/img/icons/linkedin-logo.svg') }}">
-          </div>
+            <img src="{{url('img/icons/linkedin-logo.svg')}}">
+            <img src="http://localhost:8000/img/icons/linkedin-logo.svg">
+            <!-- <img src="img/icons/linkedin-logo.svg"> -->
+          
           <div class="col">
           </div>
           <div class="col">
@@ -116,7 +118,7 @@ let devObject = [{
 //   },
   { img: "img/designCredits/credit2.jpg",
     title: "Furrever",
-    description: "goes here" ,
+    description: "I mostly worked on the front-end and design for this group project, though I did also assist with the back-end." ,
     date: 'Sept 2018 - Dec 2018',
   },
   { img: "img/designCredits/credit2.jpg",
