@@ -36,7 +36,7 @@
     <div class="card__head">
         Title
     </div>
-    <p class="card__copy">This is the text below</p>
+    <p class="card__copy"> </p>
 </a>
 
   <a id="devDiv01" class="card" onclick="loadDevObject('1')" href="#devTitle">
@@ -55,7 +55,7 @@
     <p class="card__copy">This is the text below</p>
 </a>
 
-  <a id="devDiv03" class="card" onclick="loadDevObject('3')" href="#devTitle">
+  <!-- <a id="devDiv03" class="card" onclick="loadDevObject('3')" href="#devTitle">
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Mimi%26Tigsi.jpg/1280px-Mimi%26Tigsi.jpg">
     <div class="card__head">
       Chatty App
@@ -69,7 +69,7 @@
       Scoodle
     </div>
     <p class="card__copy">This is the text below</p>
-</a>
+</a> -->
 
 </div>
 <!-- Image Accordion -->
@@ -96,11 +96,19 @@
 let devObject = [{
     img: "img/designCredits/credit1.jpg",
     title: "BeautyVite",
-    description: "goes here"
+    description: `In 2019, I began working on BeauteVite. I was the UX Designer and Front-End Developer on this project. I was also responsible for updating the companies style guides and was fortunate to have been able to do some hiring for the project. <br> <br>
+    I gained more experience in React, the PHP framework Laravel, and Adobe XD.
+
+    I was also responsible for the companies sound editing and design.
+    `,
+    date: 'Jan 2019 - Current',
   },
   { img: "img/designCredits/credit2.jpg",
     title: "MoneyMate",
-    description: "goes here"
+    description: `In 2018, MoneyMate was the first App I worked on as a professional Developer, I also did some UI Design and Regular Design. While working on this project I gained experience in React, Redux, Ionic, and UX. <br> <br>
+    I also gained experience as I revised the front end and recreated their mascot. Building the company an amazing 3D assest that they are still using today.
+    `,
+    date: 'Sept 2018 - Dec 2018',
   },
 //   { img: "img/designCredits/credit2.jpg",
 //     title: "FIIN INC",
@@ -108,15 +116,18 @@ let devObject = [{
 //   },
   { img: "img/designCredits/credit2.jpg",
     title: "Furrever",
-    description: "goes here"
+    description: "goes here" ,
+    date: 'Sept 2018 - Dec 2018',
   },
   { img: "img/designCredits/credit2.jpg",
     title: "Chatty App",
-    description: "Work I did "
+    description: "Work I did ",
+    date: 'Sept 2018 - Dec 2018',
   },
   { img: "img/designCredits/credit2.jpg",
     title: "Scoodle",
-    description: "Blah Blah Blah"
+    description: "Blah Blah Blah",
+    date: 'Sept 2018 - Dec 2018',
   },
 ]
 
@@ -146,6 +157,15 @@ function loadDevObject (event) {
 $(document).ready(function () {
   //your code here
   $("#devDiv00 .card__head").text(devObject[0].title);
+  $("#devDiv00 .card__copy").text(devObject[0].date);
+
+  $("#devDiv01 .card__head").text(devObject[1].title);
+  $("#devDiv01 .card__copy").text(devObject[1].date);
+
+  $("#devDiv02 .card__head").text(devObject[2].title);
+  $("#devDiv02 .card__copy").text(devObject[2].date);
+
+  
 });
 
 onLoadDev();
