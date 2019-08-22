@@ -5,6 +5,12 @@
   }
 }
 
+.flex-row-start {
+  display: flex;
+  flex-direction: start;
+  justify-content: start;
+}
+
 .flex-row {
   display: flex;
   flex-direction: row;
@@ -630,5 +636,14 @@ button {
 button:hover {
   background-color: white;
   color: #1c768f;
+}
+
+.social-icon-row img {
+  height: 3rem;
+  width: auto;
+}
+
+.padding-0-40 {
+  padding: 0px 40px;
 }
 

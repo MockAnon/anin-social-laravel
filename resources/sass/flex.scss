@@ -5,6 +5,12 @@
     }
 }
 
+.flex-row-start {
+    display: flex;
+    flex-direction: start;
+    justify-content: start;
+}
+
 .flex-row {
     display: flex;
     flex-direction: row;

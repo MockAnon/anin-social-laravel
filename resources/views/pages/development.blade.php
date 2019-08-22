@@ -11,19 +11,22 @@
         <p> Over a year of experience as a developer and roughly five years of Compositing experience. Experience with languages such as Javascript, PHP, Python, CSS, Sass and HTML. I also have experience with Frameworks such as Laravel, Angular, Ionic, and React Native. I have experience with lybraries such as jQuery and React.
          DATABASES, SYSTEMS, CMS: MongoDB, SQL, Git, Firebase, Google FireStore </p>
 
-        <p> Resume: https://resume.creddle.io/resume/4h5yjn4rlty </p>
-        <p> LinkedIn: https://www.linkedin.com/in/jarondevans/ </p>
-        <p> GitHub: https://github.com/mockanon </p>
-        <div class="row">
-          <div class="col">
-            <img src="{{url('img/icons/linkedin-logo.svg')}}">
-            <img src="http://localhost:8000/img/icons/linkedin-logo.svg">
-            <!-- <img src="img/icons/linkedin-logo.svg"> -->
-          
-          <div class="col">
+        <p> </p>
+        <p> </p>
+        <p>  </p>
+        <div class="flex-row-start social-icon-row">
+          <div class="">
+            <a href="https://www.linkedin.com/in/jarondevans/"> <img src="{{url('img/icons/linkedin-logo.svg')}}" alt="profile Pic"> LinkedIn </a>
           </div>
-          <div class="col">
+
+          <div class="padding-0-40">
+            <a href="https://github.com/mockanon"> <img src="{{url('img/icons/github-logo.svg')}}" alt="profile Pic"> GitHub </a>
           </div>
+
+          <div class="">
+            <a href="https://resume.creddle.io/resume/4h5yjn4rlty"> <img src="{{url('img/icons/return_icon.svg')}}" alt="profile Pic"> Resume </a>
+          </div>
+
         </div>
         
     </div>
