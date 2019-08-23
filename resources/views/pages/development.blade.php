@@ -28,7 +28,7 @@
           </div>
 
           <div class="padding-0-40">
-            <a href="https://github.com/mockanon"> <img src="{{url('img/icons/email-icon.svg')}}" alt="profile Pic"> GitHub </a>
+            <a id="modalDevBtn"> <img src="{{url('img/icons/email-icon.svg')}}" alt="profile Pic"> Contact Me </a>
           </div>
 
         </div>
@@ -178,6 +178,12 @@ $(document).ready(function () {
 });
 
 onLoadDev();
+
+var devBtn = document.getElementById("modalDevBtn");
+
+devBtn.onclick = function() {
+  modal.style.display = "block";
+}
 
 
 </script>
