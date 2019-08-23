@@ -24,7 +24,11 @@
           </div>
 
           <div class="">
-            <a href="https://resume.creddle.io/resume/4h5yjn4rlty"> <img src="{{url('img/icons/return_icon.svg')}}" alt="profile Pic"> Resume </a>
+            <a href="https://resume.creddle.io/resume/4h5yjn4rlty"> <img src="{{url('img/icons/profiles.svg')}}" alt="profile Pic"> Resume </a>
+          </div>
+
+          <div class="padding-0-40">
+            <a href="https://github.com/mockanon"> <img src="{{url('img/icons/email-icon.svg')}}" alt="profile Pic"> GitHub </a>
           </div>
 
         </div>
