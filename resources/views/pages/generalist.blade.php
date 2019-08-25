@@ -35,7 +35,9 @@
     </div>
 </div>
 
-@include('component.imageAccordion')
+
+
+@include('component.reelBreakdown')
 
 @include('component.slider')
 
