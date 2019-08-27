@@ -7,8 +7,8 @@
 
 .flex-row-start {
   display: flex;
-  flex-direction: start;
-  justify-content: start;
+  flex-direction: flex-start;
+  justify-content: flex-start;
 }
 
 .flex-row {
@@ -534,10 +534,12 @@
 
 .accordion-container-reel .card {
   flex: 1;
-  transition: all 1s ease-in-out;
-  height: 40vmin;
+  transition: max-height 20s ease;
+  max-height: 260px;
+  height: 260px;
   position: relative;
   overflow: hidden;
+  transition: all 2s ease;
 }
 
 .accordion-container-reel .card .card__head {
@@ -669,6 +671,11 @@
 
 .accordion-container-reel .card:not(:nth-child(6)) {
   margin-right: 1em;
+}
+
+.height0 {
+  max-height: 0px !important;
+  transition: all 2000s ease !important;
 }
 
 #slider-vert-container {
