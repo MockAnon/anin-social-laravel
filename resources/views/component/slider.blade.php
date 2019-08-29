@@ -127,12 +127,12 @@ var output = $('#sliderParent');
 
 
 for (val in objectCredits) {
-  console.log(objectCredits[val]['img'], val);
+  // console.log(objectCredits[val]['img'], val);
   
   output.append('<li><img value=' + val + ' onclick="filmCreditModal('+ val +')" class="credit-img" src=' + objectCredits[val]['img'] + '></li>')
 }
 
-  console.log("test", objectCredits);
+  // console.log("test", objectCredits);
   let guardSlide = false;
 
   //configuration
@@ -179,7 +179,7 @@ for (val in objectCredits) {
   });
 
   function nextSlide() {
-    console.log("next", startSlide);
+    // console.log("next", startSlide);
     slideContainer.animate({"margin-left": "-="+xOffset},animationSpeed, function(){
         startSlide++;
         checkPosition();
@@ -187,7 +187,7 @@ for (val in objectCredits) {
   }
   function previousSlide() {
     if (startSlide > 1) {
-      console.log("previous", startSlide);
+      // console.log("previous", startSlide);
       slideContainer.animate({"margin-left": "+="+xOffset},animationSpeed, function(){
         startSlide = startSlide - 1;
         checkPosition();
@@ -199,11 +199,11 @@ for (val in objectCredits) {
   $('#slider-container').hover(function(){
     $(this).addClass('active');
     guardSlide = true;
-    console.log(guardSlide);
+    // console.log(guardSlide);
     }, function(){
         $(this).removeClass('active');
         guardSlide = false;
-        console.log(guardSlide);
+        // console.log(guardSlide);
     })
 
   // $('#slider-container').mouseenter(function() {
@@ -244,11 +244,11 @@ for (val in objectCredits) {
   function filmCreditModal (event) {
     modalSlider.style.display = "block";
     
-        console.log("EVENT VALUE", objectCredits[event].title)
+        // console.log("EVENT VALUE", objectCredits[event].title)
     
-        console.log("EVENT VALUE", objectCredits[event].img)
+        // console.log("EVENT VALUE", objectCredits[event].img)
     
-        console.log("EVENT VALUE", objectCredits[event].description)
+        // console.log("EVENT VALUE", objectCredits[event].description)
 
         $("#filmModalTitle").text(objectCredits[event].title);
         // $("#filmModalDescription").text(objectCredits[event].img);

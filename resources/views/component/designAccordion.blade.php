@@ -2,7 +2,7 @@
   <div class="card">
     <img src="https://upload.wikimedia.org/wikipedia/commons/d/d6/Cat_plotting_something_evil%21.jpg">
     <div class="card__head">
-      Design
+
     </div>
     <p class="card__copy">This is the text below</p>
   </div>
@@ -16,7 +16,7 @@
   <div class="card">
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Neugierige-Katze.JPG/1280px-Neugierige-Katze.JPG">
     <div class="card__head">
-      Character Design
+      General
     </div>
     <p class="card__copy">This is the text below</p>
   </div>

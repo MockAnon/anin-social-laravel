@@ -42,12 +42,12 @@ var outputVert = $('#vertParent');
 
 
 for (val in vertCredits) {
-  console.log("VERT CREDITS", vertCredits[val]['img-v'], val);
+  // console.log("VERT CREDITS", vertCredits[val]['img-v'], val);
   
   outputVert.append('<li><div class="credit-img-div"><img value=' + val + ' onclick="vertSliderData('+ val +')" class="credit-img" src=' + vertCredits[val]['img'] + '></div></li>')
 }
 
-  console.log("test", vertCredits);
+  // console.log("test", vertCredits);
   let guardSlide2 = false;
 
   //configuration
@@ -63,7 +63,7 @@ for (val in vertCredits) {
   var slides = slideContainerVert.find("li");
 
   function checkPositionVert() {
-    console.log("Last Slide", lastSlide2);
+    // console.log("Last Slide", lastSlide2);
       if (startSlide2 >= lastSlide2) {
         startSlide2 = 1;
         // slideContainerVert.css("margin-left", "50px");
@@ -100,8 +100,8 @@ for (val in vertCredits) {
   // });
 
   function nextSlideVert() {
-    console.log("Last Slide", lastSlide2);
-    console.log("next", startSlide2);
+    // console.log("Last Slide", lastSlide2);
+    // console.log("next", startSlide2);
     // slideContainerVert.animate({"margin-left": "-="+xOffset2},animationSpeed2, function(){
     slideContainerVert.animate({"margin-top": "-="+xOffset2},animationSpeed2, function(){
         startSlide2++;
@@ -109,10 +109,10 @@ for (val in vertCredits) {
       });
   }
   function previousSlideVert() {
-    console.log("Last Slide", lastSlide2);
-    console.log("next", startSlide2);
+    // console.log("Last Slide", lastSlide2);
+    // console.log("next", startSlide2);
     if (startSlide2 > 1) {
-      console.log("previous", startSlide2);
+      // console.log("previous", startSlide2);
       slideContainerVert.animate({"margin-top": "+="+xOffset2},animationSpeed2, function(){
         startSlide2 = startSlide2 - 1;
         checkPositionVert();
@@ -124,11 +124,11 @@ for (val in vertCredits) {
   function filmCreditModal (event) {
     modalSlider.style.display = "block";
     
-        console.log("EVENT VALUE", objectCredits[event].title)
+        // console.log("EVENT VALUE", objectCredits[event].title)
     
-        console.log("EVENT VALUE", objectCredits[event].img)
+        // console.log("EVENT VALUE", objectCredits[event].img)
     
-        console.log("EVENT VALUE", objectCredits[event].description)
+        // console.log("EVENT VALUE", objectCredits[event].description)
 
         $("#filmModalTitle").text(objectCredits[event].title);
         // $("#filmModalDescription").text(objectCredits[event].img);
@@ -138,7 +138,7 @@ for (val in vertCredits) {
   }
 
   function vertSliderData(data) {
-    console.log (vertCredits[data]);
+    // console.log (vertCredits[data]);
     $(".vert-title").text(vertCredits[data].title);
     $(".vert-description").text(vertCredits[data].description);
     // $(".vert-img").text(vertCredits[data].img);

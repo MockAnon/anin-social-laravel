@@ -49,7 +49,7 @@
 
 <script>
 function toggleBreakdown() {
-  console.log("toggle");
+  // console.log("toggle");
   var x = document.getElementById("accordion-container-reel");
   var y = document.getElementById("accordion-container-reel").querySelectorAll(".card");
 
@@ -61,7 +61,7 @@ function toggleBreakdown() {
 
   
   if (x.style.display === "none") {
-    console.log("hide");
+    // console.log("hide");
     x.style.display = "flex";
     // y.style.height = "40vmin";
     y.forEach(function(element) {
@@ -73,7 +73,7 @@ function toggleBreakdown() {
     
 
   } else {
-    console.log("show");
+    // console.log("show");
     x.style.display = "none";
     // y.style.height = "0px";
     y.forEach(function(element) {

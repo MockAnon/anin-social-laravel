@@ -61,14 +61,14 @@ let globalToggleReel = false;
 
 function toggleReel() {
     if (globalToggleReel == false) {
-        console.log("this sort of works. false");
+        // console.log("this sort of works. false");
         $('.display-info').css('display','none');
         $('.display-reel').css('display','block');
         $('.video').attr('src', 'https://www.youtube.com/embed/6OKm4HMqyHY');
         return globalToggleReel = true;
     }
     if (globalToggleReel == true) {
-        console.log("this sort of works. true");
+        // console.log("this sort of works. true");
         $('.display-reel').css('display','none');
         $('.display-info').css('display','block');
         $('.video').attr('src', '/');

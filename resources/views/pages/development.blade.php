@@ -143,13 +143,13 @@ let devObject = [{
 function loadDevObject (event) {
     // modalSlider.style.display = "block";
 
-    console.log("this works");
+    // console.log("this works");
     
-    console.log("EVENT VALUE", devObject[event].title);
+    // console.log("EVENT VALUE", devObject[event].title);
 
-    console.log("EVENT VALUE", devObject[event].img);
+    // console.log("EVENT VALUE", devObject[event].img);
 
-    console.log("EVENT VALUE", devObject[event].description);
+    // console.log("EVENT VALUE", devObject[event].description);
 
     $("#devTitle").text(devObject[event].title);
     // $("#filmModalDescription").text(objectCredits[event].img);

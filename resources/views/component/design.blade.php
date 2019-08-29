@@ -2,7 +2,7 @@
 
     @include('component.designAccordion')
     <p> Design, UX Design, Character Design, CGI, Rigging </p>
-    <div class="flex-row-to-col"> 
+    <div class="flex-row-to-col" onload="assembleDesign()"> 
         <div style="width: 50%;">
             <h1> Design </h1>
             <p> Design  </p>
@@ -20,7 +20,18 @@
 let designPortfolio = [
   {title: Design}, 
   {title: UX Design},
-]
+];
+
+function assembleDesign() {
+  alert("ASSEMBLE");
+};
+
+assembleDesign();
+
+function getTitle(event){
+  console.log("123123123 this peee");
+  // event.insertAdjacentHTML( 'beforeend', str );
+}
 
 
 
