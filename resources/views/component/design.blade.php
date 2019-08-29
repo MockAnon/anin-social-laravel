@@ -28,11 +28,13 @@ function assembleDesign() {
 
 assembleDesign();
 
-function getTitle(event){
-  console.log("123123123 this peee");
-  // event.insertAdjacentHTML( 'beforeend', str );
-}
 
+
+$(document).ready(function() { 
+
+  console.log("123123123 this peee");
+
+});
 
 
 </script>
