@@ -13,7 +13,9 @@
         height: 40vmin;
         position: relative;
         overflow: hidden;
-        border: solid black 1px;
+        border: black solid 2px;
+        border-left: black solid 1px;
+        border-right: black solid 1px;
         .card__head {
             overflow: hidden;
             color: black;
