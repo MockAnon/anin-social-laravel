@@ -686,6 +686,10 @@
   overflow: hidden;
 }
 
+.accordion-container-design .card:hover {
+  border: rgba(255, 30, 173, 0.75) groove 2px;
+}
+
 .accordion-container-design .card {
   flex: 1;
   transition: all 1s ease-in-out;
