@@ -11,7 +11,8 @@
             <p class="vert-description"> this text </p>
             <img src="" class="vert-img">
         </div>
-        @include('component.vertSlider')
+        <!-- @include('component.vertSlider') -->
+        @include('component.designGallery')
 
     </div> 
 </div>
