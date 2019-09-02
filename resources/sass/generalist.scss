@@ -28,3 +28,23 @@
 .video {
     z-index: 0;
 }
+
+.design-credit-div {
+    animation-duration: 600ms;
+    margin: auto;
+    width: 25%;
+    height: auto;
+    padding: 0.4rem;
+    background: black;
+}
+
+.design-credit {
+    height: auto;
+    width: 100%;
+    // animation-name: card__head_anim;
+}
+
+.design-credit-div:hover {
+    transform: scale(1.2);
+    background: $pink;
+}

@@ -80,15 +80,37 @@ for (val in vertCredits) {
     }
   }
 
-  function nextSlideVert() {
+  // $(document).ready(function(){
+  //   var sliderInterval;
+  //   function startSlider(){
+  //     sliderInterval = setInterval(function(){
+  //         if (guardSlide2 == false) {
+  //         // console.log(slideContainerVert.animate({"margin-left": "-="+xOffset2}));
+  //       slideContainerVert.animate({"margin-left": "-="+xOffset2},animationSpeed2, function(){
+  //         startSlide2++;
+  //         checkPositionVert();
+  //       });
+  //     }
+  //     },slideSpeed2);
+  // };
+  // function stopSlider(){
+  //   clearInterval(sliderInterval);
+  // }
+  // startSlider();
+  // });
 
+  function nextSlideVert() {
+    // console.log("Last Slide", lastSlide2);
+    // console.log("next", startSlide2);
+    // slideContainerVert.animate({"margin-left": "-="+xOffset2},animationSpeed2, function(){
     slideContainerVert.animate({"margin-top": "-="+xOffset2},animationSpeed2, function(){
         startSlide2++;
         checkPositionVert();
       });
   }
   function previousSlideVert() {
-
+    // console.log("Last Slide", lastSlide2);
+    // console.log("next", startSlide2);
     if (startSlide2 > 1) {
       // console.log("previous", startSlide2);
       slideContainerVert.animate({"margin-top": "+="+xOffset2},animationSpeed2, function(){
@@ -101,6 +123,12 @@ for (val in vertCredits) {
 
   function filmCreditModal (event) {
     modalSlider.style.display = "block";
+    
+        // console.log("EVENT VALUE", objectCredits[event].title)
+    
+        // console.log("EVENT VALUE", objectCredits[event].img)
+    
+        // console.log("EVENT VALUE", objectCredits[event].description)
 
         $("#filmModalTitle").text(objectCredits[event].title);
         // $("#filmModalDescription").text(objectCredits[event].img);

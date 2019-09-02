@@ -1,11 +1,56 @@
-<div id="slider-vert-container">
-  <div id="slider-vert-box">
-    <ul id="vertParent">
-    </ul>
+<div class="accordion-container-design">
+  <div onclick="typeSliderData(0)" class="card">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d6/Cat_plotting_something_evil%21.jpg">
+    <div class="card__head" id="acordTitle00">
+
+    </div>
+    <!-- <p class="card__copy" id="acordCopy00">This is the text below</p> -->
   </div>
-  <button id="slide-foward-button" onclick="nextSlideVert()"> > </button>
-  <button id="slide-backward-button" onclick="previousSlideVert()"> < </button>
+  <div onclick="typeSliderData(1)" class="card">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/False_alarm_-a.jpg/1280px-False_alarm_-a.jpg">
+    <div class="card__head" id="acordTitle01">
+    </div>
+    <!-- <p class="card__copy" id="acordCopy01">This is the text below</p> -->
+  </div>
+  <div onclick="typeSliderData(2)" class="card">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Neugierige-Katze.JPG/1280px-Neugierige-Katze.JPG">
+    <div class="card__head" id="acordTitle02">
+    </div>
+    <!-- <p class="card__copy" id="acordCopy02">This is the text below</p> -->
+  </div>
+  <div onclick="typeSliderData(3)" class="card">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Al_acecho_%289272124788%29.jpg/1280px-Al_acecho_%289272124788%29.jpg">
+    <div class="card__head" id="acordTitle03">
+    </div>
+    <!-- <p class="card__copy" id="acordCopy03">This is the text below</p> -->
+  </div>
+  <div onclick="typeSliderData(4)" class="card">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Mimi%26Tigsi.jpg/1280px-Mimi%26Tigsi.jpg">
+    <div class="card__head" id="acordTitle04">
+    </div>
+    <!-- <p class="card__copy" id="acordCopy04">This is the text below</p> -->
+  </div>
+
 </div>
+
+<div class="flex-row-to-col" onload="assembleDesign()"> 
+  <div style="width: 50%;">
+      <h1> Design </h1>
+      <p> Design  </p>
+      <hr>
+      <h1 class="vert-title"> Title </h1> 
+      <p class="vert-description"> this text </p>
+      <img src="" class="vert-img">
+  </div>
+
+
+  <!-- <div id="slider-vert-container">
+    <div id="slider-vert-box"> -->
+  <div id="vertParent" style="max-height:700px; display: flex; flex-wrap: wrap; width: 50%; justify-content: space-between;">
+  </div>
+    <!-- </div>
+  </div> -->
+</div> 
 
 <script src="{{ asset('js/app.js') }}"></script>
 
@@ -35,19 +80,83 @@
     title: "Colossal",
     description: "goes here"
   },
-]
+];
+
+  let designPortfolio = [
+    {
+    title: 'Design',
+    copy: 'Design',
+    sub: [
+      {
+        img: "img/designCredits/credit1.jpg",
+        title: "Colossal",
+        description: "goes here"
+      },
+      { img: "img/designCredits/credit2.jpg",
+        title: "Colossal",
+        description: "goes here"
+      },
+      { img: "img/designCredits/credit3.jpg",
+        title: "Colossal",
+        description: "goes here"
+      },
+      { img: "img/designCredits/credit4.jpg",
+        title: "Colossal",
+        description: "goes here"
+      },
+      { img: "img/filmCredits/credit5.jpg",
+        title: "Colossal",
+        description: "goes here"
+      },
+      { img: "img/filmCredits/credit6.jpg",
+        title: "Colossal",
+        description: "goes here"
+        }
+        ]
+        }, 
+  {
+    title: 'UX Design',
+    copy: 'Design',
+    sub: [
+      { img: "img/filmCredits/credit5.jpg",
+        title: "Colossal",
+        description: "goes here"
+      },
+      { img: "img/filmCredits/credit6.jpg",
+        title: "Colossal",
+        description: "goes here"
+        }
+        ],
+    },
+  {
+    title: 'General',
+    copy: 'Design',
+    sub: [],
+    },
+  {
+    title: 'CGI',
+    copy: 'Design',
+    sub: [],
+    },
+  {
+    title: 'Rigging',
+    copy: 'Design',
+    sub: [],
+    }
+];
 
 // let out;
 var outputVert = $('#vertParent');
 
+let globalPortfolio = 0;
 
-for (val in vertCredits) {
-  // console.log("VERT CREDITS", vertCredits[val]['img-v'], val);
+// vertCredits
+for (val in designPortfolio[globalPortfolio].sub) {
   
-  outputVert.append('<li><div class="credit-img-div"><img value=' + val + ' onclick="vertSliderData('+ val +')" class="credit-img" src=' + vertCredits[val]['img'] + '></div></li>')
+  // outputVert.append('<div style="position:absolute;"><img value=' + val + ' onclick="vertSliderData('+ val +')" class="credit-img" src=' + vertCredits[val]['img'] + '></div>')
+  outputVert.append('<div style="margin: auto; width: 25%; height: auto; padding: .4rem; background: black;" class="design-credit-div"><img style="height: auto; width: 100%;" value=' + val + ' onclick="vertSliderData('+ val +')" class="design-credit" src=' + vertCredits[val]['img'] + '></div>')
 }
 
-  // console.log("test", vertCredits);
   let guardSlide2 = false;
 
   //configuration
@@ -63,75 +172,25 @@ for (val in vertCredits) {
   var slides = slideContainerVert.find("li");
 
   function checkPositionVert() {
-    // console.log("Last Slide", lastSlide2);
       if (startSlide2 >= lastSlide2) {
         startSlide2 = 1;
-        // slideContainerVert.css("margin-left", "50px");
         slideContainerVert.animate({"margin-top": "0px"},animationSpeed2, function(){
         startSlide2 = 1;
       });
     }
     if (startSlide2 <= 1) {
         startSlide2 = 1;
-        // slideContainerVert.css("margin-left", "50px");
         slideContainerVert.animate({"margin-top": "0px"},animationSpeed2, function(){
         startSlide2 = 1;
       });
     }
   }
 
-  // $(document).ready(function(){
-  //   var sliderInterval;
-  //   function startSlider(){
-  //     sliderInterval = setInterval(function(){
-  //         if (guardSlide2 == false) {
-  //         // console.log(slideContainerVert.animate({"margin-left": "-="+xOffset2}));
-  //       slideContainerVert.animate({"margin-left": "-="+xOffset2},animationSpeed2, function(){
-  //         startSlide2++;
-  //         checkPositionVert();
-  //       });
-  //     }
-  //     },slideSpeed2);
-  // };
-  // function stopSlider(){
-  //   clearInterval(sliderInterval);
-  // }
-  // startSlider();
-  // });
-
-  function nextSlideVert() {
-    // console.log("Last Slide", lastSlide2);
-    // console.log("next", startSlide2);
-    // slideContainerVert.animate({"margin-left": "-="+xOffset2},animationSpeed2, function(){
-    slideContainerVert.animate({"margin-top": "-="+xOffset2},animationSpeed2, function(){
-        startSlide2++;
-        checkPositionVert();
-      });
-  }
-  function previousSlideVert() {
-    // console.log("Last Slide", lastSlide2);
-    // console.log("next", startSlide2);
-    if (startSlide2 > 1) {
-      // console.log("previous", startSlide2);
-      slideContainerVert.animate({"margin-top": "+="+xOffset2},animationSpeed2, function(){
-        startSlide2 = startSlide2 - 1;
-        checkPositionVert();
-        });
-    }
-  }
 
 
   function filmCreditModal (event) {
     modalSlider.style.display = "block";
-    
-        // console.log("EVENT VALUE", objectCredits[event].title)
-    
-        // console.log("EVENT VALUE", objectCredits[event].img)
-    
-        // console.log("EVENT VALUE", objectCredits[event].description)
-
         $("#filmModalTitle").text(objectCredits[event].title);
-        // $("#filmModalDescription").text(objectCredits[event].img);
         $("#filmModalDescription").text(objectCredits[event].description);
         $("#filmModalImage").attr("src", objectCredits[event].img);
   
@@ -144,6 +203,43 @@ for (val in vertCredits) {
     // $(".vert-img").text(vertCredits[data].img);
     $(".vert-img").attr("src", vertCredits[data].img);
   }
+
+  function typeSliderData(data) {
+    console.log("OUT",data);
+    globalPortfolio = data;
+
+    outputVert.empty();
+
+    for (val in designPortfolio[globalPortfolio].sub) {
+      outputVert.append('<div style="margin: auto; width: 25%; height: auto; padding: .4rem; background: black;" class="design-credit-div"><img style="height: auto; width: 100%;" value=' + val + ' onclick="vertSliderData('+ val +')" class="design-credit" src=' + vertCredits[val]['img'] + '></div>')
+    }
+
+  }
+
+
+
+$(document).ready(function() { 
+
+  // console.log("123123123 this peee");
+  alert("Assemble");
+
+  $("#acordTitle00").text(designPortfolio[0].title);
+  $("#acordTitle01").text(designPortfolio[1].title);
+  $("#acordTitle02").text(designPortfolio[2].title);
+  $("#acordTitle03").text(designPortfolio[3].title);
+  $("#acordTitle04").text(designPortfolio[4].title);
+
+  
+
+  // $("#acordCopy00").text(designPortfolio[0].copy);
+  // $("#acordCopy01").text(designPortfolio[1].copy);
+  // $("#acordCopy02").text(designPortfolio[2].copy);
+  // $("#acordCopy03").text(designPortfolio[3].copy);
+  // $("#acordCopy04").text(designPortfolio[4].copy);
+
+  
+
+});
 
 
 </script>

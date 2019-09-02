@@ -917,6 +917,27 @@
   z-index: 0;
 }
 
+.design-credit-div {
+  -webkit-animation-duration: 600ms;
+          animation-duration: 600ms;
+  margin: auto;
+  width: 25%;
+  height: auto;
+  padding: 0.4rem;
+  background: black;
+}
+
+.design-credit {
+  height: auto;
+  width: 100%;
+}
+
+.design-credit-div:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  background: #f66d9b;
+}
+
 #devImg {
   width: 100%;
   height: auto;
