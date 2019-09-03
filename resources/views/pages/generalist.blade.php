@@ -14,6 +14,9 @@
                 <p> Play Reel </p> 
                 <img class="toggle-reel-img" style="" src="img/icons/play_reel.svg"> 
             </button>
+            <div id="button-reel-breakdown" onclick="toggleBreakdown()" style="margin: 1rem 0px;"> 
+                <p id="reel-copy" style="margin:0px; padding:10px;"> Reel Breakdown </p>
+            </div>
         </div>
         <p>
         My names Jaron D. Evans, I'm currently working as Front-End Developer and UI Designer. <br>

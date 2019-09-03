@@ -33,52 +33,61 @@
 
 </div>
 
-<div class="flex-row-to-col" onload="assembleDesign()"> 
+<div id="design-op1" class="flex-row-to-col" onload="assembleDesign()"> 
   <div style="width: 50%;">
-      <h1> Design </h1>
-      <p> Design  </p>
-      <hr>
-      <h1 class="vert-title"> Title </h1> 
-      <p class="vert-description"> this text </p>
-      <img src="" class="vert-img">
+      <h1 id="design-title"> Design </h1>
+      <p id="design-copy"> Design  </p>
+     
   </div>
-
-
-  <!-- <div id="slider-vert-container">
-    <div id="slider-vert-box"> -->
   <div id="vertParent" style="max-height:700px; display: flex; flex-wrap: wrap; width: 50%; justify-content: space-between;">
   </div>
-    <!-- </div>
-  </div> -->
 </div> 
+
+<div class="flex-row-to-col">
+  <div style="width: 100%;">
+    <hr>
+  </div>  
+</div>
+
+<div id="design-op2" class="flex-row-to-col">
+  <div style="width: 50%;">
+    <button onclick="returnGallery()"> Back </button>
+    <h1 id="design-clicked-title"> Design Title </h1>
+    <p id="design-clicked-copy"> Design  </p>
+
+  </div>
+  <div style="width: 50%;">
+    <img src="" class="vert-img">
+  </div>
+</div>
 
 <script src="{{ asset('js/app.js') }}"></script>
 
 <script>
   let vertCredits = [{
     img: "img/designCredits/credit1.jpg",
-    title: "Colossal",
+    title: "Colossal 1",
     description: "goes here"
   },
   { img: "img/designCredits/credit2.jpg",
-    title: "Colossal",
-    description: "goes here"
+    title: "Colossal2",
+    description: "goes here2"
   },
   { img: "img/designCredits/credit3.jpg",
-    title: "Colossal",
-    description: "goes here"
+    title: "Colossal3",
+    description: "goes here3"
   },
   { img: "img/designCredits/credit4.jpg",
-    title: "Colossal",
-    description: "goes here"
+    title: "Colossal4",
+    description: "goes here4"
   },
   { img: "img/filmCredits/credit5.jpg",
-    title: "Colossal",
-    description: "goes here"
+    title: "Colossal5",
+    description: "goes he5555re"
   },
   { img: "img/filmCredits/credit6.jpg",
-    title: "Colossal",
-    description: "goes here"
+    title: "Colossal666",
+    description: "goes h666ere"
   },
 ];
 
@@ -89,28 +98,28 @@
     sub: [
       {
         img: "img/designCredits/credit1.jpg",
-        title: "Colossal",
-        description: "goes here"
+        title: "Colossal0",
+        description: "goes here0"
       },
       { img: "img/designCredits/credit2.jpg",
-        title: "Colossal",
-        description: "goes here"
+        title: "Colossal1",
+        description: "goes here1"
       },
       { img: "img/designCredits/credit3.jpg",
-        title: "Colossal",
-        description: "goes here"
+        title: "Colossal2",
+        description: "goes here2"
       },
       { img: "img/designCredits/credit4.jpg",
-        title: "Colossal",
-        description: "goes here"
+        title: "Colossal3",
+        description: "goes here3"
       },
       { img: "img/filmCredits/credit5.jpg",
-        title: "Colossal",
-        description: "goes here"
+        title: "Colossal4",
+        description: "goes here4"
       },
       { img: "img/filmCredits/credit6.jpg",
-        title: "Colossal",
-        description: "goes here"
+        title: "Colossal5",
+        description: "goes here5"
         }
         ]
         }, 
@@ -119,12 +128,12 @@
     copy: 'Design',
     sub: [
       { img: "img/filmCredits/credit5.jpg",
-        title: "Colossal",
-        description: "goes here"
+        title: "Colossal Peezy00",
+        description: "goes here00"
       },
       { img: "img/filmCredits/credit6.jpg",
-        title: "Colossal",
-        description: "goes here"
+        title: "Colossal Peezy01",
+        description: "goes here01"
         }
         ],
     },
@@ -198,9 +207,17 @@ for (val in designPortfolio[globalPortfolio].sub) {
 
   function vertSliderData(data) {
     // console.log (vertCredits[data]);
-    $(".vert-title").text(vertCredits[data].title);
-    $(".vert-description").text(vertCredits[data].description);
-    // $(".vert-img").text(vertCredits[data].img);
+    // $(".vert-title").text(vertCredits[data].title);
+    // $(".vert-description").text(vertCredits[data].description);
+
+    console.log("DATA KEY", data, " ", globalPortfolio, " ", designPortfolio[globalPortfolio].sub[data].title, designPortfolio[globalPortfolio].sub[data].description);
+
+    $("#design-clicked-title").text(designPortfolio[globalPortfolio].sub[data].title);
+    $("#design-clicked-copy").text(designPortfolio[globalPortfolio].sub[data].description);
+
+    $("#design-op1").css('display','none');
+    $("#design-op2").css('display','flex');
+
     $(".vert-img").attr("src", vertCredits[data].img);
   }
 
@@ -209,11 +226,25 @@ for (val in designPortfolio[globalPortfolio].sub) {
     globalPortfolio = data;
 
     outputVert.empty();
+    $("#design-title").text(designPortfolio[globalPortfolio].title);
+    $("#design-copy").text(designPortfolio[globalPortfolio].description);
+
+    $("#design-op1").css('display','flex');
+    $("#design-op2").css('display','none');
+
+
+
+
 
     for (val in designPortfolio[globalPortfolio].sub) {
       outputVert.append('<div style="margin: auto; width: 25%; height: auto; padding: .4rem; background: black;" class="design-credit-div"><img style="height: auto; width: 100%;" value=' + val + ' onclick="vertSliderData('+ val +')" class="design-credit" src=' + vertCredits[val]['img'] + '></div>')
     }
 
+  }
+
+  function returnGallery() {
+    $("#design-op1").css('display','flex');
+    $("#design-op2").css('display','none');
   }
 
 

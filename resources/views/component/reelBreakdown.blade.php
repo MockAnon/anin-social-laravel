@@ -1,6 +1,6 @@
-<div id="button-reel-breakdown" onclick="toggleBreakdown()" style="margin: 1rem 0px;"> 
+<!-- <div id="button-reel-breakdown" onclick="toggleBreakdown()" style="margin: 1rem 0px;"> 
     <p id="reel-copy" style="margin:0px; padding:10px;"> Reel Breakdown </p>
-</div>
+</div> -->
 
 <div id="accordion-container-reel" class="accordion-container-reel" style="display: none;">
   <div class="card">
