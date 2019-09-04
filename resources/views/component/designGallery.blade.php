@@ -94,7 +94,7 @@
   let designPortfolio = [
     {
     title: 'Design',
-    copy: 'Design',
+    copy: 'Why hire a designer with only design experience when you have hire a designer that can take your work from start to finish.',
     sub: [
       {
         img: "img/designCredits/credit1.jpg",
