@@ -16,6 +16,8 @@
             </button>
             <div id="button-reel-breakdown" onclick="toggleBreakdown()" style="margin: 1rem 0px;"> 
                 <p id="reel-copy" style="margin:0px; padding:10px;"> Reel Breakdown </p>
+                <img class="toggle-reel-img" style="" src="img/icons/gallery.svg">
+                @include('component.reelBreakdown') 
             </div>
         </div>
         <p>
@@ -40,7 +42,7 @@
 
 
 
-@include('component.reelBreakdown')
+
 
 @include('component.slider')
 

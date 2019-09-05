@@ -1,49 +1,47 @@
-<!-- <div id="button-reel-breakdown" onclick="toggleBreakdown()" style="margin: 1rem 0px;"> 
-    <p id="reel-copy" style="margin:0px; padding:10px;"> Reel Breakdown </p>
-</div> -->
-
-<div id="accordion-container-reel" class="accordion-container-reel" style="display: none;">
-  <div class="card">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d6/Cat_plotting_something_evil%21.jpg">
-    <div class="card__head">
-      Plotting Cat
+<div style="position:absolute;  right:5; width: 400%; z-index:5;">
+  <div id="accordion-container-reel" class="accordion-container-reel" style="display: none;">
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/d/d6/Cat_plotting_something_evil%21.jpg">
+      <div class="card__head">
+        Plotting Cat
+      </div>
+      <p class="card__copy">This is the text below</p>
     </div>
-    <p class="card__copy">This is the text below</p>
-  </div>
-  <div class="card">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/False_alarm_-a.jpg/1280px-False_alarm_-a.jpg">
-    <div class="card__head">
-      Angry Cat
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/False_alarm_-a.jpg/1280px-False_alarm_-a.jpg">
+      <div class="card__head">
+        Angry Cat
+      </div>
+      <p class="card__copy">This is the text below</p>
     </div>
-    <p class="card__copy">This is the text below</p>
-  </div>
-  <div class="card">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Neugierige-Katze.JPG/1280px-Neugierige-Katze.JPG">
-    <div class="card__head">
-      Curious Cat
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Neugierige-Katze.JPG/1280px-Neugierige-Katze.JPG">
+      <div class="card__head">
+        Curious Cat
+      </div>
+      <p class="card__copy">This is the text below</p>
     </div>
-    <p class="card__copy">This is the text below</p>
-  </div>
-  <div class="card">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Al_acecho_%289272124788%29.jpg/1280px-Al_acecho_%289272124788%29.jpg">
-    <div class="card__head">
-      Prowling Cat
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Al_acecho_%289272124788%29.jpg/1280px-Al_acecho_%289272124788%29.jpg">
+      <div class="card__head">
+        Prowling Cat
+      </div>
+      <p class="card__copy">This is the text below</p>
     </div>
-    <p class="card__copy">This is the text below</p>
-  </div>
-  <div class="card">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Mimi%26Tigsi.jpg/1280px-Mimi%26Tigsi.jpg">
-    <div class="card__head">
-      Sleepy Cat
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Mimi%26Tigsi.jpg/1280px-Mimi%26Tigsi.jpg">
+      <div class="card__head">
+        Sleepy Cat
+      </div>
+      <p class="card__copy">This is the text below</p>
     </div>
-    <p class="card__copy">This is the text below</p>
-  </div>
-  <div class="card">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Mimi%26Tigsi.jpg/1280px-Mimi%26Tigsi.jpg">
-    <div class="card__head">
-      Sleepy Cat
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Mimi%26Tigsi.jpg/1280px-Mimi%26Tigsi.jpg">
+      <div class="card__head">
+        Sleepy Cat
+      </div>
+      <p class="card__copy">This is the text below</p>
     </div>
-    <p class="card__copy">This is the text below</p>
   </div>
 </div>
 
@@ -69,7 +67,7 @@ function toggleBreakdown() {
       // element.style.height = "260px";
       element.classList.remove("height0");
     });
-    buttonReel.style.margin = "0px";
+    // buttonReel.style.margin = "0px";
     
 
   } else {
@@ -82,7 +80,7 @@ function toggleBreakdown() {
 
     });
 
-    buttonReel.style.margin = "1rem 0px 1rem 0px";
+    // buttonReel.style.margin = "1rem 0px 1rem 0px";
 
   }
 

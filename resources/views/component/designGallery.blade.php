@@ -33,7 +33,7 @@
 
 </div>
 
-<div id="design-op1" class="flex-row-to-col" onload="assembleDesign()"> 
+<div id="design-op1" class="flex-row-to-col display-none" onload="assembleDesign()"> 
   <div style="width: 50%;">
       <h1 id="design-title"> Design </h1>
       <p id="design-copy"> Design  </p>
@@ -44,14 +44,14 @@
 </div> 
 
 <div class="flex-row-to-col">
-  <div style="width: 100%;">
-    <hr>
+  <div style="width: 100%; height: 2rem;">
+  
   </div>  
 </div>
 
-<div id="design-op2" class="flex-row-to-col">
+<div id="design-op2" class="flex-row-to-col display-none">
   <div style="width: 50%;">
-    <button onclick="returnGallery()"> Back </button>
+    <button onclick="returnGallery()"> <img src="{{ asset('img/x.svg') }}" class="vert-img"> </button>
     <h1 id="design-clicked-title"> Design Title </h1>
     <p id="design-clicked-copy"> Design  </p>
 
