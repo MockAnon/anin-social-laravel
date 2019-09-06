@@ -1,5 +1,6 @@
 #slider-container {
     width: 100%;
+    height: 10rem;
     // max-width: 960px; old
     max-width: 1275px;
     margin: 0 auto;
@@ -9,6 +10,9 @@
         height: 100%;
         width: auto;
         transition: transform 2s;
+        // z-index: 20;
+        position: absolute;
+        // display: block;
     }
 
     .credit-img:hover {
@@ -22,6 +26,7 @@
 
 #slider-box {
     width: 100%;
+    height: 100%;
     // height: 320px;
     background-color: #1b1b1b;
     overflow: hidden;
@@ -69,4 +74,7 @@
     // width: 300px;
     width: 100px;
     transform: translate(0, -50%);
+}
+#sliderParent {
+    margin-top: 0px;
 }
