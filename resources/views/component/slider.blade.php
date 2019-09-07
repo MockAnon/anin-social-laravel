@@ -140,7 +140,8 @@ for (val in objectCredits) {
   var animationSpeed = 1000;
   var slideSpeed = 2500;
   var startSlide = 1;
-  var lastSlide = objectCredits.length / 1.5;
+  // var lastSlide = objectCredits.length / 1.5;
+  var lastSlide = 2;
   //cache the DOM
   var slider = $("#slider-box");
   var slideContainer = slider.find("ul");

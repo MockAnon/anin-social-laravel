@@ -263,7 +263,7 @@
           transform: scale(1.2);
   z-index: 1;
   display: block;
-  position: absolute;
+  position: block;
 }
 
 #slider-box {
@@ -281,7 +281,7 @@
 }
 
 #slider-box li {
-  width: 105px;
+  width: 110px;
   height: 320px;
   display: block;
   text-align: center;

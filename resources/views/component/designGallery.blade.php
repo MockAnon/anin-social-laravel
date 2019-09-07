@@ -174,6 +174,7 @@ for (val in designPortfolio[globalPortfolio].sub) {
   var slideSpeed2 = 2500;
   var startSlide2 = 1;
   var lastSlide2 = vertCredits.length;
+  // var lastSlide2 = 2;
 
   //cache the DOM
   var sliderVert = $("#slider-vert-box");
@@ -202,8 +203,7 @@ for (val in designPortfolio[globalPortfolio].sub) {
         $("#filmModalTitle").text(objectCredits[event].title);
         $("#filmModalDescription").text(objectCredits[event].description);
         $("#filmModalImage").attr("src", objectCredits[event].img);
-  
-  }
+  };
 
   function vertSliderData(data) {
     // console.log (vertCredits[data]);
@@ -219,7 +219,7 @@ for (val in designPortfolio[globalPortfolio].sub) {
     $("#design-op2").css('display','flex');
 
     $(".vert-img").attr("src", vertCredits[data].img);
-  }
+  };
 
   function typeSliderData(data) {
     console.log("OUT",data);
@@ -240,12 +240,12 @@ for (val in designPortfolio[globalPortfolio].sub) {
       outputVert.append('<div style="margin: auto; width: 25%; height: auto; padding: .4rem; background: black;" class="design-credit-div"><img style="height: auto; width: 100%;" value=' + val + ' onclick="vertSliderData('+ val +')" class="design-credit" src=' + vertCredits[val]['img'] + '></div>')
     }
 
-  }
+  };
 
   function returnGallery() {
     $("#design-op1").css('display','flex');
     $("#design-op2").css('display','none');
-  }
+  };
 
 
 
