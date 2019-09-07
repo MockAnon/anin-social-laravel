@@ -30,7 +30,6 @@
     </div>
     <!-- <p class="card__copy" id="acordCopy04">This is the text below</p> -->
   </div>
-
 </div>
 
 <div id="design-op1" class="flex-row-to-col display-none" onload="assembleDesign()"> 
@@ -54,8 +53,8 @@
     <button onclick="returnGallery()"> <img src="{{ asset('img/x.svg') }}" class="vert-img"> </button>
     <h1 id="design-clicked-title"> Design Title </h1>
     <p id="design-clicked-copy"> Design  </p>
-
   </div>
+  
   <div style="width: 50%;">
     <img src="" class="vert-img">
   </div>
