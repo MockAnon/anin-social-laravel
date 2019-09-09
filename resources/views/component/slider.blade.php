@@ -126,22 +126,24 @@
 var output = $('#sliderParent');
 
 
-for (val in objectCredits) {
-  // console.log(objectCredits[val]['img'], val);
-  
-  output.append('<li><img value=' + val + ' onclick="filmCreditModal('+ val +')" class="credit-img" src=' + objectCredits[val]['img'] + '></li>')
-}
+
+
+function appendToArray(){
+  for (val in objectCredits) {
+    output.append('<li><img value=' + val + ' onclick="filmCreditModal('+ val +')" class="credit-img" src=' + objectCredits[val]['img'] + '></li>')
+  }
+};
 
   // console.log("test", objectCredits);
   let guardSlide = false;
 
   //configuration
-  var xOffset = 300;
-  var animationSpeed = 1000;
-  var slideSpeed = 2500;
-  var startSlide = 1;
+  var xOffset = 110;
+  var animationSpeed = 2500;
+  var slideSpeed = 3500;
+  var startSlide = 0;
   // var lastSlide = objectCredits.length / 1.5;
-  var lastSlide = 2;
+  var lastSlide = objectCredits.length;
   //cache the DOM
   var slider = $("#slider-box");
   var slideContainer = slider.find("ul");
@@ -149,24 +151,38 @@ for (val in objectCredits) {
 
   function checkPosition() {
       if (startSlide >= lastSlide) {
-        startSlide = 1;
-        // slideContainer.css("margin-left", "50px");
-        slideContainer.animate({"margin-left": "35px"},animationSpeed, function(){
+        // startSlide = 1;
+        slideContainer.css("margin-left", "0px");
+        // slideContainer.animate({"margin-left": "35px"},animationSpeed, function(){
+      //   slideContainer.animate({"margin-left": "0px"},animationSpeed, function(){
+      // });
         startSlide = 0;
-      });
     }
   }
 
   $(document).ready(function(){
+    slideContainer.css("margin-left", "0px");
+    appendToArray();
+    appendToArray();
     var sliderInterval;
     function startSlider(){
       sliderInterval = setInterval(function(){
+        console.log("guardSlide", guardSlide);
           if (guardSlide == false) {
           // console.log(slideContainer.animate({"margin-left": "-="+xOffset}));
-        slideContainer.animate({"margin-left": "-="+xOffset},animationSpeed, function(){
-          startSlide++;
-          checkPosition();
-        });
+          console.log("currentSlide", startSlide, "lastSlide", lastSlide);
+            if (startSlide >= lastSlide) {
+              slideContainer.css("margin-left", "0px");
+              startSlide = 0;
+            } else {
+              slideContainer.animate({"margin-left": "-="+xOffset},animationSpeed, function(){
+              });
+              startSlide++;
+
+            }
+
+            // checkPosition();
+       
       }
       },slideSpeed);
   };
