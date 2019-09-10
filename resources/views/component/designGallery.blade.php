@@ -50,7 +50,7 @@
 
 <div id="design-op2" class="flex-row-to-col display-none">
   <div style="width: 50%;">
-    <button onclick="returnGallery()"> <img src="{{ asset('img/x.svg') }}" class="vert-img"> </button>
+    <button style="width: auto;" onclick="returnGallery()"> <img src="{{ asset('img/x.svg') }}" id="return-button"> </button>
     <h1 id="design-clicked-title"> Design Title </h1>
     <p id="design-clicked-copy"> Design  </p>
   </div>

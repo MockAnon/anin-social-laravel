@@ -318,6 +318,10 @@
   margin-left: 0px;
 }
 
+#design-op1 {
+  padding-top: 3rem;
+}
+
 .accordion-container {
   display: flex;
   justify-content: center;
@@ -945,6 +949,11 @@
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
   background: #f66d9b;
+}
+
+#return-button {
+  height: 2rem;
+  width: auto;
 }
 
 #devImg {
