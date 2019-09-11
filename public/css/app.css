@@ -243,8 +243,7 @@
 #slider-container {
   width: 100%;
   height: 12rem;
-  overflow-x: hidden;
-  overflow-y: visible;
+  overflow: hidden;
   max-width: 1275px;
   margin: 0 auto;
   position: relative;
@@ -296,7 +295,7 @@
   position: absolute;
   right: 0;
   top: 50%;
-  height: 100%;
+  height: 10rem;
   width: 20px;
   -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%);
@@ -307,7 +306,7 @@
   position: absolute;
   left: 0;
   top: 50%;
-  height: 100%;
+  height: 10rem;
   width: 20px;
   -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%);
