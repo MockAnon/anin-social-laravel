@@ -20,7 +20,7 @@
 
     .credit-img:hover {
         transform: scale(1.2);
-        z-index: 1;
+        z-index: 4;
         // display: block;
         // position: absolute;
         // position: block;
@@ -37,7 +37,7 @@
     // overflow-x: hidden;
     // overflow-y: visible;
     margin-top: 1rem;
-    margin-bottom: 1rem;
+    // margin-bottom: 1rem;
 }
 
 #slider-box ul {
@@ -77,6 +77,7 @@
     width: 20px;
     transform: translate(0, -50%);
     border-radius: 0px;
+    z-index: 1;
 }
 #slide-backward-button {
     position: absolute;
@@ -89,6 +90,7 @@
     width: 20px;
     transform: translate(0, -50%);
     border-radius: 0px;
+    z-index: 1;
 }
 #sliderParent {
     height: 10rem;

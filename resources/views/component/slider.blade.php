@@ -20,7 +20,7 @@
           <h1 id="filmModalTitle"> </h1>
           <p id="filmModalDescription"> </p>
         </div>
-        <div >
+        <div style="width:50%;">
           <img class="img-width-100-height-auto" id="filmModalImage" src=""/>
         </div>
       </div>
@@ -199,7 +199,8 @@ function appendToArray(){
     // console.log("next", startSlide);
     slideContainer.animate({"margin-left": "-="+xOffset},animationSpeed, function(){
         startSlide++;
-        checkPosition();
+        // checkPosition();
+        console.log(startSlide);
       });
   }
   function previousSlide() {
@@ -207,7 +208,8 @@ function appendToArray(){
       // console.log("previous", startSlide);
       slideContainer.animate({"margin-left": "+="+xOffset},animationSpeed, function(){
         startSlide = startSlide - 1;
-        checkPosition();
+        console.log(startSlide);
+        // checkPosition();
         });
     }
   }
@@ -249,17 +251,20 @@ function appendToArray(){
 
   spanSlider.onclick = function() {
     modalSlider.style.display = "none";
+    guardSlide = false;
   }
 
   // When the user clicks anywhere outside of the modalSlider, close it
   window.onclick = function(event) {
     if (event.target == modalSlider) {
       modalSlider.style.display = "none";
+      guardSlide = false;
     }
   }
 
   function filmCreditModal (event) {
     modalSlider.style.display = "block";
+    guardSlide = true;
     
         // console.log("EVENT VALUE", objectCredits[event].title)
     
