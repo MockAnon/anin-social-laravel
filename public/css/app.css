@@ -290,11 +290,37 @@
   margin-bottom: 0px;
 }
 
-#slide-foward-button {
+#slide-foward-div {
   position: absolute;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
   right: 0;
   top: 50%;
+}
+
+#slide-foward-button {
+  font-size: 1.2rem;
+  padding: 0px;
+  margin: 0px;
+  position: relative;
+  opacity: 0.8;
+  height: 4rem;
+  border-radius: 0px;
+  z-index: 1;
+}
+
+#slide-foward-button :hover {
+  opacity: 1;
   height: 10rem;
+}
+
+#slide-backward-button {
+  font-size: 1.2rem;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  opacity: 0.8;
+  height: 4rem;
   width: 20px;
   -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%);
@@ -302,16 +328,8 @@
   z-index: 1;
 }
 
-#slide-backward-button {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  height: 10rem;
-  width: 20px;
-  -webkit-transform: translate(0, -50%);
-          transform: translate(0, -50%);
-  border-radius: 0px;
-  z-index: 1;
+#slide-backward-button :hover {
+  opacity: 1;
 }
 
 #sliderParent {
@@ -345,9 +363,11 @@
 }
 
 .accordion-container .card .card__head {
+  opacity: 0.8;
   overflow: hidden;
   color: black;
   background: rgba(255, 30, 173, 0.75);
+  background: #fa991c;
   padding: 0.5em;
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
@@ -386,6 +406,7 @@
 }
 
 .accordion-container .card:hover .card__head {
+  opacity: 0.8;
   text-align: center;
   bottom: calc(100% - 4em);
   color: white;
@@ -405,11 +426,12 @@
   0% {
     width: 100%;
     min-width: 100%;
-    opacity: 100;
+    opacity: 0.8;
     -webkit-transform: rotate(-90deg);
             transform: rotate(-90deg);
     color: black;
     background: rgba(255, 30, 173, 0.75);
+    background: #fa991c;
     font-size: 1em;
     height: auto;
   }
@@ -421,6 +443,7 @@
             transform: rotate(-90deg);
     color: black;
     background: rgba(255, 30, 173, 0.75);
+    background: #fa991c;
     font-size: 1em;
     min-width: 100%;
   }
@@ -456,11 +479,12 @@
   0% {
     width: 100%;
     min-width: 100%;
-    opacity: 100;
+    opacity: 0.8;
     -webkit-transform: rotate(-90deg);
             transform: rotate(-90deg);
     color: black;
     background: rgba(255, 30, 173, 0.75);
+    background: #fa991c;
     font-size: 1em;
     height: auto;
   }
@@ -472,6 +496,7 @@
             transform: rotate(-90deg);
     color: black;
     background: rgba(255, 30, 173, 0.75);
+    background: #fa991c;
     font-size: 1em;
     min-width: 100%;
   }
@@ -560,9 +585,11 @@
 }
 
 .accordion-container-reel .card .card__head {
+  opacity: 0.8;
   overflow: hidden;
   color: black;
   background: rgba(255, 30, 173, 0.75);
+  background: #fa991c;
   padding: 0.5em;
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
@@ -601,6 +628,7 @@
 }
 
 .accordion-container-reel .card:hover .card__head {
+  opacity: 0.8;
   text-align: center;
   bottom: calc(100% - 4em);
   color: white;
@@ -620,11 +648,12 @@
   0% {
     width: 100%;
     min-width: 100%;
-    opacity: 100;
+    opacity: 0.8;
     -webkit-transform: rotate(-90deg);
             transform: rotate(-90deg);
     color: black;
     background: rgba(255, 30, 173, 0.75);
+    background: #fa991c;
     font-size: 1em;
     height: auto;
   }
@@ -636,6 +665,7 @@
             transform: rotate(-90deg);
     color: black;
     background: rgba(255, 30, 173, 0.75);
+    background: #fa991c;
     font-size: 1em;
     min-width: 100%;
   }
@@ -703,7 +733,7 @@
 }
 
 .accordion-container-design .card:hover {
-  border: rgba(255, 30, 173, 0.75) groove 2px;
+  border: #fa991c groove 2px;
 }
 
 .accordion-container-design .card {
@@ -718,9 +748,11 @@
 }
 
 .accordion-container-design .card .card__head {
+  opacity: 0.8;
   overflow: hidden;
   color: black;
   background: rgba(255, 30, 173, 0.75);
+  background: #fa991c;
   padding: 0.5em;
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
@@ -762,6 +794,7 @@
 }
 
 .accordion-container-design .card:hover .card__head {
+  opacity: 0.8;
   text-align: center;
   bottom: calc(100% - 4em);
   color: white;
@@ -781,11 +814,12 @@
   0% {
     width: 100%;
     min-width: 100%;
-    opacity: 100;
+    opacity: 0.8;
     -webkit-transform: rotate(-90deg);
             transform: rotate(-90deg);
     color: black;
     background: rgba(255, 30, 173, 0.75);
+    background: #fa991c;
     font-size: 1em;
     height: auto;
   }
@@ -797,6 +831,7 @@
             transform: rotate(-90deg);
     color: black;
     background: rgba(255, 30, 173, 0.75);
+    background: #fa991c;
     font-size: 1em;
     min-width: 100%;
   }
@@ -967,6 +1002,7 @@
 body {
   font-size: 1.6rem;
   height: 100%;
+  background: #0b0c10;
 }
 
 .navbar-laravel {
@@ -987,7 +1023,7 @@ button {
   font-size: 1.6rem;
   padding: 0.5rem 1rem;
   border-radius: 0.2rem;
-  background-color: #1c768f;
+  background-color: #fa991c;
   color: white;
   width: 100%;
   border: none;
@@ -1012,5 +1048,14 @@ button:hover {
 
 .display-none {
   display: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+a {
+  color: #fbf3f2;
 }
 

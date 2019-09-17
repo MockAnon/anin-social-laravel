@@ -21,6 +21,7 @@
 body {
     font-size: 1.6rem;
     height: 100%;
+    background: $background;
 }
 
 .navbar-laravel {
@@ -40,7 +41,7 @@ button {
     font-size: 1.6rem;
     padding: 0.5rem 1rem;
     border-radius: 0.2rem;
-    background-color: $blue;
+    background-color: $primary;
     color: white;
     width: 100%;
     border: none;
@@ -65,4 +66,13 @@ button:hover {
 
 .display-none {
     display: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+a {
+    color: $font;
 }

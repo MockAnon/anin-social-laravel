@@ -16,9 +16,11 @@ body {
         position: relative;
         overflow: hidden;
         .card__head {
+            opacity: 0.8;
             overflow: hidden;
             color: black;
             background: rgba(255, 30, 173, 0.75);
+            background: $primary;
             padding: 0.5em;
             transform: rotate(-90deg);
             transform-origin: 0% 0%;
@@ -55,6 +57,7 @@ body {
                 filter: grayscale(0);
             }
             .card__head {
+                opacity: 0.8;
                 text-align: center;
                 // top: calc(100% - 2em);
                 bottom: calc(100% - 4em);
@@ -72,10 +75,12 @@ body {
                 0% {
                     width: 100%;
                     min-width: 100%;
-                    opacity: 100;
+
+                    opacity: 0.8;
                     transform: rotate(-90deg);
                     color: black;
                     background: rgba(255, 30, 173, 0.75);
+                    background: $primary;
                     font-size: 1em;
                     height: auto;
                 }
@@ -86,6 +91,7 @@ body {
                     transform: rotate(-90deg);
                     color: black;
                     background: rgba(255, 30, 173, 0.75);
+                    background: $primary;
                     font-size: 1em;
                     min-width: 100%;
                 }

@@ -3,8 +3,10 @@
     <ul id="sliderParent">
     </ul>
   </div>
-  <button id="slide-foward-button" onclick="nextSlide()"> > </button>
-  <button id="slide-backward-button" onclick="previousSlide()"> < </button>
+  <div id="slide-foward-div" style="">
+    <button style="position: relative;" id="slide-foward-button" onclick="nextSlide()">  <p style="flex-direction: column; display: flex; align-items: center;"> > </p>  </button>
+  </div>
+  <button id="slide-backward-button" onclick="previousSlide()">  </button>
 
   <!-- The Modal -->
   <div id="myModalSlider" class="modal">
