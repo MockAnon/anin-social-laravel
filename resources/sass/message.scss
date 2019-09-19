@@ -14,11 +14,17 @@
 
 /* Modal Content/Box */
 .modal-content {
-    background-color: #fefefe;
+    background-color: $black;
     padding: 20px;
-    border: 1px solid #888;
+    border: 1px solid #fa991c1a;
     width: 80%;
     margin: auto;
+    // h2 {
+    //     color: $primary;
+    // }
+    #filmModalTitle {
+        color: $primary;
+    }
     // position: absolute;
 }
 

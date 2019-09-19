@@ -187,11 +187,15 @@
 /* Modal Content/Box */
 
 .modal-content {
-  background-color: #fefefe;
+  background-color: #1d1d1d;
   padding: 20px;
-  border: 1px solid #888;
+  border: 1px solid #fa991c1a;
   width: 80%;
   margin: auto;
+}
+
+.modal-content #filmModalTitle {
+  color: #fa991c;
 }
 
 /* The Close Button */
