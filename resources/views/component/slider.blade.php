@@ -6,7 +6,9 @@
   <div id="slide-foward-div" style="">
     <button style="position: relative;" id="slide-foward-button" onclick="nextSlide()">  <p style="flex-direction: column; display: flex; align-items: center;"> > </p>  </button>
   </div>
-  <button id="slide-backward-button" onclick="previousSlide()">  </button>
+  <div id="slide-backward-div" style="">
+    <button style="position: relative;"  id="slide-backward-button" onclick="previousSlide()"> <p style="flex-direction: column; display: flex; align-items: center;"> < </p> </button>
+  </div>
 
   <!-- The Modal -->
   <div id="myModalSlider" class="modal">
