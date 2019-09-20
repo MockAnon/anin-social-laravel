@@ -2,6 +2,9 @@
     display: block;
     position: fixed;
     z-index: 1;
+    background: #ffffff6b;
+    padding: 0.5rem;
+    padding-bottom: 0.2rem;
     input {
         display: block;
         width: 40px;
@@ -19,6 +22,7 @@
         position: relative;
 
         background: #cdcdcd;
+        background: $primary;
         border-radius: 3px;
 
         z-index: 1;
@@ -78,4 +82,31 @@
             color: tomato;
         }
     }
+}
+
+//tooltip
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
 }

@@ -75,6 +75,9 @@
   display: block;
   position: fixed;
   z-index: 1;
+  background: #ffffff6b;
+  padding: 0.5rem;
+  padding-bottom: 0.2rem;
 }
 
 #menuToggle input {
@@ -94,6 +97,7 @@
   margin-bottom: 5px;
   position: relative;
   background: #cdcdcd;
+  background: #fa991c;
   border-radius: 3px;
   z-index: 1;
   -webkit-transform-origin: 4px 0px;
@@ -166,6 +170,31 @@
 
 #menu a :hover {
   color: tomato;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
 }
 
 .modal {
@@ -311,7 +340,7 @@
   height: 4rem;
   border-radius: 0px;
   z-index: 1;
-  transition: all 0.35s ease-in-out;
+  transition: all 1.1s ease-in-out;
 }
 
 #slide-foward-button:hover {
@@ -341,7 +370,7 @@
   height: 4rem;
   border-radius: 0px;
   z-index: 1;
-  transition: all 0.35s ease-in-out;
+  transition: all 1.1s ease-in-out;
 }
 
 #slide-backward-button:hover {
@@ -574,7 +603,7 @@
 }
 
 #button-reel-breakdown {
-  background-color: #1d1d1d;
+  background-color: #1c768f;
   color: white;
   text-align: center;
   padding: 0.2rem;
