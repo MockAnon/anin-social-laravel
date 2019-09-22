@@ -5,7 +5,9 @@
 @endsection
 
 @section('content')
+
 <div id="generalist-top">
+
     <div class="display-info">
         <div class="">
             <div class="flex-row">
@@ -61,7 +63,7 @@
 
 @endsection
 
-<script> 
+<script type="application/javascript"> 
 
 let globalToggleReel = false;
 
@@ -84,5 +86,12 @@ function toggleReel() {
         return globalToggleReel = false;
     }
 }
+
+
+
+
+
+
+
 
 </script>
