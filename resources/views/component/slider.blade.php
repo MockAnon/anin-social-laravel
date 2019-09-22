@@ -137,6 +137,18 @@ function appendToArray(){
   }
 };
 
+function appendToArray(){
+  for (val in objectCredits) {
+    output.append('<li><div class="tooltip"><img value=' + val + ' onclick="filmCreditModal('+ val +')" class="credit-img" src=' + objectCredits[val]['img'] + '><div class="tooltiptext">Tooltip text</div></div></li>')
+  }
+};
+
+// <div class="tooltip">Hover over me
+//     <span class="tooltiptext">Tooltip text</span>
+// </div>
+
+
+
   // console.log("test", objectCredits);
   let guardSlide = false;
 

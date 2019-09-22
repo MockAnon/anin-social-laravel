@@ -180,17 +180,17 @@
 
 .tooltip .tooltiptext {
   visibility: hidden;
-  width: 120px;
-  background-color: black;
-  color: #fff;
+  background-color: red;
+  color: #fbf3f2;
+  background: red;
   text-align: center;
   border-radius: 6px;
   padding: 5px 0;
-  position: absolute;
   z-index: 1;
-  bottom: 100%;
+  top: 0;
   left: 50%;
   margin-left: -60px;
+  z-index: 30;
 }
 
 .tooltip:hover .tooltiptext {
@@ -384,6 +384,7 @@
 }
 
 #sliderParent {
+  z-index: 10;
   height: 10rem;
   width: 100%;
   margin-left: 0px;
