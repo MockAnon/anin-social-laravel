@@ -41,87 +41,87 @@
   let objectCredits = [{
     img: "img/filmCredits/credit1.jpg",
     title: "Colossal",
-    description: "goes here"
+    description: "goes here temp writting for clossal"
   },
   { img: "img/filmCredits/credit2.jpg",
     title: "Colossal",
-    description: "goes here"
+    description: "goes here goes here temp writting for clossal"
   },
   { img: "img/filmCredits/credit3.jpg",
     title: "Colossal",
-    description: "goes here"
+    description: "goes here goes here temp writting for clossal testing this thing blah blah blah"
   },
   { img: "img/filmCredits/credit4.jpg",
     title: "Colossal",
-    description: "goes here"
+    description: "goes here  temp writting for clossal testing this thing blah blah blah"
   },
   { img: "img/filmCredits/credit5.jpg",
     title: "Colossal",
-    description: "goes here"
+    description: "goes here  temp writting for clossal testing this thing blah blah blah"
   },
   { img: "img/filmCredits/credit6.jpg",
     title: "Colossal",
-    description: "goes here"
+    description: "goes here  temp writting for clossal testing this thing blah blah blah"
   },
   { img: "img/filmCredits/credit7.jpg",
     title: "Colossal",
-    description: "goes here"
+    description: "goes here  temp writting for clossal testing this thing blah blah blah"
   },
   { img: "img/filmCredits/credit8.jpg",
     title: "Colossal",
-    description: "goes here"
+    description: "goes here  temp writting for clossal testing this thing blah blah blah"
   },
   { img: "img/filmCredits/credit9.jpg",
     title: "Colossal",
-    description: "goes here"
+    description: "goes here  temp writting for clossal testing this thing blah blah blah"
   },
   { img: "img/filmCredits/credit10.jpg",
     title: "Colossal",
-    description: "goes here"
+    description: "goes here  temp writting for clossal testing this thing blah blah blah"
   },
   { img: "img/filmCredits/credit11.jpg",
     title: "Colossal",
-    description: "goes here"
+    description: "goes here  temp writting for clossal testing this thing blah blah blah"
   },
   { img: "img/filmCredits/credit12.jpg",
     title: "Colossal",
-    description: "goes here"
+    description: "goes here  temp writting for clossal testing this thing blah blah blah"
   },
   { img: "img/filmCredits/credit13.jpg",
     title: "Colossal",
-    description: "goes here"
+    description: "goes here  temp writting for clossal testing this thing blah blah blah"
   },
   { img: "img/filmCredits/credit14.jpg",
     title: "Colossal",
-    description: "goes here"
+    description: "goes here  temp writting for clossal testing this thing blah blah blah"
   },
   { img: "img/filmCredits/credit15.jpg",
     title: "Colossal",
-    description: "goes here"
+    description: "goes here  temp writting for clossal testing this thing blah blah blah"
   },
   { img: "img/filmCredits/credit16.jpg",
     title: "Colossal",
-    description: "goes here"
+    description: "goes here  temp writting for clossal testing this thing blah blah blah"
   },
   { img: "img/filmCredits/credit17.jpg",
     title: "Colossal",
-    description: "goes here"
+    description: "goes here  temp writting for clossal testing this thing blah blah blah"
   },
   { img: "img/filmCredits/credit18.jpg",
     title: "Colossal",
-    description: "goes here"
+    description: "goes here  temp writting for clossal testing this thing blah blah blah"
   },
   { img: "img/filmCredits/credit19.jpg",
     title: "Colossal",
-    description: "goes here"
+    description: "goes here  temp writting for clossal testing this thing blah blah blah"
   },
   { img: "img/filmCredits/credit20.jpg",
     title: "Colossal",
-    description: "goes here"
+    description: "goes here  temp writting for clossal testing this thing blah blah blah"
   },
   { img: "img/filmCredits/credit21.jpg",
     title: "Colossal",
-    description: "goes here"
+    description: "goes here  temp writting for clossal testing this thing blah blah blah"
   }
 ]
 
@@ -139,7 +139,7 @@ function appendToArray(){
 
 function appendToArray(){
   for (val in objectCredits) {
-    output.append('<li><div class="tooltip"><img value=' + val + ' onclick="filmCreditModal('+ val +')" class="credit-img" src=' + objectCredits[val]['img'] + '><div class="tooltiptext">Tooltip text</div></div></li>')
+    output.append('<li><div class="tooltip"><img value=' + val + ' onclick="filmCreditModal('+ val +')" class="credit-img" src=' + objectCredits[val]['img'] + '><div class="tooltiptext"> <div>' + objectCredits[val]['description'] + '</div></div></div></li>')
   }
 };
 
@@ -210,14 +210,12 @@ function appendToArray(){
   startSlider();
   });
 
-  function nextSlide() {
-    // console.log("next", startSlide);
-    slideContainer.animate({"margin-left": "-="+xOffset},animationSpeed, function(){
-        startSlide++;
-        // checkPosition();
-        console.log(startSlide);
-      });
-  }
+  // function nextSlide() {
+  //   slideContainer.animate({"margin-left": "-="+xOffset},animationSpeed, function(){
+  //       startSlide++;
+  //       console.log(startSlide);
+  //     });
+  // }
   function previousSlide() {
     if (startSlide > 1) {
       // console.log("previous", startSlide);
