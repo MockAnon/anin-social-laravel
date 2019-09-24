@@ -1,3 +1,5 @@
+<div id="slider-overlay"> <p> </p> </div>
+
 <div id="slider-container">
   <div id="slider-box">
     <ul id="sliderParent">
@@ -175,40 +177,40 @@ function appendToArray(){
     }
   }
 
+              // checkPosition();
+
+
   $(document).ready(function(){
     slideContainer.css("margin-left", "0px");
     appendToArray();
     appendToArray();
     var sliderInterval;
-    function startSlider(){
-      sliderInterval = setInterval(function(){
-        console.log("guardSlide", guardSlide);
-          if (guardSlide == false) {
-          // console.log(slideContainer.animate({"margin-left": "-="+xOffset}));
-          console.log("currentSlide", startSlide, "lastSlide", lastSlide);
-            if (startSlide >= lastSlide) {
-              slideContainer.css("margin-left", "0px");
-              startSlide = 0;
-            } else {
-              slideContainer.animate({"margin-left": "-="+xOffset},animationSpeed, function(){
-              });
-              startSlide++;
-
-            }
-
-            // checkPosition();
-       
-      }
-      },slideSpeed);
-  };
+  //   function startSlider(){
+  //     sliderInterval = setInterval(function(){
+  //       console.log("guardSlide", guardSlide);
+  //         if (guardSlide == false) {
+  //         console.log("currentSlide", startSlide, "lastSlide", lastSlide);
+  //           if (startSlide >= lastSlide) {
+  //             slideContainer.css("margin-left", "0px");
+  //             startSlide = 0;
+  //           } else {
+  //             slideContainer.animate({"margin-left": "-="+xOffset},animationSpeed, function(){
+  //             });
+  //             startSlide++;
+  //           }
+  //     }
+  //     },slideSpeed);
+  // };
   function stopSlider(){
     clearInterval(sliderInterval);
   }
-  //mouse events
-  // slider.on("mouseenter", stopSlider);
-  // slider.on("mouseleave", startSlider);
   startSlider();
   });
+  
+          // console.log(slideContainer.animate({"margin-left": "-="+xOffset}));
+    //mouse events
+  // slider.on("mouseenter", stopSlider);
+  // slider.on("mouseleave", startSlider);
 
   // function nextSlide() {
   //   slideContainer.animate({"margin-left": "-="+xOffset},animationSpeed, function(){
