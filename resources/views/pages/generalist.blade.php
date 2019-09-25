@@ -6,6 +6,12 @@
 
 @section('content')
 
+<div id="generalist-ol">
+    <img onclick="generalistClose();" id="generalist-close" src="img/x2.svg">
+    <h1> Hello </h1>
+    <p> Hello 2323 232 222 </p>
+</div>
+
 <div id="generalist-top">
 
     <div class="display-info">
@@ -89,6 +95,19 @@ function toggleReel() {
         return globalToggleReel = false;
     }
 }
+
+function generalistClose() {
+    $('#generalist-ol').hide();
+}
+
+function generalistOpen() {
+    $('#generalist-ol').show();
+    $(document).click(function(event) {
+        $('#generalist-ol').hide();
+    });
+}
+
+
 
 
 

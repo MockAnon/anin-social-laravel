@@ -1,37 +1,39 @@
 <div id="slider-overlay"> <p> </p> </div>
 
-<div id="slider-container">
-  <div id="slider-box">
-    <ul id="sliderParent">
-    </ul>
-  </div>
-  <div id="slide-foward-div" style="">
-    <button style="position: relative;" id="slide-foward-button" onclick="nextSlide()">  <p style="flex-direction: column; display: flex; align-items: center;"> > </p>  </button>
-  </div>
-  <div id="slide-backward-div" style="">
-    <button style="position: relative;"  id="slide-backward-button" onclick="previousSlide()"> <p style="flex-direction: column; display: flex; align-items: center;"> < </p> </button>
-  </div>
-
-  <!-- The Modal -->
-  <div id="myModalSlider" class="modal">
-
-    <!-- Modal content -->
-    <div class="modal-content">
-      <div class="flex-row-reverse">
-        <span id="modalSliderClose" class="close close-slider">&times;</span>
-      </div >
-
-      <div class="flex-row" style="max-height: 500px; width: 100%;">
-        <div>
-          <h1 id="filmModalTitle"> </h1>
-          <p id="filmModalDescription"> </p>
-        </div>
-        <div style="width:50%;">
-          <img class="img-width-100-height-auto" id="filmModalImage" src=""/>
-        </div>
-      </div>
+<div style="position: relative;">
+  <div id="slider-container">
+    <div id="slider-box">
+      <ul id="sliderParent">
+      </ul>
+    </div>
+    <div id="slide-foward-div" style="">
+      <button style="position: relative;" id="slide-foward-button" onclick="nextSlide()">  <p style="flex-direction: column; display: flex; align-items: center;"> > </p>  </button>
+    </div>
+    <div id="slide-backward-div" style="">
+      <button style="position: relative;"  id="slide-backward-button" onclick="previousSlide()"> <p style="flex-direction: column; display: flex; align-items: center;"> < </p> </button>
     </div>
 
+    <!-- The Modal -->
+    <div id="myModalSlider" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="flex-row-reverse">
+          <span id="modalSliderClose" class="close close-slider">&times;</span>
+        </div >
+
+        <div class="flex-row" style="max-height: 500px; width: 100%;">
+          <div>
+            <h1 id="filmModalTitle"> </h1>
+            <p id="filmModalDescription"> </p>
+          </div>
+          <div style="width:50%;">
+            <img class="img-width-100-height-auto" id="filmModalImage" src=""/>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </div>
 </div>
 
