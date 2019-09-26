@@ -6,7 +6,7 @@
 
 @section('content')
 
-<div id="generalist-ol">
+<div id="generalist-ol" class="generalist-ol-visible">
     <img onclick="generalistClose();" id="generalist-close" src="img/x2.svg">
     <h1> Hello </h1>
     <p> Hello 2323 232 222 </p>
@@ -96,14 +96,24 @@ function toggleReel() {
     }
 }
 
-function generalistClose() {
-    $('#generalist-ol').hide();
-}
+    function generalistClose() {
+        // $('#generalist-ol').hide();
+        
+        $('#generalist-ol').addClass("generalist-ol-visible");
+    }
 
-function generalistOpen() {
-    $('#generalist-ol').show();
-    $(document).click(function(event) {
-        $('#generalist-ol').hide();
+    function generalistOpen() {
+        // $('#generalist-ol').show();
+        $('#generalist-ol').removeClass("generalist-ol-visible");
+
+
+        $(document).click(function(event) {
+
+        console.log(!$(event.target).closest("#generalist-ol, #generalist-close").length);
+
+        if (!$(event.target).closest("#generalist-ol, #generalist-close").length) {
+            $(document).find("#generalist-ol").addClass("generalist-ol-visible");
+        }
     });
 }
 
