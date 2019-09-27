@@ -71,8 +71,11 @@
 
 
 @endsection
-
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 <script type="application/javascript"> 
+
+
+
 
 let globalToggleReel = false;
 
@@ -97,25 +100,31 @@ function toggleReel() {
 }
 
     function generalistClose() {
-        // $('#generalist-ol').hide();
+        $('#generalist-ol').hide();
         
-        $('#generalist-ol').addClass("generalist-ol-visible");
+        // $('#generalist-ol').addClass("generalist-ol-visible");
     }
 
     function generalistOpen() {
-        // $('#generalist-ol').show();
-        $('#generalist-ol').removeClass("generalist-ol-visible");
+        $('#generalist-ol').show();
+        // $(document).click(function(event) {
+        // console.log()
+        
+        // if (!$(event.target).closest("#generalist-ol, #generalist-close").length) {
+        //     $("body").find("#generalist-ol").addClass("generalist-ol-visible");
+        // }
+        // });
+
+        // $('#generalist-ol').removeClass("generalist-ol-visible");
+    }
 
 
-        $(document).click(function(event) {
 
-        console.log(!$(event.target).closest("#generalist-ol, #generalist-close").length);
-
-        if (!$(event.target).closest("#generalist-ol, #generalist-close").length) {
-            $(document).find("#generalist-ol").addClass("generalist-ol-visible");
+    $(document).click(function(event) {
+        if (!$(event.target).closest("#generalist-ol, #generalist-close, #accordion-container-reel").length) {
+            $('#generalist-ol').hide();
         }
     });
-}
 
 
 
