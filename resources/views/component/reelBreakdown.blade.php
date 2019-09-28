@@ -59,30 +59,27 @@ function toggleBreakdown() {
 
   
   if (x.style.display === "none") {
-    // console.log("hide");
     x.style.display = "flex";
-    // y.style.height = "40vmin";
     y.forEach(function(element) {
-
-      // element.style.height = "260px";
       element.classList.remove("height0");
     });
-    // buttonReel.style.margin = "0px";
-    
-
-  } else {
-    // console.log("show");
-    x.style.display = "none";
-    // y.style.height = "0px";
-    y.forEach(function(element) {
-      // element.style.height = "0px";
-      element.classList.add("height0");
-
+    $(document).click(function(event) {
+    if (!$(event.target).closest("#accordion-container-reel, #button-reel-breakdown").length) {
+      console.log("BOOM");
+        x.style.display = "none";
+        y.forEach(function(element) {
+          element.classList.add("height0");
+        });
+      }
     });
 
-    // buttonReel.style.margin = "1rem 0px 1rem 0px";
-
+  } else {
+    x.style.display = "none";
+    y.forEach(function(element) {
+      element.classList.add("height0");
+    });
   }
-
 };
+
+
 </script>

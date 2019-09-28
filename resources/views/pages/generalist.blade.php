@@ -123,6 +123,8 @@ function toggleReel() {
     $(document).click(function(event) {
         if (!$(event.target).closest("#generalist-ol, #generalist-close, #accordion-container-reel").length) {
             $('#generalist-ol').hide();
+            
+            
         }
     });
 
