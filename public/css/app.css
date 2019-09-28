@@ -173,7 +173,6 @@
 }
 
 .tooltip {
-  position: relative;
   display: inline-block;
   border-bottom: 1px dotted black;
 }
@@ -183,14 +182,11 @@
   background-color: red;
   color: #fbf3f2;
   background: red;
-  position: absolute;
+  position: fixed;
   top: 0;
-  z-index: -1;
   font-size: 1.2rem;
   width: 400px;
   text-align: left;
-  left: -100%;
-  right: -100%;
 }
 
 .tooltip:hover .tooltiptext {
@@ -276,7 +272,6 @@
 #slider-container {
   width: 100%;
   height: 12rem;
-  overflow: hidden;
   max-width: 1275px;
   margin: 0 auto;
 }

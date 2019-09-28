@@ -1,7 +1,7 @@
 <!-- <div id="slider-overlay"> <p> </p> </div> -->
 
 
-<div style="position: relative; overflow: auto;" id="slider-container">
+<div style="position: relative;" id="slider-container">
   <div id="slider-box">
     <ul id="sliderParent">
     </ul>
@@ -145,7 +145,7 @@ function appendToArray(){
 
 function appendToArray(){
   for (val in objectCredits) {
-    output.append('<li class="tooltip"><img value=' + val + ' onclick="filmCreditModal('+ val +')" class="credit-img" src=' + objectCredits[val]['img'] + '><div class="tooltiptext"> <div>' + objectCredits[val]['description'] + '</div></div></li>')
+    output.append('<li><div class="tooltip"><img value=' + val + ' onclick="filmCreditModal('+ val +')" class="credit-img" src=' + objectCredits[val]['img'] + '><div class="tooltiptext"> <div>' + objectCredits[val]['description'] + '</div></div></div></li>')
   }
 };
 
