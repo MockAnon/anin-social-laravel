@@ -1,5 +1,11 @@
 <!-- <div id="slider-overlay"> <p> </p> </div> -->
 
+<div id="slider-ol" class="slider-ol-visible">
+    <img onclick="sliderOlClose();" id="slider-close" src="img/x2.svg">
+    <h1> Hello </h1>
+    <p> Hello 2323 232 222 </p>
+</div>
+
 
 <div style="position: relative; overflow: auto;" id="slider-container">
   <div id="slider-box">
