@@ -1,13 +1,13 @@
 <!-- <div id="slider-overlay"> <p> </p> </div> -->
 
-<div id="slider-ol" class="slider-ol-visible">
+<!-- <div id="slider-ol" class="slider-ol-visible">
     <img onclick="sliderOlClose();" id="slider-close" src="img/x2.svg">
-    <h1> Hello </h1>
-    <p> Hello 2323 232 222 </p>
-</div>
+    <h1 id="slider-title"> Hello </h1>
+    <p id="slider-text"> Hello 2323 232 222 </p>
+</div> -->
 
 
-<div style="position: relative; overflow: auto;" id="slider-container">
+<div style="position: relative; overflow: hidden;" id="slider-container">
   <div id="slider-box">
     <ul id="sliderParent">
     </ul>
@@ -151,7 +151,8 @@ function appendToArray(){
 
 function appendToArray(){
   for (val in objectCredits) {
-    output.append('<li class="tooltip"><img value=' + val + ' onclick="filmCreditModal('+ val +')" class="credit-img" src=' + objectCredits[val]['img'] + '><div class="tooltiptext"> <div>' + objectCredits[val]['description'] + '</div></div></li>')
+    // <li class="tooltip"> </li> <div class="tooltiptext"> <div>' + objectCredits[val]['description'] + '</div></div>
+    output.append('<img value=' + val + ' onclick="filmCreditModal('+ val +')" class="credit-img" src=' + objectCredits[val]['img'] + '>')
   }
 };
 
@@ -214,7 +215,7 @@ function appendToArray(){
   function stopSlider(){
     clearInterval(sliderInterval);
   }
-  startSlider();
+  // startSlider();
   });
   
           // console.log(slideContainer.animate({"margin-left": "-="+xOffset}));
@@ -240,15 +241,29 @@ function appendToArray(){
   }
 
 
+  $('.credit-img').hover(function(){
+    console.log("TEST", $(this).val())
+  });
+
+  $('img').hover(function(){
+    alert($(this).find('input').val())
+  });
+
   $('#slider-container').hover(function(){
     $(this).addClass('active');
     guardSlide = true;
-    // console.log(guardSlide);
-    }, function(){
-        $(this).removeClass('active');
-        guardSlide = false;
-        // console.log(guardSlide);
-    })
+    console.log(guardSlide);
+
+
+
+  }, function(){
+      $(this).removeClass('active');
+      guardSlide = false;
+      // console.log(guardSlide);
+  });
+
+
+
 
   // $('#slider-container').mouseenter(function() {
   //     $('#slider-container').show();  
