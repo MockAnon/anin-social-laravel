@@ -10,6 +10,7 @@
 <div style="position: relative; overflow: hidden;" id="slider-container">
   <div id="slider-box">
     <ul id="sliderParent">
+      <li value="2"> <div style="width:30px; height: 2rem;"> </div> </li>
     </ul>
   </div>
   <div id="slide-foward-div" style="">
@@ -145,14 +146,14 @@ var output = $('#sliderParent');
 
 function appendToArray(){
   for (val in objectCredits) {
-    output.append('<li><img value=' + val + ' onclick="filmCreditModal('+ val +')" class="credit-img" src=' + objectCredits[val]['img'] + '></li>')
+    output.append('<li value='+ val +'><img value=' + val + ' onclick="filmCreditModal('+ val +')" class="credit-img" src=' + objectCredits[val]['img'] + '></li>')
   }
 };
 
 function appendToArray(){
   for (val in objectCredits) {
     // <li class="tooltip"> </li> <div class="tooltiptext"> <div>' + objectCredits[val]['description'] + '</div></div>
-    output.append('<img value=' + val + ' onclick="filmCreditModal('+ val +')" class="credit-img" src=' + objectCredits[val]['img'] + '>')
+    output.append('<li value='+ val +'><img value=' + val + ' onclick="filmCreditModal('+ val +')" class="credit-img" src=' + objectCredits[val]['img'] + '></li>')
   }
 };
 
@@ -240,14 +241,25 @@ function appendToArray(){
     }
   }
 
-
-  $('.credit-img').hover(function(){
-    console.log("TEST", $(this).val())
+  $(document).ready(function(){
+    // $('.credit-img').hover(function(){
+    //   console.log("TEST", $(this).val())
+    // });
+    $('.credit-img').hover(function(event){
+      // console.log($(this).find('input').val())
+      console.log($(event).val());
+      console.log($(this).find().val());
+    });
   });
 
-  $('img').hover(function(){
-    alert($(this).find('input').val())
-  });
+  // body.on('mouseleave', '.credit-img', (function() {
+    // $(this).fadeOut(500);
+  //   console.log(this);
+  // }));
+
+  // $('li').hover(function(){
+  //   alert($(this).find('input').val())
+  // });
 
   $('#slider-container').hover(function(){
     $(this).addClass('active');
