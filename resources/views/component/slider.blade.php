@@ -1,10 +1,12 @@
 <!-- <div id="slider-overlay"> <p> </p> </div> -->
 
-<!-- <div id="slider-ol" class="slider-ol-visible">
+<!-- slider-ol -->
+
+<div id="" class="slider-ol-visible">
     <img onclick="sliderOlClose();" id="slider-close" src="img/x2.svg">
     <h1 id="slider-title"> Hello </h1>
     <p id="slider-text"> Hello 2323 232 222 </p>
-</div> -->
+</div>
 
 
 <div style="position: relative; overflow: hidden;" id="slider-container">
@@ -146,16 +148,18 @@ var output = $('#sliderParent');
 
 function appendToArray(){
   for (val in objectCredits) {
-    output.append('<li value='+ val +'><img value=' + val + ' onclick="filmCreditModal('+ val +')" class="credit-img" src=' + objectCredits[val]['img'] + '></li>')
+    output.append('<li class="credit-li">' + '<input style="display:none;" value='+val+'>' + '<img value=' + val + ' onclick="filmCreditModal('+ val +')" class="credit-img" src=' + objectCredits[val]['img'] + '></li>')
   }
 };
 
 function appendToArray(){
   for (val in objectCredits) {
     // <li class="tooltip"> </li> <div class="tooltiptext"> <div>' + objectCredits[val]['description'] + '</div></div>
-    output.append('<li value='+ val +'><img value=' + val + ' onclick="filmCreditModal('+ val +')" class="credit-img" src=' + objectCredits[val]['img'] + '></li>')
+    output.append('<li class="credit-li">' + '<input style="display:none;" value='+val+'>' + '<img value=' + val + ' onclick="filmCreditModal('+ val +')" class="credit-img" src=' + objectCredits[val]['img'] + '></li>')
   }
 };
+
+
 
 // <div class="tooltip">Hover over me
 //     <span class="tooltiptext">Tooltip text</span>
@@ -245,11 +249,21 @@ function appendToArray(){
     // $('.credit-img').hover(function(){
     //   console.log("TEST", $(this).val())
     // });
-    $('.credit-img').hover(function(event){
+    // $('.credit-img').hover(function(){
       // console.log($(this).find('input').val())
-      console.log($(event).val());
-      console.log($(this).find().val());
-    });
+      // console.log($(event).val());
+      // console.log($(this).val());
+    // });
+    // .credit-img
+    $('.credit-li').hover(function(){
+      let index = $(this).find('input').val();
+      console.log(index);
+      // $('.slider-title').val();
+      objectCredits[index]
+      $("#slider-title").text(objectCredits[index].title);
+      $("#slider-text").text(objectCredits[index].description);
+    })
+
   });
 
   // body.on('mouseleave', '.credit-img', (function() {
@@ -323,9 +337,9 @@ function appendToArray(){
         // console.log("EVENT VALUE", objectCredits[event].img)
     
         // console.log("EVENT VALUE", objectCredits[event].description)
+        // $("#filmModalDescription").text(objectCredits[event].img);
 
         $("#filmModalTitle").text(objectCredits[event].title);
-        // $("#filmModalDescription").text(objectCredits[event].img);
         $("#filmModalDescription").text(objectCredits[event].description);
         $("#filmModalImage").attr("src", objectCredits[event].img);
   
