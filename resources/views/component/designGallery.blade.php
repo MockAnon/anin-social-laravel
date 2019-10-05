@@ -1,30 +1,34 @@
 <div class="accordion-container-design">
-  <div onclick="typeSliderData(0)" class="card">
+  <div onclick="typeSliderData(0)" class="card card-info" val="0">
+    <input style="display:none;" value='0'>
     <img src="https://upload.wikimedia.org/wikipedia/commons/d/d6/Cat_plotting_something_evil%21.jpg">
     <div class="card__head" id="acordTitle00">
-
     </div>
     <!-- <p class="card__copy" id="acordCopy00">This is the text below</p> -->
   </div>
-  <div onclick="typeSliderData(1)" class="card">
+  <div onclick="typeSliderData(1)" class="card card-info" val="1">
+    <input style="display:none;" value='1'>
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/False_alarm_-a.jpg/1280px-False_alarm_-a.jpg">
     <div class="card__head" id="acordTitle01">
     </div>
     <!-- <p class="card__copy" id="acordCopy01">This is the text below</p> -->
   </div>
-  <div onclick="typeSliderData(2)" class="card">
+  <div onclick="typeSliderData(2)" class="card card-info" val="2">
+    <input style="display:none;" value='2'>
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Neugierige-Katze.JPG/1280px-Neugierige-Katze.JPG">
     <div class="card__head" id="acordTitle02">
     </div>
     <!-- <p class="card__copy" id="acordCopy02">This is the text below</p> -->
   </div>
-  <div onclick="typeSliderData(3)" class="card">
+  <div onclick="typeSliderData(3)" class="card card-info" val="3">
+    <input style="display:none;" value='3'>
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Al_acecho_%289272124788%29.jpg/1280px-Al_acecho_%289272124788%29.jpg">
     <div class="card__head" id="acordTitle03">
     </div>
     <!-- <p class="card__copy" id="acordCopy03">This is the text below</p> -->
   </div>
-  <div onclick="typeSliderData(4)" class="card">
+  <div onclick="typeSliderData(4)" class="card card-info" val="4">
+    <input style="display:none;" value='3'>
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Mimi%26Tigsi.jpg/1280px-Mimi%26Tigsi.jpg">
     <div class="card__head" id="acordTitle04">
     </div>
@@ -225,6 +229,13 @@ for (val in designPortfolio[globalPortfolio].sub) {
     $(".vert-img").attr("src", vertCredits[data].img);
   };
 
+
+  $('.card-info').hover(function(){
+    let inputVal = $(this).find('input').val();
+    typeSliderData(inputVal);
+  });
+
+
   function typeSliderData(data) {
     console.log("OUT",data);
     globalPortfolio = data;
@@ -235,11 +246,6 @@ for (val in designPortfolio[globalPortfolio].sub) {
 
     $("#design-op1").css('display','flex');
     $("#design-op2").css('display','none');
-
-
-
-
-
     for (val in designPortfolio[globalPortfolio].sub) {
       outputVert.append('<div style="margin: auto; width: 25%; height: auto; padding: .4rem; background: black;" class="design-credit-div"><img style="height: auto; width: 100%;" value=' + val + ' onclick="vertSliderData('+ val +')" class="design-credit" src=' + vertCredits[val]['img'] + '></div>')
     }

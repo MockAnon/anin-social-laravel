@@ -46,40 +46,49 @@
 </div>
 
 <script>
-function toggleBreakdown() {
-  // console.log("toggle");
-  var x = document.getElementById("accordion-container-reel");
-  var y = document.getElementById("accordion-container-reel").querySelectorAll(".card");
-
+  var xToggle = document.getElementById("accordion-container-reel");
+  var yToggle = document.getElementById("accordion-container-reel").querySelectorAll(".card");
   let buttonReel = document.getElementById("button-reel-breakdown");
+  // function toggleBreakdown() {
+  //   if (xToggle.style.display === "none") {
+  //     breakdownShow();
+  //   } else {
+  //     breakdownHide();
+  //   }
+  // };
 
-  // console.log("toggle", y);
-
-
-
-  
-  if (x.style.display === "none") {
-    x.style.display = "flex";
-    y.forEach(function(element) {
+  function breakdownShow() {
+    xToggle.style.display = "flex";
+    yToggle.forEach(function(element) {
       element.classList.remove("height0");
     });
     $(document).click(function(event) {
     if (!$(event.target).closest("#accordion-container-reel, #button-reel-breakdown").length) {
       console.log("BOOM");
-        x.style.display = "none";
-        y.forEach(function(element) {
+        xToggle.style.display = "none";
+        yToggle.forEach(function(element) {
           element.classList.add("height0");
         });
       }
     });
+  };
 
-  } else {
-    x.style.display = "none";
-    y.forEach(function(element) {
+  function breakdownHide() {
+    xToggle.style.display = "none";
+    yToggle.forEach(function(element) {
       element.classList.add("height0");
     });
-  }
-};
+  };
+
+  $(document).ready(function(){
+      $('#button-reel-breakdown').hover(function(){
+        breakdownShow();
+
+      }, function(){
+        breakdownHide();
+      });
+  });
+
 
 
 </script>

@@ -23,7 +23,8 @@
                     <p> Play Reel </p> 
                     <img class="toggle-reel-img" style="" src="img/icons/play_reel.svg"> 
                 </button>
-                <div id="button-reel-breakdown" onclick="toggleBreakdown()" style="margin: 1rem 0px;"> 
+                <!-- <div id="button-reel-breakdown" onclick="toggleBreakdown()" style="margin: 1rem 0px;">  -->
+                <div id="button-reel-breakdown" style="margin: 1rem 0px;"> 
                     <p id="reel-copy" style="margin:0px; padding:10px;"> Reel Breakdown </p>
                     <img class="toggle-reel-img" style="" src="img/icons/gallery.svg">
                     @include('component.reelBreakdown') 
@@ -49,12 +50,12 @@
         </div>
     </div>
 
-    <div class="tooltip">Hover over me
+    <!-- <div class="tooltip">Hover over me
         <span class="tooltiptext">Tooltip text</span>
     </div>
     <div class="tooltip">Hover over me
         <span class="tooltiptext">Tooltip text</span>
-    </div>
+    </div> -->
 
 
     @include('component.slider')
@@ -127,7 +128,6 @@ function toggleReel() {
             
         }
     });
-
 
 
 

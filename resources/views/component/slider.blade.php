@@ -1,18 +1,18 @@
 <!-- <div id="slider-overlay"> <p> </p> </div> -->
 
 <!-- slider-ol -->
-
-<div id="" class="slider-ol-visible">
-    <img onclick="sliderOlClose();" id="slider-close" src="img/x2.svg">
-    <h1 id="slider-title"> Hello </h1>
-    <p id="slider-text"> Hello 2323 232 222 </p>
+<div style="position: relative; z-index:1-;">
+  <div id="slider-ol-visible" class="">
+      <h1 id="slider-title"> </h1>
+      <p id="slider-text"> </p>
+  </div>
 </div>
 
 
 <div style="position: relative; overflow: hidden;" id="slider-container">
   <div id="slider-box">
     <ul id="sliderParent">
-      <li value="2"> <div style="width:30px; height: 2rem;"> </div> </li>
+      <!-- <li value="2"> <div style="width:30px; height: 2rem;"> </div> </li> -->
     </ul>
   </div>
   <div id="slide-foward-div" style="">
@@ -246,23 +246,27 @@ function appendToArray(){
   }
 
   $(document).ready(function(){
-    // $('.credit-img').hover(function(){
-    //   console.log("TEST", $(this).val())
-    // });
-    // $('.credit-img').hover(function(){
-      // console.log($(this).find('input').val())
-      // console.log($(event).val());
-      // console.log($(this).val());
-    // });
-    // .credit-img
-    $('.credit-li').hover(function(){
+
+    $(".credit-li").mouseover(function() {
+      // $("#slider-ol-visible").css("display","block");
       let index = $(this).find('input').val();
       console.log(index);
-      // $('.slider-title').val();
-      objectCredits[index]
       $("#slider-title").text(objectCredits[index].title);
       $("#slider-text").text(objectCredits[index].description);
-    })
+      $("#slider-ol-visible").show();
+    }).mouseout(function() {
+      // $("#slider-ol-visible").css("display","none");
+      $("#slider-ol-visible").hide();
+    });
+
+
+    // $('.credit-li').hover(function(){
+    //   let index = $(this).find('input').val();
+    //   console.log(index);
+    //   $("#slider-title").text(objectCredits[index].title);
+    //   $("#slider-text").text(objectCredits[index].description);
+    //   $("#slider-ol-visible").show();
+    // })
 
   });
 
@@ -279,9 +283,6 @@ function appendToArray(){
     $(this).addClass('active');
     guardSlide = true;
     console.log(guardSlide);
-
-
-
   }, function(){
       $(this).removeClass('active');
       guardSlide = false;
