@@ -201,26 +201,26 @@ function appendToArray(){
     appendToArray();
     appendToArray();
     var sliderInterval;
-  //   function startSlider(){
-  //     sliderInterval = setInterval(function(){
-  //       console.log("guardSlide", guardSlide);
-  //         if (guardSlide == false) {
-  //         console.log("currentSlide", startSlide, "lastSlide", lastSlide);
-  //           if (startSlide >= lastSlide) {
-  //             slideContainer.css("margin-left", "0px");
-  //             startSlide = 0;
-  //           } else {
-  //             slideContainer.animate({"margin-left": "-="+xOffset},animationSpeed, function(){
-  //             });
-  //             startSlide++;
-  //           }
-  //     }
-  //     },slideSpeed);
-  // };
+    function startSlider(){
+      sliderInterval = setInterval(function(){
+        console.log("guardSlide", guardSlide);
+          if (guardSlide == false) {
+          console.log("currentSlide", startSlide, "lastSlide", lastSlide);
+            if (startSlide >= lastSlide) {
+              slideContainer.css("margin-left", "0px");
+              startSlide = 0;
+            } else {
+              slideContainer.animate({"margin-left": "-="+xOffset},animationSpeed, function(){
+              });
+              startSlide++;
+            }
+      }
+      },slideSpeed);
+  };
   function stopSlider(){
     clearInterval(sliderInterval);
   }
-  // startSlider();
+  startSlider();
   });
   
           // console.log(slideContainer.animate({"margin-left": "-="+xOffset}));
@@ -228,12 +228,13 @@ function appendToArray(){
   // slider.on("mouseenter", stopSlider);
   // slider.on("mouseleave", startSlider);
 
-  // function nextSlide() {
-  //   slideContainer.animate({"margin-left": "-="+xOffset},animationSpeed, function(){
-  //       startSlide++;
-  //       console.log(startSlide);
-  //     });
-  // }
+  function nextSlide() {
+    slideContainer.animate({"margin-left": "-="+xOffset},animationSpeed, function(){
+        startSlide++;
+        console.log(startSlide);
+      });
+  }
+  
   function previousSlide() {
     if (startSlide > 1) {
       // console.log("previous", startSlide);

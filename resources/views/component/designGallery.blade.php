@@ -1,33 +1,33 @@
 <div class="accordion-container-design">
-  <div onclick="typeSliderData(0)" class="card card-info" val="0">
+  <div onclick="typeSliderDataClick(0)" class="card card-info" val="0">
     <input style="display:none;" value='0'>
     <img src="https://upload.wikimedia.org/wikipedia/commons/d/d6/Cat_plotting_something_evil%21.jpg">
     <div class="card__head" id="acordTitle00">
     </div>
     <!-- <p class="card__copy" id="acordCopy00">This is the text below</p> -->
   </div>
-  <div onclick="typeSliderData(1)" class="card card-info" val="1">
+  <div onclick="typeSliderDataClick(1)" class="card card-info" val="1">
     <input style="display:none;" value='1'>
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/False_alarm_-a.jpg/1280px-False_alarm_-a.jpg">
     <div class="card__head" id="acordTitle01">
     </div>
     <!-- <p class="card__copy" id="acordCopy01">This is the text below</p> -->
   </div>
-  <div onclick="typeSliderData(2)" class="card card-info" val="2">
+  <div onclick="typeSliderDataClick(2)" class="card card-info" val="2">
     <input style="display:none;" value='2'>
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Neugierige-Katze.JPG/1280px-Neugierige-Katze.JPG">
     <div class="card__head" id="acordTitle02">
     </div>
     <!-- <p class="card__copy" id="acordCopy02">This is the text below</p> -->
   </div>
-  <div onclick="typeSliderData(3)" class="card card-info" val="3">
+  <div onclick="typeSliderDataClick(3)" class="card card-info" val="3">
     <input style="display:none;" value='3'>
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Al_acecho_%289272124788%29.jpg/1280px-Al_acecho_%289272124788%29.jpg">
     <div class="card__head" id="acordTitle03">
     </div>
     <!-- <p class="card__copy" id="acordCopy03">This is the text below</p> -->
   </div>
-  <div onclick="typeSliderData(4)" class="card card-info" val="4">
+  <div onclick="typeSliderDataClick(4)" class="card card-info" val="4">
     <input style="display:none;" value='3'>
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Mimi%26Tigsi.jpg/1280px-Mimi%26Tigsi.jpg">
     <div class="card__head" id="acordTitle04">
@@ -36,7 +36,7 @@
   </div>
 </div>
 
-<div id="design-op1" class="flex-row-to-col display-none" onload="assembleDesign()"> 
+<div id="design-op1" class="flex-row-to-col display-none padding-0-3" onload="assembleDesign()"> 
   <div style="width: 50%;">
       <h1 id="design-title"> Design </h1>
       <p id="design-copy"> Design  </p>
@@ -46,13 +46,13 @@
   </div>
 </div> 
 
-<div class="flex-row-to-col">
+<!-- <div class="flex-row-to-col">
   <div style="width: 100%; height: 2rem;">
   
   </div>  
-</div>
+</div> -->
 
-<div id="design-op2" class="flex-row-to-col display-none">
+<div id="design-op2" class="flex-row-to-col display-none padding-0-3">
   <div style="width: 50%;">
     <button style="width: auto;" onclick="returnGallery()"> <img src="{{ asset('img/x.svg') }}" id="return-button"> </button>
     <h1 id="design-clicked-title"> Design Title </h1>
@@ -230,15 +230,33 @@ for (val in designPortfolio[globalPortfolio].sub) {
   };
 
 
-  $('.card-info').hover(function(){
-    let inputVal = $(this).find('input').val();
-    typeSliderData(inputVal);
-  });
+  // $('.card-info').hover(function(){
+  //   let inputVal = $(this).find('input').val();
+  //   typeSliderData(inputVal);
+  // });
 
+  $(".card-info").mouseover(function() {
+      let index = $(this).find('input').val();
+      typeSliderData(index);
+      // console.log(index);
+      // $("#slider-title").text(objectCredits[index].title);
+      // $("#slider-text").text(objectCredits[index].description);
+      // $("#slider-ol-visible").show();
+    }).mouseout(function() {
+      // $("#slider-ol-visible").hide();
+    });
+
+
+  function typeSliderDataClick(data) {
+    document.getElementById('design-op1').scrollIntoView();
+    typeSliderData(data);
+  }
 
   function typeSliderData(data) {
     console.log("OUT",data);
     globalPortfolio = data;
+
+    
 
     outputVert.empty();
     $("#design-title").text(designPortfolio[globalPortfolio].title);

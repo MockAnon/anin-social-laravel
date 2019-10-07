@@ -1,4 +1,4 @@
-<div style="height: 100vh; padding-top:44px;">
+<div style="height: 100vh;">
 
     @include('component.designGallery')
 
