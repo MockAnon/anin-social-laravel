@@ -1,4 +1,4 @@
-<div style="position:absolute;  right:5; width: 400%; z-index:5;">
+<div style="position:absolute;  right:5; width: 400%; z-index:5; bottom:100%;">
   <div id="accordion-container-reel" class="accordion-container-reel" style="display: none;">
     <div class="card" onclick="generalistOpen();">
       <img src="https://upload.wikimedia.org/wikipedia/commons/d/d6/Cat_plotting_something_evil%21.jpg">
