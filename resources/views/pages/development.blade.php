@@ -40,28 +40,31 @@
 <!-- Image Accordion -->
 <div class="accordion-container">
 
-<a id="devDiv00" class="card" onclick="loadDevObject('0')" href="#devTitle">
+<a id="devDiv00" class="card devcard-info" onclick="loadDevObject('0')" href="#devTitle">
     <img src="https://upload.wikimedia.org/wikipedia/commons/d/d6/Cat_plotting_something_evil%21.jpg">
     <div class="card__head">
         Title
     </div>
     <p class="card__copy"> </p>
+    <input style="display:none;" value='0'>
 </a>
 
-  <a id="devDiv01" class="card" onclick="loadDevObject('1')" href="#devTitle">
+  <a id="devDiv01" class="card devcard-info" onclick="loadDevObject('1')" href="#devTitle">
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/False_alarm_-a.jpg/1280px-False_alarm_-a.jpg">
     <div class="card__head">
       MoneyMate
     </div>
     <p class="card__copy">This is the text below</p>
+    <input style="display:none;" value='1'>
 </a>
 
-  <a id="devDiv02" class="card" onclick="loadDevObject('2')" href="#devTitle">
+  <a id="devDiv02" class="card devcard-info" onclick="loadDevObject('2')" href="#devTitle">
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Al_acecho_%289272124788%29.jpg/1280px-Al_acecho_%289272124788%29.jpg">
     <div class="card__head">
       Furrever
     </div>
     <p class="card__copy">This is the text below</p>
+    <input style="display:none;" value='2'>
 </a>
 
   <!-- <a id="devDiv03" class="card" onclick="loadDevObject('3')" href="#devTitle">
@@ -139,6 +142,16 @@ let devObject = [{
     date: 'Sept 2018 - Dec 2018',
   },
 ]
+
+
+$(".devcard-info").mouseover(function() {
+  let index = $(this).find('input').val();
+  loadDevObject(index);
+
+}).mouseout(function() {
+
+});
+
 
 function loadDevObject (event) {
     // modalSlider.style.display = "block";
