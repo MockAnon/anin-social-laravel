@@ -16,9 +16,9 @@
         height: 40vmin;
         position: relative;
         overflow: hidden;
-        border: black solid 2px;
-        border-left: black solid 1px;
-        border-right: black solid 1px;
+        border: $background solid 2px;
+        border-left: $background solid 1px;
+        border-right: $background solid 1px;
         .card__head {
             opacity: 0.8;
             overflow: hidden;

@@ -836,9 +836,9 @@
   height: 40vmin;
   position: relative;
   overflow: hidden;
-  border: black solid 2px;
-  border-left: black solid 1px;
-  border-right: black solid 1px;
+  border: #1d1d1d solid 2px;
+  border-left: #1d1d1d solid 1px;
+  border-right: #1d1d1d solid 1px;
 }
 
 .accordion-container-design .card .card__head {
