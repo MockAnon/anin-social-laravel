@@ -12,7 +12,7 @@ window.onmousemove = function(e) {
     mousePos.y = e.clientY;
     console.log(mousePos.x, mousePos.y);
     // updatethis();
-    updatePro();
+    // updatePro();
     // renderPro();
 };
 
@@ -21,31 +21,31 @@ function distanceFromCenter() {
     return Math.sqrt(Math.pow(mousePos.x - canvas.width / 2, 2) + Math.pow(mousePos.y - canvas.height / 2, 2));
 }
 
-function updatePro() {
-    // Particle.prototype.update = function() {
-    console.log('updates');
-    this.theta += (this.speed / 750) * this.direction;
-    this.x = canvas.width / 2 + Math.cos(this.theta) * this.radius * (distanceFromCenter() / this.maxRadius);
-    this.y = canvas.height / 2 + Math.sin(this.theta) * this.radius * (distanceFromCenter() / this.maxRadius);
-    this.radius += this.radialChange;
-    if (Math.abs(this.radius) > this.maxRadius) {
-        this.radialChange *= -1;
-    }
-}
+// function updatePro() {
+// Particle.prototype.update = function() {
+//     console.log('updates');
+//     this.theta += (this.speed / 750) * this.direction;
+//     this.x = canvas.width / 2 + Math.cos(this.theta) * this.radius * (distanceFromCenter() / this.maxRadius);
+//     this.y = canvas.height / 2 + Math.sin(this.theta) * this.radius * (distanceFromCenter() / this.maxRadius);
+//     this.radius += this.radialChange;
+//     if (Math.abs(this.radius) > this.maxRadius) {
+//         this.radialChange *= -1;
+//     }
+// }
 
-function renderPro() {
-    // Particle.prototype.render = function() {
-    console.log('render');
-    ctx.save();
-    ctx.beginPath();
-    ctx.fillStyle = 'white';
-    ctx.strokeStyle = '#444';
-    ctx.globalAlpha = this.opacity;
-    ctx.arc(this.x, this.y, this.size / 2, 0, 2 * Math.PI, false);
-    ctx.fill();
-    ctx.stroke();
-    ctx.restore();
-}
+// function renderPro() {
+// Particle.prototype.render = function() {
+//     console.log('render');
+//     ctx.save();
+//     ctx.beginPath();
+//     ctx.fillStyle = 'white';
+//     ctx.strokeStyle = '#444';
+//     ctx.globalAlpha = this.opacity;
+//     ctx.arc(this.x, this.y, this.size / 2, 0, 2 * Math.PI, false);
+//     ctx.fill();
+//     ctx.stroke();
+//     ctx.restore();
+// }
 
 var ball = {
         x: 0,
@@ -66,7 +66,7 @@ var ball = {
     alpha_f = 0.03,
     alpha_phase = 0,
     // Line
-    link_line_width = 0.8,
+    link_line_width = 0.4,
     dis_limit = 260,
     add_mouse_point = true,
     mouse_in = false,
@@ -231,7 +231,7 @@ function getDisOf(b1, b2) {
 
 // add balls if there a little balls
 function addBallIfy() {
-    if (balls.length < 20) {
+    if (balls.length < 60) {
         balls.push(getRandomBall());
     }
 }
