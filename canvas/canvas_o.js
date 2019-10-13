@@ -11,12 +11,15 @@ var mousePos = { x: 0, y: 0 };
 window.onmousemove = function(e) {
     mousePos.x = e.clientX;
     mousePos.y = e.clientY;
+    console.log('mouse');
 };
 function distanceFromCenter() {
+    console.log('distance');
     return Math.sqrt(Math.pow(mousePos.x - canvas.width / 2, 2) + Math.pow(mousePos.y - canvas.height / 2, 2));
 }
 
 function Particle() {
+    console.log('particles');
     this.theta = Math.random() * Math.PI * 2;
     this.radius = Math.random() * (canvas.width > canvas.height ? canvas.width : canvas.height) * 0.33 + 40;
     this.maxRadius = Math.random() * (canvas.width > canvas.height ? canvas.width : canvas.height) * 0.45;
@@ -30,6 +33,7 @@ function Particle() {
     this.connected = Math.random() < 0.75;
 }
 Particle.prototype.update = function() {
+    console.log('update');
     this.theta += (this.speed / 750) * this.direction;
     this.x = canvas.width / 2 + Math.cos(this.theta) * this.radius * (distanceFromCenter() / this.maxRadius);
     this.y = canvas.height / 2 + Math.sin(this.theta) * this.radius * (distanceFromCenter() / this.maxRadius);
@@ -39,6 +43,7 @@ Particle.prototype.update = function() {
     }
 };
 Particle.prototype.render = function() {
+    console.log('render');
     ctx.save();
     ctx.beginPath();
     ctx.fillStyle = 'white';
@@ -56,6 +61,7 @@ for (var i = 0; i < Math.random() * 50 + 100; i++) {
 }
 requestAnimationFrame(
     (demo = function() {
+        console.log('animation');
         ctx.save();
         ctx.fillStyle = '#242424';
         ctx.fillRect(0, 0, canvas.width, canvas.height);
