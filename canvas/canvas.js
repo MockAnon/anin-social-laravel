@@ -8,16 +8,82 @@ var ctx = canvas.getContext('2d');
 var mousePos = { x: 0, y: 0 };
 
 window.onmousemove = function(e) {
+    //mouse position
     mousePos.x = e.clientX;
     mousePos.y = e.clientY;
-    console.log(mousePos.x, mousePos.y);
-    // updatethis();
-    // updatePro();
-    // renderPro();
+    //
+    halfWidth = canvas.width / 2;
+    halfHeight = canvas.height / 2;
+    //percentage
+    let xPercentage = e.clientX / canvas.width + 1;
+    // let yPercentage = e.clientY / canvas.height / 2 + 1;
+    let fromCenter;
+    let finalPercentage;
+    let yFromCenter;
+    let Ypercentage;
+
+    if (mousePos.x < halfWidth) {
+        fromCenter = mousePos.x;
+        finalPercentage = (fromCenter / halfWidth) * -1 + 2;
+    } else {
+        fromCenter = mousePos.x - halfWidth;
+        finalPercentage = fromCenter / halfWidth + 1;
+    }
+
+    if (mousePos.y < halfHeight) {
+        yFromCenter = mousePos.y;
+        Ypercentage = (yFromCenter / halfHeight) * -1 + 2;
+    } else {
+        yFromCenter = mousePos.y - halfHeight;
+        Ypercentage = yFromCenter / halfHeight + 1;
+    }
+
+    if (finalPercentage < Ypercentage) {
+        finalPercentage = Ypercentage;
+    }
+
+    // console.log('Percentage', xPercentage);
+    // console.log('Percentage-Y', yPercentage);
+
+    // this.theta = Math.random() * Math.PI * 2;
+    // this.radius = Math.random() * (canvas.width > canvas.height ? canvas.width : canvas.height) * 0.33 + 40;
+    // this.maxRadius = Math.random() * (canvas.width > canvas.height ? canvas.width : canvas.height) * 0.45;
+
+    // console.log(mousePos.x, mousePos.y);
+    // let w = distanceFromCenter();
+    // let h = distanceFromCenter();
+    // this.x = canvas.width / 2 + Math.cos(this.theta) * this.radius * (distanceFromCenter() / this.maxRadius);
+    // this.y = canvas.height / 2 + Math.sin(this.theta) * this.radius * (distanceFromCenter() / this.maxRadius);
+
+    // ctx.restore();
+    // console.log('halfW', halfWidth, 'halfH', halfHeight);
+    // console.log('X', mousePos.x, 'Width', canvas.width, 'Y', mousePos.y, 'height', canvas.height);
+
+    ctx.setTransform(finalPercentage, 0, 0, finalPercentage, 0, 0);
+
+    // ctx.setTransform(xPercentage, 0, 0, xPercentage, 0, 0);
+    // ctx.setTransform(1.1, 0, 0, 1.1, 0, 0);
+
+    // ctx.resetTransform();
+
+    // ctx.setTransform(1, 0, 0, 1, 0, 0);
+
+    // if (mousePos.x > halfWidth + 50) {
+    //     console.log('grow', halfWidth + 50);
+    //     ctx.scale(1.001, 1.001);
+    // } else if (mousePos.x < halfWidth - 50) {
+    //     console.log('shrink', halfWidth - 50);
+    //     ctx.scale(0.98, 0.98);
+    // } else {
+    //     console.log('STAY');
+    //     ctx.setTransform(1, 0, 0, 1, 0, 0);
+    // }
+
+    ctx.scale(1.02, 1.02);
 };
 
 function distanceFromCenter() {
-    console.log('distance');
+    // console.log('distance');
     return Math.sqrt(Math.pow(mousePos.x - canvas.width / 2, 2) + Math.pow(mousePos.y - canvas.height / 2, 2));
 }
 
@@ -61,13 +127,13 @@ var ball = {
         g: 255,
         b: 4
     },
-    R = 2,
+    R = 1,
     balls = [],
     alpha_f = 0.03,
     alpha_phase = 0,
     // Line
-    link_line_width = 0.4,
-    dis_limit = 260,
+    link_line_width = 0.2,
+    dis_limit = 180,
     add_mouse_point = true,
     mouse_in = false,
     mouse_ball = {
@@ -82,7 +148,7 @@ var ball = {
 // Random speed
 function getRandomSpeed(pos) {
     var min = -1,
-        max = 1;
+        max = 0.5;
     switch (pos) {
         case 'top':
             return [randomNumFrom(min, max), randomNumFrom(0.1, max)];
