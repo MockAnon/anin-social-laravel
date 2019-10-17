@@ -15,13 +15,14 @@
 
     <div id="generalist-top">
 
-        <div class="display-info padding-0-3">
+        <div class="display-info">
       
                 <div class="flex-row">
 
                     <h3 style="margin: 0px;"> Developer, Compositor, and CG Generalist </h3>
 
                 </div>
+                <hr style="margin: 0px;">
                 <div>
                     <p class="font-size-14">
                         My names Jaron D. Evans, I'm currently working as Front-End Developer and UI Designer. <br> <br>

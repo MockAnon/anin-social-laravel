@@ -824,6 +824,7 @@
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  padding-bottom: 0.5rem;
 }
 
 .accordion-container-design .card:hover {
@@ -1158,6 +1159,13 @@
 #design-op2 h3,
 #design-op2 h1 {
   color: #1d1d1d;
+}
+
+.display-info {
+  padding-top: 6rem;
+  padding-bottom: 1rem;
+  padding-left: 3%;
+  padding-right: 3%;
 }
 
 #devImg {

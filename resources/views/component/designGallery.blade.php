@@ -38,7 +38,8 @@
 
 <div id="design-op1" class="flex-row-to-col display-none padding-0-3" onload="assembleDesign()"> 
   <div style="width: 50%;">
-      <h1 id="design-title"> Design </h1>
+      <h3 id="design-title"> Design </h3>
+      <hr style="margin: 0px;">
       <p id="design-copy"> Design  </p>
      
   </div>
@@ -55,7 +56,8 @@
 <div id="design-op2" class="flex-row-to-col display-none padding-0-3">
   <div style="width: 50%;">
     <button style="width: auto;" onclick="returnGallery()"> <img src="{{ asset('img/x.svg') }}" id="return-button"> </button>
-    <h1 id="design-clicked-title"> Design Title </h1>
+    <h3 id="design-clicked-title"> Design Title </h3>
+    <hr style="margin: 0px;">
     <p id="design-clicked-copy"> Design  </p>
   </div>
   

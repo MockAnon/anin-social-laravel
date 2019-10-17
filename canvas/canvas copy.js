@@ -16,6 +16,7 @@ window.onmousemove = function(e) {
     halfHeight = canvas.height / 2;
     //percentage
     let xPercentage = e.clientX / canvas.width + 1;
+    // let yPercentage = e.clientY / canvas.height / 2 + 1;
     let fromCenter;
     let finalPercentage;
     let yFromCenter;
@@ -45,6 +46,8 @@ window.onmousemove = function(e) {
     //     finalPercentage = 1.25;
     // }
 
+    console.log('ff', finalPercentage);
+
     // console.log('Percentage', xPercentage);
     // console.log('Percentage-Y', yPercentage);
 
@@ -61,11 +64,28 @@ window.onmousemove = function(e) {
     // ctx.restore();
     // console.log('halfW', halfWidth, 'halfH', halfHeight);
     // console.log('X', mousePos.x, 'Width', canvas.width, 'Y', mousePos.y, 'height', canvas.height);
-    // ctx.transform(x / 2, y / 2);
-    // ctx.translate(canvas.width / 2, canvas.height / 2);
+
     ctx.setTransform(finalPercentage, 0, 0, finalPercentage, 0, 0);
 
-    // ctx.scale(1.02, 1.02);
+    // ctx.setTransform(xPercentage, 0, 0, xPercentage, 0, 0);
+    // ctx.setTransform(1.1, 0, 0, 1.1, 0, 0);
+
+    // ctx.resetTransform();
+
+    // ctx.setTransform(1, 0, 0, 1, 0, 0);
+
+    // if (mousePos.x > halfWidth + 50) {
+    //     console.log('grow', halfWidth + 50);
+    //     ctx.scale(1.001, 1.001);
+    // } else if (mousePos.x < halfWidth - 50) {
+    //     console.log('shrink', halfWidth - 50);
+    //     ctx.scale(0.98, 0.98);
+    // } else {
+    //     console.log('STAY');
+    //     ctx.setTransform(1, 0, 0, 1, 0, 0);
+    // }
+
+    ctx.scale(1.02, 1.02);
 };
 
 function distanceFromCenter() {
@@ -113,13 +133,13 @@ var ball = {
         g: 255,
         b: 4
     },
-    R = 0.8,
+    R = 1,
     balls = [],
     alpha_f = 0.03,
     alpha_phase = 0,
     // Line
-    link_line_width = 0.1,
-    dis_limit = 100,
+    link_line_width = 0.2,
+    dis_limit = 180,
     add_mouse_point = true,
     mouse_in = false,
     mouse_ball = {
@@ -172,7 +192,7 @@ function getRandomBall() {
                 vy: getRandomSpeed('top')[1],
                 r: R,
                 alpha: 1,
-                phase: randomNumFrom(0, 20)
+                phase: randomNumFrom(0, 10)
             };
             break;
         case 'right':
@@ -183,7 +203,7 @@ function getRandomBall() {
                 vy: getRandomSpeed('right')[1],
                 r: R,
                 alpha: 1,
-                phase: randomNumFrom(0, 20)
+                phase: randomNumFrom(0, 10)
             };
             break;
         case 'bottom':
@@ -194,7 +214,7 @@ function getRandomBall() {
                 vy: getRandomSpeed('bottom')[1],
                 r: R,
                 alpha: 1,
-                phase: randomNumFrom(0, 20)
+                phase: randomNumFrom(0, 10)
             };
             break;
         case 'left':
@@ -205,7 +225,7 @@ function getRandomBall() {
                 vy: getRandomSpeed('left')[1],
                 r: R,
                 alpha: 1,
-                phase: randomNumFrom(0, 20)
+                phase: randomNumFrom(0, 10)
             };
             break;
     }
@@ -283,7 +303,7 @@ function getDisOf(b1, b2) {
 
 // add balls if there a little balls
 function addBallIfy() {
-    if (balls.length < 160) {
+    if (balls.length < 60) {
         balls.push(getRandomBall());
     }
 }
