@@ -8,6 +8,8 @@ var ctx = canvas.getContext('2d');
 var mousePos = { x: 0, y: 0 };
 
 window.onmousemove = function(e) {
+    // zoom radio
+    let zoomIn = 3;
     //mouse position
     mousePos.x = e.clientX;
     mousePos.y = e.clientY;
@@ -18,25 +20,36 @@ window.onmousemove = function(e) {
     let xPercentage = e.clientX / canvas.width + 1;
     let fromCenter;
     let finalPercentage;
+    let xPoint;
+    let xCut;
     let yFromCenter;
     let Ypercentage;
 
     if (mousePos.x < halfWidth) {
-        fromCenter = mousePos.x / 2;
-        finalPercentage = (fromCenter / halfWidth) * -1 + 1.5;
+        // fromCenter = mousePos.x / 2;
+        fromCenter = (mousePos.x - halfWidth) / zoomIn;
+        xPoint = (fromCenter / halfWidth) * -1;
+        console.log('xPoint', xPoint);
+        xCut = xPoint / 2;
+        finalPercentage = xCut + 1;
     } else {
         console.log('else');
-        fromCenter = (mousePos.x - halfWidth) / 2;
-        finalPercentage = fromCenter / halfWidth + 1;
+        fromCenter = (mousePos.x - halfWidth) / zoomIn;
+        xPoint = fromCenter / halfWidth;
+        console.log('xPoint', xPoint);
+        xCut = xPoint / 2;
+        finalPercentage = xCut + 1;
     }
 
     if (mousePos.y < halfHeight) {
         yFromCenter = mousePos.y / 2;
-        Ypercentage = (yFromCenter / halfHeight) * -1 + 2;
+        Ypercentage = ((yFromCenter / halfHeight) * -1) / 2 + 2;
     } else {
         yFromCenter = (mousePos.y - halfHeight) / 2;
-        Ypercentage = yFromCenter / halfHeight + 1;
+        Ypercentage = yFromCenter / halfHeight / 2 + 1;
     }
+
+    console.log(finalPercentage);
 
     // if (finalPercentage < Ypercentage) {
     //     finalPercentage = (finalPercentage + Ypercentage) / 2;
@@ -63,6 +76,7 @@ window.onmousemove = function(e) {
     // console.log('X', mousePos.x, 'Width', canvas.width, 'Y', mousePos.y, 'height', canvas.height);
     // ctx.transform(x / 2, y / 2);
     // ctx.translate(canvas.width / 2, canvas.height / 2);
+
     ctx.setTransform(finalPercentage, 0, 0, finalPercentage, 0, 0);
 
     // ctx.scale(1.02, 1.02);
