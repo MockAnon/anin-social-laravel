@@ -21,10 +21,12 @@ window.onmousemove = function(e) {
     let yFromCenter;
     let Ypercentage;
 
-    if (mousePos.x < halfWidth) {
+    let centerMinus = 40;
+
+    if (mousePos.x < halfWidth + centerMinus) {
         fromCenter = mousePos.x / 2;
         finalPercentage = (fromCenter / halfWidth) * -1 + 1.5;
-    } else {
+    } else if (mousePos.x > halfWidth - centerMinus) {
         console.log('else');
         fromCenter = (mousePos.x - halfWidth) / 2;
         finalPercentage = fromCenter / halfWidth + 1;

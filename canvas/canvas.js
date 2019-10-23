@@ -25,6 +25,8 @@ window.onmousemove = function(e) {
     let yFromCenter;
     let Ypercentage;
 
+    // let centerMinus = 40;
+
     if (mousePos.x < halfWidth) {
         // fromCenter = mousePos.x / 2;
         fromCenter = (mousePos.x - halfWidth) / zoomIn;
@@ -41,13 +43,13 @@ window.onmousemove = function(e) {
         finalPercentage = xCut + 1;
     }
 
-    if (mousePos.y < halfHeight) {
-        yFromCenter = mousePos.y / 2;
-        Ypercentage = ((yFromCenter / halfHeight) * -1) / 2 + 2;
-    } else {
-        yFromCenter = (mousePos.y - halfHeight) / 2;
-        Ypercentage = yFromCenter / halfHeight / 2 + 1;
-    }
+    // if (mousePos.y < halfHeight) {
+    //     yFromCenter = mousePos.y / 2;
+    //     Ypercentage = ((yFromCenter / halfHeight) * -1) / 2 + 2;
+    // } else {
+    //     yFromCenter = (mousePos.y - halfHeight) / 2;
+    //     Ypercentage = yFromCenter / halfHeight / 2 + 1;
+    // }
 
     console.log(finalPercentage);
 
