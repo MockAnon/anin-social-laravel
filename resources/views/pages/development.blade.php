@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-<div class="row">
+<div id="development-top" class="row display-info">
     <div class="col">
         <h3> Development </h3>
         <p> Over a year of experience as a developer and roughly five years of Compositing experience. Experience with languages such as Javascript, PHP, Python, CSS, Sass and HTML. I also have experience with Frameworks such as Laravel, Angular, Ionic, and React Native. I have experience with lybraries such as jQuery and React.
@@ -85,12 +85,12 @@
 
 </div>
 <!-- Image Accordion -->
-<div class="flex-col">
+<div class="flex-col padding-2-0" id="development-bottom">
     <div class="flex-row">
-        <div class="flex-1-van" >
+        <div class="flex-1-van padding-0-1" style="padding-right: 0px;">
             <img id="devImg" src="/"/>
         </div>
-        <div class="flex-1-van"> 
+        <div class="flex-1-van padding-0-1 border-left-break"> 
             <h1 id="devTitle"> Title </h1>
             <p id="devDescription"> Description </p>
         </div>

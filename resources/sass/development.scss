@@ -2,3 +2,24 @@
     width: 100%;
     height: auto;
 }
+
+#development-top {
+    // padding: 0px 2rem;
+    background: $white;
+    color: $black;
+    p,
+    h3,
+    h1 {
+        color: $black;
+    }
+}
+
+#development-bottom {
+    background: $white;
+    color: $black;
+    p,
+    h3,
+    h1 {
+        color: $black;
+    }
+}
