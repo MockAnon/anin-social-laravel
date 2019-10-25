@@ -43,7 +43,7 @@
       <p id="design-copy"> Design  </p>
      
   </div>
-  <div id="vertParent" style="max-height:700px; display: flex; flex-wrap: wrap; width: 50%; justify-content: space-between;">
+  <div id="vertParent" style="max-height:700px; display: flex; flex-wrap: wrap; width: 50%; justify-content: space-between; padding: 1rem;">
   </div>
 </div> 
 
@@ -258,13 +258,19 @@ for (val in designPortfolio[globalPortfolio].sub) {
     console.log("OUT",data);
     globalPortfolio = data;
 
-    
-
     outputVert.empty();
     $("#design-title").text(designPortfolio[globalPortfolio].title);
     $("#design-copy").text(designPortfolio[globalPortfolio].description);
 
     $("#design-op1").css('display','flex');
+    $("#design-op1").css('height','auto');
+    //toggle
+    var el = $('#design-op1'),
+    curHeight = el.height(),
+    autoHeight = el.css('height', 'auto').height();
+    el.height(curHeight).animate({height: autoHeight}, 1000);
+    // $("#design-op1").css('height','0');
+    // $("#design-op1").animate({height:fit-content},200);
     $("#design-op2").css('display','none');
     for (val in designPortfolio[globalPortfolio].sub) {
       outputVert.append('<div style="margin: auto; width: 25%; height: auto; padding: .4rem; background: black;" class="design-credit-div"><img style="height: auto; width: 100%;" value=' + val + ' onclick="vertSliderData('+ val +')" class="design-credit" src=' + vertCredits[val]['img'] + '></div>')
