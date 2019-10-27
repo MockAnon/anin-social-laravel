@@ -250,31 +250,71 @@ for (val in designPortfolio[globalPortfolio].sub) {
 
 
   function typeSliderDataClick(data) {
-    document.getElementById('design-op1').scrollIntoView();
+    // document.getElementById('design-op1').scrollIntoView();
+
     typeSliderData(data);
   }
 
+  // let dataSelected;
+
+  let animateHeight = '100%';
+
   function typeSliderData(data) {
+    
     console.log("OUT",data);
-    globalPortfolio = data;
+    if(data == globalPortfolio) {
+      return;
 
-    outputVert.empty();
-    $("#design-title").text(designPortfolio[globalPortfolio].title);
-    $("#design-copy").text(designPortfolio[globalPortfolio].description);
+    } else {
+      globalPortfolio = data;
 
-    $("#design-op1").css('display','flex');
-    $("#design-op1").css('height','auto');
-    //toggle
-    var el = $('#design-op1'),
-    curHeight = el.height(),
-    autoHeight = el.css('height', 'auto').height();
-    el.height(curHeight).animate({height: autoHeight}, 1000);
+      var el = $('#design-op1');
+
+      
+
+      outputVert.empty();
+      $("#design-title").text(designPortfolio[globalPortfolio].title);
+      $("#design-copy").text(designPortfolio[globalPortfolio].description);
+      for (val in designPortfolio[globalPortfolio].sub) {
+        console.log("EACH");
+        outputVert.append('<div style="margin: auto; width: 25%; height: auto; padding: .4rem; background: black;" class="design-credit-div"><img style="height: auto; width: 100%;" value=' + val + ' onclick="vertSliderData('+ val +')" class="design-credit" src=' + vertCredits[val]['img'] + '></div>')
+      } 
+
+
+      new Promise(function(resolve, reject) {
+        $("#design-op1").css('display','flex');
+        
+        $("#design-op2").css('display','none'); 
+        //Set height to auto
+        // el.css("max-height",0);
+        el.animate({"max-height": 0}, 5);
+        //Store auto height
+        // animateHeight = el.outerHeight(true);
+//reset
+        // el.css("height",0);
+      });
+      new Promise(function(resolve, reject) {
+
+        // console.log("Height", animateHeight);
+        //height Animation
+        // el.animate({height: '0px'}, 30);
+
+        el.animate({"max-height": '100%'}, 1000);
+        // $( "#design-op1" ).slideToggle( "slow" );
+        // el.style.height = 'auto';
+        console.log("Promise 02");
+        resolve('Promise 02'); 
+      });
+
+      return;
+    }
+   
+    // el.css("height","0px");
+    // curHeight = el.height(),
+    // autoHeight = el.css('height', '100%').height();
+    
     // $("#design-op1").css('height','0');
     // $("#design-op1").animate({height:fit-content},200);
-    $("#design-op2").css('display','none');
-    for (val in designPortfolio[globalPortfolio].sub) {
-      outputVert.append('<div style="margin: auto; width: 25%; height: auto; padding: .4rem; background: black;" class="design-credit-div"><img style="height: auto; width: 100%;" value=' + val + ' onclick="vertSliderData('+ val +')" class="design-credit" src=' + vertCredits[val]['img'] + '></div>')
-    }
 
   };
 
