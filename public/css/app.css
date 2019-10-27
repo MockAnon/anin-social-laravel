@@ -1187,6 +1187,7 @@
 }
 
 #development-bottom {
+  overflow: hidden;
   background: #fbf3f2;
   color: #1d1d1d;
 }

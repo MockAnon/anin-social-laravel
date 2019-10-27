@@ -257,22 +257,14 @@ for (val in designPortfolio[globalPortfolio].sub) {
 
   // let dataSelected;
 
-  let animateHeight = '100%';
-
   function typeSliderData(data) {
-    
-    console.log("OUT",data);
     if(data == globalPortfolio) {
       return;
 
     } else {
       globalPortfolio = data;
-
       var el = $('#design-op1');
       var cr = $('.design-credit');
-      console.log(cr);
-
-      
 
       outputVert.empty();
       $("#design-title").text(designPortfolio[globalPortfolio].title);
@@ -282,45 +274,22 @@ for (val in designPortfolio[globalPortfolio].sub) {
         outputVert.append('<div style="margin: auto; width: 25%; height: auto; padding: .4rem; background: black;" class="design-credit-div"><img style="height: auto; width: 100%;" value=' + val + ' onclick="vertSliderData('+ val +')" class="design-credit" src=' + vertCredits[val]['img'] + '></div>')
       } 
 
-
       new Promise(function(resolve, reject) {
         $("#design-op1").css('display','flex');
-        
         $("#design-op2").css('display','none'); 
-        //Set height to auto
-        // el.css("max-height",0);
         el.animate({"max-height": 0}, 5);
         cr.animate({"max-width": 0}, 5);
-        //Store auto height
-        // animateHeight = el.outerHeight(true);
-//reset
-        // el.css("height",0);
       });
+
       new Promise(function(resolve, reject) {
-
-        // console.log("Height", animateHeight);
-        //height Animation
-        // el.animate({height: '0px'}, 30);
-
         el.animate({"max-height": '100%'}, 1000);
         cr.animate({"max-width": '100%'}, 1000);
-
-        // $( "#design-op1" ).slideToggle( "slow" );
-        // el.style.height = 'auto';
         console.log("Promise 02");
         resolve('Promise 02'); 
       });
 
       return;
     }
-   
-    // el.css("height","0px");
-    // curHeight = el.height(),
-    // autoHeight = el.css('height', '100%').height();
-    
-    // $("#design-op1").css('height','0');
-    // $("#design-op1").animate({height:fit-content},200);
-
   };
 
   function returnGallery() {

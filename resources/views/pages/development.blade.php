@@ -152,24 +152,67 @@ $(".devcard-info").mouseover(function() {
 
 });
 
+function typeSliderData(data) {
+    if(data == globalPortfolio) {
+      return;
 
+    } else {
+      globalPortfolio = data;
+      var el = $('#development-bottom');
+
+
+      outputVert.empty();
+      $("#design-title").text(designPortfolio[globalPortfolio].title);
+      $("#design-copy").text(designPortfolio[globalPortfolio].description);
+      for (val in designPortfolio[globalPortfolio].sub) {
+        console.log("EACH");
+        outputVert.append('<div style="margin: auto; width: 25%; height: auto; padding: .4rem; background: black;" class="design-credit-div"><img style="height: auto; width: 100%;" value=' + val + ' onclick="vertSliderData('+ val +')" class="design-credit" src=' + vertCredits[val]['img'] + '></div>')
+      } 
+
+      new Promise(function(resolve, reject) {
+        el.css('display','flex');
+        $("#design-op2").css('display','none'); 
+        el.animate({"max-height": 0}, 5);
+      });
+
+      new Promise(function(resolve, reject) {
+        el.animate({"max-height": '100%'}, 1000);
+        console.log("Promise 02");
+        resolve('Promise 02'); 
+      });
+
+      return;
+    }
+  };
+
+  let globalPortfolio;
 function loadDevObject (event) {
-    // modalSlider.style.display = "block";
+  globalPortfolio = event;
+  var el = $('#development-bottom');
 
-    // console.log("this works");
-    
-    // console.log("EVENT VALUE", devObject[event].title);
 
-    // console.log("EVENT VALUE", devObject[event].img);
-
-    // console.log("EVENT VALUE", devObject[event].description);
+  // el.empty();
 
     $("#devTitle").text(devObject[event].title);
     // $("#filmModalDescription").text(objectCredits[event].img);
     $("#devDescription").text(devObject[event].description);
     $("#devImg").attr("src", devObject[event].img);
+
+    new Promise(function(resolve, reject) {
+        // el.css('display','flex');
+        el.animate({"max-height": 0}, 5);
+      });
+
+      new Promise(function(resolve, reject) {
+        el.animate({"max-height": '100%'}, 1000);
+        console.log("Promise 02");
+        resolve('Promise 02'); 
+      });
   
   }
+
+
+
 
 //   let devAccordian = ``;
 
@@ -190,13 +233,22 @@ $(document).ready(function () {
   
 });
 
-onLoadDev();
+// onLoadDev();
 
 var devBtn = document.getElementById("modalDevBtn");
 
 devBtn.onclick = function() {
   modal.style.display = "block";
 }
+
+
+// $(".card-info").mouseover(function() {
+//   let index = $(this).find('input').val();
+//   typeSliderData(index);
+//   }).mouseout(function() {
+// });
+
+
 
 
 </script>
