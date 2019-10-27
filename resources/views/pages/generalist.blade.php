@@ -52,7 +52,7 @@
                     <p> Play Reel </p> 
                     <img class="toggle-reel-img" src="img/icons/return_icon.svg"> 
                 </button>
-                <iframe style="position: relative;" class="video" width="100%" height="315" src="https://www.youtube.com/embed/6OKm4HMqyHY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                <iframe style="position: relative;" class="video" width="100%" height="75%" src="https://www.youtube.com/embed/6OKm4HMqyHY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
                 </iframe>
             </div>
         </div>

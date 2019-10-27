@@ -269,6 +269,8 @@ for (val in designPortfolio[globalPortfolio].sub) {
       globalPortfolio = data;
 
       var el = $('#design-op1');
+      var cr = $('.design-credit');
+      console.log(cr);
 
       
 
@@ -288,6 +290,7 @@ for (val in designPortfolio[globalPortfolio].sub) {
         //Set height to auto
         // el.css("max-height",0);
         el.animate({"max-height": 0}, 5);
+        cr.animate({"max-width": 0}, 5);
         //Store auto height
         // animateHeight = el.outerHeight(true);
 //reset
@@ -300,6 +303,8 @@ for (val in designPortfolio[globalPortfolio].sub) {
         // el.animate({height: '0px'}, 30);
 
         el.animate({"max-height": '100%'}, 1000);
+        cr.animate({"max-width": '100%'}, 1000);
+
         // $( "#design-op1" ).slideToggle( "slow" );
         // el.style.height = 'auto';
         console.log("Promise 02");
@@ -328,7 +333,7 @@ for (val in designPortfolio[globalPortfolio].sub) {
 $(document).ready(function() { 
 
   // console.log("123123123 this peee");
-  alert("Assemble");
+  // alert("Assemble");
 
   $("#acordTitle00").text(designPortfolio[0].title);
   $("#acordTitle01").text(designPortfolio[1].title);
