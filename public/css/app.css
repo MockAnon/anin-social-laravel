@@ -1170,6 +1170,10 @@
   padding-right: 3%;
 }
 
+#devTitle {
+  overflow: hidden;
+}
+
 #devImg {
   width: 100%;
   height: auto;

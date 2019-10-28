@@ -88,7 +88,7 @@
 <div class="flex-col padding-2-0" id="development-bottom">
     <div class="flex-row">
         <div class="flex-1-van padding-0-1" style="padding-right: 0px;">
-            <img id="devImg" src="/"/>
+            <img class="scale-img" id="devImg" src="/"/>
         </div>
         <div class="flex-1-van padding-0-1 border-left-break"> 
             <h1 id="devTitle"> Title </h1>
@@ -152,64 +152,62 @@ $(".devcard-info").mouseover(function() {
 
 });
 
-function typeSliderData(data) {
-    if(data == globalPortfolio) {
-      return;
+let globalPortfolio;
 
-    } else {
-      globalPortfolio = data;
-      var el = $('#development-bottom');
-
-
-      outputVert.empty();
-      $("#design-title").text(designPortfolio[globalPortfolio].title);
-      $("#design-copy").text(designPortfolio[globalPortfolio].description);
-      for (val in designPortfolio[globalPortfolio].sub) {
-        console.log("EACH");
-        outputVert.append('<div style="margin: auto; width: 25%; height: auto; padding: .4rem; background: black;" class="design-credit-div"><img style="height: auto; width: 100%;" value=' + val + ' onclick="vertSliderData('+ val +')" class="design-credit" src=' + vertCredits[val]['img'] + '></div>')
-      } 
-
-      new Promise(function(resolve, reject) {
-        el.css('display','flex');
-        $("#design-op2").css('display','none'); 
-        el.animate({"max-height": 0}, 5);
-      });
-
-      new Promise(function(resolve, reject) {
-        el.animate({"max-height": '100%'}, 1000);
-        console.log("Promise 02");
-        resolve('Promise 02'); 
-      });
-
-      return;
-    }
-  };
-
-  let globalPortfolio;
 function loadDevObject (event) {
   globalPortfolio = event;
   var el = $('#development-bottom');
+  let devTitle = $("#devTitle");
+  let imgSelect = $('.scale-img');
+
+  $("#devDescription").text(devObject[event].description);
+  devTitle.text(" ");
+  devTitle.empty();
+  devTitle.animate({"max-width": '0px'});
+  devTitle.css("display", "none");
+  // devTitle.empty();
+
+  $( ".scale-img" ).each(function() {
+    $(this).empty();
+    $(this).animate({"max-width": 0}, 5);
+    $(this).attr("src", devObject[event].img);
+  });
 
 
-  // el.empty();
 
-    $("#devTitle").text(devObject[event].title);
-    // $("#filmModalDescription").text(objectCredits[event].img);
-    $("#devDescription").text(devObject[event].description);
-    $("#devImg").attr("src", devObject[event].img);
+  new Promise(function(resolve, reject) {
+    // $("#devImg").attr("src", devObject[event].img);
+    // el.css('display','flex');
+    el.animate({"max-height": '0px'}, 5);
+    
+    console.log("Promise 01");
+    
+    // for(i = 0; i < imgSelect.length; i++) {
+    //   imgSelect[i].animate({"max-height": 0}, 5);
+    // }
+  });
 
-    new Promise(function(resolve, reject) {
-        // el.css('display','flex');
-        el.animate({"max-height": 0}, 5);
-      });
+  new Promise(function(resolve, reject) {
+    
+    el.animate({"max-height": '100%'}, 1000);
+    console.log("Promise 02");
 
-      new Promise(function(resolve, reject) {
-        el.animate({"max-height": '100%'}, 1000);
-        console.log("Promise 02");
-        resolve('Promise 02'); 
-      });
+    resolve('Promise 02'); 
+  });
+
+  new Promise(function(resolve, reject){
+    devTitle.css("display", "block");
+    devTitle.text(devObject[event].title);
+    devTitle.animate({ "max-width": '100%'}, 1000);
+    console.log("Promise 03");
+
+    $( ".scale-img" ).each(function() {
+      console.log(this);
+      $(this).animate({"max-width": '100%'}, 1000);
+    });
+  });
   
-  }
+}
 
 
 
