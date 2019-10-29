@@ -144,13 +144,13 @@ let devObject = [{
 ]
 
 
-$(".devcard-info").mouseover(function() {
-  let index = $(this).find('input').val();
-  loadDevObject(index);
+// $(".devcard-info").mouseover(function() {
+//   let index = $(this).find('input').val();
+//   loadDevObject(index);
 
-}).mouseout(function() {
+// }).mouseout(function() {
 
-});
+// });
 
 let globalPortfolio;
 
@@ -161,10 +161,10 @@ function loadDevObject (event) {
   let imgSelect = $('.scale-img');
 
   $("#devDescription").text(devObject[event].description);
+  devTitle.css("display", "none");
   devTitle.text(" ");
   devTitle.empty();
   devTitle.animate({"max-width": '0px'});
-  devTitle.css("display", "none");
   // devTitle.empty();
 
   $( ".scale-img" ).each(function() {
@@ -191,6 +191,7 @@ function loadDevObject (event) {
     
     el.animate({"max-height": '100%'}, 1000);
     console.log("Promise 02");
+    devTitle.animate({ "max-width": '100%'}, 1000);
 
     resolve('Promise 02'); 
   });
@@ -198,7 +199,6 @@ function loadDevObject (event) {
   new Promise(function(resolve, reject){
     devTitle.css("display", "block");
     devTitle.text(devObject[event].title);
-    devTitle.animate({ "max-width": '100%'}, 1000);
     console.log("Promise 03");
 
     $( ".scale-img" ).each(function() {
@@ -235,9 +235,9 @@ $(document).ready(function () {
 
 var devBtn = document.getElementById("modalDevBtn");
 
-devBtn.onclick = function() {
-  modal.style.display = "block";
-}
+// devBtn.onclick = function() {
+//   modal.style.display = "block";
+// }
 
 
 // $(".card-info").mouseover(function() {
