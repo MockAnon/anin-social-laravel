@@ -1287,3 +1287,12 @@ a {
   border-left: solid #78bfb8 10px;
 }
 
+canvas {
+  border: 1px solid black;
+  background: #1d1d1d;
+}
+
+body {
+  margin: 0;
+}
+

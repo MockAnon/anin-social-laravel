@@ -161,12 +161,19 @@ function loadDevObject (event) {
   var el = $('#development-bottom');
   let devTitle = $("#devTitle");
   let imgSelect = $('.scale-img');
+  let devDescription = $("#devDescription");
 
-  $("#devDescription").text(devObject[event].description);
+  
   
   devTitle.text(" ");
   devTitle.empty();
   devTitle.animate({"max-width": '0px'},0);
+  // devTitle.empty();
+
+  
+  devDescription.text(" ");
+  devDescription.empty();
+  devDescription.animate({"max-width": '0px'},0);
   // devTitle.empty();
 
   $( ".scale-img" ).each(function() {
@@ -179,6 +186,8 @@ function loadDevObject (event) {
 
   new Promise(function(resolve, reject) {
     devTitle.css("display", "none");
+
+    devDescription.css("display", "none");
     // $("#devImg").attr("src", devObject[event].img);
     // el.css('display','flex');
     el.animate({"max-height": '0px'}, 5);
@@ -194,7 +203,11 @@ function loadDevObject (event) {
     
     el.animate({"max-height": '100%'}, 100);
     console.log("Promise 02");
+    devTitle.css("display", "none");
     devTitle.animate({ "max-width": '100%'}, 1000);
+
+    devDescription.css("display", "none");
+    devDescription.animate({ "max-width": '100%'}, 1000);
 
     resolve('Promise 02'); 
   });
@@ -202,6 +215,9 @@ function loadDevObject (event) {
   new Promise(function(resolve, reject){
     devTitle.css("display", "block");
     devTitle.text(devObject[event].title);
+
+    devDescription.css("display", "block");
+    devDescription.text(devObject[event].description);
     console.log("Promise 03");
 
     $( ".scale-img" ).each(function() {
