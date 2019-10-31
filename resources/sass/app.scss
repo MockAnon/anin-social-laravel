@@ -101,3 +101,11 @@ a {
 .border-left-break {
     border-left: solid $thirdary 10px;
 }
+
+canvas {
+    border: 1px solid black;
+    background: #1d1d1d;
+}
+body {
+    margin: 0;
+}

@@ -155,27 +155,30 @@ let devObject = [{
 let globalPortfolio;
 
 function loadDevObject (event) {
+  
+
   globalPortfolio = event;
   var el = $('#development-bottom');
   let devTitle = $("#devTitle");
   let imgSelect = $('.scale-img');
 
   $("#devDescription").text(devObject[event].description);
-  devTitle.css("display", "none");
+  
   devTitle.text(" ");
   devTitle.empty();
-  devTitle.animate({"max-width": '0px'});
+  devTitle.animate({"max-width": '0px'},0);
   // devTitle.empty();
 
   $( ".scale-img" ).each(function() {
     $(this).empty();
-    $(this).animate({"max-width": 0}, 5);
+    $(this).animate({"max-width": "0px"}, 1);
     $(this).attr("src", devObject[event].img);
   });
 
 
 
   new Promise(function(resolve, reject) {
+    devTitle.css("display", "none");
     // $("#devImg").attr("src", devObject[event].img);
     // el.css('display','flex');
     el.animate({"max-height": '0px'}, 5);
@@ -189,7 +192,7 @@ function loadDevObject (event) {
 
   new Promise(function(resolve, reject) {
     
-    el.animate({"max-height": '100%'}, 1000);
+    el.animate({"max-height": '100%'}, 100);
     console.log("Promise 02");
     devTitle.animate({ "max-width": '100%'}, 1000);
 
@@ -205,6 +208,7 @@ function loadDevObject (event) {
       console.log(this);
       $(this).animate({"max-width": '100%'}, 1000);
     });
+    document.getElementById('development-bottom').scrollIntoView();
   });
   
 }
