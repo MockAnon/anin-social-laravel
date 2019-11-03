@@ -1186,8 +1186,21 @@
 
 #development-top p,
 #development-top h3,
-#development-top h1 {
+#development-top h1,
+#development-top a {
   color: #1d1d1d;
+  -webkit-transform: all 0.2s;
+          transform: all 0.2s;
+}
+
+#development-top a:hover {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+#development-top a {
+  display: flex;
+  align-items: center;
 }
 
 #development-bottom {
@@ -1283,6 +1296,10 @@ a {
   padding: 2rem 0px;
 }
 
+.padding-r-1 {
+  padding-right: 10px;
+}
+
 .border-left-break {
   border-left: solid #78bfb8 10px;
 }
@@ -1294,5 +1311,15 @@ canvas {
 
 body {
   margin: 0;
+}
+
+.zoom {
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.zoom:hover {
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
 }
 

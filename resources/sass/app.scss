@@ -98,6 +98,10 @@ a {
     padding: 2rem 0px;
 }
 
+.padding-r-1 {
+    padding-right: 10px;
+}
+
 .border-left-break {
     border-left: solid $thirdary 10px;
 }
@@ -108,4 +112,12 @@ canvas {
 }
 body {
     margin: 0;
+}
+
+.zoom {
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.zoom:hover {
+    transform: scale(1.01);
 }

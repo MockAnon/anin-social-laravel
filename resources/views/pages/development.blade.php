@@ -15,20 +15,20 @@
         <p> </p>
         <p>  </p>
         <div class="flex-row-start social-icon-row">
-          <div class="">
-            <a href="https://www.linkedin.com/in/jarondevans/"> <img src="{{url('img/icons/linkedin-logo.svg')}}" alt="profile Pic"> LinkedIn </a>
+          <div class="zoom">
+            <a href="https://www.linkedin.com/in/jarondevans/"> <img class="padding-r-1" src="{{url('img/icons/linkedin-logo.svg')}}" alt="profile Pic"> LinkedIn </a>
           </div>
 
-          <div class="padding-0-40">
-            <a href="https://github.com/mockanon"> <img src="{{url('img/icons/github-logo.svg')}}" alt="profile Pic"> GitHub </a>
+          <div class="padding-0-40 zoom">
+            <a href="https://github.com/mockanon"> <img class="padding-r-1" src="{{url('img/icons/github-logo.svg')}}" alt="profile Pic"> GitHub </a>
           </div>
 
-          <div class="">
-            <a href="https://resume.creddle.io/resume/4h5yjn4rlty"> <img src="{{url('img/icons/profiles.svg')}}" alt="profile Pic"> Resume </a>
+          <div class="zoom">
+            <a href="https://resume.creddle.io/resume/4h5yjn4rlty"> <img class="padding-r-1" src="{{url('img/icons/profiles.svg')}}" alt="profile Pic"> Resume </a>
           </div>
 
-          <div class="padding-0-40">
-            <a id="modalDevBtn"> <img src="{{url('img/icons/email-icon.svg')}}" alt="profile Pic"> Contact Me </a>
+          <div class="padding-0-40 zoom">
+            <a id="modalDevBtn"> <img class="padding-r-1" src="{{url('img/icons/email-icon.svg')}}" alt="profile Pic"> Contact Me </a>
           </div>
 
         </div>
@@ -154,6 +154,8 @@ let devObject = [{
 
 let globalPortfolio;
 
+
+
 function loadDevObject (event) {
   
 
@@ -224,10 +226,11 @@ function loadDevObject (event) {
       console.log(this);
       $(this).animate({"max-width": '100%'}, 1000);
     });
-    document.getElementById('development-bottom').scrollIntoView();
+    // document.getElementById('development-bottom').scrollIntoView();
   });
   
 }
+
 
 
 
@@ -247,6 +250,8 @@ $(document).ready(function () {
 
   $("#devDiv02 .card__head").text(devObject[2].title);
   $("#devDiv02 .card__copy").text(devObject[2].date);
+
+  loadDevObject(1);
 
   
 });
