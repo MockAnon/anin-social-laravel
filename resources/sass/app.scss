@@ -115,9 +115,12 @@ body {
 }
 
 .zoom {
-    transition: all 0.5s;
+    // transition: all 0.5s ease;
+    // transition: transform 0.2s ease;
+    transform: scale(1);
+
     cursor: pointer;
 }
 .zoom:hover {
-    transform: scale(1.01);
+    transform: scale(0.9) !important;
 }

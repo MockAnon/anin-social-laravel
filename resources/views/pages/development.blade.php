@@ -85,18 +85,20 @@
 
 </div>
 <!-- Image Accordion -->
-<div class="flex-col padding-2-0" id="development-bottom">
-    <div class="flex-row">
-        <div class="flex-1-van padding-0-1" style="padding-right: 0px;">
-            <img class="scale-img" id="devImg" src="/"/>
-        </div>
-        <div class="flex-1-van padding-0-1 border-left-break"> 
-            <h1 id="devTitle"> Title </h1>
-            <p id="devDescription"> Description </p>
-        </div>
-    </div>
-    <!-- <h1 id="devTitle"> Title </h1>
-    <p id="devDescription"> Description </p> -->
+<div id="development-bottom-parent">
+  <div class="flex-col padding-2-0" id="development-bottom">
+      <div class="flex-row">
+          <div class="flex-1-van padding-0-1" style="padding-right: 0px;">
+              <img class="scale-img" id="devImg" src="/"/>
+          </div>
+          <div class="flex-1-van padding-0-1 border-left-break"> 
+              <h1 id="devTitle"> Title </h1>
+              <p id="devDescription"> Description </p>
+          </div>
+      </div>
+      <!-- <h1 id="devTitle"> Title </h1>
+      <p id="devDescription"> Description </p> -->
+  </div>
 </div>
     
 @endsection
@@ -154,33 +156,45 @@ let devObject = [{
 
 let globalPortfolio;
 
-
+// let loaded = 1;
 
 function loadDevObject (event) {
+  // event.preventDefault();
   
-
+// if (loaded == 1) {
+  loaded = 0;
   globalPortfolio = event;
   var el = $('#development-bottom');
   let devTitle = $("#devTitle");
   let imgSelect = $('.scale-img');
   let devDescription = $("#devDescription");
 
+  el.stop();
+  devTitle.stop();
+  imgSelect.stop();
+  devDescription.stop();
+
   
   
   devTitle.text(" ");
   devTitle.empty();
-  devTitle.animate({"max-width": '0px'},0);
+  // devTitle.animate({"max-width": '0px'},0);
+  devTitle.css({"max-width": '0px'});
+
   // devTitle.empty();
 
   
   devDescription.text(" ");
   devDescription.empty();
-  devDescription.animate({"max-width": '0px'},0);
+  devDescription.animate({"max-height": '0px'},0);
+  devDescription.css({"max-height": '0px'});
+  // devDescription.animate({},0);
   // devTitle.empty();
 
   $( ".scale-img" ).each(function() {
     $(this).empty();
-    $(this).animate({"max-width": "0px"}, 1);
+    // $(this).animate({"max-width": "0px"}, 1);
+    $(this).css({"max-width": "0px"});
     $(this).attr("src", devObject[event].img);
   });
 
@@ -192,7 +206,8 @@ function loadDevObject (event) {
     devDescription.css("display", "none");
     // $("#devImg").attr("src", devObject[event].img);
     // el.css('display','flex');
-    el.animate({"max-height": '0px'}, 5);
+    // el.animate({"max-height": '0%'}, 5);
+    el.css({"max-height": '0%'});
     
     console.log("Promise 01");
     
@@ -207,9 +222,12 @@ function loadDevObject (event) {
     console.log("Promise 02");
     devTitle.css("display", "none");
     devTitle.animate({ "max-width": '100%'}, 1000);
+    
 
     devDescription.css("display", "none");
-    devDescription.animate({ "max-width": '100%'}, 1000);
+    // devDescription.animate({ "max-width": '100%'}, 1000);
+    // devDescription.animate({ "max-height": '100%'}, 1000);
+    devDescription.animate({ "max-height": '3000px'}, 3000);
 
     resolve('Promise 02'); 
   });
@@ -226,8 +244,14 @@ function loadDevObject (event) {
       console.log(this);
       $(this).animate({"max-width": '100%'}, 1000);
     });
+    // devDescription.animate({ "max-height": '100%'}, 1000);
     // document.getElementById('development-bottom').scrollIntoView();
+    // loaded = 1;
   });
+// }
+// else {
+//   return false;
+// }
   
 }
 

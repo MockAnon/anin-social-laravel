@@ -265,7 +265,8 @@ for (val in designPortfolio[globalPortfolio].sub) {
       globalPortfolio = data;
       var el = $('#design-op1');
       var cr = $('.design-credit');
-
+      el.stop();
+      cr.stop();
       outputVert.empty();
       $("#design-title").text(designPortfolio[globalPortfolio].title);
       $("#design-copy").text(designPortfolio[globalPortfolio].description);
