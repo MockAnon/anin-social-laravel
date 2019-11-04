@@ -59,83 +59,83 @@
     description: "goes here temp writting for clossal"
   },
   { img: "img/filmCredits/credit2.jpg",
-    title: "Colossal",
+    title: "See You Tomorrow",
     description: "goes here goes here temp writting for clossal"
   },
   { img: "img/filmCredits/credit3.jpg",
-    title: "Colossal",
+    title: "Journey to the West The Demons Strike Back",
     description: "goes here goes here temp writting for clossal testing this thing blah blah blah"
   },
   { img: "img/filmCredits/credit4.jpg",
-    title: "Colossal",
+    title: "Hunter Killer",
     description: "goes here  temp writting for clossal testing this thing blah blah blah"
   },
   { img: "img/filmCredits/credit5.jpg",
-    title: "Colossal",
+    title: "Status Update",
     description: "goes here  temp writting for clossal testing this thing blah blah blah"
   },
   { img: "img/filmCredits/credit6.jpg",
-    title: "Colossal",
+    title: "Legion",
     description: "goes here  temp writting for clossal testing this thing blah blah blah"
   },
   { img: "img/filmCredits/credit7.jpg",
-    title: "Colossal",
+    title: "Wynonna Earp",
     description: "goes here  temp writting for clossal testing this thing blah blah blah"
   },
   { img: "img/filmCredits/credit8.jpg",
-    title: "Colossal",
+    title: "Edge of Winter",
     description: "goes here  temp writting for clossal testing this thing blah blah blah"
   },
   { img: "img/filmCredits/credit9.jpg",
-    title: "Colossal",
+    title: "Scandal",
     description: "goes here  temp writting for clossal testing this thing blah blah blah"
   },
   { img: "img/filmCredits/credit10.jpg",
-    title: "Colossal",
+    title: "London Has Fallen",
     description: "goes here  temp writting for clossal testing this thing blah blah blah"
   },
   { img: "img/filmCredits/credit11.jpg",
-    title: "Colossal",
+    title: "Hyena Road",
     description: "goes here  temp writting for clossal testing this thing blah blah blah"
   },
   { img: "img/filmCredits/credit12.jpg",
-    title: "Colossal",
+    title: "The Brain The Story of You",
     description: "goes here  temp writting for clossal testing this thing blah blah blah"
   },
   { img: "img/filmCredits/credit13.jpg",
-    title: "Colossal",
+    title: "Orphan Black",
     description: "goes here  temp writting for clossal testing this thing blah blah blah"
   },
   { img: "img/filmCredits/credit14.jpg",
-    title: "Colossal",
+    title: "How to Get Away With Murder",
     description: "goes here  temp writting for clossal testing this thing blah blah blah"
   },
   { img: "img/filmCredits/credit15.jpg",
-    title: "Colossal",
+    title: "Texas Rising",
     description: "goes here  temp writting for clossal testing this thing blah blah blah"
   },
   { img: "img/filmCredits/credit16.jpg",
-    title: "Colossal",
+    title: "UFOs Declassified",
     description: "goes here  temp writting for clossal testing this thing blah blah blah"
   },
   { img: "img/filmCredits/credit17.jpg",
-    title: "Colossal",
+    title: "Hellions",
     description: "goes here  temp writting for clossal testing this thing blah blah blah"
   },
   { img: "img/filmCredits/credit18.jpg",
-    title: "Colossal",
+    title: "A.C.O.R.N.S. Operation Crack Down",
     description: "goes here  temp writting for clossal testing this thing blah blah blah"
   },
   { img: "img/filmCredits/credit19.jpg",
-    title: "Colossal",
+    title: "Star Trek Discovery",
     description: "goes here  temp writting for clossal testing this thing blah blah blah"
   },
   { img: "img/filmCredits/credit20.jpg",
-    title: "Colossal",
+    title: "Loving Pablo",
     description: "goes here  temp writting for clossal testing this thing blah blah blah"
   },
   { img: "img/filmCredits/credit21.jpg",
-    title: "Colossal",
+    title: "Hunter Killer",
     description: "goes here  temp writting for clossal testing this thing blah blah blah"
   }
 ]

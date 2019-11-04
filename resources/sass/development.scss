@@ -12,11 +12,11 @@
     h1,
     a {
         color: $black;
-        transform: all 0.2s;
+        // transform: all 0.2s;
     }
-    a:hover {
-        transform: scale(1.5);
-    }
+    // a:hover {
+    //     transform: scale(1.5);
+    // }
     a {
         display: flex;
         align-items: center;

@@ -32,12 +32,12 @@
                     </p>
                 </div>
                 <div class="flex-row" style="justify-content: flex-end;">
-                    <button onclick="toggleReel()" class="toggle-reel-button"> 
+                    <button onclick="toggleReel()" class="toggle-reel-button zoom"> 
                         <p class="margin-0 padding-bottom-1"> Play Reel </p> 
                         <img class="toggle-reel-img" style="" src="img/icons/play_reel.svg"> 
                     </button>
                     <!-- <div id="button-reel-breakdown" onclick="toggleBreakdown()" style="margin: 1rem 0px;">  -->
-                    <div id="button-reel-breakdown" style=""> 
+                    <div class="zoom" id="button-reel-breakdown" style=""> 
                         <p id="reel-copy" class="margin-0 padding-bottom-1" style="margin:0px;"> Reel Breakdown </p>
                         <img class="toggle-reel-img" style="" src="img/icons/gallery.svg">
                         @include('component.reelBreakdown') 

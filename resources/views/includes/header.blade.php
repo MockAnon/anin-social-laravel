@@ -1,6 +1,6 @@
 
 <nav role="navigation">
-  <div id="menuToggle">
+  <div class="zoom" id="menuToggle">
    
     <input type="checkbox" />
     
@@ -10,9 +10,9 @@
     
     
     <ul id="menu">
-      <a href="/"><li>Home</li></a>
-      <a href="/development"><li>Development</li></a>
-      <a href="/generalist"><li>Designer / Generalist </li></a>
+      <a class="zoom" href="/"><li>Home</li></a>
+      <a class="zoom" href="/development"><li>Development</li></a>
+      <a class="zoom" href="/generalist"><li>Designer / Generalist </li></a>
       <!-- <a id="modalBtn"><li>Contact</li></a> -->
     </ul>
   </div>

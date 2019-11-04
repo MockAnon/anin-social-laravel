@@ -1189,13 +1189,6 @@
 #development-top h1,
 #development-top a {
   color: #1d1d1d;
-  -webkit-transform: all 0.2s;
-          transform: all 0.2s;
-}
-
-#development-top a:hover {
-  -webkit-transform: scale(1.5);
-          transform: scale(1.5);
 }
 
 #development-top a {
@@ -1323,13 +1316,19 @@ body {
 }
 
 .zoom {
+  transition: all 0.2s ease;
   -webkit-transform: scale(1);
           transform: scale(1);
   cursor: pointer;
 }
 
 .zoom:hover {
-  -webkit-transform: scale(0.9) !important;
-          transform: scale(0.9) !important;
+  -webkit-transform: scale(1.05) !important;
+          transform: scale(1.05) !important;
+}
+
+canvas {
+  border: 1px solid black;
+  background: #1d1d1d;
 }
 
