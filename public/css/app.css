@@ -1332,3 +1332,18 @@ canvas {
   background: #1d1d1d;
 }
 
+.reveal {
+  opacity: 0;
+  -webkit-transform: translate3d(0, 100px, 0);
+          transform: translate3d(0, 100px, 0);
+  transition: opacity 0.8s, -webkit-transform 0.8s;
+  transition: opacity 0.8s, transform 0.8s;
+  transition: opacity 0.8s, transform 0.8s, -webkit-transform 0.8s;
+}
+
+.reveal_visible {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+

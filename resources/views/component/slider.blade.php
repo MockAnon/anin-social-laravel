@@ -3,8 +3,8 @@
 <!-- slider-ol -->
 <div style="position: relative; z-index:1-;">
   <div id="slider-ol-visible" class="">
-      <h1 id="slider-title"> </h1>
-      <p id="slider-text"> </p>
+      <h1 class="reveal" id="slider-title"> </h1>
+      <p class="reveal" id="slider-text"> </p>
   </div>
 </div>
 
@@ -148,14 +148,14 @@ var output = $('#sliderParent');
 
 function appendToArray(){
   for (val in objectCredits) {
-    output.append('<li class="credit-li">' + '<input style="display:none;" value='+val+'>' + '<img value=' + val + ' onclick="filmCreditModal('+ val +')" class="credit-img" src=' + objectCredits[val]['img'] + '></li>')
+    output.append('<li class="credit-li reveal">' + '<input style="display:none;" value='+val+'>' + '<img value=' + val + ' onclick="filmCreditModal('+ val +')" class="credit-img" src=' + objectCredits[val]['img'] + '></li>')
   }
 };
 
 function appendToArray(){
   for (val in objectCredits) {
     // <li class="tooltip"> </li> <div class="tooltiptext"> <div>' + objectCredits[val]['description'] + '</div></div>
-    output.append('<li class="credit-li">' + '<input style="display:none;" value='+val+'>' + '<img value=' + val + ' onclick="filmCreditModal('+ val +')" class="credit-img" src=' + objectCredits[val]['img'] + '></li>')
+    output.append('<li class="credit-li reveal">' + '<input style="display:none;" value='+val+'>' + '<img value=' + val + ' onclick="filmCreditModal('+ val +')" class="credit-img" src=' + objectCredits[val]['img'] + '></li>')
   }
 };
 
