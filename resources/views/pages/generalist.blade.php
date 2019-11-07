@@ -46,7 +46,7 @@
        
         </div>
 
-        <div class="row display-reel">
+        <div class="row display-reel reveal">
             <div style="position: relative;">
                 <button onclick="toggleReel()" class="toggle-reel-button position-reel-button"> 
                     <p class="reveal"> Play Reel </p> 

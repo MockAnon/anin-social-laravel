@@ -16,7 +16,7 @@
         @yield('content')
       </div>
 
-
+<p> WHY DON'T YOU WORK </p>
       @include('component.footer')
 
     </body>

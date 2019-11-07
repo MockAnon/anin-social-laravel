@@ -1,5 +1,3 @@
-@section('custom-script')
-
 <p> Footer BS </p>
 
 
@@ -7,7 +5,7 @@
   <script src="{{ mix('js/app.js') }}"></script>
   <script type="text/javascript">
       $(document).ready(function() {
-          alert("Settings page was loaded");
+          // alert("Settings page was loaded");
           console.log("Please work");
       });
 
@@ -62,4 +60,8 @@
 
 
   </script>
+
+@section('custom-script')
+
+
 @stop

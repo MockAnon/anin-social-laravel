@@ -7,27 +7,27 @@
 @section('content')
 <div id="development-top" class="row display-info">
     <div class="col">
-        <h3> Development </h3>
-        <p> Over a year of experience as a developer and roughly five years of Compositing experience. Experience with languages such as Javascript, PHP, Python, CSS, Sass and HTML. I also have experience with Frameworks such as Laravel, Angular, Ionic, and React Native. I have experience with lybraries such as jQuery and React.
+        <h3 class="reveal"> Development </h3>
+        <p class="reveal"> Over a year of experience as a developer and roughly five years of Compositing experience. Experience with languages such as Javascript, PHP, Python, CSS, Sass and HTML. I also have experience with Frameworks such as Laravel, Angular, Ionic, and React Native. I have experience with lybraries such as jQuery and React.
          DATABASES, SYSTEMS, CMS: MongoDB, SQL, Git, Firebase, Google FireStore </p>
 
         <p> </p>
         <p> </p>
         <p>  </p>
         <div class="flex-row-start social-icon-row">
-          <div class="zoom">
+          <div class="zoom reveal">
             <a href="https://www.linkedin.com/in/jarondevans/"> <img class="padding-r-1" src="{{url('img/icons/linkedin-logo.svg')}}" alt="profile Pic"> LinkedIn </a>
           </div>
 
-          <div class="padding-0-40 zoom">
+          <div class="padding-0-40 zoom reveal">
             <a href="https://github.com/mockanon"> <img class="padding-r-1" src="{{url('img/icons/github-logo.svg')}}" alt="profile Pic"> GitHub </a>
           </div>
 
-          <div class="zoom">
+          <div class="zoom reveal">
             <a href="https://resume.creddle.io/resume/4h5yjn4rlty"> <img class="padding-r-1" src="{{url('img/icons/profiles.svg')}}" alt="profile Pic"> Resume </a>
           </div>
 
-          <div class="padding-0-40 zoom">
+          <div class="padding-0-40 zoom reveal">
             <a id="modalDevBtn"> <img class="padding-r-1" src="{{url('img/icons/email-icon.svg')}}" alt="profile Pic"> Contact Me </a>
           </div>
 
@@ -40,7 +40,7 @@
 <!-- Image Accordion -->
 <div class="accordion-container">
 
-<a id="devDiv00" class="card devcard-info" onclick="loadDevObject('0')" href="#devTitle">
+<a id="devDiv00" class="card devcard-info reveal" onclick="loadDevObject('0')" href="#devTitle">
     <img src="https://upload.wikimedia.org/wikipedia/commons/d/d6/Cat_plotting_something_evil%21.jpg">
     <div class="card__head">
         Title
@@ -49,7 +49,7 @@
     <input style="display:none;" value='0'>
 </a>
 
-  <a id="devDiv01" class="card devcard-info" onclick="loadDevObject('1')" href="#devTitle">
+  <a id="devDiv01" class="card devcard-info reveal" onclick="loadDevObject('1')" href="#devTitle">
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/False_alarm_-a.jpg/1280px-False_alarm_-a.jpg">
     <div class="card__head">
       MoneyMate
@@ -58,7 +58,7 @@
     <input style="display:none;" value='1'>
 </a>
 
-  <a id="devDiv02" class="card devcard-info" onclick="loadDevObject('2')" href="#devTitle">
+  <a id="devDiv02" class="card devcard-info reveal" onclick="loadDevObject('2')" href="#devTitle">
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Al_acecho_%289272124788%29.jpg/1280px-Al_acecho_%289272124788%29.jpg">
     <div class="card__head">
       Furrever
@@ -89,11 +89,11 @@
   <div class="flex-col padding-2-0" id="development-bottom">
       <div class="flex-row">
           <div class="flex-1-van padding-0-1" style="padding-right: 0px;">
-              <img class="scale-img" id="devImg" src="/"/>
+              <img class="scale-img reveal" id="devImg" src="/"/>
           </div>
           <div class="flex-1-van padding-0-1 border-left-break"> 
-              <h1 id="devTitle"> Title </h1>
-              <p id="devDescription"> Description </p>
+              <h1 class="reveal" id="devTitle"> Title </h1>
+              <p class="reveal" id="devDescription"> Description </p>
           </div>
       </div>
       <!-- <h1 id="devTitle"> Title </h1>
