@@ -13,7 +13,7 @@
       
       // WOAH
     var rafId = null;
-    var delay = 200;
+    var delay = 80;
     var lTime = 0;
 
     function scroll() {
@@ -35,6 +35,7 @@
         }
       });
     }
+
     function reveal() {
       rafId = null;
       var now = performance.now();
@@ -51,12 +52,13 @@
 
     $(scroll);
     $(window).scroll(scroll);
-    $(window).click(function() {
-      $('.reveal').removeClass('reveal_visible').removeClass('reveal_pending');
-      lTime = performance.now() + 500;
-      var top = $(window).scrollTop();
-      $(window).scrollTop(top === 0 ? 1 : top-1);
-    });
+    // $(window).click(function() {
+    //   console.log("clicker");
+    //   $('.reveal').removeClass('reveal_visible').removeClass('reveal_pending');
+    //   lTime = performance.now() + 500;
+    //   var top = $(window).scrollTop();
+    //   $(window).scrollTop(top === 0 ? 1 : top-1);
+    // });
 
 
   </script>

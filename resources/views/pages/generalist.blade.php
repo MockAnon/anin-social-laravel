@@ -6,6 +6,10 @@
 
 @section('content')
 <div id="generalist-body">
+    
+    <img id="" src="img/generalistBG.jpg">
+    <img id="" src="img/developmentBG.jpg">
+
         
     <div id="generalist-ol" class="generalist-ol-visible">
         <img onclick="generalistClose();" id="generalist-close" src="img/x2.svg">
