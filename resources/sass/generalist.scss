@@ -109,8 +109,14 @@
 }
 
 #generalist-top {
-    // padding: 0px 2rem;
+    position: relative;
     background: $white;
+    background-image: url('/img/generalistBG.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    // padding: 0px 2rem;
+    // background: $white;
     color: $black;
     p,
     h3,
@@ -146,4 +152,15 @@
 
 #devTitle {
     overflow: hidden;
+}
+
+#addOpacity {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    opacity: 0.3;
+    width: 100%;
+    height: 100%;
+    background-color: $white;
 }

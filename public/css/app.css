@@ -1134,7 +1134,12 @@
 }
 
 #generalist-top {
+  position: relative;
   background: #fbf3f2;
+  background-image: url("/img/generalistBG.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
   color: #1d1d1d;
 }
 
@@ -1174,6 +1179,16 @@
   overflow: hidden;
 }
 
+#addOpacity {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.3;
+  width: 100%;
+  height: 100%;
+  background-color: #fbf3f2;
+}
+
 #devImg {
   width: 100%;
   height: auto;
@@ -1181,6 +1196,11 @@
 
 #development-top {
   background: #fbf3f2;
+  background-image: url("/img/developmentBG.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+  position: relative;
   color: #1d1d1d;
 }
 

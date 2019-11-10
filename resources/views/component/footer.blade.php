@@ -1,4 +1,4 @@
-<p> Footer BS </p>
+
 
 
   <!-- <script src="jquery-3.4.0.min.js"></script> -->

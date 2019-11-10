@@ -6,6 +6,14 @@
 #development-top {
     // padding: 0px 2rem;
     background: $white;
+    background-image: url('/img/developmentBG.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    position: relative;
+
+    // background-size: auto;
+
     color: $black;
     p,
     h3,

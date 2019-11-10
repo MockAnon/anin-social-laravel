@@ -7,8 +7,8 @@
 @section('content')
 <div id="generalist-body">
     
-    <img id="" src="img/generalistBG.jpg">
-    <img id="" src="img/developmentBG.jpg">
+    <!-- <img id="" src="img/generalistBG.jpg">
+    <img id="" src="img/developmentBG.jpg"> -->
 
         
     <div id="generalist-ol" class="generalist-ol-visible">
@@ -18,6 +18,7 @@
     </div>
 
     <div id="generalist-top">
+        <div id="addOpacity"> </div>
 
         <div class="display-info">
       
