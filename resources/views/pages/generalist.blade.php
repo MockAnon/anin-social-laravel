@@ -20,11 +20,11 @@
     <div id="generalist-top">
         <div id="addOpacity"> </div>
 
-        <div class="display-info">
+        <div class="display-info push-top">
       
                 <div class="flex-row">
 
-                    <h3 class="reveal" style="margin: 0px;"> Developer, Compositor, and CG Generalist </h3>
+                    <h3 class="reveal" style="margin: 0px;"> Developer, Compositor <br> and CG Generalist </h3>
 
                 </div>
                 <hr style="margin: 0px;">
@@ -36,7 +36,12 @@
                         <br> <br> and consideration.
                     </p>
                 </div>
-                <div class="flex-row reveal" style="justify-content: flex-end;">
+                
+                
+
+
+                <div class="flex-row reveal" style="justify-content: flex-end; justify-content: flex-end; position: absolute; right: 3vw; bottom: 0px;">
+                    
                     <button onclick="toggleReel()" class="toggle-reel-button zoom"> 
                         <p class="margin-0 padding-bottom-1"> Play Reel </p> 
                         <img class="toggle-reel-img" style="" src="img/icons/play_reel.svg"> 
@@ -48,6 +53,12 @@
                         @include('component.reelBreakdown') 
                     </div>
                 </div>
+
+                <!-- <div class="flex-row"> -->
+                    <a href="#myModalSlider"> 
+                        <img class="toggle-reel-img" style="position:absolute; left: 50%; right: 50%; bottom: -5vh;" src="img/icons/downArrow.svg"> 
+                    </a>
+                <!-- </div> -->
        
         </div>
 

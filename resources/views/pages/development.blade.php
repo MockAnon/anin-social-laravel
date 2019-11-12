@@ -7,7 +7,7 @@
 @section('content')
 <div id="development-top" class="row display-info">
   <div id="addOpacity"> </div> 
-    <div class="col">
+    <div class="col push-top">
         <h3 class="reveal"> Development </h3>
         <p class="reveal"> Over a year of experience as a developer and roughly five years of Compositing experience. Experience with languages such as Javascript, PHP, Python, CSS, Sass and HTML. I also have experience with Frameworks such as Laravel, Angular, Ionic, and React Native. I have experience with lybraries such as jQuery and React.
          DATABASES, SYSTEMS, CMS: MongoDB, SQL, Git, Firebase, Google FireStore </p>
