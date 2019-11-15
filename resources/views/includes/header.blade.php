@@ -1,6 +1,8 @@
 
+
 <nav role="navigation">
   <div class="zoom" id="menuToggle">
+    <img style="width:21rem; height:auto;" src="img/icons/logo.png">
    
     <input type="checkbox" />
     

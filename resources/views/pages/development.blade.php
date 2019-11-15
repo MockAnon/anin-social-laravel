@@ -33,13 +33,25 @@
           </div>
 
         </div>
+
+
         
     </div>
+
+    <a href="#bottom"> 
+      <img class="toggle-reel-img" style="position:absolute; left: 50%; right: 50%; bottom: 5vh;" src="img/icons/downArrow.svg"> 
+    </a>
+
 </div>
 
 
 <!-- Image Accordion -->
+<div id="bottom"> 
+</div>
+
 <div class="accordion-container">
+
+
 
 <a id="devDiv00" class="card devcard-info reveal" onclick="loadDevObject('0')" href="#devTitle">
     <img src="https://upload.wikimedia.org/wikipedia/commons/d/d6/Cat_plotting_something_evil%21.jpg">
@@ -110,8 +122,8 @@
 
 let devObject = [{
     img: "img/designCredits/credit1.jpg",
-    title: "BeautyVite",
-    description: `In 2019, I began working on BeauteVite. I was the UX Designer and Front-End Developer on this project. I was also responsible for updating the companies style guides and was fortunate to have been able to do some hiring for the project. <br> <br>
+    title: "Seminarii",
+    description: `In 2019, I began working on Seminarii. I was the UX Designer and Front-End Developer on this project. I was also responsible for updating the companies style guides and was fortunate to have been able to do some hiring for the project. <br> <br>
     I gained more experience in React, the PHP framework Laravel, and Adobe XD.
 
     I was also responsible for the companies sound editing and design.

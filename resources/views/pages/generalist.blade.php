@@ -55,7 +55,7 @@
                 </div>
 
                 <!-- <div class="flex-row"> -->
-                    <a href="#myModalSlider"> 
+                    <a href="#bottom"> 
                         <img class="toggle-reel-img" style="position:absolute; left: 50%; right: 50%; bottom: -5vh;" src="img/icons/downArrow.svg"> 
                     </a>
                 <!-- </div> -->
@@ -81,7 +81,7 @@
         </div> -->
     </div>
 
-
+    <div id="bottom" > </div>
     @include('component.slider')
 
 
