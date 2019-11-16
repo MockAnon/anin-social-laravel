@@ -1,8 +1,18 @@
-#menuToggle {
-    display: block;
-    position: fixed;
+#navbar {
+    width: 100%;
     z-index: 1;
     background: #ffffff6b;
+    // display: block;
+    display: flex;
+    justify-content: space-between;
+}
+
+#menuToggle {
+    // width: 100vw;
+    right: 0;
+    // position: fixed;
+    // z-index: 1;
+    // background: #ffffff6b;
     padding: 0.5rem;
     padding-bottom: 0.2rem;
     input {
@@ -68,6 +78,7 @@
     -webkit-font-smoothing: antialiased;
     // transform-origin: 0% 0%;
     transform: translate(-100%, 0);
+    transform: translate(0, 0);
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
     li {
         padding: 10px 0;
