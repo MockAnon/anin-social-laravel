@@ -2,7 +2,7 @@
 
 <nav id="navbar" role="navigation" style="position: fixed;">
   <div id="navbar-child">
-    <a href="/">
+    <a href="/" class="zoom">
       <img style="width:21rem; height:auto;" src="img/icons/logo.png"> 
     </a>
     <div class="zoom" id="menuToggle">

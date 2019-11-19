@@ -33,6 +33,12 @@
             if (!rafId) requestAnimationFrame(reveal);  
           }
         }
+        if(scrollTop < 20) {
+          console.log("transparent");
+          $("#navbar").css({'opacity', 0});
+        } else {
+          $("#navbar").css({'opacity', 100});
+        }
       });
     }
 

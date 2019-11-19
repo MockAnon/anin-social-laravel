@@ -255,6 +255,10 @@
   visibility: visible;
 }
 
+.transparent {
+  opacity: 0;
+}
+
 .modal {
   display: none;
   /* Hidden by default */
