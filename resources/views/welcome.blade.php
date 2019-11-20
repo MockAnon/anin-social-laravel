@@ -5,7 +5,11 @@
 @endsection
 
 @section('content')
-    <canvas></canvas>
+    <!-- <canvas></canvas> -->
+    <div style="position: relative; height: 100%; width: 100%;">
+        <img style="position: absolute; left: 0; width: 100vw; height: auto;" id="" src="img/generalistBG.jpg">
+        <img style="position: absolute; left: 0; width: 100vw; height: auto;" id="" src="img/developmentBG.jpg">
+    <div>
     <div class="flex-row">
         <p class="flex-1"> Woah </p>
         <p class="flex-1"> Woah2 </p>

@@ -5,7 +5,8 @@
     <a href="/" class="zoom">
       <img style="width:21rem; height:auto;" src="img/icons/logo.png"> 
     </a>
-    <div class="zoom" id="menuToggle">
+    <div style="transform: scale(1); cursor: pointer;" class="" id="menuToggle">
+    <!-- <div class="zoom" id="menuToggle"> -->
     
       <input type="checkbox" />
       

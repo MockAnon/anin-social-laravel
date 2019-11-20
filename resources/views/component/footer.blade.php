@@ -21,6 +21,14 @@
       var height = $(window).height()
       console.log(scrollTop, height);
       var visibleTop = scrollTop + height;
+
+      if(scrollTop < 20) {
+        console.log("transparent");
+        $("#navbar").css('background-color','#fbf3f200');
+      } else {
+        $("#navbar").css('background-color', "#fbf3f2");
+      }
+
       $('.reveal').each(function() {
         var $t = $(this);
         if ($t.hasClass('reveal_visible')) { return; }
@@ -33,12 +41,7 @@
             if (!rafId) requestAnimationFrame(reveal);  
           }
         }
-        if(scrollTop < 20) {
-          console.log("transparent");
-          $("#navbar").css({'opacity', 0});
-        } else {
-          $("#navbar").css({'opacity', 100});
-        }
+
       });
     }
 
