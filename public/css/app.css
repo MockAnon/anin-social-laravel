@@ -1438,3 +1438,32 @@ canvas {
   position: relative;
 }
 
+/* The image used */
+
+/* Full height */
+
+/* Center and scale the image nicely */
+
+.img-home-size {
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: auto;
+}
+
+#img-home-left {
+  width: 50%;
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  display: inline-block;
+}
+
+#img-home-right {
+  width: 50%;
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  display: inline-block;
+}
+
