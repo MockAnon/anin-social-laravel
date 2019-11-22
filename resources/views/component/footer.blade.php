@@ -69,6 +69,39 @@
     //   $(window).scrollTop(top === 0 ? 1 : top-1);
     // });
 
+    $(document).ready(function(){
+      let right = $("#img-home-right");
+      let left = $("#img-home-left");
+
+      right.mouseover(function() {
+        console.log("over");  
+        right.animate({
+            width: "70%"
+        }, 100, function() {
+
+        });
+        left.animate({
+            width: "30%"
+        }, 100, function() {
+
+        });
+      });
+
+      left.mouseover(function() {
+        console.log("left");  
+        left.animate({
+            width: "70%"
+        }, 100, function() {
+
+        });
+        right.animate({
+            width: "30%"
+        }, 100, function() {
+
+        });
+      });
+    });
+
 
   </script>
 

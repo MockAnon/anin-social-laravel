@@ -12,6 +12,7 @@
       @include('includes.header')
       @include('component.message')
 
+      @yield('content02')
       <div class="container">
         @yield('content')
       </div>
