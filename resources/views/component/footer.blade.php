@@ -73,6 +73,37 @@
       let right = $("#img-home-right");
       let left = $("#img-home-left");
 
+      let righta = $("#img-home-right .main-links-homepage");
+      let lefta = $("#img-home-left .main-links-homepage");
+
+      // background: #668da7;
+
+      $(function() {
+        right.hover(function() {
+          left.css('background-color', '#00caff4d');
+          lefta.css('background-color', '#668da7');
+          
+        }, function() {
+          // on mouseout, reset the background colour
+          lefta.css('background-color', '');
+          left.css('background-color', '#ffffff45');
+          
+        });
+      });
+
+      $(function() {
+        left.hover(function() {
+          right.css('background-color', '#00caff4d');
+          righta.css('background-color', '#668da7');
+          
+        }, function() {
+          righta.css('background-color', '');
+          // on mouseout, reset the background colour
+          right.css('background-color', '#ffffff45');
+        });
+      });
+
+
       right.mouseover(function() {
         console.log("over");  
         right.animate({
@@ -90,12 +121,14 @@
       left.mouseover(function() {
         console.log("left");  
         left.animate({
-            width: "70%"
+            width: "70%",
+            background: "#00caff4d"
         }, 100, function() {
 
         });
         right.animate({
-            width: "30%"
+            width: "30%",
+            background: "#ffffff45"
         }, 100, function() {
 
         });

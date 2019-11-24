@@ -7,12 +7,24 @@
 @section('content')
     <!-- <canvas></canvas> -->
     <div style="position: relative; white-space: nowrap; width: 100vw;">
-        <div id="img-home-left" style="">
-            <img class="img-home-size" style="" id="" src="img/generalistBG.jpg">
+        <div id="img-home-left" >
+            <div class="main-div-homepage">
+                <a class="zoom main-links-homepage" href="/generalist"> Design </a>
+                <div> <p> Over a year of experience as a developer and roughly five years of Compositing experience. Experience with languages such as Javascript, PHP, Python, CSS, Sass and HTML. I also have experience with Frameworks such as Laravel, Angular, Ionic, and React Native. I have experience with lybraries such as jQuery and React. DATABASES, SYSTEMS, CMS: MongoDB, SQL, Git, Firebase, Google FireStore </p> </div>
+            </div>
+            <img class="img-home-size"  id="" src="img/generalistBG.jpg">
         </div>
-        <div id="img-home-right" style="">
-            <img class="img-home-size" style="" id="" src="img/developmentBG.jpg">
+        <div id="img-home-right" >
+            
+            
+            <div class="main-div-homepage">
+                <a class="zoom main-links-homepage" href="/development"> Development </a>
+            </div>
+
+            <img class="img-home-size"  id="" src="img/developmentBG.jpg">
         </div>
+        <!-- <div style="background: white; z-index: -1;">
+        </div> -->
     </div>
 
     <!-- <div class="flex-row">
@@ -20,10 +32,8 @@
         <p class="flex-1"> Woah2 </p>
         <p class="flex-1"> woah 3 </p>
     </div>  -->
-    <div style="height: 100vh;">
-        <a href="/development"> Development </a>
-        <a href="/generalist"> Design </a>
-    </div>
+    <!-- <div style="height: 100vh;">
+    </div> -->
     <!-- <div style="height: 100vh;">
     </div> -->
 @endsection

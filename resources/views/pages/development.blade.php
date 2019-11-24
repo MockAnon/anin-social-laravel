@@ -132,8 +132,10 @@ let devObject = [{
   },
   { img: "img/designCredits/credit2.jpg",
     title: "MoneyMate",
-    description: `In 2018, MoneyMate was the first App I worked on as a professional Developer, I also did some UI Design and Regular Design. While working on this project I gained experience in React, Redux, Ionic, and UX. <br> <br>
-    I also gained experience as I revised the front end and recreated their mascot. Building the company an amazing 3D assest that they are still using today.
+    description: `MoneyMate is an admirable application created by a start up called FIIN that is meant to be a much needed alternative to payday loans. It provides fast and easy personal loans that help the user take care of their instant cash needs, while also helping them create a savings cushion.
+  In regards to the project stack: For Front-End Development we used React Router, React Native, Ionic, Ionic-Angular, Redux, Bootstrap, and Sass.
+  For UX/UI we used InVision and Photoshop. Aside from assisting with this, I was fortunate enough to do some other design for ad and pamphlets, not to mention some CGI work building the Money Mate mascot, which they still use even today.
+  I worked on this project as a Front-End Developer, Designer, and UI/UX Designer.
     `,
     date: 'Sept 2018 - Dec 2018',
   },
@@ -143,7 +145,11 @@ let devObject = [{
 //   },
   { img: "img/designCredits/credit2.jpg",
     title: "Furrever",
-    description: "I mostly worked on the front-end and design for this group project, though I did also assist with the back-end." ,
+    description: `Fur-ever is an application that helps caring owners acquire and raise pets the pet centric way. Fur-ever is an application that helps caring owners acquire and raise pets the pet centric way. We strived to create an app that would foster a pet centered community through local events and knowledge. 
+    In regards to the project stack: For Front-End Development we used React Router, Bootstrap, Axios, and Sass. For Back-end we used Node.Js, Express, Firebase, and Google FireStore. We also used both the Google Places and Petfinder API’s.
+    Our team split the work for the initial skeleton horizontally and then built the features vertically. Each feature spanned the entire stack.
+    We built each feature vertically, thus we all worked on the full-stack.`,
+    
     date: 'Sept 2018 - Dec 2018',
   },
   { img: "img/designCredits/credit2.jpg",

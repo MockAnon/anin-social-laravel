@@ -167,22 +167,60 @@ canvas {
 // background-size: cover;
 // }
 .img-home-size {
+    // position: absolute;
+    // left: 0;
+    // height: 100%;
+    // width: auto;
+
     position: absolute;
     left: 0;
-    height: 100%;
+    top: 0;
+    max-height: 400%;
+    min-height: 100%;
     width: auto;
+    max-width: 400%;
+    min-width: 100%;
+    z-index: -1;
 }
 #img-home-left {
     width: 50%;
     position: relative;
-    height: 100%;
+    // height: 100%;
+    height: 100vh;
     overflow: hidden;
     display: inline-block;
+    background: #ffffff45;
 }
+
 #img-home-right {
     width: 50%;
     position: relative;
-    height: 100%;
+    // height: 100%;
+    height: 100vh;
     overflow: hidden;
     display: inline-block;
+    background: #ffffff45;
+}
+
+.main-div-homepage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    // box-shadow: 25px 25px 50px 0 white inset, -25px -25px 50px 0 white inset;
+}
+
+.main-links-homepage {
+    border: 3px solid $black;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    color: $black !important;
+    text-decoration: none;
+    // opacity: 0.8;
+    background-color: $white;
+}
+
+.main-links-homepage:hover {
+    background-color: $secondary;
+    // opacity: 1;
 }

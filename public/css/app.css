@@ -1447,23 +1447,50 @@ canvas {
 .img-home-size {
   position: absolute;
   left: 0;
-  height: 100%;
+  top: 0;
+  max-height: 400%;
+  min-height: 100%;
   width: auto;
+  max-width: 400%;
+  min-width: 100%;
+  z-index: -1;
 }
 
 #img-home-left {
   width: 50%;
   position: relative;
-  height: 100%;
+  height: 100vh;
   overflow: hidden;
   display: inline-block;
+  background: #ffffff45;
 }
 
 #img-home-right {
   width: 50%;
   position: relative;
-  height: 100%;
+  height: 100vh;
   overflow: hidden;
   display: inline-block;
+  background: #ffffff45;
+}
+
+.main-div-homepage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.main-links-homepage {
+  border: 3px solid #1d1d1d;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  color: #1d1d1d !important;
+  text-decoration: none;
+  background-color: #fbf3f2;
+}
+
+.main-links-homepage:hover {
+  background-color: #b4cbd9;
 }
 
