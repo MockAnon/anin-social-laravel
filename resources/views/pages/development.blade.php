@@ -54,7 +54,7 @@
 
 
 <a id="devDiv00" class="card devcard-info reveal" onclick="loadDevObject('0')" href="#devTitle">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d6/Cat_plotting_something_evil%21.jpg">
+    <img src="img/appCredits/seminarii_02.png">
     <div class="card__head">
         Title
     </div>
@@ -63,7 +63,7 @@
 </a>
 
   <a id="devDiv01" class="card devcard-info reveal" onclick="loadDevObject('1')" href="#devTitle">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/False_alarm_-a.jpg/1280px-False_alarm_-a.jpg">
+    <img src="img/appCredits/moneymate_01.jpg">
     <div class="card__head">
       MoneyMate
     </div>
@@ -72,7 +72,7 @@
 </a>
 
   <a id="devDiv02" class="card devcard-info reveal" onclick="loadDevObject('2')" href="#devTitle">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Al_acecho_%289272124788%29.jpg/1280px-Al_acecho_%289272124788%29.jpg">
+    <img src="img/appCredits/furever_01.png">
     <div class="card__head">
       Furrever
     </div>
@@ -121,7 +121,8 @@
 <script>
 
 let devObject = [{
-    img: "img/designCredits/credit1.jpg",
+    img: "img/appCredits/seminarii_01.png",
+    img2: "img/appCredits/seminarii_02.png",
     title: "Seminarii",
     description: `In 2019, I began working on Seminarii. I was the UX Designer and Front-End Developer on this project. I was also responsible for updating the companies style guides and was fortunate to have been able to do some hiring for the project. <br> <br>
     I gained more experience in React, the PHP framework Laravel, and Adobe XD.
@@ -131,8 +132,9 @@ let devObject = [{
     date: 'Jan 2019 - Current',
   },
   { img: "img/designCredits/credit2.jpg",
+    img2: "img/designCredits/credit2.jpg",
     title: "MoneyMate",
-    description: `MoneyMate is an admirable application created by a start up called FIIN that is meant to be a much needed alternative to payday loans. It provides fast and easy personal loans that help the user take care of their instant cash needs, while also helping them create a savings cushion.
+    description: `MoneyMate is an admirable application I was forunate enough to work on in 2018. It was created by a start up called FIIN that was meant to be a much needed alternative to payday loans. It provides fast and easy personal loans that help the user take care of their instant cash needs, while also helping them create a savings cushion.
   In regards to the project stack: For Front-End Development we used React Router, React Native, Ionic, Ionic-Angular, Redux, Bootstrap, and Sass.
   For UX/UI we used InVision and Photoshop. Aside from assisting with this, I was fortunate enough to do some other design for ad and pamphlets, not to mention some CGI work building the Money Mate mascot, which they still use even today.
   I worked on this project as a Front-End Developer, Designer, and UI/UX Designer.
@@ -143,7 +145,8 @@ let devObject = [{
 //     title: "FIIN INC",
 //     description: "Blah Due Doe here"
 //   },
-  { img: "img/designCredits/credit2.jpg",
+  { img: "img/appCredits/furever_01.png",
+    img2: "img/appCredits/furever_02.png",
     title: "Furrever",
     description: `Fur-ever is an application that helps caring owners acquire and raise pets the pet centric way. Fur-ever is an application that helps caring owners acquire and raise pets the pet centric way. We strived to create an app that would foster a pet centered community through local events and knowledge. 
     In regards to the project stack: For Front-End Development we used React Router, Bootstrap, Axios, and Sass. For Back-end we used Node.Js, Express, Firebase, and Google FireStore. We also used both the Google Places and Petfinder API’s.
