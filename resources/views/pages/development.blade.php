@@ -103,6 +103,9 @@
       <div class="flex-row">
           <div class="flex-1-van padding-0-1" style="padding-right: 0px;">
               <img class="scale-img reveal" id="devImg" src="/"/>
+              <img class="scale-img reveal" id="devImg02" src="/"/>
+              <img class="scale-img reveal" id="devImg03" src="/"/>
+              <img class="scale-img reveal" id="devImg04" src="/"/>
           </div>
           <div class="flex-1-van padding-0-1 border-left-break"> 
               <h1 class="reveal" id="devTitle"> Title </h1>
@@ -121,7 +124,7 @@
 <script>
 
 let devObject = [{
-    img: "img/appCredits/seminarii_01.png",
+    img: ["img/appCredits/seminarii_01.png", "img/appCredits/seminarii_02.png",],
     img2: "img/appCredits/seminarii_02.png",
     title: "Seminarii",
     description: `In 2019, I began working on Seminarii. I was the UX Designer and Front-End Developer on this project. I was also responsible for updating the companies style guides and was fortunate to have been able to do some hiring for the project. <br> <br>
@@ -131,8 +134,10 @@ let devObject = [{
     `,
     date: 'Jan 2019 - Current',
   },
-  { img: "img/designCredits/credit2.jpg",
-    img2: "img/designCredits/credit2.jpg",
+  { img: ["img/appCredits/moneymate_01.jpg", "img/appCredits/moneymate_02.tif", "img/appCredits/moneymate_03.tif", "img/appCredits/moneymate_04.gif",],
+    img2: "img/appCredits/moneymate_02.tif",
+    img3: "img/appCredits/moneymate_03.tif",
+    img4: "img/appCredits/moneymate_04.gif",
     title: "MoneyMate",
     description: `MoneyMate is an admirable application I was forunate enough to work on in 2018. It was created by a start up called FIIN that was meant to be a much needed alternative to payday loans. It provides fast and easy personal loans that help the user take care of their instant cash needs, while also helping them create a savings cushion.
   In regards to the project stack: For Front-End Development we used React Router, React Native, Ionic, Ionic-Angular, Redux, Bootstrap, and Sass.
@@ -145,8 +150,10 @@ let devObject = [{
 //     title: "FIIN INC",
 //     description: "Blah Due Doe here"
 //   },
-  { img: "img/appCredits/furever_01.png",
+  { img: ["img/appCredits/furever_01.png", "img/appCredits/furever_02.png", "img/appCredits/furever_03.gif", "img/appCredits/furever_04.gif",],
     img2: "img/appCredits/furever_02.png",
+    img3: "img/appCredits/furever_03.gif",
+    img4: "img/appCredits/furever_04.gif",
     title: "Furrever",
     description: `Fur-ever is an application that helps caring owners acquire and raise pets the pet centric way. Fur-ever is an application that helps caring owners acquire and raise pets the pet centric way. We strived to create an app that would foster a pet centered community through local events and knowledge. 
     In regards to the project stack: For Front-End Development we used React Router, Bootstrap, Axios, and Sass. For Back-end we used Node.Js, Express, Firebase, and Google FireStore. We also used both the Google Places and Petfinder API’s.
@@ -213,11 +220,12 @@ function loadDevObject (event) {
   // devDescription.animate({},0);
   // devTitle.empty();
 
-  $( ".scale-img" ).each(function() {
+  $( ".scale-img" ).each(function(val) {
     $(this).empty();
     // $(this).animate({"max-width": "0px"}, 1);
     $(this).css({"max-width": "0px"});
-    $(this).attr("src", devObject[event].img);
+    console.log("woah", val);
+    $(this).attr("src", devObject[event].img[val]);
   });
 
 
@@ -226,16 +234,8 @@ function loadDevObject (event) {
     devTitle.css("display", "none");
 
     devDescription.css("display", "none");
-    // $("#devImg").attr("src", devObject[event].img);
-    // el.css('display','flex');
-    // el.animate({"max-height": '0%'}, 5);
     el.css({"max-height": '0%'});
-    
     console.log("Promise 01");
-    
-    // for(i = 0; i < imgSelect.length; i++) {
-    //   imgSelect[i].animate({"max-height": 0}, 5);
-    // }
   });
 
   new Promise(function(resolve, reject) {
@@ -247,8 +247,6 @@ function loadDevObject (event) {
     
 
     devDescription.css("display", "none");
-    // devDescription.animate({ "max-width": '100%'}, 1000);
-    // devDescription.animate({ "max-height": '100%'}, 1000);
     devDescription.animate({ "max-height": '3000px'}, 3000);
 
     resolve('Promise 02'); 
@@ -266,15 +264,9 @@ function loadDevObject (event) {
       console.log(this);
       $(this).animate({"max-width": '100%'}, 1000);
     });
-    // devDescription.animate({ "max-height": '100%'}, 1000);
-    // document.getElementById('development-bottom').scrollIntoView();
-    // loaded = 1;
+
   });
-// }
-// else {
-//   return false;
-// }
-  
+
 }
 
 

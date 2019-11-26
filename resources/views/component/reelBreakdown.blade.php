@@ -1,47 +1,115 @@
 <div style="position:absolute;  right:5; width: 400%; z-index:5; bottom:100%;">
   <div id="accordion-container-reel" class="accordion-container-reel" style="display: none;">
     <div class="card" onclick="generalistOpen();">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/d/d6/Cat_plotting_something_evil%21.jpg">
+      <img src="img/reelIcons/01a.jpg">
       <div class="card__head">
         Plotting Cat
       </div>
       <p class="card__copy">This is the text below</p>
     </div>
     <div class="card" onclick="generalistOpen();">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/False_alarm_-a.jpg/1280px-False_alarm_-a.jpg">
+      <img src="img/reelIcons/02a.jpg">
       <div class="card__head">
         Angry Cat
       </div>
       <p class="card__copy">This is the text below</p>
     </div>
     <div class="card" onclick="generalistOpen();">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Neugierige-Katze.JPG/1280px-Neugierige-Katze.JPG">
+      <img src="img/reelIcons/03a.jpg">
       <div class="card__head">
         Curious Cat
       </div>
       <p class="card__copy">This is the text below</p>
     </div>
     <div class="card" onclick="generalistOpen();">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Al_acecho_%289272124788%29.jpg/1280px-Al_acecho_%289272124788%29.jpg">
+      <img src="img/reelIcons/04a.jpg">
       <div class="card__head">
         Prowling Cat
       </div>
       <p class="card__copy">This is the text below</p>
     </div>
     <div class="card" onclick="generalistOpen();">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Mimi%26Tigsi.jpg/1280px-Mimi%26Tigsi.jpg">
+      <img src="img/reelIcons/05a.jpg">
       <div class="card__head">
         Sleepy Cat
       </div>
       <p class="card__copy">This is the text below</p>
     </div>
+    
     <div class="card" onclick="generalistOpen();">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Mimi%26Tigsi.jpg/1280px-Mimi%26Tigsi.jpg">
+      <img src="img/reelIcons/06a.jpg">
       <div class="card__head">
         Sleepy Cat
       </div>
       <p class="card__copy">This is the text below</p>
     </div>
+
+    <div class="card" onclick="generalistOpen();">
+      <img src="img/reelIcons/07a.jpg">
+      <div class="card__head">
+        Sleepy Cat
+      </div>
+      <p class="card__copy">This is the text below</p>
+    </div>
+
+    <div class="card" onclick="generalistOpen();">
+      <img src="img/reelIcons/08a.jpg">
+      <div class="card__head">
+        Sleepy Cat
+      </div>
+      <p class="card__copy">This is the text below</p>
+    </div>
+
+    <div class="card" onclick="generalistOpen();">
+      <img src="img/reelIcons/09a.jpg">
+      <div class="card__head">
+        Sleepy Cat
+      </div>
+      <p class="card__copy">This is the text below</p>
+    </div>
+
+    <div class="card" onclick="generalistOpen();">
+      <img src="img/reelIcons/10a.jpg">
+      <div class="card__head">
+        Sleepy Cat
+      </div>
+      <p class="card__copy">This is the text below</p>
+    </div>
+
+    <div class="card" onclick="generalistOpen();">
+      <img src="img/reelIcons/11a.jpg">
+      <div class="card__head">
+        Sleepy Cat
+      </div>
+      <p class="card__copy">This is the text below</p>
+    </div>
+
+    <div class="card" onclick="generalistOpen();">
+      <img src="img/reelIcons/12a.jpg">
+      <div class="card__head">
+        Sleepy Cat
+      </div>
+      <p class="card__copy">This is the text below</p>
+    </div>
+
+    <div class="card" onclick="generalistOpen();">
+      <img src="img/reelIcons/13a.jpg">
+      <div class="card__head">
+        Sleepy Cat
+      </div>
+      <p class="card__copy">This is the text below</p>
+    </div>
+
+    <div class="card" onclick="generalistOpen();">
+      <img src="img/reelIcons/14a.jpg">
+      <div class="card__head">
+        Sleepy Cat
+      </div>
+      <p class="card__copy">This is the text below</p>
+    </div>
+
+
+
   </div>
 </div>
 
