@@ -2,110 +2,110 @@
   <div id="accordion-container-reel" class="accordion-container-reel" style="display: none;">
     <div class="card" onclick="generalistOpen();">
       <img src="img/reelIcons/01a.jpg">
-      <div class="card__head">
+      <!-- <div class="card__head">
         Plotting Cat
-      </div>
-      <p class="card__copy">This is the text below</p>
+      </div> -->
+      
     </div>
     <div class="card" onclick="generalistOpen();">
       <img src="img/reelIcons/02a.jpg">
-      <div class="card__head">
+      <!-- <div class="card__head">
         Angry Cat
-      </div>
-      <p class="card__copy">This is the text below</p>
+      </div> -->
+      
     </div>
     <div class="card" onclick="generalistOpen();">
       <img src="img/reelIcons/03a.jpg">
-      <div class="card__head">
+      <!-- <div class="card__head">
         Curious Cat
-      </div>
-      <p class="card__copy">This is the text below</p>
+      </div> -->
+      
     </div>
     <div class="card" onclick="generalistOpen();">
       <img src="img/reelIcons/04a.jpg">
-      <div class="card__head">
+      <!-- <div class="card__head">
         Prowling Cat
-      </div>
-      <p class="card__copy">This is the text below</p>
+      </div> -->
+      
     </div>
     <div class="card" onclick="generalistOpen();">
       <img src="img/reelIcons/05a.jpg">
-      <div class="card__head">
+      <!-- <div class="card__head">
         Sleepy Cat
-      </div>
-      <p class="card__copy">This is the text below</p>
+      </div> -->
+      
     </div>
     
-    <div class="card" onclick="generalistOpen();">
+    <div style="margin-right: 1rem;" class="card" onclick="generalistOpen();">
       <img src="img/reelIcons/06a.jpg">
-      <div class="card__head">
+      <!-- <div class="card__head">
         Sleepy Cat
-      </div>
-      <p class="card__copy">This is the text below</p>
+      </div> -->
+      
     </div>
 
     <div class="card" onclick="generalistOpen();">
       <img src="img/reelIcons/07a.jpg">
-      <div class="card__head">
+      <!-- <div class="card__head">
         Sleepy Cat
-      </div>
-      <p class="card__copy">This is the text below</p>
+      </div> -->
+      
     </div>
 
     <div class="card" onclick="generalistOpen();">
       <img src="img/reelIcons/08a.jpg">
-      <div class="card__head">
+      <!-- <div class="card__head">
         Sleepy Cat
-      </div>
-      <p class="card__copy">This is the text below</p>
+      </div> -->
+      
     </div>
 
     <div class="card" onclick="generalistOpen();">
       <img src="img/reelIcons/09a.jpg">
-      <div class="card__head">
+      <!-- <div class="card__head">
         Sleepy Cat
-      </div>
-      <p class="card__copy">This is the text below</p>
+      </div> -->
+      
     </div>
 
     <div class="card" onclick="generalistOpen();">
       <img src="img/reelIcons/10a.jpg">
-      <div class="card__head">
+      <!-- <div class="card__head">
         Sleepy Cat
-      </div>
-      <p class="card__copy">This is the text below</p>
+      </div> -->
+      
     </div>
 
     <div class="card" onclick="generalistOpen();">
       <img src="img/reelIcons/11a.jpg">
-      <div class="card__head">
+      <!-- <div class="card__head">
         Sleepy Cat
-      </div>
-      <p class="card__copy">This is the text below</p>
+      </div> -->
+      
     </div>
 
     <div class="card" onclick="generalistOpen();">
       <img src="img/reelIcons/12a.jpg">
-      <div class="card__head">
+      <!-- <div class="card__head">
         Sleepy Cat
-      </div>
-      <p class="card__copy">This is the text below</p>
+      </div> -->
+      
     </div>
 
     <div class="card" onclick="generalistOpen();">
       <img src="img/reelIcons/13a.jpg">
-      <div class="card__head">
+      <!-- <div class="card__head">
         Sleepy Cat
-      </div>
-      <p class="card__copy">This is the text below</p>
+      </div> -->
+      
     </div>
 
     <div class="card" onclick="generalistOpen();">
-      <img src="img/reelIcons/14a.jpg">
+      <!-- <img src="img/reelIcons/14a.jpg">
       <div class="card__head">
         Sleepy Cat
-      </div>
-      <p class="card__copy">This is the text below</p>
+      </div> -->
+      
     </div>
 
 
