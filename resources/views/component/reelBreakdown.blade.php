@@ -36,7 +36,7 @@
       
     </div>
     
-    <div style="margin-right: 1rem;" class="card" onclick="generalistOpen();">
+    <div style="margin-right: 0.2rem;" class="card" onclick="generalistOpen();">
       <img src="img/reelIcons/06a.jpg">
       <!-- <div class="card__head">
         Sleepy Cat
@@ -100,13 +100,6 @@
       
     </div>
 
-    <div class="card" onclick="generalistOpen();">
-      <!-- <img src="img/reelIcons/14a.jpg">
-      <div class="card__head">
-        Sleepy Cat
-      </div> -->
-      
-    </div>
 
 
 

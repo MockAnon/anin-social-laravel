@@ -110,27 +110,19 @@
         title: "Colossal1",
         description: "goes here1"
       },
-      { img: "img/designCredits/credit3.jpg",
-        img2: "img/designCredits/credit3-2.jpg",
+      { img: "img/designCredits/credit3_1.jpg",
+        img2: "img/designCredits/credit3_2.jpg",
         title: "Colossal2",
         description: "goes here2"
       },
-      { img: "img/designCredits/BeauteVite_DSP.jpg",
-        title: "BeauteVite DPS",
-        description: "goes here3"
-      },
-      { img: "img/filmCredits/canadianBeautyAwardsAd.jpg",
-        title: "canadianBeautyAwardsAd",
-        description: "canadianBeautyAwardsAd"
-      },
-      { img: "img/filmCredits/Cosmoprof_Postcard_01.jpg",
-        title: "Cosmoprof_Postcard",
-        description: "Cosmoprof_Postcard"
-      },
-      // { img: "img/filmCredits/moneymate.gif",
-      //   title: "moneymate.gif",
-      //   description: "moneymate"
+      // { img: "img/designCredits/BeauteVite_DSP.jpg",
+      //   title: "BeauteVite DPS",
+      //   description: "goes here3"
       // },
+      { img: "img/filmCredits/moneymate.gif",
+        title: "moneymate.gif",
+        description: "moneymate"
+      },
     ]
   }, 
   {

@@ -720,8 +720,6 @@
   align-items: center;
   overflow: hidden;
   margin-top: 0px;
-  -webkit-transform: skew(-5deg);
-          transform: skew(-5deg);
   margin-top: -2px;
   z-index: 5;
   background: black;
@@ -731,8 +729,7 @@
 .accordion-container-reel .card {
   flex: 1;
   transition: max-height 20s ease;
-  max-height: 260px;
-  height: 260px;
+  height: 140px;
   position: relative;
   overflow: hidden;
   transition: all 2s ease;
@@ -871,7 +868,7 @@
 }
 
 .accordion-container-reel .card:not(:nth-child(6)) {
-  margin-right: 1rem;
+  margin-right: 0.2rem;
 }
 
 .height0 {
