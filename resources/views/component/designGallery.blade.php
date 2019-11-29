@@ -69,6 +69,8 @@
 <script src="{{ asset('js/app.js') }}"></script>
 
 <script>
+
+//loads generalists
   let vertCredits = [{
     img: "img/designCredits/credit1.jpg",
     title: "Colossal 1",
@@ -103,23 +105,23 @@
     sub: [
       {
         img: "img/designCredits/credit1.jpg",
-        title: "Colossal0",
+        title: "BG Image",
         description: "goes here0"
       },
       { img: "img/designCredits/credit2.jpg",
-        title: "Colossal1",
+        title: "Drawing",
         description: "goes here1"
       },
       { img: "img/designCredits/credit3_1.jpg",
         img2: "img/designCredits/credit3_2.jpg",
-        title: "Colossal2",
+        title: "Design Wedding",
         description: "goes here2"
       },
       // { img: "img/designCredits/BeauteVite_DSP.jpg",
       //   title: "BeauteVite DPS",
       //   description: "goes here3"
       // },
-      { img: "img/filmCredits/moneymate.gif",
+      { img: "img/designCredits/moneymate.gif",
         title: "moneymate.gif",
         description: "moneymate"
       },
@@ -129,15 +131,28 @@
     title: 'UX Design',
     copy: 'Design',
     sub: [
-      { img: "img/filmCredits/credit5.jpg",
+      { img: "img/uxCredits/furever_01.png",
         title: "Colossal Peezy00",
         description: "goes here00"
       },
-      { img: "img/filmCredits/credit6.jpg",
+      { img: "img/uxCredits/furever_02.png",
         title: "Colossal Peezy01",
         description: "goes here01"
-        }
-        ],
+      },
+      { img: "img/uxCredits/furever_03.gif",
+        title: "Colossal Peezy00",
+        description: "goes here00"
+      },
+      { img: "img/uxCredits/seminarii_01.png",
+        title: "Colossal Peezy01",
+        description: "goes here01"
+      },
+      { img: "img/uxCredits/seminarii_02.png",
+        title: "Colossal Peezy00",
+        description: "goes here00"
+      },
+
+      ],
     },
   {
     title: 'General',
@@ -163,7 +178,7 @@ let globalPortfolio = 0;
 
 // vertCredits
 for (val in designPortfolio[globalPortfolio].sub) {
-  
+  // console.log("vertCAl", vertCredits[val]['img']);
   // outputVert.append('<div style="position:absolute;"><img value=' + val + ' onclick="vertSliderData('+ val +')" class="credit-img" src=' + vertCredits[val]['img'] + '></div>')
   outputVert.append('<div style="margin: auto; width: 25%; height: auto; padding: .4rem; background: black;" class="design-credit-div"><img style="height: auto; width: 100%;" value=' + val + ' onclick="vertSliderData('+ val +')" class="design-credit" src=' + vertCredits[val]['img'] + '></div>')
 }
@@ -262,9 +277,10 @@ for (val in designPortfolio[globalPortfolio].sub) {
       outputVert.empty();
       $("#design-title").text(designPortfolio[globalPortfolio].title);
       $("#design-copy").text(designPortfolio[globalPortfolio].description);
+
       for (val in designPortfolio[globalPortfolio].sub) {
-        console.log("EACH");
-        outputVert.append('<div style="margin: auto; width: 25%; height: auto; padding: .4rem; background: black;" class="design-credit-div"><img style="height: auto; width: 100%;" value=' + val + ' onclick="vertSliderData('+ val +')" class="design-credit" src=' + vertCredits[val]['img'] + '></div>')
+        console.log("EACH", vertCredits[val]['img'], designPortfolio[globalPortfolio].sub[val]['img'] );
+        outputVert.append('<div style="margin: auto; width: 25%; height: auto; padding: .4rem; background: black;" class="design-credit-div"><img style="height: auto; width: 100%;" value=' + val + ' onclick="vertSliderData('+ val +')" class="design-credit" src=' + designPortfolio[globalPortfolio].sub[val]['img'] + '></div>')
       } 
 
       new Promise(function(resolve, reject) {
