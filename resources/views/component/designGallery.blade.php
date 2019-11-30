@@ -149,7 +149,7 @@
       },
       { img: "img/uxCredits/seminarii_02.png",
         title: "Colossal Peezy00",
-        description: "goes here00"
+        description: "goes here0022"
       },
 
       ],
