@@ -63,6 +63,9 @@
   
   <div style="width: 50%;">
     <img src="" class="vert-img reveal">
+    <video id="movieToggle" class="reveal" src="movie.ogg" controls>
+      Your browser does not support the video tag.
+    </video>
   </div>
 </div>
 
@@ -157,17 +160,59 @@
   {
     title: 'General',
     copy: 'Design',
-    sub: [],
+    sub: [
+      { img: "img/uxCredits/furever_03.gif",
+        title: "Colossal Peezy00",
+        description: "goes here00"
+      },
+      { img: "img/uxCredits/seminarii_01.png",
+        title: "Colossal Peezy01",
+        description: "goes here01"
+      },
+      { img: "img/uxCredits/seminarii_02.png",
+        title: "Colossal Peezy00",
+        description: "goes here0022"
+      },
+    ],
     },
   {
     title: 'CGI',
     copy: 'Design',
-    sub: [],
+    sub: [
+      { img: "img/uxCredits/furever_03.gif",
+        title: "Colossal Peezy00",
+        description: "goes here00"
+      },
+      { img: "img/uxCredits/seminarii_01.png",
+        title: "Colossal Peezy01",
+        description: "goes here01"
+      },
+      { img: "img/uxCredits/seminarii_02.png",
+        title: "Colossal Peezy00",
+        description: "goes here0022"
+      },
+    ],
     },
   {
     title: 'Rigging',
     copy: 'Design',
-    sub: [],
+    sub: [
+      { img: "img/uxCredits/furever_03.gif",
+        link: "https://www.youtube.com/watch?v=OCtHX_enHdc&list=PLOrN4pt9GlFs4y-IbsvCJRobmhUKCQMUR&index=1",
+        title: "Colossal Peezy00",
+        description: "goes here00"
+      },
+      { img: "img/uxCredits/seminarii_01.png",
+        link: "https://www.youtube.com/watch?v=Bz73OkwKisk&list=PLOrN4pt9GlFs4y-IbsvCJRobmhUKCQMUR&index=2",
+        title: "Colossal Peezy01",
+        description: "goes here01"
+      },
+      { img: "img/uxCredits/seminarii_02.png",
+        link: "https://www.youtube.com/watch?v=jAuwXjniIjk&list=PLOrN4pt9GlFs4y-IbsvCJRobmhUKCQMUR&index=3",
+        title: "Colossal Peezy00",
+        description: "goes here0022"
+      },
+    ],
     }
 ];
 
@@ -226,6 +271,7 @@ for (val in designPortfolio[globalPortfolio].sub) {
     // console.log (vertCredits[data]);
     // $(".vert-title").text(vertCredits[data].title);
     // $(".vert-description").text(vertCredits[data].description);
+    console.log(vertCredits[data]['img'], "src", designPortfolio[globalPortfolio].sub[data].link);
 
     console.log("DATA KEY", data, " ", globalPortfolio, " ", designPortfolio[globalPortfolio].sub[data].title, designPortfolio[globalPortfolio].sub[data].description);
 
@@ -235,7 +281,9 @@ for (val in designPortfolio[globalPortfolio].sub) {
     $("#design-op1").css('display','none');
     $("#design-op2").css('display','flex');
 
-    $(".vert-img").attr("src", vertCredits[data].img);
+    $(".vert-img").attr("src", designPortfolio[globalPortfolio].sub[data].img);
+
+    $("#movieToggle").attr("src", designPortfolio[globalPortfolio].sub[data].link);
   };
 
 

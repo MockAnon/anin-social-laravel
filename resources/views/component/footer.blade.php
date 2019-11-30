@@ -19,7 +19,7 @@
     function scroll() {
       var scrollTop = $(window).scrollTop();
       var height = $(window).height()
-      console.log(scrollTop, height);
+      // console.log(scrollTop, height);
       var visibleTop = scrollTop + height;
 
       if(scrollTop < 20) {
@@ -105,7 +105,7 @@
 
 
       right.mouseover(function() {
-        console.log("over");  
+        // console.log("over");  
         right.animate({
             width: "70%"
         }, 100, function() {
@@ -119,7 +119,7 @@
       });
 
       left.mouseover(function() {
-        console.log("left");  
+        // console.log("left");  
         left.animate({
             width: "70%",
             background: "#00caff4d"
