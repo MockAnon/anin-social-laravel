@@ -283,6 +283,15 @@ for (val in designPortfolio[globalPortfolio].sub) {
 
     $(".vert-img").attr("src", designPortfolio[globalPortfolio].sub[data].img);
 
+
+    if(designPortfolio[globalPortfolio].sub[data].link) {
+      console.log("exists");
+    $("#movieToggle").css('display','block');
+    } else {
+      console.log("doesn't exists");
+    $("#movieToggle").css('display','none');
+    }
+
     $("#movieToggle").attr("src", designPortfolio[globalPortfolio].sub[data].link);
   };
 
