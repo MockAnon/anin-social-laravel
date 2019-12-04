@@ -200,23 +200,24 @@
     copy: 'Design',
     sub: [
       { img: "img/uxCredits/furever_03.gif",
-        link: "https://www.youtube.com/watch?v=OCtHX_enHdc&list=PLOrN4pt9GlFs4y-IbsvCJRobmhUKCQMUR&index=1",
+        link: "https://www.youtube.com/embed/OCtHX_enHdc",
         title: "Colossal Peezy00",
         description: "goes here00"
       },
       { img: "img/uxCredits/seminarii_01.png",
-        link: "https://www.youtube.com/watch?v=Bz73OkwKisk&list=PLOrN4pt9GlFs4y-IbsvCJRobmhUKCQMUR&index=2",
+        link: "https://www.youtube.com/embed/Bz73OkwKisk",
         title: "Colossal Peezy01",
         description: "goes here01"
       },
       { img: "img/uxCredits/seminarii_02.png",
-        link: "https://www.youtube.com/watch?v=jAuwXjniIjk&feature=youtu.be",
+        link: "https://www.youtube.com/embed/jAuwXjniIjk",
         title: "Colossal Peezy00",
         description: "goes here0022"
       },
     ],
     }
 ];
+
 
 // let out;
 var outputVert = $('#vertParent');
@@ -295,7 +296,7 @@ for (val in designPortfolio[globalPortfolio].sub) {
     $("#movieToggle").empty()
     // $("#movieToggle").html('<source src="'+designPortfolio[globalPortfolio].sub[data].link+'" type="video/mp4"></source>' );
     // $("#movieToggle").html('<source src="https://www.youtube.com/watch?v=DzjKoGVusow&html5=True" type="video/mp4"></source>' );
-    $("#movieToggle").html('<iframe width="560" height="315" src="https://www.youtube.com/embed/OCtHX_enHdc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>' );
+    $("#movieToggle").html('<iframe width="100%" height="315" src="'+designPortfolio[globalPortfolio].sub[data].link+'" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>' );
 
     } else {
       console.log("doesn't exists");

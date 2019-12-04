@@ -3,7 +3,7 @@
 <nav id="navbar" role="navigation" style="position: fixed;">
   <div id="navbar-child">
     <a href="/" class="zoom">
-      <img style="width:21rem; height:auto;" src="img/icons/logo.png"> 
+      <img style="width:21rem; height:auto;" src="img/icons/logo.svg"> 
     </a>
     <div style="transform: scale(1); cursor: pointer;" class="" id="menuToggle">
     <!-- <div class="zoom" id="menuToggle"> -->
