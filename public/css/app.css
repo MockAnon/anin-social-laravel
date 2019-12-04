@@ -1245,6 +1245,11 @@
   background-color: #fbf3f2;
 }
 
+#movieToggle {
+  width: 100%;
+  padding-top: 0.5rem;
+}
+
 #devImg {
   width: 100%;
   height: auto;

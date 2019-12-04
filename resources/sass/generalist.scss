@@ -111,7 +111,7 @@
 #generalist-top {
     position: relative;
     background: $white;
-    background-image: url('/img/generalistBG.jpg');
+    background-image: url("/img/generalistBG.jpg");
     background-size: cover;
     background-attachment: fixed;
     height: 100vh;
@@ -163,4 +163,9 @@
     width: 100%;
     height: 100%;
     background-color: $white;
+}
+
+#movieToggle {
+    width: 100%;
+    padding-top: 0.5rem;
 }

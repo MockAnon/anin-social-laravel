@@ -63,9 +63,11 @@
   
   <div style="width: 50%;">
     <img src="" class="vert-img reveal">
-    <video id="movieToggle" class="reveal" src="movie.ogg" controls>
+    <div id="movieToggle" class="reveal">
+    </div>
+    <!-- <video  controls>
       Your browser does not support the video tag.
-    </video>
+    </video> -->
   </div>
 </div>
 
@@ -208,7 +210,7 @@
         description: "goes here01"
       },
       { img: "img/uxCredits/seminarii_02.png",
-        link: "https://www.youtube.com/watch?v=jAuwXjniIjk&list=PLOrN4pt9GlFs4y-IbsvCJRobmhUKCQMUR&index=3",
+        link: "https://www.youtube.com/watch?v=jAuwXjniIjk&feature=youtu.be",
         title: "Colossal Peezy00",
         description: "goes here0022"
       },
@@ -287,12 +289,20 @@ for (val in designPortfolio[globalPortfolio].sub) {
     if(designPortfolio[globalPortfolio].sub[data].link) {
       console.log("exists");
     $("#movieToggle").css('display','block');
+    // $("#movieToggle").attr("src", designPortfolio[globalPortfolio].sub[data].link);
+    // $("#movieToggle")[0].load();
+
+    $("#movieToggle").empty()
+    // $("#movieToggle").html('<source src="'+designPortfolio[globalPortfolio].sub[data].link+'" type="video/mp4"></source>' );
+    // $("#movieToggle").html('<source src="https://www.youtube.com/watch?v=DzjKoGVusow&html5=True" type="video/mp4"></source>' );
+    $("#movieToggle").html('<iframe width="560" height="315" src="https://www.youtube.com/embed/OCtHX_enHdc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>' );
+
     } else {
       console.log("doesn't exists");
     $("#movieToggle").css('display','none');
     }
 
-    $("#movieToggle").attr("src", designPortfolio[globalPortfolio].sub[data].link);
+
   };
 
 
