@@ -193,23 +193,44 @@
         title: "Colossal Peezy00",
         description: "goes here0022"
       },
+      { img: "img/riggingCredits/spider_v01.png",
+        img2: "img/riggingCredits/car_v02.png",
+        link: "https://www.youtube.com/embed/OCtHX_enHdc",
+        title: "Colossal Peezy00",
+        description: "goes here00"
+      },
+      { img: "img/riggingCredits/drag_v01.png",
+        img2: "img/riggingCredits/drag_v02.png",
+        link: "https://www.youtube.com/embed/Bz73OkwKisk",
+        title: "Colossal Peezy01",
+        description: "goes here01"
+      },
+      { img: "img/riggingCredits/car_v01.png",
+        img2: "img/riggingCredits/spider_v02.png",
+        link: "https://www.youtube.com/embed/jAuwXjniIjk",
+        title: "Colossal Peezy00",
+        description: "goes here0022"
+      },
     ],
     },
   {
     title: 'Rigging',
     copy: 'Design',
     sub: [
-      { img: "img/uxCredits/furever_03.gif",
+      { img: "img/riggingCredits/spider_v01.png",
+        img2: "img/riggingCredits/car_v02.png",
         link: "https://www.youtube.com/embed/OCtHX_enHdc",
         title: "Colossal Peezy00",
         description: "goes here00"
       },
-      { img: "img/uxCredits/seminarii_01.png",
+      { img: "img/riggingCredits/drag_v01.png",
+        img2: "img/riggingCredits/drag_v02.png",
         link: "https://www.youtube.com/embed/Bz73OkwKisk",
         title: "Colossal Peezy01",
         description: "goes here01"
       },
-      { img: "img/uxCredits/seminarii_02.png",
+      { img: "img/riggingCredits/car_v01.png",
+        img2: "img/riggingCredits/spider_v02.png",
         link: "https://www.youtube.com/embed/jAuwXjniIjk",
         title: "Colossal Peezy00",
         description: "goes here0022"
