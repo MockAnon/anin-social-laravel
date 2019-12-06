@@ -134,7 +134,7 @@
   let designPortfolio = [
     {
     title: 'Design & UX Design',
-    copy: 'Why hire a designer with only design experience when you have hire a designer that can take your work from start to finish.',
+    copy: 'Why hire a Designer or UX Designer with only design experience when you have hire one that can take the work from start to finish. A designer that understands the entire process.',
     sub: [
       {
         img: "img/designCredits/credit1.jpg",
@@ -186,7 +186,7 @@
   }, 
   {
     title: 'General',
-    copy: 'Design',
+    copy: 'This section is to showcase general work.',
     sub: [
       { img: "img/uxCredits/furever_03.gif",
         title: "Colossal Peezy00",
@@ -204,7 +204,7 @@
     },
   {
     title: 'CGI',
-    copy: 'Design',
+    copy: 'CGI stands for Computer Graphic Imagery. I have worked as both a Generalist as well as a Compositor.',
     sub: [
       { img: "img/uxCredits/furever_03.gif",
         title: "Colossal Peezy00",
@@ -390,11 +390,11 @@ let globalPortfolio = 0;
       cr.stop();
       outputVert.empty();
       $("#design-title").text(designPortfolio[globalPortfolio].title);
-      $("#design-copy").text(designPortfolio[globalPortfolio].description);
+      $("#design-copy").text(designPortfolio[globalPortfolio].copy);
 
       for (val in designPortfolio[globalPortfolio].sub) {
         // console.log("EACH", vertCredits[val]['img'], designPortfolio[globalPortfolio].sub[val]['img'] );
-        outputVert.append('<div style="margin: auto; width: 25%; height: auto; padding: .4rem; background: black;" class="design-credit-div"><img style="height: auto; width: 100%;" value=' + val + ' onclick="vertSliderData('+ val +')" class="design-credit" src=' + designPortfolio[globalPortfolio].sub[val]['img'] + '></div>')
+        outputVert.append('<div style="margin: auto; width: 25%; height: auto; padding: .4rem; background: black; margin-bottom: 0.5rem;" class="design-credit-div"><img style="height: auto; width: 100%;" value=' + val + ' onclick="vertSliderData('+ val +')" class="design-credit" src=' + designPortfolio[globalPortfolio].sub[val]['img'] + '></div>')
       } 
 
       new Promise(function(resolve, reject) {
@@ -405,7 +405,7 @@ let globalPortfolio = 0;
       });
 
       new Promise(function(resolve, reject) {
-        el.animate({"max-height": '100%'}, 1000);
+        el.animate({"max-height": '700%'}, 1000);
         cr.animate({"max-width": '100%'}, 1000);
         console.log("Promise 02");
         resolve('Promise 02'); 

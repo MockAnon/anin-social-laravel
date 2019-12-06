@@ -987,11 +987,11 @@
   padding-left: 3.5rem;
   position: absolute;
   left: 0;
-  font-size: 1em;
   white-space: nowrap;
   bottom: calc(100% - 10em);
   bottom: -60;
   min-width: 240%;
+  font-size: 17px;
 }
 
 .accordion-container-design .card .card__copy {
@@ -1226,8 +1226,8 @@
 }
 
 .design-credit-div:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
   background: #f66d9b;
 }
 
