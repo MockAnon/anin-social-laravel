@@ -20,20 +20,18 @@
     </div>
     <!-- <p class="card__copy" id="acordCopy02">This is the text below</p> -->
   </div>
-  <div onclick="typeSliderDataClick(3)" class="card card-info reveal" val="3">
+  <!-- <div onclick="typeSliderDataClick(3)" class="card card-info reveal" val="3">
     <input style="display:none;" value='3'>
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Al_acecho_%289272124788%29.jpg/1280px-Al_acecho_%289272124788%29.jpg">
     <div class="card__head" id="acordTitle03">
     </div>
-    <!-- <p class="card__copy" id="acordCopy03">This is the text below</p> -->
-  </div>
-  <div onclick="typeSliderDataClick(4)" class="card card-info reveal" val="4">
+  </div> -->
+  <!-- <div onclick="typeSliderDataClick(4)" class="card card-info reveal" val="4">
     <input style="display:none;" value='3'>
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Mimi%26Tigsi.jpg/1280px-Mimi%26Tigsi.jpg">
     <div class="card__head" id="acordTitle04">
     </div>
-    <!-- <p class="card__copy" id="acordCopy04">This is the text below</p> -->
-  </div>
+  </div> -->
 </div>
 
 <div id="design-op1" class="flex-row-to-col display-none padding-0-3" onload="assembleDesign()"> 
@@ -85,11 +83,11 @@
     title: "Colossal2",
     description: "goes here2"
   },
-  { img: "img/designCredits/credit3.jpg",
+  { img: "img/designCredits/credit3_1.jpg",
     title: "Colossal3",
     description: "goes here3"
   },
-  { img: "img/designCredits/credit4.jpg",
+  { img: "img/designCredits/credit3_2.jpg",
     title: "Colossal4",
     description: "goes here4"
   },
@@ -103,9 +101,36 @@
   },
 ];
 
+  // {
+  //   title: 'UX Design',
+  //   copy: 'Design',
+  //   sub: [
+  //     { img: "img/uxCredits/furever_01.png",
+  //       title: "Colossal Peezy00",
+  //       description: "goes here00"
+  //     },
+  //     { img: "img/uxCredits/furever_02.png",
+  //       title: "Colossal Peezy01",
+  //       description: "goes here01"
+  //     },
+  //     { img: "img/uxCredits/furever_03.gif",
+  //       title: "Colossal Peezy00",
+  //       description: "goes here00"
+  //     },
+  //     { img: "img/uxCredits/seminarii_01.png",
+  //       title: "Colossal Peezy01",
+  //       description: "goes here01"
+  //     },
+  //     { img: "img/uxCredits/seminarii_02.png",
+  //       title: "Colossal Peezy00",
+  //       description: "goes here0022"
+  //     },
+  //     ],
+  //   },
+
   let designPortfolio = [
     {
-    title: 'Design',
+    title: 'Design & UX Design',
     copy: 'Why hire a designer with only design experience when you have hire a designer that can take your work from start to finish.',
     sub: [
       {
@@ -122,20 +147,10 @@
         title: "Design Wedding",
         description: "goes here2"
       },
-      // { img: "img/designCredits/BeauteVite_DSP.jpg",
-      //   title: "BeauteVite DPS",
-      //   description: "goes here3"
-      // },
       { img: "img/designCredits/moneymate.gif",
         title: "moneymate.gif",
         description: "moneymate"
       },
-    ]
-  }, 
-  {
-    title: 'UX Design',
-    copy: 'Design',
-    sub: [
       { img: "img/uxCredits/furever_01.png",
         title: "Colossal Peezy00",
         description: "goes here00"
@@ -156,9 +171,8 @@
         title: "Colossal Peezy00",
         description: "goes here0022"
       },
-
-      ],
-    },
+    ]
+  }, 
   {
     title: 'General',
     copy: 'Design',
@@ -368,7 +382,7 @@ for (val in designPortfolio[globalPortfolio].sub) {
       $("#design-copy").text(designPortfolio[globalPortfolio].description);
 
       for (val in designPortfolio[globalPortfolio].sub) {
-        console.log("EACH", vertCredits[val]['img'], designPortfolio[globalPortfolio].sub[val]['img'] );
+        // console.log("EACH", vertCredits[val]['img'], designPortfolio[globalPortfolio].sub[val]['img'] );
         outputVert.append('<div style="margin: auto; width: 25%; height: auto; padding: .4rem; background: black;" class="design-credit-div"><img style="height: auto; width: 100%;" value=' + val + ' onclick="vertSliderData('+ val +')" class="design-credit" src=' + designPortfolio[globalPortfolio].sub[val]['img'] + '></div>')
       } 
 
@@ -398,26 +412,17 @@ for (val in designPortfolio[globalPortfolio].sub) {
 
 
 $(document).ready(function() { 
-
-  // console.log("123123123 this peee");
-  // alert("Assemble");
-
   $("#acordTitle00").text(designPortfolio[0].title);
   $("#acordTitle01").text(designPortfolio[1].title);
   $("#acordTitle02").text(designPortfolio[2].title);
-  $("#acordTitle03").text(designPortfolio[3].title);
-  $("#acordTitle04").text(designPortfolio[4].title);
-
-  
+  // $("#acordTitle03").text(designPortfolio[3].title);
+  // $("#acordTitle04").text(designPortfolio[4].title);
 
   // $("#acordCopy00").text(designPortfolio[0].copy);
   // $("#acordCopy01").text(designPortfolio[1].copy);
   // $("#acordCopy02").text(designPortfolio[2].copy);
   // $("#acordCopy03").text(designPortfolio[3].copy);
   // $("#acordCopy04").text(designPortfolio[4].copy);
-
-  
-
 });
 
 
