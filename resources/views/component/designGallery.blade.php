@@ -1,21 +1,21 @@
 <div class="accordion-container-design">
   <div onclick="typeSliderDataClick(0)" class="card card-info reveal" val="0">
     <input style="display:none;" value='0'>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d6/Cat_plotting_something_evil%21.jpg">
+    <img src="img/riggingCredits/spider_v01.png">
     <div class="card__head" id="acordTitle00">
     </div>
     <!-- <p class="card__copy" id="acordCopy00">This is the text below</p> -->
   </div>
   <div onclick="typeSliderDataClick(1)" class="card card-info reveal" val="1">
     <input style="display:none;" value='1'>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/False_alarm_-a.jpg/1280px-False_alarm_-a.jpg">
+    <img src="img/riggingCredits/drag_v01.png">
     <div class="card__head" id="acordTitle01">
     </div>
     <!-- <p class="card__copy" id="acordCopy01">This is the text below</p> -->
   </div>
   <div onclick="typeSliderDataClick(2)" class="card card-info reveal" val="2">
     <input style="display:none;" value='2'>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Neugierige-Katze.JPG/1280px-Neugierige-Katze.JPG">
+    <img src="img/riggingCredits/car_v01.png">
     <div class="card__head" id="acordTitle02">
     </div>
     <!-- <p class="card__copy" id="acordCopy02">This is the text below</p> -->
@@ -33,6 +33,9 @@
     </div>
   </div> -->
 </div>
+
+
+
 
 <div id="design-op1" class="flex-row-to-col display-none padding-0-3" onload="assembleDesign()"> 
   <div style="width: 50%;">
@@ -138,39 +141,47 @@
         title: "BG Image",
         description: "goes here0"
       },
-      { img: "img/designCredits/credit2.jpg",
+      { 
+        img: "img/designCredits/credit2.jpg",
         title: "Drawing",
         description: "goes here1"
       },
-      { img: "img/designCredits/credit3_1.jpg",
+      { 
+        img: "img/designCredits/credit3_1.jpg",
         img2: "img/designCredits/credit3_2.jpg",
         title: "Design Wedding",
         description: "goes here2"
       },
-      { img: "img/designCredits/moneymate.gif",
+      { 
+        img: "img/designCredits/moneymate.gif",
         title: "moneymate.gif",
         description: "moneymate"
       },
-      { img: "img/uxCredits/furever_01.png",
+      { 
+        img: "img/uxCredits/furever_01.png",
         title: "Colossal Peezy00",
         description: "goes here00"
       },
-      { img: "img/uxCredits/furever_02.png",
+      { 
+        img: "img/uxCredits/furever_02.png",
         title: "Colossal Peezy01",
         description: "goes here01"
       },
-      { img: "img/uxCredits/furever_03.gif",
+      { 
+        img: "img/uxCredits/furever_03.gif",
         title: "Colossal Peezy00",
         description: "goes here00"
       },
-      { img: "img/uxCredits/seminarii_01.png",
+      { 
+        img: "img/uxCredits/seminarii_01.png",
         title: "Colossal Peezy01",
         description: "goes here01"
       },
-      { img: "img/uxCredits/seminarii_02.png",
+      { 
+        img: "img/uxCredits/seminarii_02.png",
         title: "Colossal Peezy00",
         description: "goes here0022"
-      },
+      }
     ]
   }, 
   {
@@ -260,11 +271,11 @@ var outputVert = $('#vertParent');
 let globalPortfolio = 0;
 
 // vertCredits
-for (val in designPortfolio[globalPortfolio].sub) {
-  // console.log("vertCAl", vertCredits[val]['img']);
-  // outputVert.append('<div style="position:absolute;"><img value=' + val + ' onclick="vertSliderData('+ val +')" class="credit-img" src=' + vertCredits[val]['img'] + '></div>')
-  outputVert.append('<div style="margin: auto; width: 25%; height: auto; padding: .4rem; background: black;" class="design-credit-div"><img style="height: auto; width: 100%;" value=' + val + ' onclick="vertSliderData('+ val +')" class="design-credit" src=' + vertCredits[val]['img'] + '></div>')
-}
+// outputVert.append('<div style="position:absolute;"><img value=' + val + ' onclick="vertSliderData('+ val +')" class="credit-img" src=' + vertCredits[val]['img'] + '></div>')
+// for (val in designPortfolio[globalPortfolio].sub) {
+//   console.log("vertCAl", vertCredits[val]['img']);
+//   outputVert.append('<div style="margin: auto; width: 25%; height: auto; padding: .4rem; background: black;" class="design-credit-div"><img style="height: auto; width: 100%;" value=' + val + ' onclick="vertSliderData('+ val +')" class="design-credit" src=' + vertCredits[val].img + '></div>')
+// }
 
   let guardSlide2 = false;
 
