@@ -56,7 +56,7 @@
 
                 <!-- <div class="flex-row"> -->
                     <a href="#bottom"> 
-                        <img class="toggle-reel-img" style="position:absolute; left: 50%; right: 50%; bottom: -5vh;" src="img/icons/downArrow.svg"> 
+                        <img class="toggle-reel-img" style="position:absolute; left: 50%; right: 50%; bottom: 0px;" src="img/icons/downArrow.svg"> 
                     </a>
                 <!-- </div> -->
        
