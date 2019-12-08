@@ -1587,3 +1587,8 @@ canvas {
   background-color: #b4cbd9;
 }
 
+.scale-img {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+

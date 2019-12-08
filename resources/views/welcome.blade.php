@@ -10,7 +10,9 @@
         <div id="img-home-left" >
             <div class="main-div-homepage">
                 <a class="zoom main-links-homepage" href="/generalist"> Design </a>
-                <div> <p> Over a year of experience as a developer and roughly five years of Compositing experience. Experience with languages such as Javascript, PHP, Python, CSS, Sass and HTML. I also have experience with Frameworks such as Laravel, Angular, Ionic, and React Native. I have experience with lybraries such as jQuery and React. DATABASES, SYSTEMS, CMS: MongoDB, SQL, Git, Firebase, Google FireStore </p> </div>
+                {{-- <div> 
+                    <p> Over a year of experience as a developer and roughly five years of Compositing experience. Experience with languages such as Javascript, PHP, Python, CSS, Sass and HTML. I also have experience with Frameworks such as Laravel, Angular, Ionic, and React Native. I have experience with lybraries such as jQuery and React. DATABASES, SYSTEMS, CMS: MongoDB, SQL, Git, Firebase, Google FireStore </p> 
+                </div> --}}
             </div>
             <img class="img-home-size"  id="" src="img/generalistBG.jpg">
         </div>

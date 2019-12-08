@@ -1,22 +1,22 @@
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url("https://fonts.googleapis.com/css?family=Nunito");
 
 // Variables
-@import 'variables';
+@import "variables";
 
 //imports
-@import 'flex.scss';
-@import 'menu.scss';
-@import 'message.scss';
-@import 'slider.scss';
+@import "flex.scss";
+@import "menu.scss";
+@import "message.scss";
+@import "slider.scss";
 
-@import 'imageAccordion.scss';
-@import 'imageAccordionReel.scss';
-@import 'imageAccordionDesign.scss';
+@import "imageAccordion.scss";
+@import "imageAccordionReel.scss";
+@import "imageAccordionDesign.scss";
 
-@import 'sliderVert.scss';
-@import 'generalist.scss';
-@import 'development.scss';
+@import "sliderVert.scss";
+@import "generalist.scss";
+@import "development.scss";
 
 body {
     font-size: 1.6rem;
@@ -223,4 +223,9 @@ canvas {
 .main-links-homepage:hover {
     background-color: $secondary;
     // opacity: 1;
+}
+
+.scale-img {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
 }

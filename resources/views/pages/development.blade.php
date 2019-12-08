@@ -101,7 +101,7 @@
 <div id="development-bottom-parent">
   <div class="flex-col padding-2-0" id="development-bottom">
       <div class="flex-row">
-          <div class="flex-1-van padding-0-1" style="padding-right: 0px;">
+          <div class="flex-1-van padding-0-1" style="padding-right: 0px; background: #e5eeef;">
               <img class="scale-img reveal" id="devImg" src="/"/>
               <img class="scale-img reveal" id="devImg02" src="/"/>
               <img class="scale-img reveal" id="devImg03" src="/"/>
@@ -124,7 +124,7 @@
 <script>
 
 let devObject = [{
-    img: ["img/appCredits/seminarii_01.png", "img/appCredits/seminarii_02.png",],
+    img: ["img/appCredits/seminarii_01.png", "img/appCredits/seminarii_02.png"],
     img2: "img/appCredits/seminarii_02.png",
     title: "Seminarii",
     description: `In 2019, I began working on Seminarii. I was the UX Designer and Front-End Developer on this project. I was also responsible for updating the companies style guides and was fortunate to have been able to do some hiring for the project. <br> <br>
@@ -134,10 +134,7 @@ let devObject = [{
     `,
     date: 'Jan 2019 - Current',
   },
-  { img: ["img/appCredits/moneymate_01.jpg", "img/appCredits/moneymate_02.tif", "img/appCredits/moneymate_03.tif", "img/appCredits/moneymate_04.gif",],
-    img2: "img/appCredits/moneymate_02.tif",
-    img3: "img/appCredits/moneymate_03.tif",
-    img4: "img/appCredits/moneymate_04.gif",
+  { img: ["img/appCredits/moneymate_01.jpg", "img/appCredits/moneymate_02.jpg", "img/appCredits/moneymate_03.jpg", "img/appCredits/moneymate_04.gif"],
     title: "MoneyMate",
     description: `MoneyMate is an admirable application I was forunate enough to work on in 2018. It was created by a start up called FIIN that was meant to be a much needed alternative to payday loans. It provides fast and easy personal loans that help the user take care of their instant cash needs, while also helping them create a savings cushion.
   In regards to the project stack: For Front-End Development we used React Router, React Native, Ionic, Ionic-Angular, Redux, Bootstrap, and Sass.
@@ -150,10 +147,7 @@ let devObject = [{
 //     title: "FIIN INC",
 //     description: "Blah Due Doe here"
 //   },
-  { img: ["img/appCredits/furever_01.png", "img/appCredits/furever_02.png", "img/appCredits/furever_03.gif", "img/appCredits/furever_04.gif",],
-    img2: "img/appCredits/furever_02.png",
-    img3: "img/appCredits/furever_03.gif",
-    img4: "img/appCredits/furever_04.gif",
+  { img: ["img/appCredits/furever_01.png", "img/appCredits/furever_03.gif", "img/appCredits/furever_02.png"],
     title: "Furrever",
     description: `Fur-ever is an application that helps caring owners acquire and raise pets the pet centric way. Fur-ever is an application that helps caring owners acquire and raise pets the pet centric way. We strived to create an app that would foster a pet centered community through local events and knowledge. 
     In regards to the project stack: For Front-End Development we used React Router, Bootstrap, Axios, and Sass. For Back-end we used Node.Js, Express, Firebase, and Google FireStore. We also used both the Google Places and Petfinder API’s.
@@ -221,11 +215,16 @@ function loadDevObject (event) {
   // devTitle.empty();
 
   $( ".scale-img" ).each(function(val) {
+    console.log("output this", devObject[event].img[val]);
     $(this).empty();
     // $(this).animate({"max-width": "0px"}, 1);
     $(this).css({"max-width": "0px"});
     console.log("woah", val);
-    $(this).attr("src", devObject[event].img[val]);
+    if(devObject[event].img[val] == undefined) {
+      $(this).attr("src", "");
+    } else {
+      $(this).attr("src", devObject[event].img[val]);
+    }
   });
 
 
@@ -240,7 +239,7 @@ function loadDevObject (event) {
 
   new Promise(function(resolve, reject) {
     
-    el.animate({"max-height": '100%'}, 100);
+    el.animate({"max-height": '3000%'}, 100);
     console.log("Promise 02");
     devTitle.css("display", "none");
     devTitle.animate({ "max-width": '100%'}, 1000);

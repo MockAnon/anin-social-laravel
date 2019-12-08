@@ -16,8 +16,13 @@
       
       <ul id="menu">
         <!-- <a class="zoom" href="/"><li>Home</li></a> -->
-        <a class="zoom" href="/development"><li>Development</li></a>
-        <a class="zoom" href="/generalist"><li>Designer / Generalist </li></a>
+        @if(Request::path() === '/')
+
+        @else
+          <a class="zoom" href="/development"><li>Development</li></a>
+          <a class="zoom" href="/generalist"><li>Designer / Generalist </li></a>
+        
+        @endif
       </ul>
       
     </div>
