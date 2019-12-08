@@ -1281,6 +1281,7 @@
   background-attachment: fixed;
   height: 100vh;
   color: #1d1d1d;
+  padding-top: 6rem;
 }
 
 #generalist-top p,
@@ -1524,7 +1525,6 @@ canvas {
 }
 
 .push-top {
-  top: 19vh;
   position: relative;
 }
 
