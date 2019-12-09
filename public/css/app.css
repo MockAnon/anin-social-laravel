@@ -1346,6 +1346,7 @@
   background-attachment: fixed;
   height: 100vh;
   position: relative;
+  padding-top: 6rem;
   color: #1d1d1d;
 }
 
