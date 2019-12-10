@@ -188,18 +188,18 @@
     title: 'General',
     copy: 'This section is to showcase general work.',
     sub: [
-      { img: "img/uxCredits/furever_03.gif",
-        title: "Colossal Peezy00",
-        description: "goes here00"
-      },
-      { img: "img/uxCredits/seminarii_01.png",
-        title: "Colossal Peezy01",
-        description: "goes here01"
-      },
-      { img: "img/uxCredits/seminarii_02.png",
-        title: "Colossal Peezy00",
-        description: "goes here0022"
-      },
+      //{ img: "img/uxCredits/furever_03.gif",
+       // title: "Colossal Peezy00",
+       // description: "goes here00"
+      //},
+      //{ img: "img/uxCredits/seminarii_01.png",
+       // title: "Colossal Peezy01",
+       // description: "goes here01"
+      //},
+      //{ img: "img/uxCredits/seminarii_02.png",
+       // title: "Colossal Peezy00",
+       // description: "goes here0022"
+      //},
     ],
     },
   {
@@ -209,14 +209,6 @@
       { img: "img/uxCredits/furever_03.gif",
         title: "Colossal Peezy00",
         description: "goes here00"
-      },
-      { img: "img/uxCredits/seminarii_01.png",
-        title: "Colossal Peezy01",
-        description: "goes here01"
-      },
-      { img: "img/uxCredits/seminarii_02.png",
-        title: "Colossal Peezy00",
-        description: "goes here0022"
       },
       { img: "img/riggingCredits/spider_v01.png",
         img2: "img/riggingCredits/car_v02.png",
@@ -310,10 +302,11 @@ let globalPortfolio = 0;
 
 
   function filmCreditModal (event) {
-    modalSlider.style.display = "block";
-        $("#filmModalTitle").text(objectCredits[event].title);
-        $("#filmModalDescription").text(objectCredits[event].description);
-        $("#filmModalImage").attr("src", objectCredits[event].img);
+    console.log("event");
+        //modalSlider.style.display = "block";
+        //$("#filmModalTitle").text(objectCredits[event].title);
+        //$("#filmModalDescription").text(objectCredits[event].description);
+        //$("#filmModalImage").attr("src", objectCredits[event].img);
   };
 
   function vertSliderData(data) {
