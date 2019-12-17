@@ -54,7 +54,8 @@
   </div>  
 </div> -->
 
-<div id="design-op2" class="flex-row-to-col display-none padding-0-3">
+{{-- display-none --}}
+<div id="design-op2" class="flex-row-to-col  padding-0-3">
   <div style="width: 50%;">
     <button class="reveal" style="width: auto;" onclick="returnGallery()"> <img src="{{ asset('img/x.svg') }}" id="return-button"> </button>
     <h3 class="reveal" id="design-clicked-title"> Design Title </h3>
@@ -260,7 +261,7 @@
 // let out;
 var outputVert = $('#vertParent');
 
-let globalPortfolio = 0;
+let globalPortfolio;
 
 // vertCredits
 // outputVert.append('<div style="position:absolute;"><img value=' + val + ' onclick="vertSliderData('+ val +')" class="credit-img" src=' + vertCredits[val]['img'] + '></div>')
@@ -351,16 +352,11 @@ let globalPortfolio = 0;
   //   typeSliderData(inputVal);
   // });
 
-  $(".card-info").mouseover(function() {
-      let index = $(this).find('input').val();
-      typeSliderData(index);
-      // console.log(index);
-      // $("#slider-title").text(objectCredits[index].title);
-      // $("#slider-text").text(objectCredits[index].description);
-      // $("#slider-ol-visible").show();
-    }).mouseout(function() {
-      // $("#slider-ol-visible").hide();
-    });
+ // $(".card-info").mouseover(function() {
+      //let index = $(this).find('input').val();
+      //typeSliderData(index);
+    //}).mouseout(function() {
+    //});
 
 
   function typeSliderDataClick(data) {
@@ -372,6 +368,7 @@ let globalPortfolio = 0;
   // let dataSelected;
 
   function typeSliderData(data) {
+    console.log("data", data);
     if(data == globalPortfolio) {
       return;
 
@@ -427,6 +424,7 @@ $(document).ready(function() {
   // $("#acordCopy02").text(designPortfolio[2].copy);
   // $("#acordCopy03").text(designPortfolio[3].copy);
   // $("#acordCopy04").text(designPortfolio[4].copy);
+    typeSliderDataClick(0);
 });
 
 
