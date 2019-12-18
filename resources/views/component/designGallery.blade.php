@@ -139,6 +139,8 @@
     sub: [
       {
         img: "img/designCredits/credit1.jpg",
+        img2: "img/designCredits/credit1.jpg",
+        img3: "img/designCredits/credit1.jpg",
         title: "BG Image",
         description: "goes here0"
       },
@@ -325,6 +327,8 @@ let globalPortfolio;
     $("#design-op2").css('display','flex');
 
     $(".vert-img").attr("src", designPortfolio[globalPortfolio].sub[data].img);
+    $(".vert-img").attr("src", designPortfolio[globalPortfolio].sub[data].img2);
+    $(".vert-img").attr("src", designPortfolio[globalPortfolio].sub[data].img3);
 
 
     if(designPortfolio[globalPortfolio].sub[data].link) {
