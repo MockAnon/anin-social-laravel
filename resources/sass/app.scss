@@ -202,10 +202,27 @@ canvas {
     background: #ffffff45;
 }
 
+#homepage-black-block {
+    // width: 30%;
+    z-index: -1;
+    height: 100%;
+    background: $black;
+    width: 40%;
+    position: absolute;
+}
+
 .main-div-homepage {
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100%;
+    // box-shadow: 25px 25px 50px 0 white inset, -25px -25px 50px 0 white inset;
+}
+
+.main-div-homepage-left {
+    display: flex;
+    align-items: center;
+    justify-content: left;
     height: 100%;
     // box-shadow: 25px 25px 50px 0 white inset, -25px -25px 50px 0 white inset;
 }
@@ -222,6 +239,29 @@ canvas {
 
 .main-links-homepage:hover {
     background-color: $secondary;
+    // opacity: 1;
+}
+
+.main-links-homepage-02 {
+    // border: 3px solid $black;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    // color: none !important;
+    text-decoration: none;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: $white;
+    color: #000; /* Fallback for older browsers */
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 40px;
+    font-size: 4rem;
+
+    // opacity: 0.8;
+    // background-color: $white;
+}
+
+.main-links-homepage-02:hover {
+    color: $white !important;
+    // background-color: $secondary;
     // opacity: 1;
 }
 

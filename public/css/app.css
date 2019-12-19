@@ -518,19 +518,19 @@
   position: absolute;
   bottom: -1rem;
   background: #b4cbd9;
-  color: #fbf3f2;
+  color: #1d1d1d;
   padding: 1rem 1rem 1rem 2rem;
   max-width: 100%;
   border-radius: 4rem 2px 0 0;
 }
 
 #slider-title {
-  font-size: 2rem;
+  font-size: 1.2rem;
   margin: 0px;
 }
 
 #slider-text {
-  font-size: 1.4rem;
+  font-size: 1rem;
   margin: 0px;
 }
 
@@ -1565,6 +1565,14 @@ canvas {
   background: #ffffff45;
 }
 
+#homepage-black-block {
+  z-index: -1;
+  height: 100%;
+  background: #1d1d1d;
+  width: 40%;
+  position: absolute;
+}
+
 .main-div-homepage {
   display: -webkit-box;
   display: flex;
@@ -1572,6 +1580,16 @@ canvas {
           align-items: center;
   -webkit-box-pack: center;
           justify-content: center;
+  height: 100%;
+}
+
+.main-div-homepage-left {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: left;
+          justify-content: left;
   height: 100%;
 }
 
@@ -1586,6 +1604,23 @@ canvas {
 
 .main-links-homepage:hover {
   background-color: #b4cbd9;
+}
+
+.main-links-homepage-02 {
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #fbf3f2;
+  color: #000;
+  /* Fallback for older browsers */
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 40px;
+  font-size: 4rem;
+}
+
+.main-links-homepage-02:hover {
+  color: #fbf3f2 !important;
 }
 
 .scale-img {

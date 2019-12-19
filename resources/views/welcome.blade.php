@@ -5,14 +5,44 @@
 @endsection
 
 @section('content')
-    <!-- <canvas></canvas> -->
+<div style="position: relative; white-space: nowrap; width: 100vw; height: 100vh;">
+
+    <div class="main-div-homepage-left" style="">
+        {{-- <div id="homepage-black-block">
+
+        </div> --}}
+        <div style="display: flex;  width: 100%; flex-direction: column;">
+            <div style="display: flex; flex-direction: row;">
+                <div style="position: relative;">
+                    <span style="font-size: .8rem; color: white; position: absolute; left: 0.8rem; top: 0;"> 01 </span>
+                    <a class="zoom main-links-homepage-02" href="/generalist">  Design </a>
+                </div>
+
+                <div style="position: relative;">
+                    <span style="font-size: .8rem; color: white; position: absolute; left: 0.8rem; top: 0;"> 02 </span> 
+                    <a class="zoom main-links-homepage-02" href="/development"> Development </a>
+                </div>
+            </div>
+       
+        
+            <hr>
+
+            <p> Web Development </p>
+
+            <p> <span> 1 </span> - 2 </p>
+        </div>
+
+    </div>
+
+</div>
+
+
+
     <div style="position: relative; white-space: nowrap; width: 100vw;">
         <div id="img-home-left" >
             <div class="main-div-homepage">
                 <a class="zoom main-links-homepage" href="/generalist"> Design </a>
-                {{-- <div> 
-                    <p> Over a year of experience as a developer and roughly five years of Compositing experience. Experience with languages such as Javascript, PHP, Python, CSS, Sass and HTML. I also have experience with Frameworks such as Laravel, Angular, Ionic, and React Native. I have experience with lybraries such as jQuery and React. DATABASES, SYSTEMS, CMS: MongoDB, SQL, Git, Firebase, Google FireStore </p> 
-                </div> --}}
+
             </div>
             <img class="img-home-size"  id="" src="img/generalistBG.jpg">
         </div>
@@ -25,10 +55,13 @@
 
             <img class="img-home-size"  id="" src="img/developmentBG.jpg">
         </div>
-        <!-- <div style="background: white; z-index: -1;">
-        </div> -->
+
     </div>
 
+@endsection
+
+
+    <!-- <canvas></canvas> -->
     <!-- <div class="flex-row">
         <p class="flex-1"> Woah </p>
         <p class="flex-1"> Woah2 </p>
@@ -38,9 +71,6 @@
     </div> -->
     <!-- <div style="height: 100vh;">
     </div> -->
-@endsection
-
-
 
 
 <!-- <script language="JavaScript" type="text/javascript" src="/js/jquery-1.2.6.min.js"></script>
