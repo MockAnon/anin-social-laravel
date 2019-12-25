@@ -14,22 +14,22 @@
         <div style="display: flex;  width: 100%; flex-direction: column;">
             <div style="display: flex; flex-direction: row;">
                 <div style="position: relative;">
-                    <span style="font-size: .8rem; color: white; position: absolute; left: 0.8rem; top: 0;"> 01 </span>
-                    <a class="zoom main-links-homepage-02" href="/generalist">  Design </a>
+                    <span style="font-size: .8rem; color: white; position: absolute; left: 0.8rem; top: 0;"> 00 </span>
+                    <a class="zoom main-links-homepage-02" href="/generalist" onmouseover="hoverTitle(0)">  Design </a>
                 </div>
 
                 <div style="position: relative;">
-                    <span style="font-size: .8rem; color: white; position: absolute; left: 0.8rem; top: 0;"> 02 </span> 
-                    <a class="zoom main-links-homepage-02" href="/development"> Development </a>
+                    <span style="font-size: .8rem; color: white; position: absolute; left: 0.8rem; top: 0;"> 01 </span> 
+                    <a class="zoom main-links-homepage-02" href="/development" onmouseover="hoverTitle(1)"> Development </a>
                 </div>
             </div>
        
         
             <hr>
 
-            <p> Web Development </p>
+            <p id="selectedTitle"> Web Development </p>
 
-            <p> <span> 1 </span> - 2 </p>
+            <p> <span id="selectedNo"> 00 </span> - 01 </p>
         </div>
 
     </div>
@@ -78,6 +78,29 @@
 <script language="JavaScript" type="text/javascript" src="/js/sprinkle.js"></script> -->
 
 <script type="application/javascript">
+
+    let selectHomeType = [
+        {
+            title: "Development",
+            no: "00"
+        },
+        {
+            title: "Design",
+            no: "01"
+        }
+    ];
+
+    function hoverTitle(val) {
+        console.log(selectHomeType[val].title, selectHomeType[val].no);
+
+        $("#selectedNo").text(selectHomeType[val].no);
+        $("#selectedTitle").text(selectHomeType[val].title);
+
+    }
+
+    console.log(selectHomeType[0].title, selectHomeType[0].no);
+
+    
 
 
     // particle.min.js hosted on GitHub
