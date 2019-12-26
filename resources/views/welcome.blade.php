@@ -8,9 +8,14 @@
 <div style="position: relative; white-space: nowrap; width: 100vw; height: 100vh;">
 
     <div class="main-div-homepage-left" style="">
-        {{-- <div id="homepage-black-block">
+        <div id="homepage-black-block">
+        </div>
 
-        </div> --}}
+        <div id="homepage-video-block">
+            <img id="homepage-bg-image" style="height: 100%; width: auto; position: absolute; right: 0px; left: auto;" src="./img/bg_pan.jpg">
+        </div>
+
+
         <div style="display: flex;  width: 100%; flex-direction: column;">
             <div style="display: flex; flex-direction: row;">
                 <div style="position: relative;">
@@ -91,10 +96,17 @@
     ];
 
     function hoverTitle(val) {
-        console.log(selectHomeType[val].title, selectHomeType[val].no);
+        console.log(selectHomeType[val].title, selectHomeType[val].no, val);
 
         $("#selectedNo").text(selectHomeType[val].no);
         $("#selectedTitle").text(selectHomeType[val].title);
+    
+        if(val == 0) {
+            $("#homepage-bg-image").animate({"left": "0px", "right": "auto"});
+        }
+        if(val == 1) {
+            $("#homepage-bg-image").animate({"left": "auto", "right": "0px"});
+        }
 
     }
 

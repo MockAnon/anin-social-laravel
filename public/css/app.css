@@ -1569,8 +1569,22 @@ canvas {
   z-index: -1;
   height: 100%;
   background: #1d1d1d;
+  background: black;
   width: 40%;
   position: absolute;
+}
+
+#homepage-video-block {
+  z-index: -2;
+  height: 100%;
+  background: #1d1d1d;
+  background: black;
+  background: red;
+  width: 100%;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  overflow: hidden;
 }
 
 .main-div-homepage {
@@ -1626,5 +1640,10 @@ canvas {
 .scale-img {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
+}
+
+#homepage-bg-image {
+  -webkit-transition: all 4s;
+  transition: all 4s;
 }
 

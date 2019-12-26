@@ -207,8 +207,23 @@ canvas {
     z-index: -1;
     height: 100%;
     background: $black;
+    background: black;
     width: 40%;
     position: absolute;
+}
+
+#homepage-video-block {
+    // width: 30%;
+    z-index: -2;
+    height: 100%;
+    background: $black;
+    background: black;
+    background: red;
+    width: 100%;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    overflow: hidden;
 }
 
 .main-div-homepage {
@@ -268,4 +283,8 @@ canvas {
 .scale-img {
     padding-top: 0.25rem;
     padding-bottom: 0.25rem;
+}
+
+#homepage-bg-image {
+    transition: all 4s;
 }
