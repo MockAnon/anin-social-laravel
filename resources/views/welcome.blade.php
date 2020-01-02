@@ -12,11 +12,11 @@
         </div>
 
         <div id="homepage-video-block">
-            <img id="homepage-bg-image" style="height: 100%; width: auto; position: absolute; right: 0px; left: auto;" src="./img/bg_pan.jpg">
+            <img id="homepage-bg-image" style="height: 100%; width: auto; position: absolute; right: 0px; left: auto;" src="./img/background_05.png">
         </div>
 
 
-        <div style="display: flex;  width: 100%; flex-direction: column;">
+        <div style="display: flex;  width: 100%; flex-direction: column; padding: 3rem;">
             <div style="display: flex; flex-direction: row;">
                 <div style="position: relative;">
                     <span style="font-size: .8rem; color: white; position: absolute; left: 0.8rem; top: 0;"> 00 </span>
@@ -32,9 +32,11 @@
         
             <hr>
 
+            <div id="home-white-div" style=""> </div>
+
             <p id="selectedTitle"> Web Development </p>
 
-            <p> <span id="selectedNo"> 00 </span> - 01 </p>
+            <div style="position: absolute; bottom: 10%; font-size: 1rem; display: flex; color:white;"> <span id="selectedNo"> 00 </span> <div style="height:1px; width: 3rem; max-width: 50%; margin: auto 20px; background: white;"> </div> 01 </div>
         </div>
 
     </div>
@@ -43,25 +45,25 @@
 
 
 
-    <div style="position: relative; white-space: nowrap; width: 100vw;">
-        <div id="img-home-left" >
-            <div class="main-div-homepage">
-                <a class="zoom main-links-homepage" href="/generalist"> Design </a>
+{{-- <div style="position: relative; white-space: nowrap; width: 100vw;">
+    <div id="img-home-left" >
+        <div class="main-div-homepage">
+            <a class="zoom main-links-homepage" href="/generalist"> Design </a>
 
-            </div>
-            <img class="img-home-size"  id="" src="img/generalistBG.jpg">
         </div>
-        <div id="img-home-right" >
-            
-            
-            <div class="main-div-homepage">
-                <a class="zoom main-links-homepage" href="/development"> Development </a>
-            </div>
-
-            <img class="img-home-size"  id="" src="img/developmentBG.jpg">
-        </div>
-
+        <img class="img-home-size"  id="" src="img/generalistBG.jpg">
     </div>
+    <div id="img-home-right" >
+        
+        
+        <div class="main-div-homepage">
+            <a class="zoom main-links-homepage" href="/development"> Development </a>
+        </div>
+
+        <img class="img-home-size"  id="" src="img/developmentBG.jpg">
+    </div>
+
+</div> --}}
 
 @endsection
 
@@ -86,11 +88,11 @@
 
     let selectHomeType = [
         {
-            title: "Development",
+            title: "Developer, Compositor and CG Generalist",
             no: "00"
         },
         {
-            title: "Design",
+            title: "Development",
             no: "01"
         }
     ];
@@ -103,9 +105,17 @@
     
         if(val == 0) {
             $("#homepage-bg-image").animate({"left": "0px", "right": "auto"});
+            $("#homepage-bg-image").css("right", "auto");
+            //$("#selectedTitle").text("02 works");
+            $("#home-white-div").css("width", "2.5%");
+            $("#home-white-div").css("margin-left", "30%");
         }
         if(val == 1) {
             $("#homepage-bg-image").animate({"left": "auto", "right": "0px"});
+            $("#homepage-bg-image").css("left", "auto");
+            //$("#selectedTitle").text("01 works");
+            $("#home-white-div").css("width", "5%");
+            $("#home-white-div").css("margin-left", "2.5%");
         }
 
     }
