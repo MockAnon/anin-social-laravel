@@ -100,11 +100,26 @@
     function hoverTitle(val) {
         console.log(selectHomeType[val].title, selectHomeType[val].no, val);
 
-        $("#selectedNo").text(selectHomeType[val].no);
-        $("#selectedTitle").text(selectHomeType[val].title);
+
+        $("#selectedTitle")
+            .animate({width: 0, opacity: 0}, 200, function() {
+                $("#selectedTitle").text(selectHomeType[val].title);
+                //$("#selectedNo").text(selectHomeType[val].no);
+                $("#selectedTitle").animate({width: "100%", opacity: 1}, 200, function() { 
+                });
+        });
+
+        $("#selectedNo")
+            .animate({height: 0, opacity: 0}, 400, function() {
+                $("#selectedNo").text(selectHomeType[val].no);
+                //$("#selectedNo").css({height: "100%", opacity: 1});
+                $("#selectedNo").animate({height: "100%", opacity: 1}, 300, function() { 
+                });
+        });
     
         if(val == 0) {
             $("#homepage-bg-image").animate({"left": "0px", "right": "auto"});
+
             $("#homepage-bg-image").css("right", "auto");
             //$("#selectedTitle").text("02 works");
             $("#home-white-div").css("width", "2.5%");
