@@ -76,6 +76,8 @@
       let righta = $("#img-home-right .main-links-homepage");
       let lefta = $("#img-home-left .main-links-homepage");
 
+
+
       // background: #668da7;
 
       $(function() {

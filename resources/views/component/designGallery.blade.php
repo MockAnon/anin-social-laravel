@@ -1,21 +1,21 @@
 <div class="accordion-container-design">
   <div onclick="typeSliderDataClick(0)" class="card card-info reveal" val="0">
     <input style="display:none;" value='0'>
-    <img src="img/riggingCredits/spider_v01.png">
+    <img id="design" src="img/riggingCredits/spider_v01.png">
     <div class="card__head" id="acordTitle00">
     </div>
     <!-- <p class="card__copy" id="acordCopy00">This is the text below</p> -->
   </div>
   <div onclick="typeSliderDataClick(1)" class="card card-info reveal" val="1">
     <input style="display:none;" value='1'>
-    <img src="img/riggingCredits/drag_v01.png">
+    <img id="general" src="img/riggingCredits/drag_v01.png">
     <div class="card__head" id="acordTitle01">
     </div>
     <!-- <p class="card__copy" id="acordCopy01">This is the text below</p> -->
   </div>
   <div onclick="typeSliderDataClick(2)" class="card card-info reveal" val="2">
     <input style="display:none;" value='2'>
-    <img src="img/riggingCredits/car_v01.png">
+    <img id="cgi" src="img/riggingCredits/car_v01.png">
     <div class="card__head" id="acordTitle02">
     </div>
     <!-- <p class="card__copy" id="acordCopy02">This is the text below</p> -->
@@ -361,6 +361,51 @@ let globalPortfolio;
       //typeSliderData(index);
     //}).mouseout(function() {
     //});
+
+    let general = $("#general");
+    let cgi = $("#cgi");
+    let design = $("#design");
+    $(".card-info").mouseover(function() {
+      let index = $(this).find('input').val();
+
+      //typeSliderData(index);
+      console.log("index", index);
+
+      if (index == 0) {
+        general.attr('src','img/icons/generalA.png');
+        cgi.attr('src','img/icons/cgiA.png');
+        // design.attr('src','img/icons/designB.png');
+
+        //design.fadeTo(1000,0.30, function() {
+          //design.attr("src", 'img/icons/designB.png');
+        //});
+
+        design.fadeOut(200, function () {
+          $(this).attr('src', 'img/icons/designB.png').fadeIn(200);
+        });
+
+        //design.fadeTo(1000,0.30, function() {
+          //design.attr("src", 'img/icons/designB.png');
+        //}).fadeTo(500,1);
+
+      }
+      if (index == 1) {
+        general.attr('src','img/icons/generalA.png');
+        cgi.attr('src','img/icons/cgiA.png');
+        design.attr('src','img/icons/designA.png');
+      }
+      if (index == 2) {
+        general.attr('src','img/icons/generalA.png');
+        cgi.attr('src','img/icons/cgiB.png');
+        design.attr('src','img/icons/designA.png');
+      }
+
+    }).mouseout(function() {
+      general.attr('src','img/icons/generalA.png');
+      cgi.attr('src','img/icons/cgiA.png');
+      design.attr('src','img/icons/designA.png');
+
+    });
 
 
   function typeSliderDataClick(data) {
