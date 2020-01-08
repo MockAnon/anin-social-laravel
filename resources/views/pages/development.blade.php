@@ -136,7 +136,7 @@ let devObject = [{
   },
   { img: ["img/appCredits/moneymate_01.jpg", "img/appCredits/moneymate_02.jpg", "img/appCredits/moneymate_03.jpg", "img/appCredits/moneymate_04.gif"],
     title: "MoneyMate",
-    description: `MoneyMate is an admirable application I was forunate enough to work on in 2018. It was created by a start up called FIIN that was meant to be a much needed alternative to payday loans. It provides fast and easy personal loans that help the user take care of their instant cash needs, while also helping them create a savings cushion.
+    description: `MoneyMate is an application I was forunate enough to work on in 2018. It was created by a start up called FIIN that was meant to be a much needed alternative to payday loans. It provides fast and easy personal loans that help the user take care of their instant cash needs, while also helping them create a savings cushion.
   In regards to the project stack: For Front-End Development we used React Router, React Native, Ionic, Ionic-Angular, Redux, Bootstrap, and Sass.
   For UX/UI we used InVision and Photoshop. Aside from assisting with this, I was fortunate enough to do some other design for ad and pamphlets, not to mention some CGI work building the Money Mate mascot, which they still use even today.
   I worked on this project as a Front-End Developer, Designer, and UI/UX Designer.
