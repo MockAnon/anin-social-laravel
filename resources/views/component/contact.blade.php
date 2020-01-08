@@ -1,10 +1,10 @@
 <div class="row">
     <div class="col-md-6">
-        <h3> Sign Up </h3>
+        <h3 style="margin-bottom: 2rem; margin-top: 0rem;"> Sign Up </h3>
         @if (Session::has('flash_message'))
             <div class="alert alert-success">{{ Session::get('flash_message') }} </div>
         @endif
-        <form action="{{ route('contact.store') }}" method="post" class="flex-col"> 
+        <form style="margin: 0px; padding: 0px;" action="{{ route('contact.store') }}" method="post" class="flex-col"> 
             
         {{ csrf_field() }}
 
