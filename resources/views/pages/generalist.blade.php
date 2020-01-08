@@ -47,11 +47,11 @@
                         <img class="toggle-reel-img" style="" src="img/icons/play_reel.svg"> 
                     </button>
                     <!-- <div id="button-reel-breakdown" onclick="toggleBreakdown()" style="margin: 1rem 0px;">  -->
-                    <div class="zoom" id="button-reel-breakdown" style=""> 
+                    {{-- <div class="zoom" id="button-reel-breakdown" style=""> 
                         <p id="reel-copy" class="margin-0 padding-bottom-1" style="margin:0px;"> Reel Breakdown </p>
                         <img class="toggle-reel-img" style="" src="img/icons/gallery.svg">
                         @include('component.reelBreakdown') 
-                    </div>
+                    </div> --}}
                 </div>
 
                 <!-- <div class="flex-row"> -->

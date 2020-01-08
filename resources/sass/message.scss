@@ -47,6 +47,7 @@
 }
 
 #modalBtn {
+    z-index: 1000;
     right: 0;
     bottom: 0;
     position: fixed;
@@ -65,6 +66,7 @@
     // transition-timing-function: ease-in;
     // transition: background-color 3s ease-in-out 1s, color 3s ease-in-out 1s;
     transition: all 1s;
+    cursor: pointer;
 }
 
 #modalBtn:hover {

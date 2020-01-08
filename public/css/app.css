@@ -349,6 +349,7 @@
 }
 
 #modalBtn {
+  z-index: 1000;
   right: 0;
   bottom: 0;
   position: fixed;
@@ -363,6 +364,7 @@
   border: none;
   -webkit-transition: all 1s;
   transition: all 1s;
+  cursor: pointer;
 }
 
 #modalBtn:hover {
@@ -1458,6 +1460,10 @@ a {
   margin: 0px;
 }
 
+.margin-bottom-1 {
+  margin-bottom: 1rem;
+}
+
 .padding-bottom-1 {
   padding-bottom: 1rem;
 }
@@ -1585,7 +1591,6 @@ canvas {
   height: 100%;
   background: #1d1d1d;
   background: black;
-  background: red;
   width: 70%;
   position: absolute;
   right: 0px;
@@ -1666,5 +1671,18 @@ canvas {
   -webkit-transition: all 1s;
   transition: all 1s;
   height: 3px;
+}
+
+#myModal {
+  z-index: 1000;
+  color: #fbf3f2;
+}
+
+#myModal .form-group {
+  padding: 1rem;
+}
+
+.padding-bottom-1rem {
+  padding-bottom: 1rem;
 }
 

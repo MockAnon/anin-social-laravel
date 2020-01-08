@@ -89,6 +89,10 @@ a {
     margin: 0px;
 }
 
+.margin-bottom-1 {
+    margin-bottom: 1rem;
+}
+
 .padding-bottom-1 {
     padding-bottom: 1rem;
 }
@@ -224,7 +228,7 @@ canvas {
     height: 100%;
     background: $black;
     background: black;
-    background: red;
+    // background: red;
 
     width: 70%;
     position: absolute;
@@ -307,4 +311,16 @@ canvas {
     background-color: $white;
     transition: all 1s;
     height: 3px;
+}
+
+#myModal {
+    z-index: 1000;
+    .form-group {
+        padding: 1rem;
+    }
+    color: $white;
+}
+
+.padding-bottom-1rem {
+    padding-bottom: 1rem;
 }

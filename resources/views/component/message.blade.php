@@ -1,6 +1,6 @@
 <!-- Trigger/Open The Modal -->
 <div id="modalBtn">
-  <img id="modalIcon" src="img/icons/create_mail.svg">
+  <img style="z-index:500;" id="modalIcon" src="img/icons/create_mail.svg">
 </div>
 
 

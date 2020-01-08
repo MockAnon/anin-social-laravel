@@ -58,7 +58,7 @@
     <div class="card__head">
         Title
     </div>
-    <p class="card__copy"> </p>
+    {{-- <p class="card__copy"> </p> --}}
     <input style="display:none;" value='0'>
 </a>
 
@@ -67,7 +67,7 @@
     <div class="card__head">
       MoneyMate
     </div>
-    <p class="card__copy">This is the text below</p>
+    {{-- <p class="card__copy"></p> --}}
     <input style="display:none;" value='1'>
 </a>
 
@@ -76,7 +76,7 @@
     <div class="card__head">
       Furrever
     </div>
-    <p class="card__copy">This is the text below</p>
+    {{-- <p class="card__copy"></p> --}}
     <input style="display:none;" value='2'>
 </a>
 
@@ -280,13 +280,13 @@ function loadDevObject (event) {
 $(document).ready(function () {
   //your code here
   $("#devDiv00 .card__head").text(devObject[0].title);
-  $("#devDiv00 .card__copy").text(devObject[0].date);
+  //$("#devDiv00 .card__copy").text(devObject[0].date);
 
   $("#devDiv01 .card__head").text(devObject[1].title);
-  $("#devDiv01 .card__copy").text(devObject[1].date);
+  //$("#devDiv01 .card__copy").text(devObject[1].date);
 
   $("#devDiv02 .card__head").text(devObject[2].title);
-  $("#devDiv02 .card__copy").text(devObject[2].date);
+  //$("#devDiv02 .card__copy").text(devObject[2].date);
 
   loadDevObject(1);
 

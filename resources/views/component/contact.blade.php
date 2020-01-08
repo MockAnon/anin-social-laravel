@@ -4,32 +4,32 @@
         @if (Session::has('flash_message'))
             <div class="alert alert-success">{{ Session::get('flash_message') }} </div>
         @endif
-        <form action="{{ route('contact.store') }}" method="post"> 
+        <form action="{{ route('contact.store') }}" method="post" class="flex-col"> 
             
         {{ csrf_field() }}
 
         @csrf
-            <div class="form-group">
-                <label for="email"> Your E-Mail: </label>
-                <input class="form-control" type="text" name="email" id="email"> 
+            {{-- <div class=""> --}}
+                <label class="padding-bottom-1" for="email"> Your E-Mail: </label>
+                <input class="form-control margin-bottom-1" type="text" name="email" id="email"> 
                 @if ($errors->has('email'))
                     <small class="form-text invalid-feedback">{{ $errors->first('email') }} </small>
                 @endif
-            </div>
-            <div class="form-group">
-                <label for="subject"> Your Full Name: </label>
-                <input class="form-control" type="text" name="name" id="subject">
+            {{-- </div>
+            <div class=""> --}}
+                <label class="padding-bottom-1" for="subject"> Your Full Name: </label>
+                <input class="form-control margin-bottom-1" type="text" name="name" id="subject">
                 @if ($errors->has('name'))
                     <small class="form-text invalid-feedback">{{ $errors->first('name') }} </small>
                 @endif
-            </div>
-            <div class="form-group">
-                <label for="message"> Message </label>
-                <textarea class="form-control" type="message" name="message" id="message"> </textarea>
+            {{-- </div>
+            <div class=""> --}}
+                <label class="padding-bottom-1" for="message"> Message </label>
+                <textarea class="form-control margin-bottom-1" type="message" name="message" id="message"> </textarea>
                 @if ($errors->has('message'))
                     <small class="form-text invalid-feedback">{{ $errors->first('message') }} </small>
                 @endif
-            </div>
+            {{-- </div> --}}
             <button type="submit" class="btn btn-primary flex-05"> Submit </button>
         </form>
     </div>
