@@ -517,11 +517,12 @@
   display: none;
   position: absolute;
   bottom: -1rem;
+  right: 0;
   background: #b4cbd9;
   color: #1d1d1d;
   padding: 1rem 1rem 1rem 2rem;
-  max-width: 100%;
   border-radius: 4rem 2px 0 0;
+  max-width: 1275px;
 }
 
 #slider-title {
@@ -1211,13 +1212,19 @@
 }
 
 .design-credit-div {
-  -webkit-animation-duration: 600ms;
-          animation-duration: 600ms;
+  -webkit-animation-duration: all 600ms;
+          animation-duration: all 600ms;
   margin: auto;
   width: 25%;
   height: auto;
   padding: 0.4rem;
-  background: black;
+  text-align: center;
+  box-shadow: 0 2px 4px 0px none;
+  cursor: pointer;
+}
+
+.design-credit-div p {
+  margin: 0.5rem 0rem;
 }
 
 .design-credit {
@@ -1229,6 +1236,13 @@
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   background: #f66d9b;
+  border-radius: 0.2rem;
+  background: #fff;
+  box-shadow: 0 2px 4px 0px #616161;
+}
+
+.design-credit-div:hover p {
+  color: #f2a25c;
 }
 
 #return-button {

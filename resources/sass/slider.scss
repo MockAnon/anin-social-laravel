@@ -182,11 +182,13 @@
     display: none;
     position: absolute;
     bottom: -1rem;
+    right: 0;
     background: $secondary;
     color: $black;
     padding: 1rem 1rem 1rem 2rem;
-    max-width: 100%;
+    // max-width: 100%;
     border-radius: 4rem 2px 0 0;
+    max-width: 1275px;
 }
 
 #slider-title {

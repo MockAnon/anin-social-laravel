@@ -35,12 +35,18 @@
 }
 
 .design-credit-div {
-    animation-duration: 600ms;
+    animation-duration: all 600ms;
     margin: auto;
     width: 25%;
     height: auto;
     padding: 0.4rem;
-    background: black;
+    // background: black;
+    text-align: center;
+    box-shadow: 0 2px 4px 0px none;
+    cursor: pointer;
+    p {
+        margin: 0.5rem 0rem;
+    }
 }
 
 .design-credit {
@@ -52,6 +58,13 @@
 .design-credit-div:hover {
     transform: scale(1.1);
     background: $pink;
+    // border: solid $secondary 1px;
+    border-radius: 0.2rem;
+    background: #fff;
+    box-shadow: 0 2px 4px 0px rgb(97, 97, 97);
+    p {
+        color: $primary;
+    }
 }
 
 // #generalist-top {

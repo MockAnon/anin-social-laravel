@@ -135,11 +135,41 @@
     title: 'Design & UX Design',
     copy: 'Why hire a Designer or UX Designer with only design experience when you have hire one that can take the work from start to finish. A designer that understands the entire process.',
     sub: [
+
+      { 
+        img: "img/designCredits/credit3_1.jpg",
+        img2: "img/designCredits/credit3_2.jpg",
+        title: "Card Design",
+        description: "goes here2"
+      },
+      { 
+        img: "img/designCredits/moneymate.gif",
+        title: "Money Mate Robot Designs",
+        description: "moneymate"
+      },
+      { img: "img/uxCredits/furever_01.png",
+        img2: "img/uxCredits/furever_02.png",
+        img3: "img/uxCredits/furever_03.gif",
+        title: "Fur-Ever UX Design",
+        description: "goes here01"
+      },
+      { 
+        img: "img/uxCredits/seminarii_01.png",
+        img2: "img/uxCredits/seminarii_02.png",
+        title: "Seminarii UX Design/ Front-End",
+        description: "goes here01"
+      },
+    ]
+  }, 
+  {
+    title: 'General',
+    copy: 'This section is to showcase general work.',
+    sub: [
       {
         img: "img/designCredits/credit1.jpg",
         img2: "img/designCredits/credit1.jpg",
         img3: "img/designCredits/credit1.jpg",
-        title: "BG Image",
+        title: "Painting / Colour",
         description: "goes here0"
       },
       { 
@@ -147,48 +177,6 @@
         title: "Drawing",
         description: "goes here1"
       },
-      { 
-        img: "img/designCredits/credit3_1.jpg",
-        img2: "img/designCredits/credit3_2.jpg",
-        title: "Design Wedding",
-        description: "goes here2"
-      },
-      { 
-        img: "img/designCredits/moneymate.gif",
-        title: "moneymate.gif",
-        description: "moneymate"
-      },
-      { 
-        img: "img/uxCredits/furever_01.png",
-        title: "Colossal Peezy00",
-        description: "goes here00"
-      },
-      { 
-        img: "img/uxCredits/furever_02.png",
-        title: "Colossal Peezy01",
-        description: "goes here01"
-      },
-      { 
-        img: "img/uxCredits/furever_03.gif",
-        title: "Colossal Peezy00",
-        description: "goes here00"
-      },
-      { 
-        img: "img/uxCredits/seminarii_01.png",
-        title: "Colossal Peezy01",
-        description: "goes here01"
-      },
-      { 
-        img: "img/uxCredits/seminarii_02.png",
-        title: "Colossal Peezy00",
-        description: "goes here0022"
-      }
-    ]
-  }, 
-  {
-    title: 'General',
-    copy: 'This section is to showcase general work.',
-    sub: [
       //{ img: "img/uxCredits/furever_03.gif",
        // title: "Colossal Peezy00",
        // description: "goes here00"
@@ -208,27 +196,27 @@
     copy: 'CGI stands for Computer Graphic Imagery. I have worked as both a Generalist as well as a Compositor.',
     sub: [
       { img: "img/uxCredits/furever_03.gif",
-        title: "Colossal Peezy00",
+        title: "CG Modelling",
         description: "goes here00"
       },
       { img: "img/riggingCredits/spider_v01.png",
         img2: "img/riggingCredits/car_v02.png",
         link: "https://www.youtube.com/embed/OCtHX_enHdc",
-        title: "Colossal Peezy00",
+        title: "Rigging",
         description: "goes here00"
       },
-      { img: "img/riggingCredits/drag_v01.png",
-        img2: "img/riggingCredits/drag_v02.png",
-        link: "https://www.youtube.com/embed/Bz73OkwKisk",
-        title: "Colossal Peezy01",
-        description: "goes here01"
-      },
-      { img: "img/riggingCredits/car_v01.png",
-        img2: "img/riggingCredits/spider_v02.png",
-        link: "https://www.youtube.com/embed/jAuwXjniIjk",
-        title: "Colossal Peezy00",
-        description: "goes here0022"
-      },
+      //{ img: "img/riggingCredits/drag_v01.png",
+        //img2: "img/riggingCredits/drag_v02.png",
+        //link: "https://www.youtube.com/embed/Bz73OkwKisk",
+        //title: "Colossal Peezy01",
+        //description: "goes here01"
+     // },
+      //{ img: "img/riggingCredits/car_v01.png",
+      //  img2: "img/riggingCredits/spider_v02.png",
+       // link: "https://www.youtube.com/embed/jAuwXjniIjk",
+        //title: "Colossal Peezy00",
+       // description: "goes here0022"
+      //},
     ],
     },
   {
@@ -415,7 +403,7 @@ let globalPortfolio;
 
       for (val in designPortfolio[globalPortfolio].sub) {
         // console.log("EACH", vertCredits[val]['img'], designPortfolio[globalPortfolio].sub[val]['img'] );
-        outputVert.append('<div style="margin: auto; width: 25%; height: auto; padding: .4rem; background: black; margin-bottom: 0.5rem;" class="design-credit-div"><img style="height: auto; width: 100%;" value=' + val + ' onclick="vertSliderData('+ val +')" class="design-credit" src=' + designPortfolio[globalPortfolio].sub[val]['img'] + '></div>')
+        outputVert.append('<div style=" margin-bottom: 0.5rem;" class="design-credit-div"><img style="height: auto; width: 100%;" value=' + val + ' onclick="vertSliderData('+ val +')" class="design-credit" src=' + designPortfolio[globalPortfolio].sub[val]['img'] + '> <p>'+ designPortfolio[globalPortfolio].sub[val]['title'] +' </p></div>'        )
       } 
 
       new Promise(function(resolve, reject) {
