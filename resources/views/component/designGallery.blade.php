@@ -202,7 +202,7 @@
       { img: "img/riggingCredits/spider_v01.png",
         img2: "img/riggingCredits/car_v02.png",
         link: "https://www.youtube.com/embed/OCtHX_enHdc",
-        title: "Rigging",
+        title: "Rigging 02",
         description: "goes here00"
       },
       //{ img: "img/riggingCredits/drag_v01.png",
