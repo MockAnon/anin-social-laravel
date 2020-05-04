@@ -12,9 +12,6 @@
         <p class="reveal"> Over a year of experience as a developer and roughly five years of Compositing experience. Experience with languages such as Javascript, PHP, Python, CSS, Sass and HTML. I also have experience with Frameworks such as Laravel, Angular, Ionic, and React Native. I have experience with lybraries such as jQuery and React.
          DATABASES, SYSTEMS, CMS: MongoDB, SQL, Git, Firebase, Google FireStore </p>
 
-        <p> </p>
-        <p> </p>
-        <p>  </p>
         <div class="flex-row-start social-icon-row">
           <div class="zoom reveal">
             <a href="https://www.linkedin.com/in/jarondevans/"> <img class="padding-r-1" src="{{url('img/icons/linkedin-logo.svg')}}" alt="profile Pic"> LinkedIn </a>
@@ -31,7 +28,53 @@
           <div class="padding-0-40 zoom reveal">
             <a id="modalDevBtn"> <img class="padding-r-1" src="{{url('img/icons/email-icon.svg')}}" alt="profile Pic"> Contact Me </a>
           </div>
+        </div>
 
+        <div class="flex-row-start background-grey">
+          <ul class="col mt-0">
+            <li> <h5> CODING LANGUAGES </h5> </li>
+            <li> HTML</li>
+            <li> CSS</li>
+            <li> JavaScript</li>
+            <li> Python</li>
+            <li> PHP </li>
+            <li> C# </li>
+          </ul>
+
+          <ul class="col background-grey mt-0">
+            <li> <h5> DATABASES, SYSTEMS, CMS </h5> </li>
+            <li> MongoDB</li>
+            <li> SQL</li>
+            <li> Git</li>
+            <li> Firebase</li>
+            <li> Google FireStore </li>
+          </ul>
+          
+
+          <ul class="col background-grey mt-0">
+            <li> <h5> FRAMEWORKS, LIBRARIES, PLATFORMS AND ENVIRONMENTS </h5> </li>
+            <li> NodeJS</li>
+            <li> React</li>
+            <li> Rails</li>
+            <li> AJAX</li>
+            <li> Express </li>
+            <li> Knex </li>
+            <li> JQuery </li>
+            <li> ActiveRecord </li>
+            <li> WebSockets </li>
+          </ul>
+          <ul class="col background-grey mt-0">
+            <li> React Router </li>
+            <li> Axios </li>
+            <li> SASS </li>
+            <li> Node.js </li>
+            <li> Google Places </li>
+            <li> Ionic </li>
+            <li> React Native </li>
+            <li> Laravel </li>
+            <li> Moodle </li>
+            <li> Unity </li>
+          </ul>
         </div>
 
 

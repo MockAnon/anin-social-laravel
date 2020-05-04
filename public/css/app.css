@@ -1358,7 +1358,7 @@
   background-image: url("/img/developmentBG.jpg");
   background-size: cover;
   background-attachment: fixed;
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
   padding-top: 6rem;
   color: #1d1d1d;
@@ -1371,11 +1371,23 @@
   color: #1d1d1d;
 }
 
+#development-top h5 {
+  background: #fbf3f2;
+}
+
 #development-top a {
   display: -webkit-box;
   display: flex;
   -webkit-box-align: center;
           align-items: center;
+}
+
+#development-top ul {
+  list-style-type: none;
+}
+
+#development-top .col {
+  padding: 0.2rem;
 }
 
 #development-bottom {
@@ -1466,6 +1478,11 @@ h3,
 h4,
 a {
   color: #ffffff;
+}
+
+h5 {
+  font-size: 1.8rem;
+  margin: 0px;
 }
 
 .margin-0 {
@@ -1696,5 +1713,13 @@ canvas {
 
 .padding-bottom-1rem {
   padding-bottom: 1rem;
+}
+
+.background-grey {
+  background: #f3e9e7;
+}
+
+.mt-0 {
+  margin-top: 0px;
 }
 

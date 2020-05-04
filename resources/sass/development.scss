@@ -9,7 +9,7 @@
     background-image: url("/img/developmentBG.jpg");
     background-size: cover;
     background-attachment: fixed;
-    height: 100vh;
+    min-height: 100vh;
     position: relative;
     padding-top: 6rem;
 
@@ -23,12 +23,22 @@
         color: $black;
         // transform: all 0.2s;
     }
+
+    h5 {
+        background: $white;
+    }
     // a:hover {
     //     transform: scale(1.5);
     // }
     a {
         display: flex;
         align-items: center;
+    }
+    ul {
+        list-style-type: none;
+    }
+    .col {
+        padding: 0.2rem;
     }
 }
 
