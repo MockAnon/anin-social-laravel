@@ -50,6 +50,25 @@
             </ul>
           </div>
         </div>
+
+        <div class="flex-row-start mt-2 skew">
+          <div class="col-12 mt-0">
+            <ul class="border-black">
+              <li> <h5 class="border-left-orange"> PROJECTS </h5> </li>
+              <li> 
+                Net2Net IT - Developer Jan 2020 to current
+              </li>
+              <li> 
+                BeauteSchool Inc. - Front End Developer and UX Designer Jan. 2019​ to Jan 2020
+              </li>
+              <li> 
+                FIIN INC. - Front-End Developer and Web Designer Sept. 2018​ to Jan. 2019​
+              </li>
+
+            </ul>
+          </div>
+        </div>
+
         <div class="flex-row-start mb-6 skew">
 
           <div class="col-3 mt-0">
