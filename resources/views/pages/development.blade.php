@@ -30,51 +30,80 @@
           </div>
         </div>
 
-        <div class="flex-row-start background-grey">
-          <ul class="col mt-0">
-            <li> <h5> CODING LANGUAGES </h5> </li>
-            <li> HTML</li>
-            <li> CSS</li>
-            <li> JavaScript</li>
-            <li> Python</li>
-            <li> PHP </li>
-            <li> C# </li>
-          </ul>
 
-          <ul class="col background-grey mt-0">
-            <li> <h5> DATABASES, SYSTEMS, CMS </h5> </li>
-            <li> MongoDB</li>
-            <li> SQL</li>
-            <li> Git</li>
-            <li> Firebase</li>
-            <li> Google FireStore </li>
-          </ul>
+
+
+        <div class="flex-row-start mt-2 skew">
+          <div class="col-12 mt-0">
+            <ul class="border-black">
+              <li> <h5 class="border-left-orange"> EXPERIENCE </h5> </li>
+              <li> 
+                Net2Net IT - Developer Jan 2020 to current
+              </li>
+              <li> 
+                BeauteSchool Inc. - Front End Developer and UX Designer Jan. 2019​ to Jan 2020
+              </li>
+              <li> 
+                FIIN INC. - Front-End Developer and Web Designer Sept. 2018​ to Jan. 2019​
+              </li>
+
+            </ul>
+          </div>
+        </div>
+        <div class="flex-row-start mb-6 skew">
+
+          <div class="col-3 mt-0">
+            <ul class="border-black">
+              <li> <h5 class="border-left-orange"> CODING LANGUAGES </h5> </li>
+              <li> HTML</li>
+              <li> CSS</li>
+              <li> JavaScript</li>
+              <li> Python</li>
+              <li> PHP </li>
+              <li> C# </li>
+            </ul>
+          </div>
+
+          <div class="col-3 mt-0">
+            <ul class="border-black">
+              <li> <h5 class="border-left-orange"> DATABASES, SYSTEMS, CMS </h5> </li>
+              <li> MongoDB</li>
+              <li> SQL</li>
+              <li> Git</li>
+              <li> Firebase</li>
+              <li> Google FireStore </li>
+            </ul>
+          </div>
           
+          <div class ="col-6 mt-0 ">
+            <div class="flex-row-start border-black">
+              <ul class="col-6 padding-0">
+                <li> <h5 class="border-left-orange"> FRAMEWORKS, LIBRARIES, PLATFORMS AND ENVIRONMENTS </h5> </li>
+                <li> NodeJS</li>
+                <li> React</li>
+                <li> Rails</li>
+                <li> AJAX</li>
+                <li> Express </li>
+                <li> Knex </li>
+                <li> JQuery </li>
 
-          <ul class="col background-grey mt-0">
-            <li> <h5> FRAMEWORKS, LIBRARIES, PLATFORMS AND ENVIRONMENTS </h5> </li>
-            <li> NodeJS</li>
-            <li> React</li>
-            <li> Rails</li>
-            <li> AJAX</li>
-            <li> Express </li>
-            <li> Knex </li>
-            <li> JQuery </li>
-            <li> ActiveRecord </li>
-            <li> WebSockets </li>
-          </ul>
-          <ul class="col background-grey mt-0">
-            <li> React Router </li>
-            <li> Axios </li>
-            <li> SASS </li>
-            <li> Node.js </li>
-            <li> Google Places </li>
-            <li> Ionic </li>
-            <li> React Native </li>
-            <li> Laravel </li>
-            <li> Moodle </li>
-            <li> Unity </li>
-          </ul>
+              </ul>
+              <ul class="col-6 padding-0">
+                <li> ActiveRecord </li>
+                <li> WebSockets </li>
+                <li> React Router </li>
+                <li> Axios </li>
+                <li> SASS </li>
+                <li> Node.js </li>
+                <li> Google Places </li>
+                <li> Ionic </li>
+                <li> React Native </li>
+                <li> Laravel </li>
+                <li> Moodle </li>
+                <li> Unity </li>
+              </ul>
+            </div>
+          </div>
         </div>
 
 

@@ -98,6 +98,10 @@ h5 {
     margin-bottom: 1rem;
 }
 
+.padding-0 {
+    padding: 0px !important;
+}
+
 .padding-bottom-1 {
     padding-bottom: 1rem;
 }
@@ -338,4 +342,28 @@ canvas {
 
 .mt-0 {
     margin-top: 0px;
+}
+
+.mt-2 {
+    margin-top: 2rem;
+}
+
+.mb-6 {
+    margin-bottom: 6rem;
+}
+
+.border-black {
+    border: solid 3px $black;
+    border-left: solid $black 8px;
+    // border-radius: 5px;
+    border-top: none;
+    border-right: none;
+}
+
+.skew {
+    transform: skew(5deg);
+}
+
+.border-left-orange {
+    border-left: 2px solid $primary;
 }

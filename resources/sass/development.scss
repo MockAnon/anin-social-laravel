@@ -25,7 +25,8 @@
     }
 
     h5 {
-        background: $white;
+        background: $black;
+        color: $white;
     }
     // a:hover {
     //     transform: scale(1.5);
@@ -36,9 +37,26 @@
     }
     ul {
         list-style-type: none;
+        padding: 0px;
+        margin: 0px;
     }
     .col {
         padding: 0.2rem;
+    }
+    .col-3 {
+        padding: 0.2rem;
+        width: calc(100% / 4);
+        margin-top: 0px;
+    }
+    .col-6 {
+        padding: 0.2rem;
+        width: calc(100% / 2);
+        margin-top: 0px;
+    }
+    .col-12 {
+        padding: 0.2rem;
+        width: calc(100% / 1);
+        margin-top: 0px;
     }
 }
 
