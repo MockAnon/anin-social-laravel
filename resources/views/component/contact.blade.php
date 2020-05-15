@@ -30,8 +30,10 @@
                     <small class="form-text invalid-feedback">{{ $errors->first('message') }} </small>
                 @endif
             {{-- </div> --}}
+            <div id="html_element"></div>
             <button type="submit" class="btn btn-primary flex-05"> Submit </button>
         </form>
+
     </div>
  </div>
 
@@ -43,7 +45,18 @@
 <style>
     .invalid-feedback {
         display: block;
-        
     }
+    
 
 </style>
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+        async defer>
+    </script>
+
+<script type="text/javascript">
+    var onloadCallback = function() {
+        grecaptcha.render('html_element', {
+            'sitekey' : '6LcGg_cUAAAAAPn-BNqyHBdmikCHBV803Hx9W3t5'
+        });
+    };
+</script>
