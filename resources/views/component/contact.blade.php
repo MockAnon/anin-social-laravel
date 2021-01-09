@@ -1,37 +1,36 @@
 <div class="row">
-    <div class="col-md-6">
-        <h3 style="margin-bottom: 2rem; margin-top: 0rem;"> Sign Up </h3>
+    <div class="col-md-6 background-grey color-black">
         @if (Session::has('flash_message'))
             <div class="alert alert-success">{{ Session::get('flash_message') }} </div>
         @endif
         <form style="margin: 0px; padding: 0px;" action="{{ route('contact.store') }}" method="post" class="flex-col"> 
             
-        {{ csrf_field() }}
+            {{ csrf_field() }}
 
-        @csrf
-            {{-- <div class=""> --}}
+            @csrf
+            <div class="padding-0-1 padding-top-05">
                 <label class="padding-bottom-1" for="email"> Your E-Mail: </label>
-                <input class="form-control margin-bottom-1" type="text" name="email" id="email"> 
+                <input class="form-control margin-bottom-05" type="text" name="email" id="email"> 
                 @if ($errors->has('email'))
-                    <small class="form-text invalid-feedback">{{ $errors->first('email') }} </small>
+                    <small class="form-text invalid-feedback margin-bottom-025">{{ $errors->first('email') }} </small>
                 @endif
-            {{-- </div>
-            <div class=""> --}}
+
                 <label class="padding-bottom-1" for="subject"> Your Full Name: </label>
-                <input class="form-control margin-bottom-1" type="text" name="name" id="subject">
+                <input class="form-control margin-bottom-05" type="text" name="name" id="subject">
                 @if ($errors->has('name'))
-                    <small class="form-text invalid-feedback">{{ $errors->first('name') }} </small>
+                    <small class="form-text invalid-feedback margin-bottom-025">{{ $errors->first('name') }} </small>
                 @endif
-            {{-- </div>
-            <div class=""> --}}
-                <label class="padding-bottom-1" for="message"> Message </label>
-                <textarea class="form-control margin-bottom-1" type="message" name="message" id="message"> </textarea>
+
+                <label class="padding-bottom-1" for="message"> Message: </label>
+                <textarea class="form-control margin-bottom-05" type="message" name="message" id="message"> </textarea>
                 @if ($errors->has('message'))
-                    <small class="form-text invalid-feedback">{{ $errors->first('message') }} </small>
+                    <small class="form-text invalid-feedback margin-bottom-05">{{ $errors->first('message') }} </small>
                 @endif
-            {{-- </div> --}}
-            <div id="html_element"></div>
-            <button type="submit" class="btn btn-primary flex-05"> Submit </button>
+            </div>
+
+            <div class="" data-callback="recaptchaCallback" id="html_element"></div>
+
+            <button id="submitBtn" type="submit" disabled class="btn btn-primary flex-05"> Submit </button>
         </form>
 
     </div>
@@ -59,4 +58,17 @@
             'sitekey' : '6LcGg_cUAAAAAPn-BNqyHBdmikCHBV803Hx9W3t5'
         });
     };
+    function recaptchaCallback() {
+        if(grecaptcha && grecaptcha.getResponse().length > 0)
+        {
+            //the recaptcha is checked
+            $('#submitBtn').removeAttr('disabled');
+        }
+        else
+        {
+            //The recaptcha is not cheched
+        }
+    };
+
+
 </script>

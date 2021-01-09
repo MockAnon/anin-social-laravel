@@ -1,17 +1,17 @@
 <div class="accordion-container-design">
-  <div onclick="typeSliderDataClick(0)" class="card card-info reveal" val="0">
+  <div onclick="typeSliderDataClick(0)" class="card card-info reveal cursor-pointer" val="0">
     <input style="display:none;" value='0'>
     <img id="design" src="img/icons/designA.png">
     <div class="card__head" id="acordTitle00">
     </div>
   </div>
-  <div onclick="typeSliderDataClick(1)" class="card card-info reveal" val="1">
+  <div onclick="typeSliderDataClick(1)" class="card card-info reveal cursor-pointer" val="1">
     <input style="display:none;" value='1'>
     <img id="general" src="img/icons/generalA.png">
     <div class="card__head" id="acordTitle01">
     </div>
   </div>
-  <div onclick="typeSliderDataClick(2)" class="card card-info reveal" val="2">
+  <div onclick="typeSliderDataClick(2)" class="card card-info reveal cursor-pointer" val="2">
     <input style="display:none;" value='2'>
     <img id="cgi" src="img/icons/cgiA.png">
     <div class="card__head" id="acordTitle02">

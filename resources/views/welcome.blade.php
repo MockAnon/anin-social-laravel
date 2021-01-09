@@ -12,7 +12,7 @@
         </div>
 
         <div id="homepage-video-block">
-            <img id="homepage-bg-image" style="height: 100%; width: auto; position: absolute; right: 0px; left: auto;" src="./img/background_05.png">
+            <img id="homepage-bg-image" style="height: 100%; width: auto; position: absolute; right: 0px; left: auto;" src="./img/background_05.png" alt="background navigation">
         </div>
 
 
@@ -36,7 +36,7 @@
 
             <p id="selectedTitle"> Web Development </p>
 
-            <div style="position: absolute; bottom: 10%; font-size: 1rem; display: flex; color:white;"> <span id="selectedNo"> 00 </span> <div style="height:1px; width: 3rem; max-width: 50%; margin: auto 20px; background: white;"> </div> 01 </div>
+            <div style="position: absolute; bottom: 10%; font-size: 1.2rem; display: flex; color:white;"> <span id="selectedNo"> 00 </span> <div style="height:1px; width: 3rem; max-width: 50%; margin: auto 20px; background: white;"> </div> 01 </div>
         </div>
 
     </div>
@@ -89,46 +89,32 @@
     let selectHomeType = [
         {
             title: "Developer, Compositor and CG Generalist",
-            no: "00"
+            no: "#00"
         },
         {
             title: "Development",
-            no: "01"
+            no: "#01"
         }
     ];
 
     function hoverTitle(val) {
-        console.log(selectHomeType[val].title, selectHomeType[val].no, val);
-
-
-        $("#selectedTitle")
-            .animate({width: 0, opacity: 0}, 200, function() {
-                $("#selectedTitle").text(selectHomeType[val].title);
-                //$("#selectedNo").text(selectHomeType[val].no);
-                $("#selectedTitle").animate({width: "100%", opacity: 1}, 200, function() { 
-                });
-        });
-
-        $("#selectedNo")
-            .animate({height: 0, opacity: 0}, 400, function() {
-                $("#selectedNo").text(selectHomeType[val].no);
-                //$("#selectedNo").css({height: "100%", opacity: 1});
-                $("#selectedNo").animate({height: "100%", opacity: 1}, 300, function() { 
-                });
-        });
-    
+        $("#selectedTitle").css({"width":"0", "opacity": "0"});
+        $("#selectedNo").css({"height":"0", "opacity": "0"});
+        $("#selectedTitle").text(selectHomeType[val].title);
+        $("#selectedNo").text(selectHomeType[val].no);
+        $("#selectedTitle").stop().animate({width: "100%", opacity: 1}, 600, function() { });
+        $("#selectedNo").stop().animate({height: "100%", opacity: 1}, 600, function() { });
+        
         if(val == 0) {
-            $("#homepage-bg-image").animate({"left": "0px", "right": "auto"});
-
+            $("#homepage-bg-image").stop().animate({"left": "0px", "right": "auto"});
             $("#homepage-bg-image").css("right", "auto");
-            //$("#selectedTitle").text("02 works");
+            $("#home-white-div").stop();
             $("#home-white-div").css("width", "2.5%");
             $("#home-white-div").css("margin-left", "30%");
-        }
-        if(val == 1) {
-            $("#homepage-bg-image").animate({"left": "auto", "right": "0px"});
+        } else {
+            $("#homepage-bg-image").stop().animate({"left": "auto", "right": "0px"});
             $("#homepage-bg-image").css("left", "auto");
-            //$("#selectedTitle").text("01 works");
+            $("#home-white-div").stop();
             $("#home-white-div").css("width", "5%");
             $("#home-white-div").css("margin-left", "2.5%");
         }

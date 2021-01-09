@@ -21,6 +21,13 @@
 
 .position-reel-button {
     position: absolute;
+    top: auto;
+    // bottom: 0px;
+    // right: 0px;
+    margin: 4.5rem 0rem;
+    padding: 0.4rem 0.6rem;
+    z-index: 10;
+    box-shadow: 0 2px 4px 0px rgb(97, 97, 97);
 }
 
 .toggle-reel-img {
@@ -127,7 +134,7 @@
     background-image: url("/img/generalistBG.jpg");
     background-size: cover;
     background-attachment: fixed;
-    height: 100vh;
+    min-height: 100vh;
     // padding: 0px 2rem;
     // background: $white;
     color: $black;
@@ -136,6 +143,33 @@
     h3,
     h1 {
         color: $black;
+    }
+    h5 {
+        background: $black;
+        color: $white;
+    }
+    a {
+        display: flex;
+        align-items: center;
+    }
+
+    .youtube-button-settings {
+        // background: none;
+        background: $black;
+        // border-radius: 50%;
+        padding: 0.4rem 0.6rem;
+        padding-right: 3rem;
+        border-bottom-right-radius: 0px;
+        border-top-right-radius: 0px;
+        border: solid 1px $blue;
+        border-right: none;
+        p,
+        button {
+            color: $white;
+        }
+        img {
+            fill: white;
+        }
     }
 }
 

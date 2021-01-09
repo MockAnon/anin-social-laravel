@@ -1,18 +1,15 @@
 <!-- Trigger/Open The Modal -->
 <div id="modalBtn">
-  <img style="z-index:500;" id="modalIcon" src="img/icons/create_mail.svg">
+  <img style="z-index:500;" id="modalIcon" src="img/icons/create_mail.svg" alt="Send mail">
 </div>
-
-
-
-
 
 <!-- The Modal -->
 <div id="myModal" class="modal">
 
   <!-- Modal content -->
   <div class="modal-content">
-    <div class="flex-row-reverse">
+    <div class="flex-row padding-1-05 position-relative">
+      Contact
       <span class="close">&times;</span>
     </div>
     @include('component.contact')

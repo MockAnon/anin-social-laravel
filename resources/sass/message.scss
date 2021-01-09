@@ -15,10 +15,12 @@
 /* Modal Content/Box */
 .modal-content {
     background-color: $black;
-    padding: 20px;
-    border: 1px solid #fa991c1a;
+    // padding: 20px;
+    // border: 1px solid #fa991c1a;
     width: 80%;
+    max-width: 600px;
     margin: auto;
+    margin-top: 2%;
     // h2 {
     //     color: $primary;
     // }
@@ -30,14 +32,17 @@
 
 /* The Close Button */
 .close {
-    color: #aaa;
+    // color: #aaa;
     font-size: 28px;
     font-weight: bold;
+    position: absolute;
+    top: 0.3rem;
+    right: 1rem;
 }
 
 .close:hover,
 .close:focus {
-    color: black;
+    color: $primary;
     text-decoration: none;
     cursor: pointer;
 }
@@ -80,4 +85,8 @@
     height: 7rem;
     // width: 600px;
     // transform: translateX(500px);
+}
+
+#submitBtn {
+    border-radius: 0px;
 }
