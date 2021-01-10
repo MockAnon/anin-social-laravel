@@ -7,7 +7,7 @@
  My name is Jaron D Evans I am a Design and overall Generalist.
 @endsection
 @section('keywords')
- Design, Generalist, Jaron D Evans, Art, Compositor, Experience
+ Design, Generalist, Jaron D Evans, Art, Compositor, Experience,
 @endsection
 
 @section('content')
@@ -298,7 +298,7 @@
 
 
 @endsection
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+
 <script type="application/javascript"> 
 
 

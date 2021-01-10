@@ -2,7 +2,7 @@
 
 <nav id="navbar" role="navigation" style="position: fixed;">
   <div id="navbar-child">
-    <a href="/" class="zoom">
+    <a href="/" class="zoom" aria-label="Return to the Home Page">
       {{-- <img style="width:19rem; height:auto;" src="img/icons/logo.svg">  --}}
 
       <svg style="width:19rem; height:auto;" xmlns="http://www.w3.org/2000/svg" width="553.859" height="112.438" viewBox="0 0 553.859 112.438" alt="JaronDEvans.com">
@@ -48,8 +48,8 @@
     </a>
     <div style="transform: scale(1); cursor: pointer;" class="" id="menuToggle">
     <!-- <div class="zoom" id="menuToggle"> -->
-    
-      <input type="checkbox" />
+      <label id="main-menu-toggle" class="display-none">Menu</label>
+      <input type="checkbox" aria-labelledby="main-menu-toggle"/>
       
       <span></span>
       <span></span>

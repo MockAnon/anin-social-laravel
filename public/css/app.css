@@ -1793,7 +1793,11 @@ canvas {
 }
 
 .main-links-homepage-02 {
-  padding: 1rem 2rem;
+  text-decoration: none;
+}
+
+.main-links-homepage-02 h1 {
+  padding: 0rem 2rem;
   border-radius: 50px;
   text-decoration: none;
   -webkit-text-stroke-width: 1px;
@@ -1803,9 +1807,10 @@ canvas {
   color: rgba(0, 0, 0, 0.5);
   font-size: 40px;
   font-size: 4rem;
+  margin: 0px;
 }
 
-.main-links-homepage-02:hover {
+.main-links-homepage-02:hover h1 {
   color: #fbf3f2 !important;
 }
 

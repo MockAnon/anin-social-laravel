@@ -361,8 +361,12 @@ canvas {
 }
 
 .main-links-homepage-02 {
+    text-decoration: none;
+}
+
+.main-links-homepage-02 h1 {
     // border: 3px solid $black;
-    padding: 1rem 2rem;
+    padding: 0rem 2rem;
     border-radius: 50px;
     // color: none !important;
     text-decoration: none;
@@ -372,12 +376,13 @@ canvas {
     color: rgba(0, 0, 0, 0.5);
     font-size: 40px;
     font-size: 4rem;
+    margin: 0px;
 
     // opacity: 0.8;
     // background-color: $white;
 }
 
-.main-links-homepage-02:hover {
+.main-links-homepage-02:hover h1 {
     color: $white !important;
     // background-color: $secondary;
     // opacity: 1;

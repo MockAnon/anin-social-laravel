@@ -3,6 +3,12 @@
 @section('title')
  Welcome!
 @endsection
+@section('description')
+ My name is Jaron D Evans I am a Design and overall Generalist.
+@endsection
+@section('keywords')
+ Design, Generalist, Jaron D Evans, Art, Compositor, Experience
+@endsection
 
 @section('content')
 <div style="position: relative; white-space: nowrap; width: 100vw; height: 100vh;">
@@ -16,16 +22,16 @@
         </div>
 
 
-        <div style="display: flex;  width: 100%; flex-direction: column; padding: 3rem;">
+        <header style="display: flex;  width: 100%; flex-direction: column; padding: 3rem;">
             <div style="display: flex; flex-direction: row;">
                 <div style="position: relative;">
                     <span style="font-size: .8rem; color: white; position: absolute; left: 0.8rem; top: 0;"> 00 </span>
-                    <a class="zoom main-links-homepage-02" href="/generalist" onmouseover="hoverTitle(0)">  Design </a>
+                    <a class="zoom main-links-homepage-02" href="/generalist" onmouseover="hoverTitle(0)"> <h1> Design </h1> </a>
                 </div>
 
                 <div style="position: relative;">
                     <span style="font-size: .8rem; color: white; position: absolute; left: 0.8rem; top: 0;"> 01 </span> 
-                    <a class="zoom main-links-homepage-02" href="/development" onmouseover="hoverTitle(1)"> Development </a>
+                    <a class="zoom main-links-homepage-02" href="/development" onmouseover="hoverTitle(1)"> <h1> Development </h1> </a>
                 </div>
             </div>
        
@@ -64,9 +70,6 @@
     </div>
 
 </div> --}}
-
-@endsection
-
 
     <!-- <canvas></canvas> -->
     <!-- <div class="flex-row">
@@ -158,3 +161,5 @@
 
 
 </script>
+@endsection
+
