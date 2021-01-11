@@ -18,7 +18,7 @@
         </div>
 
         <div id="homepage-video-block">
-            <img id="homepage-bg-image" style="height: 100%; width: auto; position: absolute; right: 0px; left: auto;" src="./img/background_05.png" alt="background navigation">
+            <img id="homepage-bg-image" style="height: 100%; width: auto; position: absolute; right: 0px; left: auto;" src="./img/background_05.svg" alt="background navigation">
         </div>
 
 
