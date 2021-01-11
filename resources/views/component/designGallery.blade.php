@@ -1,19 +1,19 @@
 <div class="accordion-container-design">
   <div onclick="typeSliderDataClick(0)" class="card card-info reveal cursor-pointer" val="0">
     <input style="display:none;" value='0'>
-    <img id="design" src="img/icons/designA.png">
+    <img id="design" src="img/icons/designA.png" alt="design">
     <div class="card__head" id="acordTitle00">
     </div>
   </div>
   <div onclick="typeSliderDataClick(1)" class="card card-info reveal cursor-pointer" val="1">
     <input style="display:none;" value='1'>
-    <img id="general" src="img/icons/generalA.png">
+    <img id="general" src="img/icons/generalA.png" alt="generalist">
     <div class="card__head" id="acordTitle01">
     </div>
   </div>
   <div onclick="typeSliderDataClick(2)" class="card card-info reveal cursor-pointer" val="2">
     <input style="display:none;" value='2'>
-    <img id="cgi" src="img/icons/cgiA.png">
+    <img id="cgi" src="img/icons/cgiA.png" alt="cgi">
     <div class="card__head" id="acordTitle02">
     </div>
   </div>
@@ -55,14 +55,14 @@
 {{-- display-none --}}
 <div id="design-op2" class="flex-row-to-col  padding-0-3">
   <div style="width: 50%;">
-    <button class="reveal" style="width: auto;" onclick="returnGallery()"> <img src="{{ asset('img/x.svg') }}" id="return-button"> </button>
+    <button class="reveal" style="width: auto;" onclick="returnGallery()"> <img src="{{ asset('img/x.svg') }}" id="return-button" alt="generalist"> </button>
     <h3 class="reveal" id="design-clicked-title"> Design Title </h3>
     <hr class="reveal" style="margin: 0px;">
     <p class="reveal" id="design-clicked-copy"> Design  </p>
   </div>
   
   <div style="width: 50%;">
-    <img src="" class="vert-img reveal">
+    <img src="" class="vert-img reveal" alt="generalist">
     <div id="movieToggle" class="reveal">
     </div>
     <!-- <video  controls>
@@ -71,9 +71,9 @@
   </div>
 </div>
 
-<script src="{{ asset('js/app.js') }}"></script>
+{{-- <script src="{{ asset('js/app.js') }}"></script> --}}
 
-<script>
+<script type="text/javascript" defer="defer">
 
 //loads generalists
   let vertCredits = [{
@@ -403,7 +403,7 @@ let globalPortfolio;
 
       for (val in designPortfolio[globalPortfolio].sub) {
         // console.log("EACH", vertCredits[val]['img'], designPortfolio[globalPortfolio].sub[val]['img'] );
-        outputVert.append('<div style=" margin-bottom: 0.5rem;" class="design-credit-div"><img style="height: auto; width: 100%;" value=' + val + ' onclick="vertSliderData('+ val +')" class="design-credit" src=' + designPortfolio[globalPortfolio].sub[val]['img'] + '> <p>'+ designPortfolio[globalPortfolio].sub[val]['title'] +' </p></div>'        )
+        outputVert.append('<div style=" margin-bottom: 0.5rem;" class="design-credit-div"><img alt=' + designPortfolio[globalPortfolio].sub[val]['title'] + ' style="height: auto; width: 100%;" value=' + val + ' onclick="vertSliderData('+ val +')" class="design-credit" src=' + designPortfolio[globalPortfolio].sub[val]['img'] + '> <p>'+ designPortfolio[globalPortfolio].sub[val]['title'] +' </p></div>'        )
       } 
 
       new Promise(function(resolve, reject) {

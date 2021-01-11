@@ -60,8 +60,8 @@
         @if(Request::path() === '/')
 
         @else
-          <a class="zoom" href="/development"><li>Development</li></a>
-          <a class="zoom" href="/generalist"><li>Designer / Generalist </li></a>
+          <li><a class="zoom" href="/development">Development</a></li>
+          <li><a class="zoom" href="/generalist">Designer / Generalist</a></li>
         
         @endif
       </ul>

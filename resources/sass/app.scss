@@ -307,6 +307,9 @@ canvas {
     #homepage-black-block {
         width: 0%;
     }
+    .skew {
+        transform: skew(0deg);
+    }
 }
 
 #homepage-video-block {

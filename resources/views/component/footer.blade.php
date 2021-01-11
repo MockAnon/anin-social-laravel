@@ -2,8 +2,8 @@
 
 
   <!-- <script src="jquery-3.4.0.min.js"></script> -->
-  <script src="{{ mix('js/app.js') }}"></script>
-  <script type="text/javascript">
+  {{-- <script src="{{ mix('js/app.js') }}"></script> --}}
+  <script type="text/javascript" defer="defer">
       $(document).ready(function() {
           // alert("Settings page was loaded");
           console.log("Please work");

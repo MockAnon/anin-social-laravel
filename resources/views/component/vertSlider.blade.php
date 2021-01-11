@@ -7,7 +7,7 @@
   <button id="slide-backward-button" onclick="previousSlideVert()"> < </button>
 </div>
 
-<script src="{{ asset('js/app.js') }}"></script>
+{{-- <script src="{{ asset('js/app.js') }}"></script> --}}
 
 <script>
   let vertCredits = [{

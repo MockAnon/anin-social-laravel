@@ -14,7 +14,7 @@
 <div id="development-top" class="row display-info">
   <div id="addOpacity"> </div> 
     <div class="col push-top">
-        <h3 class="reveal"> Development </h3>
+        <h1 class="reveal"> Development </h1>
         <p class="reveal"> Over two years of experience as a developer and roughly five years of Compositing experience. Experience with languages such as Javascript, PHP, Python, CSS, Sass and HTML. I also have experience with Frameworks such as Laravel, Angular, Ionic, and React Native. I have experience with lybraries such as jQuery and React.
          DATABASES, SYSTEMS, CMS: MongoDB, SQL, Git, Firebase, Google FireStore </p>
 
@@ -28,7 +28,7 @@
           </div>
 
           <div class="zoom reveal">
-            <a href="https://resume.creddle.io/resume/4h5yjn4rlty"> <img class="padding-r-1" src="{{url('img/icons/profiles.svg')}}" alt="profile Pic"> Resume </a>
+            <a href="https://resume.creddle.io/resume/4h5yjn4rlty" target="_blank" rel="noreferrer"> <img class="padding-r-1" src="{{url('img/icons/profiles.svg')}}" alt="profile Pic"> Resume </a>
           </div>
 
           <div class="padding-0-40 zoom reveal">
@@ -154,7 +154,7 @@
         
    
 
-    <a href="#bottom"> 
+    <a href="#bottom" aria-label="Bottom of page"> 
     <svg class="toggle-reel-img"  style="position:absolute; left: 50%; right: 50%; bottom: 5vh;"  version="1.1" id="Capa_1" overflow="visible" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
       width="284.929px" height="284.929px" viewBox="0 0 284.929 284.929" style="enable-background:new 0 0 284.929 284.929; fill:grey;"
       xml:space="preserve">
@@ -186,7 +186,7 @@
 
 
 <a id="devDiv00" class="card devcard-info reveal" onclick="loadDevObject('0')" href="#devTitle">
-    <img src="img/appCredits/seminarii_02.png">
+    <img src="img/appCredits/seminarii_02.png"  alt="seminarii">
     <div class="card__head">
         Title
     </div>
@@ -195,7 +195,7 @@
 </a>
 
   <a id="devDiv01" class="card devcard-info reveal" onclick="loadDevObject('1')" href="#devTitle">
-    <img src="img/appCredits/moneymate_01.jpg">
+    <img src="img/appCredits/moneymate_01.jpg"  alt="moneymate">
     <div class="card__head">
       MoneyMate
     </div>
@@ -204,7 +204,7 @@
 </a>
 
   <a id="devDiv02" class="card devcard-info reveal" onclick="loadDevObject('2')" href="#devTitle">
-    <img src="img/appCredits/furever_01.png">
+    <img src="img/appCredits/furever_01.png"  alt="furever">
     <div class="card__head">
       Furrever
     </div>
@@ -234,10 +234,10 @@
   <div class="flex-col padding-2-0" id="development-bottom">
       <div class="flex-row">
           <div class="flex-1-van padding-0-1" style="padding-right: 0px; background: #e5eeef;">
-              <img class="scale-img reveal" id="devImg" src="/"/>
-              <img class="scale-img reveal" id="devImg02" src="/"/>
-              <img class="scale-img reveal" id="devImg03" src="/"/>
-              <img class="scale-img reveal" id="devImg04" src="/"/>
+              <img class="scale-img reveal" id="devImg" src="/"  alt="generalist"/>
+              <img class="scale-img reveal" id="devImg02" src="/"  alt="generalist"/>
+              <img class="scale-img reveal" id="devImg03" src="/"  alt="generalist"/>
+              <img class="scale-img reveal" id="devImg04" src="/"  alt="generalist"/>
           </div>
           <div class="flex-1-van padding-0-1 border-left-break"> 
               <h1 class="reveal" id="devTitle"> Title </h1>
@@ -248,202 +248,202 @@
       <p id="devDescription"> Description </p> -->
   </div>
 </div>
-    
 @endsection
+@section('javascript')
+  {{-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script> --}}
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+  <script type="text/javascript" defer="defer">
 
-<script>
+  let devObject = [{
+      img: ["img/appCredits/seminarii_01.png", "img/appCredits/seminarii_02.png"],
+      img2: "img/appCredits/seminarii_02.png",
+      title: "Seminarii",
+      description: `In 2019, I began working on Seminarii. I was the UX Designer and Front-End Developer on this project. I was also responsible for updating the companies style guides and was fortunate to have been able to do some hiring for the project. <br> <br>
+      I gained more experience in React, the PHP framework Laravel, and Adobe XD.
 
-let devObject = [{
-    img: ["img/appCredits/seminarii_01.png", "img/appCredits/seminarii_02.png"],
-    img2: "img/appCredits/seminarii_02.png",
-    title: "Seminarii",
-    description: `In 2019, I began working on Seminarii. I was the UX Designer and Front-End Developer on this project. I was also responsible for updating the companies style guides and was fortunate to have been able to do some hiring for the project. <br> <br>
-    I gained more experience in React, the PHP framework Laravel, and Adobe XD.
+      I was also responsible for the companies sound editing and design.
+      `,
+      date: 'Jan 2019 - Current',
+    },
+    { img: ["img/appCredits/moneymate_01.jpg", "img/appCredits/moneymate_02.jpg", "img/appCredits/moneymate_03.jpg", "img/appCredits/moneymate_04.gif"],
+      title: "MoneyMate",
+      description: `MoneyMate is an application I was forunate enough to work on in 2018. It was created by a start up called FIIN that was meant to be a much needed alternative to payday loans. It provides fast and easy personal loans that help the user take care of their instant cash needs, while also helping them create a savings cushion.
+    In regards to the project stack: For Front-End Development we used React Router, React Native, Ionic, Ionic-Angular, Redux, Bootstrap, and Sass.
+    For UX/UI we used InVision and Photoshop. Aside from assisting with this, I was fortunate enough to do some other design for ad and pamphlets, not to mention some CGI work building the Money Mate mascot, which they still use even today.
+    I worked on this project as a Front-End Developer, Designer, and UI/UX Designer.
+      `,
+      date: 'Sept 2018 - Dec 2018',
+    },
+  //   { img: "img/designCredits/credit2.jpg",
+  //     title: "FIIN INC",
+  //     description: "Blah Due Doe here"
+  //   },
+    { img: ["img/appCredits/furever_01.png", "img/appCredits/furever_03.gif", "img/appCredits/furever_02.png"],
+      title: "Furrever",
+      description: `Fur-ever is an application that helps caring owners acquire and raise pets the pet centric way. Fur-ever is an application that helps caring owners acquire and raise pets the pet centric way. We strived to create an app that would foster a pet centered community through local events and knowledge. 
+      In regards to the project stack: For Front-End Development we used React Router, Bootstrap, Axios, and Sass. For Back-end we used Node.Js, Express, Firebase, and Google FireStore. We also used both the Google Places and Petfinder API’s.
+      Our team split the work for the initial skeleton horizontally and then built the features vertically. Each feature spanned the entire stack.
+      We built each feature vertically, thus we all worked on the full-stack.`,
+      
+      date: 'Sept 2018 - Dec 2018',
+    },
+    { img: "img/designCredits/credit2.jpg",
+      title: "Chatty App",
+      description: "Work I did ",
+      date: 'Sept 2018 - Dec 2018',
+    },
+    { img: "img/designCredits/credit2.jpg",
+      title: "Scoodle",
+      description: "Blah Blah Blah",
+      date: 'Sept 2018 - Dec 2018',
+    },
+  ]
 
-    I was also responsible for the companies sound editing and design.
-    `,
-    date: 'Jan 2019 - Current',
-  },
-  { img: ["img/appCredits/moneymate_01.jpg", "img/appCredits/moneymate_02.jpg", "img/appCredits/moneymate_03.jpg", "img/appCredits/moneymate_04.gif"],
-    title: "MoneyMate",
-    description: `MoneyMate is an application I was forunate enough to work on in 2018. It was created by a start up called FIIN that was meant to be a much needed alternative to payday loans. It provides fast and easy personal loans that help the user take care of their instant cash needs, while also helping them create a savings cushion.
-  In regards to the project stack: For Front-End Development we used React Router, React Native, Ionic, Ionic-Angular, Redux, Bootstrap, and Sass.
-  For UX/UI we used InVision and Photoshop. Aside from assisting with this, I was fortunate enough to do some other design for ad and pamphlets, not to mention some CGI work building the Money Mate mascot, which they still use even today.
-  I worked on this project as a Front-End Developer, Designer, and UI/UX Designer.
-    `,
-    date: 'Sept 2018 - Dec 2018',
-  },
-//   { img: "img/designCredits/credit2.jpg",
-//     title: "FIIN INC",
-//     description: "Blah Due Doe here"
-//   },
-  { img: ["img/appCredits/furever_01.png", "img/appCredits/furever_03.gif", "img/appCredits/furever_02.png"],
-    title: "Furrever",
-    description: `Fur-ever is an application that helps caring owners acquire and raise pets the pet centric way. Fur-ever is an application that helps caring owners acquire and raise pets the pet centric way. We strived to create an app that would foster a pet centered community through local events and knowledge. 
-    In regards to the project stack: For Front-End Development we used React Router, Bootstrap, Axios, and Sass. For Back-end we used Node.Js, Express, Firebase, and Google FireStore. We also used both the Google Places and Petfinder API’s.
-    Our team split the work for the initial skeleton horizontally and then built the features vertically. Each feature spanned the entire stack.
-    We built each feature vertically, thus we all worked on the full-stack.`,
+
+  // $(".devcard-info").mouseover(function() {
+  //   let index = $(this).find('input').val();
+  //   loadDevObject(index);
+
+  // }).mouseout(function() {
+
+  // });
+
+  let globalPortfolio;
+
+  // let loaded = 1;
+
+  function loadDevObject (event) {
+    // event.preventDefault();
     
-    date: 'Sept 2018 - Dec 2018',
-  },
-  { img: "img/designCredits/credit2.jpg",
-    title: "Chatty App",
-    description: "Work I did ",
-    date: 'Sept 2018 - Dec 2018',
-  },
-  { img: "img/designCredits/credit2.jpg",
-    title: "Scoodle",
-    description: "Blah Blah Blah",
-    date: 'Sept 2018 - Dec 2018',
-  },
-]
+  // if (loaded == 1) {
+    loaded = 0;
+    globalPortfolio = event;
+    var el = $('#development-bottom');
+    let devTitle = $("#devTitle");
+    let imgSelect = $('.scale-img');
+    let devDescription = $("#devDescription");
 
+    el.stop();
+    devTitle.stop();
+    imgSelect.stop();
+    devDescription.stop();
 
-// $(".devcard-info").mouseover(function() {
-//   let index = $(this).find('input').val();
-//   loadDevObject(index);
-
-// }).mouseout(function() {
-
-// });
-
-let globalPortfolio;
-
-// let loaded = 1;
-
-function loadDevObject (event) {
-  // event.preventDefault();
-  
-// if (loaded == 1) {
-  loaded = 0;
-  globalPortfolio = event;
-  var el = $('#development-bottom');
-  let devTitle = $("#devTitle");
-  let imgSelect = $('.scale-img');
-  let devDescription = $("#devDescription");
-
-  el.stop();
-  devTitle.stop();
-  imgSelect.stop();
-  devDescription.stop();
-
-  
-  
-  devTitle.text(" ");
-  devTitle.empty();
-  // devTitle.animate({"max-width": '0px'},0);
-  devTitle.css({"max-width": '0px'});
-
-  // devTitle.empty();
-
-  
-  devDescription.text(" ");
-  devDescription.empty();
-  devDescription.animate({"max-height": '0px'},0);
-  devDescription.css({"max-height": '0px'});
-  // devDescription.animate({},0);
-  // devTitle.empty();
-
-  $( ".scale-img" ).each(function(val) {
-    console.log("output this", devObject[event].img[val]);
-    $(this).empty();
-    // $(this).animate({"max-width": "0px"}, 1);
-    $(this).css({"max-width": "0px"});
-    console.log("woah", val);
-    if(devObject[event].img[val] == undefined) {
-      $(this).attr("src", "");
-    } else {
-      $(this).attr("src", devObject[event].img[val]);
-    }
-  });
-
-
-
-  new Promise(function(resolve, reject) {
-    devTitle.css("display", "none");
-
-    devDescription.css("display", "none");
-    el.css({"max-height": '0%'});
-    console.log("Promise 01");
-  });
-
-  new Promise(function(resolve, reject) {
     
-    el.animate({"max-height": '3000%'}, 100);
-    console.log("Promise 02");
-    devTitle.css("display", "none");
-    devTitle.animate({ "max-width": '100%'}, 1000);
     
+    devTitle.text(" ");
+    devTitle.empty();
+    // devTitle.animate({"max-width": '0px'},0);
+    devTitle.css({"max-width": '0px'});
 
-    devDescription.css("display", "none");
-    devDescription.animate({ "max-height": '3000px'}, 3000);
+    // devTitle.empty();
 
-    resolve('Promise 02'); 
-  });
+    
+    devDescription.text(" ");
+    devDescription.empty();
+    devDescription.animate({"max-height": '0px'},0);
+    devDescription.css({"max-height": '0px'});
+    // devDescription.animate({},0);
+    // devTitle.empty();
 
-  new Promise(function(resolve, reject){
-    devTitle.css("display", "block");
-    devTitle.text(devObject[event].title);
-
-    devDescription.css("display", "block");
-    devDescription.text(devObject[event].description);
-    console.log("Promise 03");
-
-    $( ".scale-img" ).each(function() {
-      console.log(this);
-      $(this).animate({"max-width": '100%'}, 1000);
+    $( ".scale-img" ).each(function(val) {
+      console.log("output this", devObject[event].img[val]);
+      $(this).empty();
+      // $(this).animate({"max-width": "0px"}, 1);
+      $(this).css({"max-width": "0px"});
+      console.log("woah", val);
+      if(devObject[event].img[val] == undefined) {
+        $(this).attr("src", "");
+      } else {
+        $(this).attr("src", devObject[event].img[val]);
+      }
     });
 
+
+
+    new Promise(function(resolve, reject) {
+      devTitle.css("display", "none");
+
+      devDescription.css("display", "none");
+      el.css({"max-height": '0%'});
+      console.log("Promise 01");
+    });
+
+    new Promise(function(resolve, reject) {
+      
+      el.animate({"max-height": '3000%'}, 100);
+      console.log("Promise 02");
+      devTitle.css("display", "none");
+      devTitle.animate({ "max-width": '100%'}, 1000);
+      
+
+      devDescription.css("display", "none");
+      devDescription.animate({ "max-height": '3000px'}, 3000);
+
+      resolve('Promise 02'); 
+    });
+
+    new Promise(function(resolve, reject){
+      devTitle.css("display", "block");
+      devTitle.text(devObject[event].title);
+
+      devDescription.css("display", "block");
+      devDescription.text(devObject[event].description);
+      console.log("Promise 03");
+
+      $( ".scale-img" ).each(function() {
+        console.log(this);
+        $(this).animate({"max-width": '100%'}, 1000);
+      });
+
+    });
+
+  }
+
+
+
+
+
+  //   let devAccordian = ``;
+
+  // function onLoadDev() {
+  // }
+
+  $(document).ready(function () {
+    //your code here
+    $("#devDiv00 .card__head").text(devObject[0].title);
+    //$("#devDiv00 .card__copy").text(devObject[0].date);
+
+    $("#devDiv01 .card__head").text(devObject[1].title);
+    //$("#devDiv01 .card__copy").text(devObject[1].date);
+
+    $("#devDiv02 .card__head").text(devObject[2].title);
+    //$("#devDiv02 .card__copy").text(devObject[2].date);
+
+    loadDevObject(1);
+
+    
   });
 
-}
+  // onLoadDev();
+
+  var devBtn = document.getElementById("modalDevBtn");
+
+  //devBtn.onclick = function() {
+    //modal.style.display = "block";
+  //}
+
+  function openModal() {
+    modal.style.display = "block";
+  }
+
+  // $(".card-info").mouseover(function() {
+  //   let index = $(this).find('input').val();
+  //   typeSliderData(index);
+  //   }).mouseout(function() {
+  // });
 
 
 
 
-
-//   let devAccordian = ``;
-
-// function onLoadDev() {
-// }
-
-$(document).ready(function () {
-  //your code here
-  $("#devDiv00 .card__head").text(devObject[0].title);
-  //$("#devDiv00 .card__copy").text(devObject[0].date);
-
-  $("#devDiv01 .card__head").text(devObject[1].title);
-  //$("#devDiv01 .card__copy").text(devObject[1].date);
-
-  $("#devDiv02 .card__head").text(devObject[2].title);
-  //$("#devDiv02 .card__copy").text(devObject[2].date);
-
-  loadDevObject(1);
-
-  
-});
-
-// onLoadDev();
-
-var devBtn = document.getElementById("modalDevBtn");
-
-//devBtn.onclick = function() {
-  //modal.style.display = "block";
-//}
-
-function openModal() {
-  modal.style.display = "block";
-}
-
-// $(".card-info").mouseover(function() {
-//   let index = $(this).find('input').val();
-//   typeSliderData(index);
-//   }).mouseout(function() {
-// });
-
-
-
-
-</script>
+  </script>
+@endsection

@@ -395,12 +395,13 @@
 }
 
 #slider-container .credit-img {
-  height: 100%;
   width: auto;
   -webkit-transition: -webkit-transform 2s;
   transition: -webkit-transform 2s;
   transition: transform 2s;
   transition: transform 2s, -webkit-transform 2s;
+  max-height: 10rem;
+  max-width: 100%;
 }
 
 #slider-container .credit-img:hover {
@@ -426,11 +427,20 @@
 
 #slider-box li {
   width: 110px;
+  max-height: 10rem;
+  height: 100%;
   display: block;
   text-align: center;
   line-height: 320px;
   float: left;
   font-size: 48px;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-flow: column;
+  -webkit-box-pack: center;
+          justify-content: center;
 }
 
 #parent {
@@ -1001,6 +1011,7 @@
   white-space: nowrap;
   bottom: calc(100% - 10em);
   bottom: -60;
+  bottom: 0px;
   min-width: 240%;
   font-size: 17px;
 }
@@ -1738,6 +1749,11 @@ canvas {
 @media (max-width: 899px) {
   #homepage-black-block {
     width: 0%;
+  }
+
+  .skew {
+    -webkit-transform: skew(0deg);
+            transform: skew(0deg);
   }
 }
 

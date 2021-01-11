@@ -18,7 +18,7 @@
 
         
     <div id="generalist-ol" class="generalist-ol-visible">
-        <img onclick="generalistClose();" id="generalist-close" src="img/x2.svg">
+        <img onclick="generalistClose();" id="generalist-close" src="img/x2.svg" alt="generalist">
         <h1> Hello </h1>
         <p> Hello 2323 232 222 </p>
     </div>
@@ -30,7 +30,7 @@
       
                 <div class="flex-row">
 
-                    <h3 class="reveal" style="margin: 0px;"> Developer, Compositor <br> and CG Generalist </h3>
+                    <h1 class="reveal" style="margin: 0px;"> Developer, Compositor <br> and CG Generalist </h1>
 
                 </div>
                 <hr style="margin: 0px;">
@@ -53,7 +53,7 @@
                         </div>
 
                         <div class="zoom reveal padding-0-40 margin-auto">
-                            <a target="_blank" href="https://resume.creddle.io/resume/4h5yjn4rlty" class="color-black"> <img class="padding-r-1" src="{{url('img/icons/profiles.svg')}}" alt="profile Pic"> Resume </a>
+                            <a target="_blank" rel="noreferrer" href="https://resume.creddle.io/resume/4h5yjn4rlty" class="color-black"> <img class="padding-r-1" src="{{url('img/icons/profiles.svg')}}" alt="profile Pic"> Resume </a>
                         </div>
 
                         <div class="zoom reveal margin-auto">
@@ -64,7 +64,7 @@
                     <div style="justify-content: flex-end; justify-content: flex-end; bottom: 0px;">
                         <button onclick="toggleReel()" class="toggle-reel-button zoom"> 
                             <p class="margin-0 padding-bottom-1"> Play Reel </p> 
-                            <img class="toggle-reel-img" style="" src="img/icons/play_reel.svg"> 
+                            <img class="toggle-reel-img" style="" src="img/icons/play_reel.svg"  alt="demo reel"> 
                         </button>
                     </div>
                     <!-- <div id="button-reel-breakdown" onclick="toggleBreakdown()" style="margin: 1rem 0px;">  -->
@@ -239,7 +239,7 @@
         
       </div>
 
-    <a href="#bottom"> 
+    <a href="#bottom" aria-label="Bottom of page"> 
     <svg class="toggle-reel-img"  style="position:absolute; left: 50%; right: 50%; bottom: 5vh;"  version="1.1" id="Capa_1" overflow="visible" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
       width="284.929px" height="284.929px" viewBox="0 0 284.929 284.929" style="enable-background:new 0 0 284.929 284.929; fill:grey;"
       xml:space="preserve">
@@ -293,21 +293,12 @@
 </div>
 
 
-
-
-
-
 @endsection
 
-<script type="application/javascript"> 
-
-
-
+@section('javascript')
+<script type="application/javascript" defer="defer"> 
 
 let globalToggleReel = false;
-
-
-
 
 function toggleReel() {
     if (globalToggleReel == false) {
@@ -328,7 +319,6 @@ function toggleReel() {
 
     function generalistClose() {
         $('#generalist-ol').hide();
-        
         // $('#generalist-ol').addClass("generalist-ol-visible");
     }
 
@@ -346,22 +336,12 @@ function toggleReel() {
         // $('#generalist-ol').removeClass("generalist-ol-visible");
     }
 
-
-
     $(document).click(function(event) {
         if (!$(event.target).closest("#generalist-ol, #generalist-close, #accordion-container-reel").length) {
             $('#generalist-ol').hide();
-            
-            
         }
     });
 
-
-
-
-
-
-
-
-
 </script>
+
+@endsection

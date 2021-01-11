@@ -50,9 +50,9 @@
 
 
 
-<script src="{{ asset('js/app.js') }}"></script>
+{{-- <script src="{{ asset('js/app.js') }}"></script> --}}
 
-<script>
+<script type="text/javascript" defer="defer">
   let objectCredits = [{
     img: "img/filmCredits/credit1.jpg",
     title: "Colossal",
@@ -148,14 +148,14 @@ var output = $('#sliderParent');
 
 function appendToArray(){
   for (val in objectCredits) {
-    output.append('<li class="credit-li reveal">' + '<input style="display:none;" value='+val+'>' + '<img value=' + val + ' onclick="filmCreditModal('+ val +')" class="credit-img" src=' + objectCredits[val]['img'] + '></li>')
+    output.append('<li class="credit-li reveal">' + '<input style="display:none;" value='+val+'>' + '<img alt=' + objectCredits[val]['title'] + ' value=' + val + ' onclick="filmCreditModal('+ val +')" class="credit-img" src=' + objectCredits[val]['img'] + '></li>')
   }
 };
 
 function appendToArray(){
   for (val in objectCredits) {
     // <li class="tooltip"> </li> <div class="tooltiptext"> <div>' + objectCredits[val]['description'] + '</div></div>
-    output.append('<li class="credit-li reveal">' + '<input style="display:none;" value='+val+'>' + '<img value=' + val + ' onclick="filmCreditModal('+ val +')" class="credit-img" src=' + objectCredits[val]['img'] + '></li>')
+    output.append('<li class="credit-li reveal">' + '<input style="display:none;" value='+val+'>' + '<img alt=' + objectCredits[val]['title'] + ' value=' + val + ' onclick="filmCreditModal('+ val +')" class="credit-img" src=' + objectCredits[val]['img'] + '></li>')
   }
 };
 
@@ -203,9 +203,9 @@ function appendToArray(){
     var sliderInterval;
     function startSlider(){
       sliderInterval = setInterval(function(){
-        console.log("guardSlide", guardSlide);
+        //console.log("guardSlide", guardSlide);
           if (guardSlide == false) {
-          console.log("currentSlide", startSlide, "lastSlide", lastSlide);
+          //console.log("currentSlide", startSlide, "lastSlide", lastSlide);
             if (startSlide >= lastSlide) {
               slideContainer.css("margin-left", "0px");
               startSlide = 0;
@@ -231,7 +231,7 @@ function appendToArray(){
   function nextSlide() {
     slideContainer.animate({"margin-left": "-="+xOffset},animationSpeed, function(){
         startSlide++;
-        console.log(startSlide);
+        //console.log(startSlide);
       });
   }
   
@@ -240,7 +240,7 @@ function appendToArray(){
       // console.log("previous", startSlide);
       slideContainer.animate({"margin-left": "+="+xOffset},animationSpeed, function(){
         startSlide = startSlide - 1;
-        console.log(startSlide);
+        //console.log(startSlide);
         // checkPosition();
         });
     }
@@ -251,7 +251,7 @@ function appendToArray(){
     $(".credit-li").mouseover(function() {
       // $("#slider-ol-visible").css("display","block");
       let index = $(this).find('input').val();
-      console.log(index);
+      //console.log(index);
       $("#slider-title").text(objectCredits[index].title);
       $("#slider-text").text(objectCredits[index].description);
       $("#slider-ol-visible").show();
@@ -283,7 +283,7 @@ function appendToArray(){
   $('#slider-container').hover(function(){
     $(this).addClass('active');
     guardSlide = true;
-    console.log(guardSlide);
+    //console.log(guardSlide);
   }, function(){
       $(this).removeClass('active');
       guardSlide = false;
