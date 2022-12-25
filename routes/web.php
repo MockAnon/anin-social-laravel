@@ -15,9 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/contact', [
-    'uses' => 'ContactMessageController@create'
-]);
+// Route::get('/contact', [
+//     'uses' => 'ContactMessageController@create'
+// ]);
 
 Route::post('/contact', [
     'uses' => 'ContactMessageController@store',

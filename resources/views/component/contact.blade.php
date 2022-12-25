@@ -54,6 +54,7 @@
 
 <script type="text/javascript">
     var max_val = "{{ env('SITE_KEY') }}";
+    
 
     var onloadCallback = function() {
         grecaptcha.render('html_element', {
