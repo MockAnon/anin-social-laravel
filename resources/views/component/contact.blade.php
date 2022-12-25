@@ -53,9 +53,11 @@
     </script>
 
 <script type="text/javascript">
+    var max_val = "{{ env('SITE_KEY') }}";
+
     var onloadCallback = function() {
         grecaptcha.render('html_element', {
-            'sitekey' : '6LcGg_cUAAAAAPn-BNqyHBdmikCHBV803Hx9W3t5'
+            'sitekey' : max_val
         });
     };
     function recaptchaCallback() {

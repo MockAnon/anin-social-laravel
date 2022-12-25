@@ -12,30 +12,60 @@
 
 @section('content')
 <div id="development-top" class="row display-info">
-  <div id="addOpacity"> </div> 
-    <div class="col push-top">
+    <div id="addOpacity"> </div> 
+    <div class="col push-top"> <div>
+    <div class="flex-row">
+      <div class="flex-05">
         <h1 class="reveal"> Development </h1>
-        <p class="reveal"> Over two years of experience as a developer and roughly five years of Compositing experience. Experience with languages such as Javascript, PHP, Python, CSS, Sass and HTML. I also have experience with Frameworks such as Laravel, Angular, Ionic, and React Native. I have experience with lybraries such as jQuery and React.
-         DATABASES, SYSTEMS, CMS: MongoDB, SQL, Git, Firebase, Google FireStore </p>
+        <p class="reveal"> Over four years of experience as a developer and roughly five years of Compositing experience. Experience with languages such as Javascript, PHP, Python, CSS, Sass and HTML. I also have experience with Frameworks such as Laravel, Angular, Ionic, and React Native. I have experience with lybraries such as jQuery and React.
+        DATABASES, SYSTEMS, CMS: MongoDB, SQL, Git, Firebase, Google FireStore </p>
+      </div>
 
-        <div class="flex-row-start social-icon-row">
-          <div class="zoom reveal">
-            <a href="https://www.linkedin.com/in/jarondevans/"> <img class="padding-r-1" src="{{url('img/icons/linkedin-logo.svg')}}" alt="profile Pic"> LinkedIn </a>
-          </div>
+      <div class="flex-05 flex-center">
+        <img class="img-top " src="/img/Desk-Right.png" alt="development desktop"/>
+      </div>
+    </div>
 
-          <div class="padding-0-40 zoom reveal">
-            <a href="https://github.com/mockanon"> <img class="padding-r-1" src="{{url('img/icons/github-logo.svg')}}" alt="profile Pic"> GitHub </a>
-          </div>
+    </div>
+    <div class="flex-row-start social-icon-row">
+      <div class="zoom reveal">
+        <a href="https://www.linkedin.com/in/jarondevans/"> <img class="padding-r-1" src="{{url('img/icons/linkedin-logo.svg')}}" alt="profile Pic"> LinkedIn </a>
+      </div>
 
-          <div class="zoom reveal">
-            <a href="https://resume.creddle.io/resume/4h5yjn4rlty" target="_blank" rel="noreferrer"> <img class="padding-r-1" src="{{url('img/icons/profiles.svg')}}" alt="profile Pic"> Resume </a>
-          </div>
+      <div class="padding-0-40 zoom reveal">
+        <a href="https://github.com/mockanon"> <img class="padding-r-1" src="{{url('img/icons/github-logo.svg')}}" alt="profile Pic"> GitHub </a>
+      </div>
 
-          <div class="padding-0-40 zoom reveal">
-            <a id="modalDevBtn" onclick="openModal()"> <img class="padding-r-1" src="{{url('img/icons/email-icon.svg')}}" alt="profile Pic"> Contact Me </a>
-          </div>
-        </div>
+      <div class="zoom reveal">
+        <a href="https://resume.creddle.io/resume/4h5yjn4rlty" target="_blank" rel="noreferrer"> <img class="padding-r-1" src="{{url('img/icons/profiles.svg')}}" alt="profile Pic"> Resume </a>
+      </div>
 
+      <div class="padding-0-40 zoom reveal">
+        <a id="modalDevBtn" onclick="openModal()"> <img class="padding-r-1" src="{{url('img/icons/email-icon.svg')}}" alt="profile Pic"> Contact Me </a>
+      </div>
+    </div>
+
+  </div>
+  <a href="#bottom" aria-label="Bottom of page"> 
+    <svg class="toggle-reel-img"  style="position:absolute; left: 50%; right: 50%; bottom: 1rem;"  version="1.1" id="Capa_1" overflow="visible" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+      width="284.929px" height="284.929px" viewBox="0 0 284.929 284.929" style="enable-background:new 0 0 284.929 284.929; fill:grey;"
+      xml:space="preserve">
+      <g>
+        <path id="top-arrow" d="M135.899,167.877c1.902,1.902,4.093,2.851,6.567,2.851s4.661-0.948,6.562-2.851L282.082,34.829
+        c1.902-1.903,2.847-4.093,2.847-6.567s-0.951-4.665-2.847-6.567L267.808,7.417c-1.902-1.903-4.093-2.853-6.57-2.853
+        c-2.471,0-4.661,0.95-6.563,2.853L142.466,119.622L30.262,7.417c-1.903-1.903-4.093-2.853-6.567-2.853
+        c-2.475,0-4.665,0.95-6.567,2.853L2.856,21.695C0.95,23.597,0,25.784,0,28.262c0,2.478,0.953,4.665,2.856,6.567L135.899,167.877z"
+          />
+
+              <path id="bottom-arrow" d="M135.899,167.877c1.902,1.902,4.093,2.851,6.567,2.851s4.661-0.948,6.562-2.851L282.082,34.829
+        c1.902-1.903,2.847-4.093,2.847-6.567s-0.951-4.665-2.847-6.567L267.808,7.417c-1.902-1.903-4.093-2.853-6.57-2.853
+        c-2.471,0-4.661,0.95-6.563,2.853L142.466,119.622L30.262,7.417c-1.903-1.903-4.093-2.853-6.567-2.853
+        c-2.475,0-4.665,0.95-6.567,2.853L2.856,21.695C0.95,23.597,0,25.784,0,28.262c0,2.478,0.953,4.665,2.856,6.567L135.899,167.877z"
+          />
+      </g>
+    </svg>
+  </a>
+</div>
 
 
       <div class="skew">
@@ -154,27 +184,9 @@
         
    
 
-    <a href="#bottom" aria-label="Bottom of page"> 
-    <svg class="toggle-reel-img"  style="position:absolute; left: 50%; right: 50%; bottom: 5vh;"  version="1.1" id="Capa_1" overflow="visible" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-      width="284.929px" height="284.929px" viewBox="0 0 284.929 284.929" style="enable-background:new 0 0 284.929 284.929; fill:grey;"
-      xml:space="preserve">
-      <g>
-        <path id="top-arrow" d="M135.899,167.877c1.902,1.902,4.093,2.851,6.567,2.851s4.661-0.948,6.562-2.851L282.082,34.829
-        c1.902-1.903,2.847-4.093,2.847-6.567s-0.951-4.665-2.847-6.567L267.808,7.417c-1.902-1.903-4.093-2.853-6.57-2.853
-        c-2.471,0-4.661,0.95-6.563,2.853L142.466,119.622L30.262,7.417c-1.903-1.903-4.093-2.853-6.567-2.853
-        c-2.475,0-4.665,0.95-6.567,2.853L2.856,21.695C0.95,23.597,0,25.784,0,28.262c0,2.478,0.953,4.665,2.856,6.567L135.899,167.877z"
-          />
 
-              <path id="bottom-arrow" d="M135.899,167.877c1.902,1.902,4.093,2.851,6.567,2.851s4.661-0.948,6.562-2.851L282.082,34.829
-        c1.902-1.903,2.847-4.093,2.847-6.567s-0.951-4.665-2.847-6.567L267.808,7.417c-1.902-1.903-4.093-2.853-6.57-2.853
-        c-2.471,0-4.661,0.95-6.563,2.853L142.466,119.622L30.262,7.417c-1.903-1.903-4.093-2.853-6.567-2.853
-        c-2.475,0-4.665,0.95-6.567,2.853L2.856,21.695C0.95,23.597,0,25.784,0,28.262c0,2.478,0.953,4.665,2.856,6.567L135.899,167.877z"
-          />
-      </g>
-    </svg>
-  </a>
 
-</div>
+
 
 
 <!-- Image Accordion -->
@@ -247,7 +259,7 @@
       <!-- <h1 id="devTitle"> Title </h1>
       <p id="devDescription"> Description </p> -->
   </div>
-</div>
+
 @endsection
 @section('javascript')
   {{-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script> --}}
