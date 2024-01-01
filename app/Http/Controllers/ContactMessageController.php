@@ -32,7 +32,7 @@ class ContactMessageController extends Controller
             $mail->to('jarondevans@gmail.com')->subject('Contact Message');
         });
 
-        return redirect()->back()->with('flash_message', 'Thank you for your message.');
-        // return response()->json(['message' => 'Request completed']);
+        //return redirect()->back()->with('flash_message', 'Thank you for your message.');
+        return response()->json(['message' => 'Request completed']);
     }
 }

@@ -16,7 +16,7 @@
     <div class="col push-top"> <div>
     <div class="flex-row">
       <div class="flex-05">
-        <h1 class="reveal"> Development </h1>
+        <h1 class="reveal"> Development 2 </h1>
         <p class="reveal"> Over four years of experience as a developer and roughly five years of Compositing experience. Experience with languages such as Javascript, PHP, Python, CSS, Sass and HTML. I also have experience with Frameworks such as Laravel, Angular, Ionic, and React Native. I have experience with lybraries such as jQuery and React.
         DATABASES, SYSTEMS, CMS: MongoDB, SQL, Git, Firebase, Google FireStore </p>
       </div>
@@ -75,7 +75,7 @@
               <li> <h5 class="border-left-orange"> EXPERIENCE </h5> </li>
               <li  class="border-bottom-black flex-row"> 
                 <div>
-                  Net2Net IT - Developer
+                  Developer
                 </div>
                 <div>
                    Jan 2020 to current
@@ -107,7 +107,7 @@
             <ul class="border-black">
               <li  class="border-bottom-black"> <h5 class="border-left-orange"> PROJECTS </h5> </li>
               <li  class="border-bottom-black"> 
-                Net2Net IT - Developer Jan 2020 to current
+                Developer Jan 2020 to current
               </li>
               <li  class="border-bottom-black"> 
                 BeauteSchool Inc. - Front End Developer and UX Designer Jan. 2019​ to Jan 2020

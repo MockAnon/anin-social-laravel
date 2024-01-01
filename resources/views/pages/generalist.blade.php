@@ -153,7 +153,7 @@
             <ul class="border-black">
               <li> <h5 class="border-left-orange"> PROJECTS </h5> </li>
               <li> 
-                Net2Net IT - Developer Jan 2020 to current
+                Developer Jan 2020 to current
               </li>
               <li> 
                 BeauteSchool Inc. - Front End Developer and UX Designer Jan. 2019​ to Jan 2020
