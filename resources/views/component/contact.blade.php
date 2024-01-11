@@ -76,7 +76,7 @@
     };
 
     const element = document.querySelector('#contact-form');
-    const messageReturn = document.querySelector(".alert-success")[0];
+    const messageReturn = document.querySelector("#alert-message");
 
     element.addEventListener('submit', event => {
         event.preventDefault();
@@ -96,6 +96,7 @@
         .then(response => {
             if (!response.ok) {
                 console.log("return", response);
+                messageReturn.classList.remove("success");
                 throw new Error("network returns error", response);
             }
             return response.json();
@@ -104,11 +105,13 @@
             //success
             console.log("resp from server ", resp.message);
             messageReturn.innerHTML = resp.message;
+            messageReturn.classList.add("success");
         })
         .catch(error => {
             // Handle error
             console.log("error ", error);
             messageReturn.innerHTML = JSON.stringify(error, null, 2);
+            messageReturn.classList.remove("success");
         });
 
         // element.submit();

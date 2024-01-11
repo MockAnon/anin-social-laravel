@@ -25,15 +25,15 @@ class ContactMessageController extends Controller
         // ]);
 
         
-        // $validator = Validator::make($request->all(),[
-        //     'name' => 'required',
-        //     'email' => 'required|email',
-        //     'message' => 'required'
-        // ])->validate();
+        $validator = Validator::make($request->all(),[
+             'name' => 'required',
+             'email' => 'required|email',
+             'message' => 'required'
+        ])->validate();
         
-        // if ($validator->fails()) {
-        //      return response()->json(['errors'=>$validator->errors()]);
-        // }
+        if ($validator->fails()) {
+              return response()->json(['errors'=>$validator->errors()]);
+        }
 
         return response()->json(['message' => 'TACO TEST']);
 

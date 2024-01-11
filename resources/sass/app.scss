@@ -580,3 +580,11 @@ input {
     max-height:500px;
     max-width:100%;
 }
+
+#alert-message {
+    color: red;
+}
+
+#alert-message.success {
+    color: green;
+}
