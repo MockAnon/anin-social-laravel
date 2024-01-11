@@ -20,8 +20,8 @@ Route::get('/', function () {
 // ]);
 
 Route::post('/contact', [
-    'uses' => 'ContactMessageController@store',
-    'as' => 'contact.store'
+    'uses' => 'ContactMessageController@postMessage',
+    'as' => 'contact.postmessage'
 ]);
 
 Route::get('/development', function () {

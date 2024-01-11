@@ -1,9 +1,11 @@
 <div class="row">
     <div class="col-md-6 background-grey color-black">
-        @if (Session::has('flash_message'))
+        <!-- @if (Session::has('flash_message'))
             <div class="alert alert-success">{{ Session::get('flash_message') }} </div>
-        @endif
-        <form style="margin: 0px; padding: 0px;" action="{{ route('contact.store') }}" method="post" class="flex-col"> 
+        @endif -->
+        <div id="alert-message" class="alert alert-success"></div>
+
+        <form id="contact-form" style="margin: 0px; padding: 0px;" action="{{ route('contact.postmessage') }}" method="post" class="flex-col"> 
             
             {{ csrf_field() }}
 
@@ -73,5 +75,45 @@
         }
     };
 
+    const element = document.querySelector('#contact-form');
+    const messageReturn = document.querySelector(".alert-success")[0];
+
+    element.addEventListener('submit', event => {
+        event.preventDefault();
+        // actual logic, e.g. validate the form
+        console.log('Form submission cancelled.');
+
+        var formData = new FormData(element);
+
+        fetch("{{ route('contact.postmessage') }}", {
+            method: "POST",
+            Headers: {
+                Accept: 'application.json',
+                'Content-Type': 'application/json'
+            },
+            body: formData,
+        })
+        .then(response => {
+            if (!response.ok) {
+                console.log("return", response);
+                throw new Error("network returns error", response);
+            }
+            return response.json();
+        })
+        .then(resp => {
+            //success
+            console.log("resp from server ", resp.message);
+            messageReturn.innerHTML = resp.message;
+        })
+        .catch(error => {
+            // Handle error
+            console.log("error ", error);
+            messageReturn.innerHTML = JSON.stringify(error, null, 2);
+        });
+
+        // element.submit();
+    });
+
+    
 
 </script>
