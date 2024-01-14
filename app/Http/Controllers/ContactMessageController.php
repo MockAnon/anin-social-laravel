@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 use App\Post;
 use App\Http\Requests\StoreLocation;
+use Validator;
 
 class ContactMessageController extends Controller
 {
@@ -18,24 +19,21 @@ class ContactMessageController extends Controller
 
     public function postMessage(Request $request)
     {
-        // $this->validate($request, [
-        //     'name' => 'required',
-        //     'email' => 'required|email',
-        //     'message' => 'required'
-        // ]);
-
+        //this is a honey pot.
+        if(!empty($request->input('subject'))) {
+             return response()->json(['message'=>"Thank you for your message", 'code'=>400]);
+        }
         
         $validator = Validator::make($request->all(),[
-             'name' => 'required',
-             'email' => 'required|email',
-             'message' => 'required'
-        ])->validate();
-        
-        if ($validator->fails()) {
-              return response()->json(['errors'=>$validator->errors()]);
-        }
+               'name' => 'required|max:100|regex:/^[\.a-zA-Z0-9,!:;? ]*$/',
+               'email' => 'required|email|max:100',
+               'message' => 'required|max:255|regex:/^[\.a-zA-Z0-9,!:;? ]*$/',
+               'g-recaptcha-response' => 'required',
+        ]);
 
-        return response()->json(['message' => 'TACO TEST']);
+        if ($validator->fails()) {
+            return response()->json(['errors'=>$validator->errors()]);
+        }
 
         Mail::send('emails.contactMessage', [
             'msg' => $request->message,
@@ -48,6 +46,6 @@ class ContactMessageController extends Controller
         });
 
         //return Redirect()->back()->with('flash_message', 'Thank you for your message.');
-        return response()->json(['message' => 'Request completed']);
+        return response()->json(['message' => 'Thank you for your message']);
     }
 }

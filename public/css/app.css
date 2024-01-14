@@ -1494,9 +1494,10 @@ textarea,
 input {
   font-size: 1.6rem;
   width: 100%;
-  border-radius: 0.2rem;
   min-height: 1.6rem;
   max-height: 5rem;
+  border-radius: 1rem;
+  border: none;
 }
 
 button {
@@ -1848,12 +1849,10 @@ canvas {
 #homepage-bg-image {
   -webkit-transition: all 2s;
   transition: all 2s;
-  left: auto;
   right: 0px;
 }
 
 .homepage-bg-1 #homepage-bg-image {
-  left: 0px;
   right: auto;
 }
 
@@ -2111,5 +2110,23 @@ input {
 .img-top {
   max-height: 500px;
   max-width: 100%;
+}
+
+#alert-message {
+  color: red;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  padding: 1rem;
+}
+
+#alert-message.success {
+  color: green;
+}
+
+#subject {
+  display: none;
 }
 

@@ -18,7 +18,7 @@
         </div>
 
         <div id="homepage-video-block">
-            <img id="homepage-bg-image" style="height: 100%; width: auto; position: absolute; right: 0px; left: auto;" src="./img/background_05.svg" alt="background navigation">
+            <img id="homepage-bg-image" style="height: 100%; width: auto; position: absolute;" src="./img/background_05.svg" alt="background navigation">
         </div>
 
 
@@ -71,8 +71,14 @@
         $("#selectedNo").stop().animate({height: "100%", opacity: 1}, 600, function() { });
         
         if(val == 0) {
-            $(".container").hasClass("homepage-bg-1").removeClass("homepage-bg-0");
+            console.log(0);
+            $(".container").removeClass("homepage-bg-1");
+            // if($(".container").hasClass("homepage-bg-1")) {
+            //     $(".container").removeClass("homepage-bg-0");
+            // }
         } else {
+            console.log(1);
+
             $(".container").addClass("homepage-bg-1");
         }
 
