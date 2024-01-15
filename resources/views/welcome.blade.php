@@ -42,7 +42,7 @@
 
             <p id="selectedTitle"> Web Development </p>
 
-            <div style="position: absolute; bottom: 10%; font-size: 1.2rem; display: flex; color:white;"> <span id="selectedNo"> 00 </span> <div style="height:1px; width: 3rem; max-width: 50%; margin: auto 20px; background: white;"> </div> 01 </div>
+            <div style="position: absolute; bottom: 10%; font-size: 1.2rem; display: flex; color:white;"> <span id="selectedNo"> 00 </span> </div>
         </div>
 
     </div>
