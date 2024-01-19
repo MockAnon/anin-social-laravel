@@ -18,7 +18,8 @@
     </head>   
     <body>
       @include('includes.header')
-      @include('component.message')
+      <!-- @include('component.message') -->
+      
 
       @yield('content02')
       <div class="container">

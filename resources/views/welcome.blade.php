@@ -49,6 +49,12 @@
 
 </div>
 
+@include('component.contact')
+
+@include('pages.development')
+@include('pages.generalist')
+
+
 <script type="application/javascript">
 
     let selectHomeType = [
