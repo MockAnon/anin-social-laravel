@@ -49,10 +49,11 @@
 
 </div>
 
-@include('component.contact')
 
-@include('pages.development')
-@include('pages.generalist')
+@include('component.masterDevelopment')
+@include('component.masterGeneralist')
+
+@include('component.contact')
 
 
 <script type="application/javascript">
